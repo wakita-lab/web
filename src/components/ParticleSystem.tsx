@@ -15,17 +15,17 @@ interface ParticleSystemProps {
 }
 
 export default function ParticleSystem({
-  count = 3000,
+  count = 1000,
   speed = 1.0,
-  noiseDensity = 0.4,
-  noiseStrength = 0.3,
+  noiseDensity = 0.1,
+  noiseStrength = 0.5,
 }: ParticleSystemProps) {
   const pointsRef = useRef<THREE.Points>(null);
   const positionsRef = useRef<THREE.BufferAttribute | null>(null);
   const initialPositionsRef = useRef<Float32Array | null>(null);
   
   // Create noise function
-  const noise2DRef = useRef(createNoise2D());
+  const noise2DRef = useRef(createNoise2D(() => Math.random()));
   
   // Generate initial particle positions (2D plane only)
   const particles = useMemo(() => {

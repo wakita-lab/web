@@ -42,10 +42,10 @@ export default function Scene() {
     >
       <TrailEffect />
       <ParticleSystem
-        count={500}
+        count={1000} // Increased particle count from 500 to 2000
         speed={1.0}
-        noiseDensity={0.4}
-        noiseStrength={0.3}
+        noiseDensity={0.1}
+        noiseStrength={0.5}
       />
       <OrbitControls enableZoom={false} enablePan={false} />
     </Canvas>

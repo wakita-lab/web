@@ -7,5 +7,5 @@ void main() {
     vec4 projectedPosition = projectionMatrix * viewPosition;
 
     gl_Position = projectedPosition;
-    gl_PointSize = 5.0;
+    gl_PointSize = 10.0; // Increased particle size from 5.0 to 10.0
 }

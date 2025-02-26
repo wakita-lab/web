@@ -14,13 +14,9 @@ export default function Home() {
   const [currentImage, setCurrentImage] = useState(WORK_IMAGES[0].path);
   return (
     <>
-      {/* 背景にパーティクルアニメーション */}
       <ParticleBackground imagePath={currentImage} />
 
-      {/* メインコンテンツ */}
-
-      <main className="flex min-h-screen w-full flex-col items-center justify-between p-8 leading-loose sm:items-start">
-        {/* 画像切り替えUI */}
+      <main className="flex min-h-screen w-full flex-col items-center justify-between p-8 leading-loose">
         <div className="flex gap-4">
           {WORK_IMAGES.map((image) => (
             <button

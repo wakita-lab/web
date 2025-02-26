@@ -8,12 +8,65 @@
 - Write the commit message in English.
 - Commit frequently and avoid committing more than two files at once unless there is a clear reason.
 - Do not commit multiple tasks at once.
+- Add an appropriate prefix Emoji to all commit messages.
 - Add the suffix [commit by roo code] to all commit messages.
+  - See here for the list of Emoji prefixes. [Emoji Prefix List](#emoji-prefix-list)
 - Follow the leading format.
-  - `git commit -m "{a simple task wrap}: {about the change you made} [commit by roo code]"`
+  - `git commit -m "{Emoji prefix} {A simple task wrap}: {Change you made} [commit by roo code]"`
 
 ### Cooperation with me
 
 - If you fail the test more than twice in a row, organize the current situation and think about the solution together. Avoid trial and error without a hypothesis.
 - You have extensive knowledge learned from GitHub, and you can implement individual algorithms and libraries faster than I can. Write the code while explaining it to me, and verify it with test code.
 - On the other hand, you are not good at processing according to the current context. Please confirm those with me.
+
+## Emoji Prefix List
+
+|   Commit type              | Emoji                                         |
+|:---------------------------|:----------------------------------------------|
+| Initial commit             | :tada: `:tada:`                               |
+| Version tag                | :bookmark: `:bookmark:`                       |
+| New feature                | :sparkles: `:sparkles:`                       |
+| Bugfix                     | :bug: `:bug:`                                 |
+| Metadata                   | :card_index: `:card_index:`                   |
+| Documentation              | :books: `:books:`                             |
+| Documenting source code    | :bulb: `:bulb:`                               |
+| Performance                | :racehorse: `:racehorse:`                     |
+| Cosmetic                   | :lipstick: `:lipstick:`                       |
+| Tests                      | :rotating_light: `:rotating_light:`           |
+| Adding a test              | :white_check_mark: `:white_check_mark:`       |
+| Make a test pass           | :heavy_check_mark: `:heavy_check_mark:`       |
+| General update             | :zap: `:zap:`                                 |
+| Improve format/structure   | :art: `:art:`                                 |
+| Refactor code              | :hammer: `:hammer:`                           |
+| Removing code/files        | :fire: `:fire:`                               |
+| Continuous Integration     | :green_heart: `:green_heart:`                 |
+| Security                   | :lock: `:lock:`                               |
+| Upgrading dependencies     | :arrow_up: `:arrow_up:`                       |
+| Downgrading dependencies   | :arrow_down: `:arrow_down:`                   |
+| Lint                       | :shirt: `:shirt:`                             |
+| Translation                | :alien: `:alien:`                             |
+| Text                       | :pencil: `:pencil:`                           |
+| Critical hotfix            | :ambulance: `:ambulance:`                     |
+| Deploying stuff            | :rocket: `:rocket:`                           |
+| Fixing on MacOS            | :apple: `:apple:`                             |
+| Fixing on Linux            | :penguin: `:penguin:`                         |
+| Fixing on Windows          | :checkered_flag: `:checkered_flag:`           |
+| Work in progress           | :construction:  `:construction:`              |
+| Adding CI build system     | :construction_worker: `:construction_worker:` |
+| Analytics or tracking code | :chart_with_upwards_trend: `:chart_with_upwards_trend:` |
+| Removing a dependency      | :heavy_minus_sign: `:heavy_minus_sign:`       |
+| Adding a dependency        | :heavy_plus_sign: `:heavy_plus_sign:`         |
+| Docker                     | :whale: `:whale:`                             |
+| Configuration files        | :wrench: `:wrench:`                           |
+| Package.json in JS         | :package: `:package:`                         |
+| Merging branches           | :twisted_rightwards_arrows: `:twisted_rightwards_arrows:` |
+| Bad code / need improv.    | :hankey: `:hankey:`                           |
+| Reverting changes          | :rewind: `:rewind:`                           |
+| Breaking changes           | :boom: `:boom:`                               |
+| Code review changes        | :ok_hand: `:ok_hand:`                         |
+| Accessibility              | :wheelchair: `:wheelchair:`                   |
+| Move/rename repository     | :truck: `:truck:`                             |
+| Other                      | [Be creative](http://www.emoji-cheat-sheet.com/)  |
+
+citation: [permanentf/GitCommitEmoji.md](https://gist.github.com/parmentf/035de27d6ed1dce0b36a)

@@ -113,28 +113,30 @@ export default function ParticleSystem({
 
       // Update particle color based on image data if available
       if (imageData) {
-        // Calculate aspect ratios
+        // Calculate aspect ratios and normalized base coordinates
         const imageAspectRatio = imageData.width / imageData.height;
         const particleAreaAspectRatio = 16 / 8; // Width (16) / Height (8)
+        const baseX = (pos.x + 8) / 16;
+        const baseY = (pos.y + 4) / 8;
 
-        let normalizedX, normalizedY;
+        // Apply object-fit: cover behavior with conditional expressions
+        // For wider images: adjust X coordinate, for taller images: adjust Y coordinate
+        const isWiderImage = imageAspectRatio > particleAreaAspectRatio;
+        const widerScaleFactor = particleAreaAspectRatio / imageAspectRatio;
+        const tallerScaleFactor = imageAspectRatio / particleAreaAspectRatio;
 
-        // Apply object-fit: cover behavior
-        if (imageAspectRatio > particleAreaAspectRatio) {
-          // Image is wider than particle area - crop sides
-          const scaleFactor = particleAreaAspectRatio / imageAspectRatio;
-          normalizedX = ((pos.x + 8) / 16 - 0.5) * scaleFactor + 0.5;
-          normalizedY = (pos.y + 4) / 8;
-        } else {
-          // Image is taller than particle area - crop top/bottom
-          const scaleFactor = imageAspectRatio / particleAreaAspectRatio;
-          normalizedX = (pos.x + 8) / 16;
-          normalizedY = ((pos.y + 4) / 8 - 0.5) * scaleFactor + 0.5;
-        }
+        // Calculate normalized coordinates with centered scaling
+        const normalizedX = Math.max(0, Math.min(1,
+          isWiderImage
+            ? (baseX - 0.5) * widerScaleFactor + 0.5
+            : baseX,
+        ));
 
-        // Clamp values to 0-1 range
-        normalizedX = Math.max(0, Math.min(1, normalizedX));
-        normalizedY = Math.max(0, Math.min(1, normalizedY));
+        const normalizedY = Math.max(0, Math.min(1,
+          isWiderImage
+            ? baseY
+            : (baseY - 0.5) * tallerScaleFactor + 0.5,
+        ));
 
         // Get color from the image
         const [r, g, b] = getColorAtPosition(imageData, normalizedX, normalizedY);

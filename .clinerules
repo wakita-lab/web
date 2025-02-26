@@ -1,3 +1,7 @@
-- Do not mix English and other languages in comments. Write all comments in English.
 - Commit for each task individually. If necessary, commit during the task as well.
   - Add the suffix [commit by roo code] to all commit messages.
+
+- If you fail the test more than twice in a row, organize the current situation and think about the solution together. Avoid trial and error without a hypothesis.
+- You have extensive knowledge learned from GitHub, and you can implement individual algorithms and libraries faster than I can. Write the code while explaining it to me, and verify it with test code.
+
+- On the other hand, you are not good at processing according to the current context. Please confirm those with me.

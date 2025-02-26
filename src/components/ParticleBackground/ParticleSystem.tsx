@@ -152,7 +152,8 @@ export default function ParticleSystem({
     colorsRef.current.needsUpdate = true;
   });
 
-  return (
+  // Only render when image data is loaded
+  return imageData ? (
     <points ref={pointsRef}>
       <bufferGeometry>
         <bufferAttribute
@@ -175,5 +176,5 @@ export default function ParticleSystem({
         vertexColors
       />
     </points>
-  );
+  ) : null;
 }

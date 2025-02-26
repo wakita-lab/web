@@ -16,7 +16,11 @@ function PreventAutoClear() {
   return null;
 }
 
-export default function Scene() {
+interface SceneProps {
+  imagePath: string;
+}
+
+export default function Scene({ imagePath }: SceneProps) {
   return (
     <Canvas
       camera={{
@@ -37,6 +41,7 @@ export default function Scene() {
         count={250}
         speed={0.01}
         noiseDensity={0.1}
+        imagePath={imagePath}
       />
     </Canvas>
   );

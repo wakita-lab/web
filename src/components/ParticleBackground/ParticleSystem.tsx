@@ -12,6 +12,7 @@ interface ParticleSystemProps {
   count: number;
   speed: number;
   noiseDensity: number;
+  imagePath: string;
 }
 
 // Image data type definition
@@ -25,6 +26,7 @@ export default function ParticleSystem({
   count,
   speed,
   noiseDensity,
+  imagePath,
 }: ParticleSystemProps) {
   const pointsRef = useRef<THREE.Points>(null);
   const positionsRef = useRef<THREE.BufferAttribute | null>(null);
@@ -32,14 +34,17 @@ export default function ParticleSystem({
   const timeToLiveRef = useRef<Int16Array | null>(null);
   const [imageData, setImageData] = useState<ImageDataType | null>(null);
 
-  const noise2D = useMemo(() => createNoise2D(() => Math.random()), []);
+  const noise2D = useMemo(() => createNoise2D(() => {
+    console.log(imagePath);
+    return Math.random();
+  }), [imagePath]);
   // State to hold image data
 
   // Load image data
   useEffect(() => {
     const loadImageData = async () => {
       try {
-        const data = await getImageData('/scenery.jpg');
+        const data = await getImageData(imagePath);
         setImageData(data);
         console.log('Image data loaded', data.width, data.height);
       } catch (error) {
@@ -48,7 +53,7 @@ export default function ParticleSystem({
     };
 
     loadImageData();
-  }, []);
+  }, [imagePath]);
 
   // Generate initial particle positions with direction angles and colors
   const particleData = useMemo(() => {

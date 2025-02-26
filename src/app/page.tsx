@@ -10,7 +10,7 @@ export default function Home() {
     <>
       <ParticleBackground imagePath={currentImage} />
 
-      <main className="flex h-lvh w-full flex-col items-center justify-between leading-loose tracking-tighter">
+      <main className="flex min-h-screen w-full flex-col items-center justify-between leading-loose tracking-tighter">
         <div className="flex w-full items-center justify-center gap-2 bg-white py-16 text-xl font-light">
           Akira Wakita Lab.
         </div>

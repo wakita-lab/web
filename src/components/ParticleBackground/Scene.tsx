@@ -32,7 +32,7 @@ export default function Scene() {
         near: 0.1,
         far: 1000,
       }}
-      style={{ background: 'black' }}
+      style={{ background: 'transparent' }}
       gl={{
         antialias: true,
         alpha: true,
@@ -41,8 +41,8 @@ export default function Scene() {
     >
       <TrailEffect />
       <ParticleSystem
-        count={500}
-        speed={0.02}
+        count={300}
+        speed={0.01}
         noiseDensity={0.1}
       />
 

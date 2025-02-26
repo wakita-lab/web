@@ -7,6 +7,8 @@
 - Commit for each task individually. If necessary, commit during the task as well.
   - Add the suffix [commit by roo code] to all commit messages.
 - Write the commit message in English.
+- Follow the commit message format.
+  - `git commit -m "{a simple task wrap}: {about the change you made} [commit by roo code]"`
 
 ### Cooperation with me
 

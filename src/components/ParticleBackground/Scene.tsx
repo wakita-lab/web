@@ -41,7 +41,7 @@ export default function Scene() {
     >
       <TrailEffect />
       <ParticleSystem
-        count={250}
+        count={250} // テクスチャを見やすくするためにパーティクル数を減らす
         speed={0.01}
         noiseDensity={0.1}
       />

@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useMemo } from 'react';
-import { useFrame } from '@react-three/fiber';
+import { useFrame, useLoader } from '@react-three/fiber';
 import * as THREE from 'three';
 import fragmentShader from './shaders/particle.frag';
 import vertexShader from './shaders/particle.vert';
@@ -20,11 +20,16 @@ export default function ParticleSystem({
 }: ParticleSystemProps) {
   const pointsRef = useRef<THREE.Points>(null);
   const positionsRef = useRef<THREE.BufferAttribute | null>(null);
+  const timeToLiveRef = useRef<Int16Array | null>(null);
   const noise2D = useMemo(() => createNoise2D(() => Math.random()), []);
+
+  // テクスチャをロード
+  const texture = useLoader(THREE.TextureLoader, '/scenery.jpg');
 
   // Generate initial particle positions with direction angles
   const particles = useMemo(() => {
     const positions = new Float32Array(count * 3);
+    const timeToLive = new Int16Array(count);
 
     for (let i = 0; i < count; i++) {
       const pos = new THREE.Vector3(
@@ -34,8 +39,10 @@ export default function ParticleSystem({
       );
 
       positions.set(pos.toArray(), i * 3);
+      timeToLive[i] = 60 + Math.trunc(Math.random() * 300);
     }
 
+    timeToLiveRef.current = timeToLive;
     return positions;
   }, [count]);
 
@@ -44,6 +51,7 @@ export default function ParticleSystem({
     if (!pointsRef.current || !positionsRef.current) return;
 
     const positions = positionsRef.current.array as Float32Array;
+    const timeToLive = timeToLiveRef.current as Int16Array;
 
     // Update each particle position based on its direction angle
     for (let i = 0; i < count; i++) {
@@ -61,12 +69,16 @@ export default function ParticleSystem({
 
       pos.add(diff);
 
-      if (Math.abs(pos.x) > 8 || Math.abs(pos.y) > 8) {
+      // decrement time to live
+      timeToLive[i] -= 1;
+
+      if (Math.abs(pos.x) > 8 || Math.abs(pos.y) > 4 || timeToLive[i] <= 0) {
         pos.set(
           (Math.random() - 0.5) * 2 * 8,
-          (Math.random() - 0.5) * 2 * 8,
+          (Math.random() - 0.5) * 2 * 4,
           0,
         );
+        timeToLive[i] = 60 + Math.trunc(Math.random() * 300);
       }
 
       positions.set(pos.toArray(), i * 3);
@@ -91,6 +103,9 @@ export default function ParticleSystem({
         transparent
         depthWrite={false}
         blending={THREE.NormalBlending}
+        uniforms={{
+          uTexture: { value: texture },
+        }}
       />
     </points>
   );

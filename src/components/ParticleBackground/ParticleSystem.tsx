@@ -90,7 +90,7 @@ export default function ParticleSystem({
         vertexShader={vertexShader}
         transparent
         depthWrite={false}
-        blending={THREE.AdditiveBlending}
+        blending={THREE.NormalBlending}
       />
     </points>
   );

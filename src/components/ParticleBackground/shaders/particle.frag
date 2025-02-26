@@ -6,6 +6,6 @@ void main() {
     // strength = pow(strength, 2.0);
 
     // Change color to bright blue
-    vec3 color = vec3(0.13, 0.3, 0.63);
+    vec3 color = vec3(0.36, 0.58, 1.0);
     gl_FragColor = vec4(color, 1.0);
 }

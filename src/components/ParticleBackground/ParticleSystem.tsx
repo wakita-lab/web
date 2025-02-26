@@ -30,10 +30,10 @@ export default function ParticleSystem({
   const positionsRef = useRef<THREE.BufferAttribute | null>(null);
   const colorsRef = useRef<THREE.BufferAttribute | null>(null);
   const timeToLiveRef = useRef<Int16Array | null>(null);
-  const noise2D = useMemo(() => createNoise2D(() => Math.random()), []);
-
-  // State to hold image data
   const [imageData, setImageData] = useState<ImageDataType | null>(null);
+
+  const noise2D = useMemo(() => createNoise2D(() => Math.random()), []);
+  // State to hold image data
 
   // Load image data
   useEffect(() => {

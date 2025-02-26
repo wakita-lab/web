@@ -111,11 +111,31 @@ export default function ParticleSystem({
         timeToLive[i] = 120 + Math.trunc(Math.random() * 300);
       }
 
-      // 画像データがある場合、パーティクルの位置に基づいて色を更新
+      // Update particle color based on image data if available
       if (imageData) {
-        // Convert to image coordinate system (-8 to 8, -4 to 4 mapped to 0 to 1)
-        const normalizedX = (pos.x + 8) / 16;
-        const normalizedY = (pos.y + 4) / 8;
+        // Calculate aspect ratios
+        const imageAspectRatio = imageData.width / imageData.height;
+        const particleAreaAspectRatio = 16 / 8; // Width (16) / Height (8)
+
+        let normalizedX, normalizedY;
+
+        // Apply object-fit: cover behavior
+        if (imageAspectRatio > particleAreaAspectRatio) {
+          // Image is wider than particle area - crop sides
+          const scaleFactor = particleAreaAspectRatio / imageAspectRatio;
+          normalizedX = ((pos.x + 8) / 16 - 0.5) * scaleFactor + 0.5;
+          normalizedY = (pos.y + 4) / 8;
+        } else {
+          // Image is taller than particle area - crop top/bottom
+          const scaleFactor = imageAspectRatio / particleAreaAspectRatio;
+          normalizedX = (pos.x + 8) / 16;
+          normalizedY = ((pos.y + 4) / 8 - 0.5) * scaleFactor + 0.5;
+        }
+
+        // Clamp values to 0-1 range
+        normalizedX = Math.max(0, Math.min(1, normalizedX));
+        normalizedY = Math.max(0, Math.min(1, normalizedY));
+
         // Get color from the image
         const [r, g, b] = getColorAtPosition(imageData, normalizedX, normalizedY);
         // Update particle color

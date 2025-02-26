@@ -47,7 +47,7 @@ export default function Scene() {
       />
 
       {/* <mesh position={[0, 0, 0.1]}>
-        <planeGeometry args={[10, 10]} />
+        <planeGeometry args={[100, 100]} />
         <meshBasicMaterial color="black" transparent opacity={0.1} />
       </mesh> */}
     </Canvas>

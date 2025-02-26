@@ -39,9 +39,9 @@ export default function ParticleSystem({
 
       // Generate random color (RGB values in range 0-1)
       const color = new THREE.Color(
-        Math.random(),
-        Math.random(),
-        Math.random(),
+        Math.random() * 0.6 + 0.4,
+        Math.random() * 0.6 + 0.4,
+        Math.random() * 0.6 + 0.4,
       );
 
       positions.set(pos.toArray(), i * 3);

@@ -1,7 +1,7 @@
 'use client';
 
 import { useRef, useMemo } from 'react';
-import { useFrame, useLoader } from '@react-three/fiber';
+import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import fragmentShader from './shaders/particle.frag';
 import vertexShader from './shaders/particle.vert';
@@ -20,15 +20,14 @@ export default function ParticleSystem({
 }: ParticleSystemProps) {
   const pointsRef = useRef<THREE.Points>(null);
   const positionsRef = useRef<THREE.BufferAttribute | null>(null);
+  const colorsRef = useRef<THREE.BufferAttribute | null>(null);
   const timeToLiveRef = useRef<Int16Array | null>(null);
   const noise2D = useMemo(() => createNoise2D(() => Math.random()), []);
 
-  // テクスチャをロード
-  const texture = useLoader(THREE.TextureLoader, '/scenery.jpg');
-
-  // Generate initial particle positions with direction angles
-  const particles = useMemo(() => {
+  // Generate initial particle positions with direction angles and colors
+  const particleData = useMemo(() => {
     const positions = new Float32Array(count * 3);
+    const colors = new Float32Array(count * 3);
     const timeToLive = new Int16Array(count);
 
     for (let i = 0; i < count; i++) {
@@ -38,12 +37,20 @@ export default function ParticleSystem({
         0,
       );
 
+      // Generate random color (RGB values in range 0-1)
+      const color = new THREE.Color(
+        Math.random(),
+        Math.random(),
+        Math.random(),
+      );
+
       positions.set(pos.toArray(), i * 3);
+      colors.set(color.toArray(), i * 3);
       timeToLive[i] = 60 + Math.trunc(Math.random() * 300);
     }
 
     timeToLiveRef.current = timeToLive;
-    return positions;
+    return { positions, colors };
   }, [count]);
 
   // Execute on each animation frame
@@ -78,7 +85,7 @@ export default function ParticleSystem({
           (Math.random() - 0.5) * 2 * 4,
           0,
         );
-        timeToLive[i] = 60 + Math.trunc(Math.random() * 300);
+        timeToLive[i] = 120 + Math.trunc(Math.random() * 300);
       }
 
       positions.set(pos.toArray(), i * 3);
@@ -94,7 +101,12 @@ export default function ParticleSystem({
         <bufferAttribute
           ref={positionsRef}
           attach="attributes-position"
-          args={[particles, 3]}
+          args={[particleData.positions, 3]}
+        />
+        <bufferAttribute
+          ref={colorsRef}
+          attach="attributes-color"
+          args={[particleData.colors, 3]}
         />
       </bufferGeometry>
       <shaderMaterial
@@ -103,9 +115,7 @@ export default function ParticleSystem({
         transparent
         depthWrite={false}
         blending={THREE.NormalBlending}
-        uniforms={{
-          uTexture: { value: texture },
-        }}
+        vertexColors
       />
     </points>
   );

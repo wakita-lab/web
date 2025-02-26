@@ -7,19 +7,19 @@ import { useEffect } from 'react';
 // Component to leave particle trails
 function TrailEffect() {
   const { gl } = useThree();
-  
+
   useEffect(() => {
     // Configure to retain drawing buffer
     gl.autoClearColor = false;
   }, [gl]);
-  
+
   useFrame(() => {
     // Slightly darken the screen each frame (instead of completely clearing)
     // Lower opacity to make trails last longer
     // gl.setClearColor(0x000000, 0.0001);
     // gl.clear();
   });
-  
+
   return null;
 }
 

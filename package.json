@@ -20,11 +20,13 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@stylistic/eslint-plugin": "^4.1.0",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
+    "eslint-plugin-tailwindcss": "^3.18.0",
     "postcss": "^8",
     "raw-loader": "^4.0.2",
     "tailwindcss": "^3.4.1",

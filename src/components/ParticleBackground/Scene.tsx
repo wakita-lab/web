@@ -48,10 +48,11 @@ export default function Scene() {
         elapsedTimeFactor={0}
       />
 
-      {/* <mesh position={[0, 0, 0.1]}>
+      {/* 透明度0.1の黒い平面 */}
+      <mesh position={[0, 0, 0.1]}>
         <planeGeometry args={[10, 10]} />
-        <meshBasicMaterial color="black" transparent opacity={0.01} />
-      </mesh> */}
+        <meshBasicMaterial color="black" transparent opacity={0.1} />
+      </mesh>
     </Canvas>
   );
 }

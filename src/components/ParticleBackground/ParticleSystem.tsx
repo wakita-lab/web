@@ -3,8 +3,8 @@
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
-import fragmentShader from '../shaders/particle.frag';
-import vertexShader from '../shaders/particle.vert';
+import fragmentShader from './shaders/particle.frag';
+import vertexShader from './shaders/particle.vert';
 import { createNoise3D } from 'simplex-noise';
 
 interface ParticleSystemProps {

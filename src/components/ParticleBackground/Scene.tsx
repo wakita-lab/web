@@ -42,11 +42,10 @@ export default function Scene() {
       <TrailEffect />
       <ParticleSystem
         count={500}
-        speed={0.01}
-        noiseDensity={0.2}
+        speed={0.02}
+        noiseDensity={0.1}
       />
 
-      {/* 透明度0.1の黒い平面 */}
       {/* <mesh position={[0, 0, 0.1]}>
         <planeGeometry args={[10, 10]} />
         <meshBasicMaterial color="black" transparent opacity={0.1} />

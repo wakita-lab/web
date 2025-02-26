@@ -4,7 +4,7 @@ import Scene from './Scene';
 
 export default function ParticleBackground() {
   return (
-    <div className="fixed inset-0 -z-10">
+    <div className="fixed w-lvw h-lvh -z-10">
       <Scene />      
     </div>
   );

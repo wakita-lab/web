@@ -5,9 +5,11 @@
 ### Commit
 
 - Commit for each task individually. If necessary, commit during the task as well.
-  - Add the suffix [commit by roo code] to all commit messages.
 - Write the commit message in English.
-- Follow the commit message format.
+- Commit frequently and avoid committing more than two files at once unless there is a clear reason.
+- Do not commit multiple tasks at once.
+- Add the suffix [commit by roo code] to all commit messages.
+- Follow the leading format.
   - `git commit -m "{a simple task wrap}: {about the change you made} [commit by roo code]"`
 
 ### Cooperation with me

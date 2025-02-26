@@ -7,6 +7,7 @@ import fragmentShader from './shaders/particle.frag';
 import vertexShader from './shaders/particle.vert';
 import { createNoise2D } from 'simplex-noise';
 import { getImageData, getColorAtPosition } from '@/utils/imageUtils';
+import seedrandom from 'seedrandom';
 
 interface ParticleSystemProps {
   count: number;
@@ -35,8 +36,7 @@ export default function ParticleSystem({
   const [imageData, setImageData] = useState<ImageDataType | null>(null);
 
   const noise2D = useMemo(() => createNoise2D(() => {
-    console.log(imagePath);
-    return Math.random();
+    return seedrandom(imagePath)();
   }), [imagePath]);
   // State to hold image data
 

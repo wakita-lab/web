@@ -2,13 +2,7 @@
 
 import ParticleBackground from '@/components/ParticleBackground';
 import { useState } from 'react';
-
-const WORK_IMAGES = [
-  { path: '/works/dismantling-awe.jpg', name: 'Dismantling Awe' },
-  { path: '/works/scalar-field-of-cosmetics.jpg', name: 'Scalar Field of Cosmetics' },
-  { path: '/works/scenery.jpg', name: 'Scenery' },
-  { path: '/works/vis-vessel-routes.png', name: 'Vessel Routes Visualization' },
-];
+import { WORK_IMAGES } from '@/constants/works';
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(WORK_IMAGES[0].path);
@@ -16,33 +10,18 @@ export default function Home() {
     <>
       <ParticleBackground imagePath={currentImage} />
 
-      <main className="flex min-h-screen w-full flex-col items-center justify-between p-8 leading-loose">
-        <div className="flex gap-4">
-          {WORK_IMAGES.map((image) => (
-            <button
-              key={image.path}
-              onClick={() => setCurrentImage(image.path)}
-              className={`rounded px-4 py-2 text-sm transition-colors ${
-                currentImage === image.path
-                  ? 'bg-white text-black'
-                  : 'bg-black/20 text-white hover:bg-black/40'
-              }`}
-            >
-              {image.name}
-            </button>
-          ))}
+      <main className="flex min-h-screen w-full flex-col items-center justify-between leading-loose tracking-tighter">
+        <div className="flex w-full items-center justify-center gap-2 bg-white py-16 text-xl font-light">
+          Akira Wakita Lab.
         </div>
-        <div className="flex gap-4">
+        <div className="flex w-full justify-center gap-8 bg-white py-16">
           {WORK_IMAGES.map((image) => (
             <button
               key={image.path}
               onClick={() => setCurrentImage(image.path)}
-              className={`rounded px-4 py-2 text-sm transition-colors ${
-                currentImage === image.path
-                  ? 'bg-white text-black'
-                  : 'bg-black/20 text-white hover:bg-black/40'
-              }`}
+              className="flex items-center gap-2 p-0 font-light tracking-tighter"
             >
+              <div className={`size-2 ${currentImage === image.path ? 'bg-current' : 'bg-transparent'}`} />
               {image.name}
             </button>
           ))}

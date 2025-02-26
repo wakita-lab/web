@@ -39,7 +39,7 @@ export default function Scene({ imagePath }: SceneProps) {
       <PreventAutoClear />
       <ParticleSystem
         count={250}
-        speed={0.01}
+        speed={0.02}
         noiseDensity={0.1}
         imagePath={imagePath}
       />

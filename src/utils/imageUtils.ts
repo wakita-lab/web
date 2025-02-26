@@ -3,7 +3,7 @@
 /**
  * Function to get pixel data from an image
  * @param imagePath Path to the image
- * @returns Promise with pixel data and image dimensions
+ * @returns Promise<{data: Uint8ClampedArray, width: number, height: number}> Pixel data and image dimensions
  */
 export async function getImageData(imagePath: string): Promise<{
   data: Uint8ClampedArray;

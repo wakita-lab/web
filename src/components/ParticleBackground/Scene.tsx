@@ -44,15 +44,13 @@ export default function Scene() {
         count={500}
         speed={0.01}
         noiseDensity={0.2}
-        noiseStrength={1}
-        elapsedTimeFactor={0}
       />
 
       {/* 透明度0.1の黒い平面 */}
-      <mesh position={[0, 0, 0.1]}>
+      {/* <mesh position={[0, 0, 0.1]}>
         <planeGeometry args={[10, 10]} />
         <meshBasicMaterial color="black" transparent opacity={0.1} />
-      </mesh>
+      </mesh> */}
     </Canvas>
   );
 }

@@ -5,27 +5,23 @@ import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import fragmentShader from './shaders/particle.frag';
 import vertexShader from './shaders/particle.vert';
-import { createNoise3D } from 'simplex-noise';
+import { createNoise2D } from 'simplex-noise';
 
 interface ParticleSystemProps {
   count: number;
   speed: number;
   noiseDensity: number;
-  noiseStrength: number;
-  elapsedTimeFactor: number;
 }
 
 export default function ParticleSystem({
   count,
   speed,
   noiseDensity,
-  noiseStrength,
-  elapsedTimeFactor,
 }: ParticleSystemProps) {
   const pointsRef = useRef<THREE.Points>(null);
   const positionsRef = useRef<THREE.BufferAttribute | null>(null);
   const initialPositionsRef = useRef<Float32Array | null>(null);
-  const noise = useMemo(() => createNoise3D(() => Math.random()), []);
+  const noise = useMemo(() => createNoise2D(() => Math.random()), []);
   
   // Generate initial particle positions with direction angles
   const particles = useMemo(() => {
@@ -46,7 +42,7 @@ export default function ParticleSystem({
   }, [count]);
 
   // Execute on each animation frame
-  useFrame(({clock}) => {
+  useFrame(() => {
     if (!pointsRef.current || !positionsRef.current || !initialPositionsRef.current) return;
     
     const positions = positionsRef.current.array as Float32Array;
@@ -55,30 +51,20 @@ export default function ParticleSystem({
     for (let i = 0; i < count; i++) {
       const ix = i * 3;
       const iy = i * 3 + 1;
-      const iz = i * 3 + 2;
       
-      // Get the direction angle (stored in z)
-      const angle = noise(
-        positions[ix] * noiseDensity,
-        positions[iy] * noiseDensity,
-        clock.elapsedTime * elapsedTimeFactor
-      ) * noiseStrength * Math.PI * 2;
-      
-      // Calculate direction vector from angle
-      const directionX = Math.cos(angle);
-      const directionY = Math.sin(angle);
-      
-      // Move 1px in the angle direction (scaled by speed)
-      positions[ix] += directionX * speed;
-      positions[iy] += directionY * speed;
-      positions[iz] = angle; // Store the new angle
-      
-      // if particle goes out of bounds, reset to random position
-      if (positions[ix] < -4 || positions[ix] > 4 || positions[iy] < -4 || positions[iy] > 4) {
+      // curl noise
+      const eps = 0.001;
+
+      const diffx = (noise(positions[ix] * noiseDensity, (positions[iy] + eps) * noiseDensity) - noise(positions[ix] * noiseDensity, (positions[iy] - eps) * noiseDensity)) / (2 * eps);
+      const diffy = -(noise((positions[ix] + eps) * noiseDensity, positions[iy] * noiseDensity) - noise((positions[ix] - eps) * noiseDensity, positions[iy] * noiseDensity)) / (2 * eps);
+
+      positions[ix] += diffx * speed;
+      positions[iy] += diffy * speed;
+
+      if (Math.abs(positions[ix]) > 4 || Math.abs(positions[iy]) > 4) {
         positions[ix] = (Math.random() - 0.5) * 8;
         positions[iy] = (Math.random() - 0.5) * 8;
       }
-      
     }
     
     // Notify GPU of position updates

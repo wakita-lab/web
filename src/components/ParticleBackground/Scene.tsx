@@ -25,7 +25,7 @@ export default function Scene() {
         near: 0.1,
         far: 1000,
       }}
-      style={{ background: 'black' }}
+      style={{ background: 'transparent' }}
       gl={{
         antialias: true,
         alpha: true,

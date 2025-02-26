@@ -1,16 +1,24 @@
 'use client';
 
-import { useRef, useMemo } from 'react';
+import { useRef, useMemo, useEffect, useState } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import fragmentShader from './shaders/particle.frag';
 import vertexShader from './shaders/particle.vert';
 import { createNoise2D } from 'simplex-noise';
+import { getImageData, getColorAtPosition } from '@/utils/imageUtils';
 
 interface ParticleSystemProps {
   count: number;
   speed: number;
   noiseDensity: number;
+}
+
+// Image data type definition
+interface ImageDataType {
+  data: Uint8ClampedArray;
+  width: number;
+  height: number;
 }
 
 export default function ParticleSystem({
@@ -23,6 +31,24 @@ export default function ParticleSystem({
   const colorsRef = useRef<THREE.BufferAttribute | null>(null);
   const timeToLiveRef = useRef<Int16Array | null>(null);
   const noise2D = useMemo(() => createNoise2D(() => Math.random()), []);
+
+  // State to hold image data
+  const [imageData, setImageData] = useState<ImageDataType | null>(null);
+
+  // Load image data
+  useEffect(() => {
+    const loadImageData = async () => {
+      try {
+        const data = await getImageData('/scenery.jpg');
+        setImageData(data);
+        console.log('Image data loaded', data.width, data.height);
+      } catch (error) {
+        console.error('Failed to load image data', error);
+      }
+    };
+
+    loadImageData();
+  }, []);
 
   // Generate initial particle positions with direction angles and colors
   const particleData = useMemo(() => {
@@ -38,11 +64,7 @@ export default function ParticleSystem({
       );
 
       // Generate random color (RGB values in range 0-1)
-      const color = new THREE.Color(
-        Math.random() * 0.6 + 0.4,
-        Math.random() * 0.6 + 0.4,
-        Math.random() * 0.6 + 0.4,
-      );
+      const color = new THREE.Color(0, 0, 0);
 
       positions.set(pos.toArray(), i * 3);
       colors.set(color.toArray(), i * 3);
@@ -55,9 +77,10 @@ export default function ParticleSystem({
 
   // Execute on each animation frame
   useFrame(() => {
-    if (!pointsRef.current || !positionsRef.current) return;
+    if (!pointsRef.current || !positionsRef.current || !colorsRef.current) return;
 
     const positions = positionsRef.current.array as Float32Array;
+    const colors = colorsRef.current.array as Float32Array;
     const timeToLive = timeToLiveRef.current as Int16Array;
 
     // Update each particle position based on its direction angle
@@ -88,11 +111,23 @@ export default function ParticleSystem({
         timeToLive[i] = 120 + Math.trunc(Math.random() * 300);
       }
 
+      // 画像データがある場合、パーティクルの位置に基づいて色を更新
+      if (imageData) {
+        // Convert to image coordinate system (-8 to 8, -4 to 4 mapped to 0 to 1)
+        const normalizedX = (pos.x + 8) / 16;
+        const normalizedY = (pos.y + 4) / 8;
+        // Get color from the image
+        const [r, g, b] = getColorAtPosition(imageData, normalizedX, normalizedY);
+        // Update particle color
+        colors.set([r, g, b], i * 3);
+      }
+
       positions.set(pos.toArray(), i * 3);
     }
 
-    // Notify GPU of position updates
+    // Notify GPU of position and color updates
     positionsRef.current.needsUpdate = true;
+    colorsRef.current.needsUpdate = true;
   });
 
   return (

@@ -41,7 +41,7 @@ export default function Scene() {
     >
       <TrailEffect />
       <ParticleSystem
-        count={300}
+        count={250}
         speed={0.01}
         noiseDensity={0.1}
       />

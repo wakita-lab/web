@@ -29,7 +29,7 @@ export default function ParticleSystem({
     for (let i = 0; i < count; i++) {
       const pos = new THREE.Vector3(
         (Math.random() - 0.5) * 2 * 8,
-        (Math.random() - 0.5) * 2 * 8,
+        (Math.random() - 0.5) * 2 * 4,
         0,
       );
 

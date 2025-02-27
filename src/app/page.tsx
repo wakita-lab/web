@@ -29,7 +29,7 @@ export default function Home() {
         <div className="flex w-full items-center justify-center bg-white px-6 py-12 text-lg md:gap-4 md:px-12">
           Akira Wakita Lab.
         </div>
-        <div className="w-full grow overflow-y-scroll" onScroll={handleScroll} ref={scrollFieldRef}>
+        <div className="scrollbar-hidden w-full grow overflow-y-scroll" onScroll={handleScroll} ref={scrollFieldRef}>
           <div style={{height: WORKS.length * 2000 + scrollFieldHeight}}></div>
         </div>
         <WorkSelector currentIndex={currentIndex} onIndexChange={handleIndexChange} works={WORKS} />

@@ -1,5 +1,6 @@
 import XCheckbox from '@/components/XCheckbox';
 import { Work } from '@/constants/works';
+import { useEffect, useRef } from 'react';
 
 interface WorkSelectorProps {
   currentIndex: number;
@@ -9,6 +10,15 @@ interface WorkSelectorProps {
 
 export default function WorkSelector({ currentIndex, onIndexChange, works }: WorkSelectorProps) {
   const length = works.length;
+  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+
+  useEffect(() => {
+    buttonRefs.current[currentIndex]?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'nearest',
+    });
+  }, [currentIndex]);
 
   return (
     <div className="flex w-full items-center justify-center gap-4 bg-white px-6 py-12 md:gap-8 md:px-12">
@@ -19,6 +29,9 @@ export default function WorkSelector({ currentIndex, onIndexChange, works }: Wor
         {works.map((work, index) => (
           <button
             key={index}
+            ref={el => {
+              buttonRefs.current[index] = el;
+            }}
             onClick={() => onIndexChange(index)}
             className="flex items-center gap-2 text-nowrap px-2 tracking-tighter"
           >

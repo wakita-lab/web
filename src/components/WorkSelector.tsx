@@ -4,11 +4,11 @@ import { useEffect, useRef } from 'react';
 
 interface WorkSelectorProps {
   currentIndex: number;
-  onIndexChange: (index: number) => void;
+  onClick: (index: number) => void;
   works: Work[];
 }
 
-export default function WorkSelector({ currentIndex, onIndexChange, works }: WorkSelectorProps) {
+export default function WorkSelector({ currentIndex, onClick, works }: WorkSelectorProps) {
   const length = works.length;
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -22,7 +22,7 @@ export default function WorkSelector({ currentIndex, onIndexChange, works }: Wor
 
   return (
     <div className="flex w-full items-center justify-center md:gap-4">
-      <button onClick={() => currentIndex > 0 && onIndexChange(currentIndex - 1)} name="prev" className="p-4 max-md:pr-2">
+      <button onClick={() => currentIndex > 0 && onClick(currentIndex - 1)} name="prev" className="p-4 max-md:pr-2">
         <XCheckbox selected={currentIndex === 0} />
       </button>
       <div className="scrollbar-hidden flex max-w-full gap-0 overflow-x-scroll md:gap-4">
@@ -32,7 +32,7 @@ export default function WorkSelector({ currentIndex, onIndexChange, works }: Wor
             ref={el => {
               buttonRefs.current[index] = el;
             }}
-            onClick={() => onIndexChange(index)}
+            onClick={() => onClick(index)}
             className="flex items-center gap-2 text-nowrap px-2 tracking-tighter"
           >
             <XCheckbox selected={index === currentIndex} />
@@ -40,7 +40,7 @@ export default function WorkSelector({ currentIndex, onIndexChange, works }: Wor
           </button>
         ))}
       </div>
-      <button onClick={() => currentIndex < length - 1 && onIndexChange(currentIndex + 1)} name="next" className="p-4 max-md:pl-2">
+      <button onClick={() => currentIndex < length - 1 && onClick(currentIndex + 1)} name="next" className="p-4 max-md:pl-2">
         <XCheckbox selected={currentIndex === length - 1} />
       </button>
     </div>

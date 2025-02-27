@@ -42,17 +42,7 @@ export default function ParticleSystem({
 
   // Load image data
   useEffect(() => {
-    const loadImageData = async () => {
-      try {
-        const data = await getImageData(imagePath);
-        setImageData(data);
-        console.log('Image data loaded', data.width, data.height);
-      } catch (error) {
-        console.error('Failed to load image data', error);
-      }
-    };
-
-    loadImageData();
+    getImageData(imagePath).then(setImageData).catch(console.error);
   }, [imagePath]);
 
   // Generate initial particle positions with direction angles and colors

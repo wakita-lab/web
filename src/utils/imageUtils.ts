@@ -28,6 +28,7 @@ export async function getImageData(imagePath: string): Promise<{
         return;
       }
 
+      ctx.filter = 'blur(1px)';
       ctx.drawImage(img, 0, 0);
       const imageData = ctx.getImageData(0, 0, width, height);
 

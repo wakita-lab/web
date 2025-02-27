@@ -30,9 +30,9 @@ export default function Scene({ imagePath }: SceneProps) {
     height: number;
   } | null>(null);
 
-  const noise2D = useMemo(() => createNoise2D(() => {
-    return seedrandom(imagePath)();
-  }), [imagePath]);
+  const random = useMemo(() => seedrandom(imagePath), [imagePath]);
+  const noise2D = useMemo(() => createNoise2D(() => random()), [random]);
+  const noiseDensity = useMemo(() => random() * 0.1 + 0.02, [random]);
 
   useEffect(() => {
     getImageData(imagePath).then(setImageData).catch(console.error);
@@ -56,11 +56,11 @@ export default function Scene({ imagePath }: SceneProps) {
       <PreventAutoClear />
       {imageData && (
         <ParticleSystem
-          count={250}
-          speed={0.02}
-          noiseDensity={0.1}
-          imageData={imageData}
           noise2D={noise2D}
+          count={200}
+          speed={0.02}
+          noiseDensity={noiseDensity}
+          imageData={imageData}
         />
       )}
     </Canvas>

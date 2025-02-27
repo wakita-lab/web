@@ -2,7 +2,10 @@
 
 import { Canvas, useThree } from '@react-three/fiber';
 import ParticleSystem from './ParticleSystem';
-import { useEffect } from 'react';
+import { useEffect, useState, useMemo } from 'react';
+import { getImageData } from '@/utils/imageUtils';
+import { createNoise2D } from 'simplex-noise';
+import seedrandom from 'seedrandom';
 
 // Component to leave particle trails
 function PreventAutoClear() {
@@ -21,6 +24,20 @@ interface SceneProps {
 }
 
 export default function Scene({ imagePath }: SceneProps) {
+  const [imageData, setImageData] = useState<{
+    data: Uint8ClampedArray;
+    width: number;
+    height: number;
+  } | null>(null);
+
+  const noise2D = useMemo(() => createNoise2D(() => {
+    return seedrandom(imagePath)();
+  }), [imagePath]);
+
+  useEffect(() => {
+    getImageData(imagePath).then(setImageData).catch(console.error);
+  }, [imagePath]);
+
   return (
     <Canvas
       camera={{
@@ -37,12 +54,15 @@ export default function Scene({ imagePath }: SceneProps) {
       }}
     >
       <PreventAutoClear />
-      <ParticleSystem
-        count={250}
-        speed={0.02}
-        noiseDensity={0.1}
-        imagePath={imagePath}
-      />
+      {imageData && (
+        <ParticleSystem
+          count={250}
+          speed={0.02}
+          noiseDensity={0.1}
+          imageData={imageData}
+          noise2D={noise2D}
+        />
+      )}
     </Canvas>
   );
 }

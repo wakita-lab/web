@@ -1,49 +1,37 @@
 'use client';
 
-import { useRef, useMemo, useEffect, useState } from 'react';
+import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
 import * as THREE from 'three';
 import fragmentShader from './shaders/particle.frag';
 import vertexShader from './shaders/particle.vert';
-import { createNoise2D } from 'simplex-noise';
-import { getImageData, getColorAtPosition } from '@/utils/imageUtils';
-import seedrandom from 'seedrandom';
+import { getColorAtPosition } from '@/utils/imageUtils';
+
+type NoiseFunction2D = (x: number, y: number) => number;
 
 interface ParticleSystemProps {
   count: number;
   speed: number;
   noiseDensity: number;
-  imagePath: string;
-}
-
-// Image data type definition
-interface ImageDataType {
-  data: Uint8ClampedArray;
-  width: number;
-  height: number;
+  imageData: {
+    data: Uint8ClampedArray;
+    width: number;
+    height: number;
+  };
+  noise2D: NoiseFunction2D;
 }
 
 export default function ParticleSystem({
   count,
   speed,
   noiseDensity,
-  imagePath,
+  imageData,
+  noise2D,
 }: ParticleSystemProps) {
   const pointsRef = useRef<THREE.Points>(null);
   const positionsRef = useRef<THREE.BufferAttribute | null>(null);
   const colorsRef = useRef<THREE.BufferAttribute | null>(null);
   const timeToLiveRef = useRef<Int16Array | null>(null);
-  const [imageData, setImageData] = useState<ImageDataType | null>(null);
-
-  const noise2D = useMemo(() => createNoise2D(() => {
-    return seedrandom(imagePath)();
-  }), [imagePath]);
-  // State to hold image data
-
-  // Load image data
-  useEffect(() => {
-    getImageData(imagePath).then(setImageData).catch(console.error);
-  }, [imagePath]);
 
   // Generate initial particle positions with direction angles and colors
   const particleData = useMemo(() => {
@@ -147,8 +135,7 @@ export default function ParticleSystem({
     colorsRef.current.needsUpdate = true;
   });
 
-  // Only render when image data is loaded
-  return imageData ? (
+  return (
     <points ref={pointsRef}>
       <bufferGeometry>
         <bufferAttribute
@@ -171,5 +158,5 @@ export default function ParticleSystem({
         vertexColors
       />
     </points>
-  ) : null;
+  );
 }

@@ -16,7 +16,7 @@ export default function Home() {
         <div className="flex w-full items-center justify-center bg-white px-6 py-12 text-lg md:gap-4 md:px-12">
           Akira Wakita Lab.
         </div>
-        <WorkSelector currentIndex={currentIndex} onIndexChange={setCurrentIndex} />
+        <WorkSelector currentIndex={currentIndex} onIndexChange={setCurrentIndex} works={WORKS} />
       </main>
     </>
   );

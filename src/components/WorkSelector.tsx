@@ -17,21 +17,14 @@ export default function WorkSelector({ currentIndex, onIndexChange, works }: Wor
       </button>
       <div className="scrollbar-hidden flex max-w-full gap-0 overflow-x-scroll md:gap-4">
         {works.map((work, index) => (
-          <label
+          <button
             key={index}
-            className="flex cursor-pointer items-center gap-2 text-nowrap px-2 tracking-tighter"
+            onClick={() => onIndexChange(index)}
+            className="flex items-center gap-2 text-nowrap px-2 tracking-tighter"
           >
-            <input
-              type="radio"
-              name="work-selector"
-              value={index}
-              checked={index === currentIndex}
-              onChange={() => onIndexChange(index)}
-              className="hidden"
-            />
             <XCheckbox selected={index === currentIndex} />
             {work.name.en}
-          </label>
+          </button>
         ))}
       </div>
       <button onClick={() => currentIndex < length - 1 && onIndexChange(currentIndex + 1)} name="next">

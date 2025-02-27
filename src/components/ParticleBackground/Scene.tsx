@@ -57,7 +57,7 @@ export default function Scene({ imagePath }: SceneProps) {
       {imageData && (
         <ParticleSystem
           noise2D={noise2D}
-          count={250}
+          count={500}
           speed={0.02}
           noiseDensity={noiseDensity}
           imageData={imageData}

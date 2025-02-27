@@ -2,10 +2,10 @@
 
 import ParticleBackground from '@/components/ParticleBackground';
 import { useState } from 'react';
-import { WORK_IMAGES } from '@/constants/works';
+import { WORKS } from '@/constants/works';
 
 export default function Home() {
-  const [currentImage, setCurrentImage] = useState(WORK_IMAGES[0].path);
+  const [currentImage, setCurrentImage] = useState(WORKS[0].images[0]);
 
   return (
     <>
@@ -16,14 +16,14 @@ export default function Home() {
           Akira Wakita Lab.
         </div>
         <div className="flex w-full justify-center gap-8 bg-white py-16">
-          {WORK_IMAGES.map((image) => (
+          {WORKS.map((work) => (
             <button
-              key={image.path}
-              onClick={() => setCurrentImage(image.path)}
+              key={work.id}
+              onClick={() => setCurrentImage(work.images[0])}
               className="flex items-center gap-2 p-0 font-light tracking-tighter"
             >
-              <div className={`size-2 ${currentImage === image.path ? 'bg-current' : 'bg-transparent'}`} />
-              {image.name}
+              <div className={`size-2 ${currentImage === work.images[0] ? 'bg-current' : 'bg-transparent'}`} />
+              {work.name}
             </button>
           ))}
         </div>

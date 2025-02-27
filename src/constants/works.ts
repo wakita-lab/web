@@ -1,6 +1,6 @@
 import worksData from '../data/works.yaml';
 
-interface Work {
+export interface Work {
   id: string;
   publishTime: string;
   images: string[];

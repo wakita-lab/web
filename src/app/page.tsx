@@ -5,6 +5,8 @@ import { useCallback, useRef, useState } from 'react';
 import { WORKS } from '@/constants/works';
 import WorkSelector from '@/components/WorkSelector';
 
+const heightPerWork = 1000;
+
 export default function Home() {
   // const [currentIndex, setCurrentIndex] = useState(0);
   const [scrollAmount, setScrollAmount] = useState(0);
@@ -13,11 +15,11 @@ export default function Home() {
   const scrollFieldHeight = scrollFieldRef.current?.clientHeight || 0;
 
   const handleIndexChange = useCallback((index: number) => {
-    scrollFieldRef.current?.scrollTo({ top: index * 2000, behavior: 'instant' });
-    setScrollAmount(index * 2000);
+    scrollFieldRef.current?.scrollTo({ top: index * heightPerWork, behavior: 'instant' });
+    setScrollAmount(index * heightPerWork);
   }, []);
 
-  const currentIndex = Math.min(Math.trunc(scrollAmount / 2000), WORKS.length - 1);
+  const currentIndex = Math.min(Math.trunc(scrollAmount / heightPerWork), WORKS.length - 1);
 
   return (
     <>
@@ -28,7 +30,7 @@ export default function Home() {
           Akira Wakita Lab.
         </div>
         <div className="scrollbar-hidden w-full grow overflow-y-scroll" ref={scrollFieldRef} onScroll={e => setScrollAmount(e.currentTarget.scrollTop)}>
-          <div style={{height: WORKS.length * 1000 + scrollFieldHeight}} />
+          <div style={{height: WORKS.length * heightPerWork + scrollFieldHeight}} />
         </div>
         <div className="flex w-full items-center justify-center bg-white px-0 py-12 md:px-8">
           <WorkSelector

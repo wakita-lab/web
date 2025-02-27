@@ -1,8 +1,23 @@
+- id: speculativefakecollege
+  publishTime: 2020-09-01
+  images:
+    - /works/speculativefakecollege.jpg
+  name:
+    en: Speculative Fake College
+    ja: Speculative Fake College
+  description:
+    ja: |
+      教員や学生による相次ぐ不祥事、入学試験の男女差別、体育会の軍隊的なガバナンスなど、大学にまつわる刺激的なゴシップが世間の注目を集めています。ここ数年で学校という場のあり方が揺らいでいることは間違いありません。同時に、人工知能やIoTの普及に伴い「知能とは何か」という問いと向き合うべき時代が始まっています。大学が使う主要な財は知能です。これからの時代の知能のあり方についての議論が求められています。虚構大学（Speculative Fake College、略してSFC）はこのような問題意識の元に設立されました。もちろん虚構の大学です。未来の教育のスペキュラティブデザインを通して、学校とは何か、知能とは何か、皆さんと一緒に考えていくことが私たちの目的です。
+    en: |
+      A spate of scandals by faculty and students, gender discrimination in admissions exams, and the military-like governance of athletic teams are just a few of the exciting gossip surrounding universities that have captured the public's attention. There is no doubt that the school as a place has been shaken up in the past few years. At the same time, with the spread of artificial intelligence and IoT, an era has begun in which we must confront the question, "What is intelligence? The primary good that universities use is intelligence. A discussion on the nature of intelligence in the coming era is required. Speculative Fake College (SFC for short) was established based on the awareness of these issues. It is, of course, a fictional college. Our purpose is to think together with you about what school is and what intelligence is through speculative design of future education.
+
 - id: worldsvesselroutes
   publishTime: 2018-12-01
   images:
     - /works/worldsvesselroutes.png
-  name: Visualization of the World's Vessel Routes in the 18th Century
+  name:
+    en: Visualization of the World's Vessel Routes in the 18th Century
+    ja: Visualization of the World's Vessel Routes in the 18th Century
   description:
     ja: |
       1750年から1850年のヨーロッパ諸国の商船（帆船）の航跡を、当時の航海日誌に基づく位置情報を使用して全地球上に可視化した。自律的な動力を持たずに、風と海流を頼りに富を求め移動する様子は、複雑で有機的な生命活動の様相を呈している。産業革命前夜、その原資となる資金をヨーロッパ諸国にもたらしたのは、三角貿易に代表される、外洋を移動する航海術の発達にあった。その航路を全地球的に可視化した本作品は、現代まで続く産業資本主義の原始的なイメージでもある。
@@ -20,7 +35,9 @@
   publishTime: 2018-09-01
   images:
     - /works/dismantle.jpg
-  name: Dismantling Awe
+  name:
+    en: Dismantling Awe
+    ja: Dismantling Awe
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。
@@ -37,7 +54,9 @@
   publishTime: 2018-06-01
   images:
     - /works/scenery.jpg
-  name: Scenery
+  name:
+    en: Scenery
+    ja: Scenery
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。
@@ -54,7 +73,9 @@
   publishTime: 2018-03-01
   images:
     - /works/cosmetics.jpg
-  name: Scalar Field of Cosmetics
+  name:
+    en: Scalar Field of Cosmetics
+    ja: Scalar Field of Cosmetics
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。

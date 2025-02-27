@@ -12,11 +12,11 @@ export default function Home() {
       <ParticleBackground imagePath={WORKS[currentIndex].images[0]} />
 
       <main className="flex min-h-svh w-full flex-col items-center justify-between leading-loose tracking-tighter">
-        <div className="flex w-full items-center justify-center gap-2 bg-white px-8 py-16 text-xl font-light">
+        <div className="flex w-full items-center justify-center gap-2 bg-white p-8 text-xl font-light">
           Akira Wakita Lab.
         </div>
-        <div className="flex w-full justify-center gap-8 bg-white px-8 py-16 font-light">
-          <div className="flex max-w-full gap-8 overflow-x-scroll">
+        <div className="flex w-full justify-center gap-8 bg-white p-8 font-light">
+          <div className="scrollbar-hidden flex max-w-full gap-8 overflow-x-scroll">
             {WORKS.map((work, index) => (
               <button
                 key={index}

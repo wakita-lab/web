@@ -115,7 +115,7 @@ export default function ParticleSystem({
             : baseX,
         ));
 
-        const normalizedY = Math.max(0, Math.min(1,
+        const normalizedY = 1.0 - Math.max(0, Math.min(1,
           isWiderImage
             ? baseY
             : (baseY - 0.5) * tallerScaleFactor + 0.5,

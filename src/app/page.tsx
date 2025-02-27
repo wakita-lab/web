@@ -6,11 +6,12 @@ import { WORK_IMAGES } from '@/constants/works';
 
 export default function Home() {
   const [currentImage, setCurrentImage] = useState(WORK_IMAGES[0].path);
+
   return (
     <>
       <ParticleBackground imagePath={currentImage} />
 
-      <main className="flex min-h-screen w-full flex-col items-center justify-between leading-loose tracking-tighter">
+      <main className="flex min-h-svh w-full flex-col items-center justify-between leading-loose tracking-tighter">
         <div className="flex w-full items-center justify-center gap-2 bg-white py-16 text-xl font-light">
           Akira Wakita Lab.
         </div>
@@ -27,7 +28,6 @@ export default function Home() {
           ))}
         </div>
       </main>
-
     </>
   );
 }

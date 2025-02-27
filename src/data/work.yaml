@@ -1,0 +1,47 @@
+dismantling-awe:
+  id: dismantling-awe
+  path: /works/dismantling-awe.jpg
+  name: Dismantling Awe
+  description:
+    ja: 畏怖の解体は、人工知能と人間の関係性を探求するアート作品です。AIによって生成された画像を解体し、再構築することで、テクノロジーに対する私たちの畏怖の念を視覚化します。
+    en: Dismantling Awe is an art piece exploring the relationship between AI and humans. By deconstructing and reconstructing AI-generated images, it visualizes our sense of awe towards technology.
+  publishTime: "2024-01-15T00:00:00+09:00"
+  creators:
+    - name: 研究室メンバー
+      role: アーティスト
+
+scalar-field-of-cosmetics:
+  id: scalar-field-of-cosmetics
+  path: /works/scalar-field-of-cosmetics.jpg
+  name: Scalar Field of Cosmetics
+  description:
+    ja: 化粧品の使用パターンをスカラー場として視覚化した作品です。日常的な美の追求を数学的な表現で捉え直すことで、新しい視点を提供します。
+    en: A visualization of cosmetics usage patterns as scalar fields. By reframing everyday pursuit of beauty through mathematical expression, it offers a new perspective.
+  publishTime: "2024-02-01T00:00:00+09:00"
+  creators:
+    - name: 研究室メンバー
+      role: データビジュアライゼーション
+
+scenery:
+  id: scenery
+  path: /works/scenery.jpg
+  name: Scenery
+  description:
+    ja: 都市の風景をデジタルで再解釈した作品です。現代の都市生活における自然と人工の境界を探求します。
+    en: A digital reinterpretation of urban landscapes. This work explores the boundary between natural and artificial in modern urban life.
+  publishTime: "2024-02-15T00:00:00+09:00"
+  creators:
+    - name: 研究室メンバー
+      role: デジタルアーティスト
+
+vis-vessel-routes:
+  id: vis-vessel-routes
+  path: /works/vis-vessel-routes.png
+  name: Visualization of the World's Vessel Routes in the 18th Century
+  description:
+    ja: 18世紀の世界の船舶航路を視覚化したデータアート作品です。歴史的な海運データを現代のビジュアライゼーション技術で表現しています。
+    en: A data art piece visualizing global vessel routes in the 18th century. Historical maritime data is expressed through modern visualization techniques.
+  publishTime: "2024-03-01T00:00:00+09:00"
+  creators:
+    - name: 研究室メンバー
+      role: データサイエンティスト

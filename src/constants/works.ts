@@ -1,11 +1,21 @@
-interface WorkImage {
-  path: string;
+import workData from '../data/work.yaml';
+
+interface Creator {
   name: string;
+  role: string;
 }
 
-export const WORK_IMAGES: WorkImage[] = [
-  { path: '/works/dismantling-awe.jpg', name: 'Dismantling Awe' },
-  { path: '/works/scalar-field-of-cosmetics.jpg', name: 'Scalar Field of Cosmetics' },
-  { path: '/works/scenery.jpg', name: 'Scenery' },
-  { path: '/works/vis-vessel-routes.png', name: 'Visualization of the World’s Vessel Routes in the 18th Century' },
-];
+interface WorkImage {
+  id: string;
+  path: string;
+  name: string;
+  description: {
+    ja: string;
+    en: string;
+  };
+  publishTime: string;
+  creators: Creator[];
+}
+
+// YAMLから読み込んだデータをWorkImage[]の形式に変換
+export const WORK_IMAGES: WorkImage[] = Object.values(workData);

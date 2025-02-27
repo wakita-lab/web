@@ -6,6 +6,10 @@ const nextConfig: NextConfig = {
       test: /\.(vert|frag)$/,
       use: 'raw-loader',
     });
+    config.module.rules.push({
+      test: /\.yaml$/,
+      use: 'js-yaml-loader',
+    });
     return config;
   },
 };

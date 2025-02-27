@@ -23,7 +23,6 @@ interface SceneProps {
 export default function Scene({ imagePath }: SceneProps) {
   return (
     <Canvas
-      className="h-[640px] w-[1152px]"
       camera={{
         position: [0, 0, 5],
         fov: 75,

@@ -1,56 +1,5 @@
-- id: dismantle
-  publishTime: 2024-01-15
-  images:
-    - /works/dismantle.jpg
-  name: Dismantling Awe
-  description:
-    ja: |
-      この作品は脇田教授の個人プロジェクトです。
-      詳細はこちらをご覧下さい。
-      Akira Wakita Website
-      >http://akirawakita.com/#works/dismantle
-    en: |
-      This work is prof. Wakita’s private project.
-      For further information, please visit here.
-      Akira Wakita Website
-      >http://akirawakita.com/#works/dismantle
-
-- id: cosmetics
-  publishTime: 2024-02-01
-  images:
-    - /works/cosmetics.jpg
-  name: Scalar Field of Cosmetics
-  description:
-    ja: |
-      この作品は脇田教授の個人プロジェクトです。
-      詳細はこちらをご覧下さい。
-      Akira Wakita Website
-      >http://akirawakita.com/#works/dismantle
-    en: |
-      This work is prof. Wakita’s private project.
-      For further information, please visit here.
-      Akira Wakita Website
-      >http://akirawakita.com/#works/dismantle
-
-- id: scenery
-  publishTime: 2024-02-15
-  images:
-    - /works/scenery.jpg
-  name: Scenery
-  description:
-    ja: |
-      この作品は脇田教授の個人プロジェクトです。
-      詳細はこちらをご覧下さい。
-      Akira Wakita Website
-      >http://akirawakita.com/#works/dismantle
-    en: |
-      This work is prof. Wakita’s private project.
-      For further information, please visit here.
-      Akira Wakita Website
-      >http://akirawakita.com/#works/dismantle
-
 - id: worldsvesselroutes
-  publishTime: 2018-09-01
+  publishTime: 2018-12-01
   images:
     - /works/worldsvesselroutes.png
   name: Visualization of the World's Vessel Routes in the 18th Century
@@ -66,3 +15,54 @@
     en: |
       Akira Wakita Laboratory (Tadashi Nagashima, Masaki Yamabe, Akira Wakita), Keio University SFC
       This project was conducted as "Pluralism and Diversity in World Trade: Dynamics of Intra-Asia Trade in the 'Long 19th Century' and Its Institutional Foundations (Project No. 24243045)," led by Tomoko Shiroyama, Professor, Graduate School of Economics, The University of Tokyo.
+
+- id: dismantle
+  publishTime: 2018-09-01
+  images:
+    - /works/dismantle.jpg
+  name: Dismantling Awe
+  description:
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
+    en: |
+      This work is prof. Wakita's private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
+
+- id: scenery
+  publishTime: 2018-06-01
+  images:
+    - /works/scenery.jpg
+  name: Scenery
+  description:
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
+    en: |
+      This work is prof. Wakita's private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
+
+- id: cosmetics
+  publishTime: 2018-03-01
+  images:
+    - /works/cosmetics.jpg
+  name: Scalar Field of Cosmetics
+  description:
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
+    en: |
+      This work is prof. Wakita's private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle

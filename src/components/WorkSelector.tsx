@@ -23,7 +23,7 @@ export default function WorkSelector({ currentIndex, onIndexChange, works }: Wor
             className="flex items-center gap-2 text-nowrap px-2 tracking-tighter"
           >
             <XCheckbox selected={index === currentIndex} />
-            {work.name.en}
+            {work.title.en}
           </button>
         ))}
       </div>

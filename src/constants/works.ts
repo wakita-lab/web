@@ -4,7 +4,7 @@ export interface Work {
   id: string;
   publishTime: string;
   images: string[];
-  name: {
+  title: {
     ja: string;
     en: string;
   };

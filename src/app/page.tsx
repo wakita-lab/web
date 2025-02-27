@@ -25,7 +25,7 @@ export default function Home() {
                 className="flex items-center gap-2 text-nowrap p-0 tracking-tighter"
               >
                 <XCheckbox selected={index === currentIndex} />
-                {work.name}
+                {work.name.en}
               </button>
             ))}
           </div>

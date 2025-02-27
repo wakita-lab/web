@@ -1,21 +1,19 @@
-import workData from '../data/work.yaml';
+import worksData from '../data/works.yaml';
 
-interface Creator {
-  name: string;
-  role: string;
-}
-
-interface WorkImage {
+interface Work {
   id: string;
-  path: string;
+  publishTime: string;
+  images: string[];
   name: string;
   description: {
     ja: string;
     en: string;
   };
-  publishTime: string;
-  creators: Creator[];
+  credits?: {
+    ja: string;
+    en: string;
+  };
 }
 
-// YAMLから読み込んだデータをWorkImage[]の形式に変換
-export const WORK_IMAGES: WorkImage[] = Object.values(workData);
+// YAMLから読み込んだデータをWork[]の形式に変換
+export const WORKS: Work[] = worksData as Work[];

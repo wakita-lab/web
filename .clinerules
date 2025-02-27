@@ -8,9 +8,8 @@
 
 ### Commit
 
-- Commit for each task individually. 
 - Commit every time you finish a task.
-- If necessary, commit during the task as well.
+- Commit during the task as well if necessary.
 - Write the commit message in English.
 - Add the suffix [commit by roo code] to all commit messages.
 - Follow the leading format.

@@ -5,27 +5,36 @@ import { useState } from 'react';
 import { WORKS } from '@/constants/works';
 
 export default function Home() {
-  const [currentImage, setCurrentImage] = useState(WORKS[0].images[0]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   return (
     <>
-      <ParticleBackground imagePath={currentImage} />
+      <ParticleBackground imagePath={WORKS[currentIndex].images[0]} />
 
       <main className="flex min-h-svh w-full flex-col items-center justify-between leading-loose tracking-tighter">
-        <div className="flex w-full items-center justify-center gap-2 bg-white py-16 text-xl font-light">
+        <div className="flex w-full items-center justify-center gap-2 bg-white px-8 py-16 text-xl font-light">
           Akira Wakita Lab.
         </div>
-        <div className="flex w-full justify-center gap-8 bg-white py-16">
-          {WORKS.map((work) => (
-            <button
-              key={work.id}
-              onClick={() => setCurrentImage(work.images[0])}
-              className="flex items-center gap-2 p-0 font-light tracking-tighter"
-            >
-              <div className={`size-2 ${currentImage === work.images[0] ? 'bg-current' : 'bg-transparent'}`} />
-              {work.name}
-            </button>
-          ))}
+        <div className="flex w-full justify-center gap-8 bg-white px-8 py-16 font-light">
+          <div className="flex max-w-full gap-8 overflow-x-scroll">
+            {WORKS.map((work, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className="flex items-center gap-2 text-nowrap p-0 tracking-tighter"
+              >
+                <div>
+                  <svg width="16" height="16" stroke="currentColor" fill="none" strokeWidth={1} viewBox="0 0 16 16">
+                    <path d="M2 2 L14 2 L14 14L2 14Z" />
+                    {index === currentIndex && (
+                      <path d="M2 2 L14 14 M14 2L2 14Z" />
+                    )}
+                  </svg>
+                </div>
+                {work.name}
+              </button>
+            ))}
+          </div>
         </div>
       </main>
     </>

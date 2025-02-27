@@ -16,7 +16,7 @@ export default function Home() {
 
   const handleIndexChange = useCallback((index: number) => {
     scrollFieldRef.current?.scrollTo({ top: index * heightPerWork, behavior: 'instant' });
-    setScrollAmount(index * heightPerWork);
+    setScrollAmount((index - 0.5) * heightPerWork);
   }, []);
 
   const currentIndex = Math.min(Math.trunc(scrollAmount / heightPerWork), WORKS.length - 1);
@@ -26,7 +26,7 @@ export default function Home() {
       <ParticleBackground imagePath={WORKS[currentIndex].images[0]} />
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">
-        <div className="flex w-full items-center justify-center bg-white py-12 text-lg">
+        <div className="flex w-full items-center justify-center bg-white py-12 text-xl">
           Akira Wakita Lab.
         </div>
         <div className="scrollbar-hidden w-full grow overflow-y-scroll" ref={scrollFieldRef} onScroll={e => setScrollAmount(e.currentTarget.scrollTop)}>

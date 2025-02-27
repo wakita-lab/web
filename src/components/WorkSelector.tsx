@@ -10,7 +10,7 @@ export default function WorkSelector({ currentIndex, onIndexChange }: WorkSelect
   return (
     <div className="flex w-full items-center justify-center gap-4 bg-white px-6 py-12 md:gap-8 md:px-12">
       <XCheckbox selected />
-      <div className="scrollbar-hidden flex max-w-full gap-4 overflow-x-scroll md:gap-8">
+      <div className="scrollbar-hidden flex max-w-full gap-0 overflow-x-scroll">
         {WORKS.map((work, index) => (
           <button
             key={index}

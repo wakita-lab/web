@@ -21,8 +21,8 @@ export default function WorkSelector({ currentIndex, onIndexChange, works }: Wor
   }, [currentIndex]);
 
   return (
-    <div className="flex w-full items-center justify-center gap-4 bg-white px-6 py-12 md:gap-8 md:px-12">
-      <button onClick={() => currentIndex > 0 && onIndexChange(currentIndex - 1)} name="prev">
+    <div className="flex w-full items-center justify-center md:gap-4">
+      <button onClick={() => currentIndex > 0 && onIndexChange(currentIndex - 1)} name="prev" className="p-4 max-md:pr-2">
         <XCheckbox selected={currentIndex === 0} />
       </button>
       <div className="scrollbar-hidden flex max-w-full gap-0 overflow-x-scroll md:gap-4">
@@ -40,7 +40,7 @@ export default function WorkSelector({ currentIndex, onIndexChange, works }: Wor
           </button>
         ))}
       </div>
-      <button onClick={() => currentIndex < length - 1 && onIndexChange(currentIndex + 1)} name="next">
+      <button onClick={() => currentIndex < length - 1 && onIndexChange(currentIndex + 1)} name="next" className="p-4 max-md:pl-2">
         <XCheckbox selected={currentIndex === length - 1} />
       </button>
     </div>

@@ -16,7 +16,7 @@ export default function Home() {
 
   const handleIndexChange = useCallback((index: number) => {
     scrollFieldRef.current?.scrollTo({ top: index * heightPerWork, behavior: 'instant' });
-    setScrollAmount((index - 0.5) * heightPerWork);
+    setScrollAmount((index + 0.5) * heightPerWork);
   }, []);
 
   const currentIndex = Math.min(Math.trunc(scrollAmount / heightPerWork), WORKS.length - 1);

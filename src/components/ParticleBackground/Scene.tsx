@@ -21,9 +21,10 @@ function PreventAutoClear() {
 
 interface SceneProps {
   imagePath: string;
+  particleSpeed: number;
 }
 
-export default function Scene({ imagePath }: SceneProps) {
+export default function Scene({ imagePath, particleSpeed }: SceneProps) {
   const [imageData, setImageData] = useState<{
     data: Uint8ClampedArray;
     width: number;
@@ -58,7 +59,7 @@ export default function Scene({ imagePath }: SceneProps) {
         <ParticleSystem
           noise2D={noise2D}
           count={500}
-          speed={0.02}
+          speed={particleSpeed}
           noiseDensity={noiseDensity}
           imageData={imageData}
         />

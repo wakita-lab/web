@@ -9,6 +9,8 @@ const workHeight = 1000;
 
 export default function Home() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [particleSpeed] = useState(0.015);
+
   const scrollFieldRef = useRef<HTMLDivElement>(null);
   const scrollFieldHeight = scrollFieldRef.current?.clientHeight || 0;
 
@@ -27,7 +29,7 @@ export default function Home() {
 
   return (
     <>
-      <ParticleBackground imagePath={WORKS[currentIndex].images[0]} />
+      <ParticleBackground imagePath={WORKS[currentIndex].images[0]} particleSpeed={particleSpeed} />
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">
         <div className="flex w-full items-center justify-center bg-white py-12 text-lg">

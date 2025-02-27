@@ -8,7 +8,7 @@ interface WorkSelectorProps {
 
 export default function WorkSelector({ currentIndex, onIndexChange }: WorkSelectorProps) {
   return (
-    <div className="flex w-full items-center justify-center gap-2 bg-white px-6 py-12 md:gap-4 md:px-12">
+    <div className="flex w-full items-center justify-center gap-4 bg-white px-6 py-12 md:gap-8 md:px-12">
       <XCheckbox selected />
       <div className="scrollbar-hidden flex max-w-full gap-4 overflow-x-scroll md:gap-8">
         {WORKS.map((work, index) => (

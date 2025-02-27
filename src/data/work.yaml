@@ -1,47 +1,68 @@
-dismantling-awe:
-  id: dismantling-awe
-  path: /works/dismantling-awe.jpg
+- id: dismantle
+  publishTime: 2024-01-15
+  images:
+    - /works/dismantle.jpg
   name: Dismantling Awe
   description:
-    ja: 畏怖の解体は、人工知能と人間の関係性を探求するアート作品です。AIによって生成された画像を解体し、再構築することで、テクノロジーに対する私たちの畏怖の念を視覚化します。
-    en: Dismantling Awe is an art piece exploring the relationship between AI and humans. By deconstructing and reconstructing AI-generated images, it visualizes our sense of awe towards technology.
-  publishTime: "2024-01-15T00:00:00+09:00"
-  creators:
-    - name: 研究室メンバー
-      role: アーティスト
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
+    en: |
+      This work is prof. Wakita’s private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
 
-scalar-field-of-cosmetics:
-  id: scalar-field-of-cosmetics
-  path: /works/scalar-field-of-cosmetics.jpg
+- id: cosmetics
+  publishTime: 2024-02-01
+  images:
+    - /works/cosmetics.jpg
   name: Scalar Field of Cosmetics
   description:
-    ja: 化粧品の使用パターンをスカラー場として視覚化した作品です。日常的な美の追求を数学的な表現で捉え直すことで、新しい視点を提供します。
-    en: A visualization of cosmetics usage patterns as scalar fields. By reframing everyday pursuit of beauty through mathematical expression, it offers a new perspective.
-  publishTime: "2024-02-01T00:00:00+09:00"
-  creators:
-    - name: 研究室メンバー
-      role: データビジュアライゼーション
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
+    en: |
+      This work is prof. Wakita’s private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
 
-scenery:
-  id: scenery
-  path: /works/scenery.jpg
+- id: scenery
+  publishTime: 2024-02-15
+  images:
+    - /works/scenery.jpg
   name: Scenery
   description:
-    ja: 都市の風景をデジタルで再解釈した作品です。現代の都市生活における自然と人工の境界を探求します。
-    en: A digital reinterpretation of urban landscapes. This work explores the boundary between natural and artificial in modern urban life.
-  publishTime: "2024-02-15T00:00:00+09:00"
-  creators:
-    - name: 研究室メンバー
-      role: デジタルアーティスト
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
+    en: |
+      This work is prof. Wakita’s private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/dismantle
 
-vis-vessel-routes:
-  id: vis-vessel-routes
-  path: /works/vis-vessel-routes.png
+- id: worldsvesselroutes
+  publishTime: 2018-09-01
+  images:
+    - /works/worldsvesselroutes.png
   name: Visualization of the World's Vessel Routes in the 18th Century
   description:
-    ja: 18世紀の世界の船舶航路を視覚化したデータアート作品です。歴史的な海運データを現代のビジュアライゼーション技術で表現しています。
-    en: A data art piece visualizing global vessel routes in the 18th century. Historical maritime data is expressed through modern visualization techniques.
-  publishTime: "2024-03-01T00:00:00+09:00"
-  creators:
-    - name: 研究室メンバー
-      role: データサイエンティスト
+    ja: |
+      1750年から1850年のヨーロッパ諸国の商船（帆船）の航跡を、当時の航海日誌に基づく位置情報を使用して全地球上に可視化した。自律的な動力を持たずに、風と海流を頼りに富を求め移動する様子は、複雑で有機的な生命活動の様相を呈している。産業革命前夜、その原資となる資金をヨーロッパ諸国にもたらしたのは、三角貿易に代表される、外洋を移動する航海術の発達にあった。その航路を全地球的に可視化した本作品は、現代まで続く産業資本主義の原始的なイメージでもある。
+    en: |
+      The tracks of merchant ships (sailing vessels) of European countries from 1750 to 1850 were visualized on the globe using location data based on the logbooks of the time. Without autonomous power, they relied on wind and ocean currents to move about in search of wealth, which presents the aspect of complex and organic life activities. On the eve of the Industrial Revolution, it was the development of the art of navigation, as typified by the triangular trade, that provided European countries with the funds to finance their operations. This work, which visualizes those routes on a global scale, is also a primitive image of industrial capitalism that has continued to the present day.
+  credits:
+    ja: |
+      慶應義塾大学SFC脇田玲研究室（長島禎, 山辺真幸, 脇田玲）
+      本プロジェクトは「世界貿易の多元性と多様性―『長期の19世紀』アジア域内貿易の動態とその制度的基盤（課題番号24243045）代表者：城山智子（東京大学大学院経済学研究科教授）」として実施されました。
+    en: |
+      Akira Wakita Laboratory (Tadashi Nagashima, Masaki Yamabe, Akira Wakita), Keio University SFC
+      This project was conducted as "Pluralism and Diversity in World Trade: Dynamics of Intra-Asia Trade in the 'Long 19th Century' and Its Institutional Foundations (Project No. 24243045)," led by Tomoko Shiroyama, Professor, Graduate School of Economics, The University of Tokyo.

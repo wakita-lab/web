@@ -75,12 +75,12 @@ export default function Home() {
     <>
       <ParticleBackground
         imagePath={currentWork.images[0]}
-        particleSpeed={scrollAmountDelta * 0.012}
+        particleSpeed={scrollAmountDelta * 0.015}
       />
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">
         <div className="flex w-full items-center justify-center bg-white py-12 text-lg">
-          Akira Wakita Lab.
+          Akira Wakita Lab. {scrollAmountDelta}
         </div>
         <div
           ref={scrollFieldRef}

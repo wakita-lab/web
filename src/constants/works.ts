@@ -2,7 +2,7 @@ import worksData from '../data/works.yaml';
 
 export interface Work {
   id: string;
-  publishTime: string;
+  publishTime: Date;
   images: string[];
   title: {
     ja: string;

@@ -34,7 +34,7 @@ export default function WorkSelector({
 
   return (
     <div className="flex w-full items-center justify-center md:gap-4">
-      <button onClick={() => currentIndex > 0 && onClick(currentIndex - 1)} name="prev" className="p-4 max-md:pr-2">
+      <button onClick={() => onClick((currentIndex - 1 + worksLength) % worksLength)} name="prev" className="p-4 max-md:pr-2">
         <XCheckbox selected={currentIndex === 0} />
       </button>
       <div className="scrollbar-hidden flex max-w-full gap-0 overflow-x-scroll md:gap-4">
@@ -52,7 +52,7 @@ export default function WorkSelector({
           </button>
         ))}
       </div>
-      <button onClick={() => currentIndex < worksLength - 1 && onClick(currentIndex + 1)} name="next" className="p-4 max-md:pl-2">
+      <button onClick={() => onClick((currentIndex + 1) % worksLength)} name="next" className="p-4 max-md:pl-2">
         <XCheckbox selected={currentIndex === worksLength - 1} />
       </button>
     </div>

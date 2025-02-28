@@ -16,6 +16,14 @@ export interface Work {
     ja: string;
     en: string;
   };
+  designTeam?: {
+    ja: string;
+    en: string;
+  };
+  press?: {
+    ja: string;
+    en: string;
+  };
 }
 
 // YAMLから読み込んだデータをWork[]の形式に変換

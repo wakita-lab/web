@@ -74,7 +74,13 @@ export default function Home() {
           className="scrollbar-hidden w-full grow overflow-y-scroll"
           onScroll={handleScroll}
         >
-          <div style={{height: WORKS.length * HEIGHT_PER_WORK + scrollFieldHeight}}></div>
+          {/* Add a little padding to the top, since chrome has a very weird scroll bug */}
+          <div style={{height: 16}} />
+          {WORKS.map((work) => (
+            <div key={work.id} id={work.id} style={{height: HEIGHT_PER_WORK}} />
+          ))}
+          {/* negate the padding from the top */}
+          <div style={{height: scrollFieldHeight - 16}} />
         </div>
         <div className="flex w-full items-center justify-center bg-white px-0 py-12 md:px-8">
           <WorkSelector

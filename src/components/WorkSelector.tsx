@@ -1,5 +1,6 @@
 import XCheckbox from '@/components/XCheckbox';
 import { Work } from '@/constants/works';
+import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
 interface WorkSelectorProps {
@@ -16,7 +17,7 @@ export default function WorkSelector({
   isInverted,
 }: WorkSelectorProps) {
   const worksLength = works.length;
-  const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
+  const buttonRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   useEffect(() => {
     buttonRefs.current[currentIndex]?.scrollIntoView({
@@ -39,17 +40,18 @@ export default function WorkSelector({
       </button>
       <div className="scrollbar-hidden flex max-w-full gap-0 overflow-x-scroll md:gap-4">
         {works.map((work, index) => (
-          <button
+          <Link
             key={index}
             ref={el => {
               buttonRefs.current[index] = el;
             }}
             onClick={() => onClick(index)}
             className="flex items-center gap-2 text-nowrap px-2 tracking-tighter"
+            href={index === currentIndex ? `/works/about/${work.id}` : `#${work.id}`}
           >
             <XCheckbox selected={index === currentIndex} />
             {work.title.en}
-          </button>
+          </Link>
         ))}
       </div>
       <button onClick={() => onClick((currentIndex + 1) % worksLength)} name="next" className="p-4 max-md:pl-2">

@@ -8,7 +8,7 @@ export interface Work {
     ja: string;
     en: string;
   };
-  description: {
+  description?: {
     ja: string;
     en: string;
   };

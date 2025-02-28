@@ -308,3 +308,62 @@
       For further information, please visit here.
       Akira Wakita Website
       >http://akirawakita.com/#works/sfos
+
+- id: fina
+  publishTime: 2015-12-30
+  images:
+    - /works/fina.jpg
+  title:
+    en: FINA
+    ja: FINA
+  description:
+    ja: |
+      FINA(Fluid-HMI Inspired by NAture)は、ドライバーの身体、特にステアリングと直結する上肢に対して情報をマッピングすることで「クルマが感じているであろう」環境情報をドライバーに直感的に伝えることを目指したHMI(Human Machine Interface)です。 一般的に、HMIは人間-対-機械という異質なもの同士の対話の円滑化を目的としています。多くの場合、機械に人間の自然言語（文字や音声）を話すように要求するアプローチが採用されており、ある種、主従関係とも言えるデザインが進められています。一方、本プロジェクトで目指したものは、映像という感覚的な言語を介した、車体と人間、双方の身体の有機的なシンクロニシティです。それはボディ・イメージ（自己の身体の空間的な像）の一部としてクルマを認識することであり、車体のスケールやディメンジョンをより深いレベルで身体化することでもあります。 この目的を実現するために、デザインチームは以下の4つの具体的な開発課題を設定しました。 1)車体の環境情報を有機的で生物的な映像に変換し、それを身体に直接投影する。2)投影する映像は、文字や数値などの明示的な情報ではなく、外部の場(Field)の変化をダイナミックに反映した映像とする。3)身体感覚に直接訴える映像を実現するために、流体シミュレーションやパーティクルシステムなどの物理学に基づくリアルタイム映像を用いる。4)ドライバーの姿勢をセンシングし、投影画像を動的に補正する。 このアプローチにより、車幅感覚を感覚的かつ効果的に習熟させたり、速度や操舵を誘導するといった実用的なシナリオを多く展開できることが明らかになりました。 「自然を模倣した映像言語」と「身体というマテリアル」をクルマのデザインに導入することで、運転をより滑らかで優美な移動へと昇華できると我々は信じています。FINAはこの目的達成に向けての第一歩となるプロトタイプであり、システムの評価とリ・デザインを繰り返しながら、実用性の高いHMIへとバージョンアップさせたいと考えています。
+    en: |
+      FINA (Fluid-HMI Inspired by Nature) is aimed to intuitively transfer the environmental information which “the car is sensing”. FINA maps the information on the driver’s body especially on the upper limb where it is directly associated with steering gear. Generally, HMI(Human Machine Interface) is aimed to accelerate the communication between different kinds such as human vs. machine. In most cases, the approach taken is demanding the machine to send out human language message (written or in audio form). But it has constructed homage relationship in a sense. What we aimed to accomplish in this project is an organic synchronicity between both human and the car body by transmitting organic image. It means to recognize car as a part of body image (spatial self body image) as well as to embody the scale, the dimension of a car in much deeper level.To achieve this aim, the design team has set tasks in 4 specific developmental levels. 1) To convert the car body’s environmental information into organic, biological images and directly project over human body. 2) The images that is being projected is not explicit information such as with written words or numbers. It should dynamically reflect changes in outer field. 3) To create images, which directly inspire body sensation, we use real-time image based on physics such as fluid simulation and particle system. 4) By sensing the driver’s position, we compensate the projected image dynamically. Using these approaches, we could rehearse the sense of a vehicle width sensibly and effectively. It has also been revealed that there are lots of practical scenarios that could be developed from this study such as inducing the speed and steering gear. By introducing “The bio inspired screen language” and “The human body as material” for car design, we believe that we could sublimate driving into more smooth and elegant transfer. FINA is a first prototype step to accomplish this goal. By repeating the steps of assessing the system and redesigning, we hope to improve HMI into more practical version.
+
+- id: flora
+  publishTime: 2015-12-29
+  images:
+    - /works/flora.jpg
+  title:
+    en: FLORA
+    ja: FLORA
+  description:
+    ja: |
+      FLORAは、自然界の植物の成長過程をモデル化し、それをデザインに応用することで、新しいデザインプロセスを提案するプロジェクトです。植物の成長は、自然界における最も効率的なデザインプロセスの一つと言えます。植物は、自らの成長過程を通じて、環境に適応し、最適な形状を獲得します。このプロジェクトでは、植物の成長過程を数理モデル化し、それをデザインに応用することで、新しいデザインプロセスを提案します。具体的には、植物の成長過程を数理モデル化し、それを3Dプリンターによる造形に応用します。植物の成長過程を数理モデル化することで、植物の成長過程をデザインに応用することが可能となります。植物の成長過程をデザインに応用することで、新しいデザインプロセスが提案されます。このプロジェクトは、植物の成長過程を数理モデル化し、それをデザインに応用することで、新しいデザインプロセスを提案することを目指します。
+
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/flora
+    en: |
+      FLORA is a visual art work that focuses on the invisible relationship between vegetation and air. This curious combination of the familiar product of nature, vegetation, and the high-level technology of computational fluid dynamics represents the magnificent aerodynamics of the plant form. It also allows the viewer to experience the life and aroma of plants integrally using all five senses.
+
+      This work is prof. Wakita’s private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/flora
+
+- id: furnishedfluid
+  publishTime: 2014-12-31
+  images:
+    - /works/furnishedfluid.jpg
+  title:
+    en: FURNISHED FLUID
+    ja: FURNISHED FLUID
+  description:
+    ja: |
+      Furnished Fluidは、流体シミュレーションを用いて、家具のデザインを行うプロジェクトです。家具のデザインは、家具の形状や材質、機能性など、様々な要素を考慮して行われます。しかし、家具のデザインにおいて、流体シミュレーションを用いることは一般的ではありません。本プロジェクトでは、流体シミュレーションを用いて、家具のデザインを行います。具体的には、家具の形状を流体シミュレーションによって決定し、その形状を3Dプリンターによって造形します。流体シミュレーションを用いることで、家具の形状を自然な形状に近づけることが可能となります。家具の形状を自然な形状に近づけることで、家具のデザインに新しい可能性が生まれます。このプロジェクトは、流体シミュレーションを用いて、家具のデザインを行うことで、新しいデザインプロセスを提案することを目指します。
+
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/ff2
+    en: |
+      Furnished Fluid is visualization that utilizes the air flow that we are practically unaware of in our daily lives. By applying fluid simulation technology — with seemingly no relation to daily life — to the objects overflowing in our surroundings, the complex and elaborate air flow and ecosystem that are invisible to the naked eye but present all around us are made apparent.
+
+      This work is prof. Wakita’s private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/ff2

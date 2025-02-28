@@ -24,7 +24,7 @@ export default function WorkLinkList({
     });
 
     const timer = setTimeout(() => {
-      const newIndex = (currentIndex + 1) % works.length;
+      const newIndex = (works.length + currentIndex + (isInverted ? -1 : 1)) % works.length;
       location.href = `#${works[newIndex].id}`;
     }, 10000);
 

@@ -38,7 +38,6 @@ export default function Home() {
     const loop = () => {
       setScrollAmountDelta((prev) => {
         const scrollAmountDeltaTarget = DEFAULT_SCROLL_SPEED * (prev < 0 ? -1 : 1);
-        console.log(scrollAmountDeltaTarget);
 
         const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.2 + prev;
         return newScrollAmountDelta;
@@ -82,7 +81,6 @@ export default function Home() {
             currentIndex={currentIndex}
             onClick={handleWorkSelectorClick}
             works={WORKS}
-            isInverted={scrollAmountDelta < 0}
           />
         </div>
       </main>

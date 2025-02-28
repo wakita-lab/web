@@ -85,7 +85,7 @@ export default function Home() {
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">
         <div className="flex w-full items-center justify-center bg-white py-12 text-lg">
-          Akira Wakita Lab. {scrollAmount}
+          Akira Wakita Lab.
         </div>
         <div
           ref={scrollFieldRef}

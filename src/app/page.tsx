@@ -28,6 +28,9 @@ export default function Home() {
   const handleScroll = useCallback(() => {
     const newScrollAmount = scrollFieldRef.current?.scrollTop || 0;
     const scrollAmountDelta = newScrollAmount - scrollAmount;
+
+    if (scrollAmountDelta === 0) return;
+
     setScrollAmountDelta(scrollAmountDelta);
   }, [scrollAmount]);
 
@@ -35,8 +38,10 @@ export default function Home() {
     const loop = () => {
       setScrollAmountDelta((prev) => {
         const scrollAmountDeltaTarget = AUTO_SCROLL_SPEED * (prev < 0 ? -1 : 1);
+        console.log(scrollAmountDeltaTarget);
 
-        const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.1 + prev;
+        const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.2 + prev;
+
         if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1 && scrollFieldRef.current) {
           const newScrollAmount =
             (
@@ -44,11 +49,13 @@ export default function Home() {
               newScrollAmountDelta +
               HEIGHT_PER_WORK * WORKS.length
             ) % (HEIGHT_PER_WORK * WORKS.length);
+
           scrollFieldRef.current.scrollTop = newScrollAmount;
         }
 
         return newScrollAmountDelta;
       });
+
       animationFrameRef.current = requestAnimationFrame(loop);
     };
     loop();

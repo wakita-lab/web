@@ -10,7 +10,7 @@ const workHeight = 1000;
 
 export default function Home() {
   const [scrollAmount, setScrollAmount] = useState(0);
-  const [particleSpeed, setParticleSpeed] = useState(0.015);
+  const [scrollAmountDelta, setScrollAmountDelta] = useState(1);
 
   const scrollFieldRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number>(0);
@@ -30,17 +30,26 @@ export default function Home() {
     setScrollAmount((prev) => {
       const newScrollAmount = scrollFieldRef.current?.scrollTop || 0;
       const scrollAmountDelta = newScrollAmount - prev;
-      setParticleSpeed(scrollAmountDelta * 0.01);
+      setScrollAmountDelta(scrollAmountDelta);
+
       return newScrollAmount;
     });
   }, []);
 
   useEffect(() => {
     const loop = () => {
-      setParticleSpeed((prev) => (0.01 - prev) * 0.1 + prev);
+      setScrollAmountDelta((prev) => {
+        const newScrollAmountDelta = (1 * Math.sign(prev) - prev) * 0.1 + prev;
+        if (Math.abs(newScrollAmountDelta) < 1.1) {
+          setScrollAmount((prev) =>
+            prev + newScrollAmountDelta,
+          );
+        }
+
+        return newScrollAmountDelta;
+      });
       animationFrameRef.current = requestAnimationFrame(loop);
     };
-
     loop();
 
     return () => {
@@ -48,11 +57,18 @@ export default function Home() {
     };
   }, []);
 
-  const currentIndex = Math.min(Math.trunc(scrollAmount / workHeight), WORKS.length - 1);
+  const currentIndex = Math.max(
+    0,
+    Math.min(WORKS.length - 1, Math.trunc(scrollAmount / workHeight)),
+  );
+  const currentWork = WORKS[currentIndex] ?? WORKS[0];
 
   return (
     <>
-      <ParticleBackground imagePath={WORKS[currentIndex].images[0]} particleSpeed={particleSpeed} />
+      <ParticleBackground
+        imagePath={currentWork.images[0]}
+        particleSpeed={scrollAmountDelta * 0.01}
+      />
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">
         <div className="flex w-full items-center justify-center bg-white py-12 text-lg">

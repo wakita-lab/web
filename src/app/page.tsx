@@ -1,7 +1,7 @@
 'use client';
 
 import ParticleBackground from '@/components/ParticleBackground';
-import { useCallback, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { WORKS } from '@/constants/works';
 import WorkSelector from '@/components/WorkSelector';
@@ -10,9 +10,11 @@ const workHeight = 1000;
 
 export default function Home() {
   const [scrollAmount, setScrollAmount] = useState(0);
-  const [particleSpeed] = useState(0.015);
+  const [particleSpeed, setParticleSpeed] = useState(0.015);
 
   const scrollFieldRef = useRef<HTMLDivElement>(null);
+  const animationFrameRef = useRef<number>(0);
+
   const scrollFieldHeight = scrollFieldRef.current?.clientHeight || 0;
 
   const handleWorkSelectorClick = useCallback((index: number) => {
@@ -22,6 +24,28 @@ export default function Home() {
 
     scrollFieldRef.current.scrollTop = newScrollAmount;
     setScrollAmount(newScrollAmount);
+  }, []);
+
+  const handleScroll = useCallback(() => {
+    setScrollAmount((prev) => {
+      const newScrollAmount = scrollFieldRef.current?.scrollTop || 0;
+      const scrollAmountDelta = newScrollAmount - prev;
+      setParticleSpeed(scrollAmountDelta * 0.01);
+      return newScrollAmount;
+    });
+  }, []);
+
+  useEffect(() => {
+    const loop = () => {
+      setParticleSpeed((prev) => (0.01 - prev) * 0.1 + prev);
+      animationFrameRef.current = requestAnimationFrame(loop);
+    };
+
+    loop();
+
+    return () => {
+      cancelAnimationFrame(animationFrameRef.current);
+    };
   }, []);
 
   const currentIndex = Math.min(Math.trunc(scrollAmount / workHeight), WORKS.length - 1);
@@ -37,7 +61,7 @@ export default function Home() {
         <div
           ref={scrollFieldRef}
           className="scrollbar-hidden w-full grow overflow-y-scroll"
-          onScroll={(event) => setScrollAmount(event.currentTarget.scrollTop)}
+          onScroll={handleScroll}
         >
           <div style={{height: WORKS.length * workHeight + scrollFieldHeight}}></div>
         </div>

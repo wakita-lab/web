@@ -41,18 +41,6 @@ export default function Home() {
         console.log(scrollAmountDeltaTarget);
 
         const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.2 + prev;
-
-        // if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1 && scrollFieldRef.current) {
-        //   const newScrollAmount =
-        //     (
-        //       scrollFieldRef.current.scrollTop +
-        //       newScrollAmountDelta +
-        //       HEIGHT_PER_WORK * WORKS.length
-        //     ) % (HEIGHT_PER_WORK * WORKS.length);
-
-        //   scrollFieldRef.current.scrollTop = newScrollAmount;
-        // }
-
         return newScrollAmountDelta;
       });
 

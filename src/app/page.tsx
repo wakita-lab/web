@@ -31,7 +31,12 @@ export default function Home() {
     const newScrollAmount = scrollFieldRef.current.scrollTop || 0;
     const scrollAmountDelta = newScrollAmount - scrollAmount;
 
-    if (scrollAmountDelta === 0) return;
+    console.log(scrollAmountDelta);
+
+    if (scrollAmountDelta === 0) {
+      setScrollAmountDelta(AUTO_SCROLL_SPEED);
+      return;
+    }
 
     setScrollAmountDelta(scrollAmountDelta);
   }, [scrollAmount]);
@@ -77,7 +82,7 @@ export default function Home() {
     <>
       <ParticleBackground
         imagePath={currentWork.images[0]}
-        particleSpeed={scrollAmountDelta * 0.015}
+        particleSpeed={scrollAmountDelta * 0.01}
       />
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">

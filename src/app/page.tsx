@@ -40,9 +40,9 @@ export default function Home() {
   useEffect(() => {
     const loop = () => {
       setScrollAmountDelta((prev) => {
-        const scorollAmountDeltaTarget = AUTO_SCROLL_SPEED * (prev < 0 ? -1 : 1);
+        const scrollAmountDeltaTarget = AUTO_SCROLL_SPEED * (prev < 0 ? -1 : 1);
 
-        const newScrollAmountDelta = (scorollAmountDeltaTarget - prev) * 0.1 + prev;
+        const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.1 + prev;
         if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1) {
           setScrollAmount((prev) =>
             prev + newScrollAmountDelta,

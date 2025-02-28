@@ -21,7 +21,7 @@ export default function Home() {
   const handleWorkSelectorClick = useCallback((index: number) => {
     if (!scrollFieldRef.current) return;
 
-    const newScrollAmount = (index + 0.5) * HEIGHT_PER_WORK;
+    const newScrollAmount = index * HEIGHT_PER_WORK;
 
     scrollFieldRef.current.scrollTop = newScrollAmount;
     setScrollAmount(newScrollAmount);

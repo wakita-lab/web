@@ -6,7 +6,8 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { WORKS } from '@/constants/works';
 import WorkSelector from '@/components/WorkSelector';
 
-const workHeight = 1000;
+const HEIGHT_PER_WORK = 1000;
+const AUTO_SCROLL_SPEED = 1;
 
 export default function Home() {
   const [scrollAmount, setScrollAmount] = useState(0);
@@ -20,7 +21,7 @@ export default function Home() {
   const handleWorkSelectorClick = useCallback((index: number) => {
     if (!scrollFieldRef.current) return;
 
-    const newScrollAmount = (index + 0.5) * workHeight;
+    const newScrollAmount = (index + 0.5) * HEIGHT_PER_WORK;
 
     scrollFieldRef.current.scrollTop = newScrollAmount;
     setScrollAmount(newScrollAmount);
@@ -39,8 +40,10 @@ export default function Home() {
   useEffect(() => {
     const loop = () => {
       setScrollAmountDelta((prev) => {
-        const newScrollAmountDelta = (1 * Math.sign(prev) - prev) * 0.1 + prev;
-        if (Math.abs(newScrollAmountDelta) < 1.1) {
+        const scorollAmountDeltaTarget = AUTO_SCROLL_SPEED * (prev < 0 ? -1 : 1);
+
+        const newScrollAmountDelta = (scorollAmountDeltaTarget - prev) * 0.1 + prev;
+        if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1) {
           setScrollAmount((prev) =>
             prev + newScrollAmountDelta,
           );
@@ -59,7 +62,7 @@ export default function Home() {
 
   const currentIndex = Math.max(
     0,
-    Math.min(WORKS.length - 1, Math.trunc(scrollAmount / workHeight)),
+    Math.min(WORKS.length - 1, Math.trunc(scrollAmount / HEIGHT_PER_WORK)),
   );
   const currentWork = WORKS[currentIndex] ?? WORKS[0];
 
@@ -79,7 +82,7 @@ export default function Home() {
           className="scrollbar-hidden w-full grow overflow-y-scroll"
           onScroll={handleScroll}
         >
-          <div style={{height: WORKS.length * workHeight + scrollFieldHeight}}></div>
+          <div style={{height: WORKS.length * HEIGHT_PER_WORK + scrollFieldHeight}}></div>
         </div>
         <div className="flex w-full items-center justify-center bg-white px-0 py-12 md:px-8">
           <WorkSelector

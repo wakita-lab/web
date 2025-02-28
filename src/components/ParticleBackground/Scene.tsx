@@ -57,11 +57,11 @@ export default function Scene({ imagePath, particleSpeed }: SceneProps) {
       <PreventAutoClear />
       {imageData && (
         <ParticleSystem
-          noise2D={noise2D}
           count={500}
           speed={particleSpeed}
           noiseDensity={noiseDensity}
           imageData={imageData}
+          noise2D={noise2D}
         />
       )}
     </Canvas>

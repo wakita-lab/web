@@ -45,7 +45,9 @@ export default function Home() {
         const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.1 + prev;
         if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1) {
           setScrollAmount((prev) =>
-            (prev + newScrollAmountDelta) % (WORKS.length * HEIGHT_PER_WORK),
+            (
+              (WORKS.length * HEIGHT_PER_WORK) + (prev + newScrollAmountDelta)
+            ) % (WORKS.length * HEIGHT_PER_WORK),
           );
         }
 

@@ -4,7 +4,7 @@ import ParticleBackground from '@/components/ParticleBackground';
 import { useCallback, useEffect, useRef, useState } from 'react';
 
 import { WORKS } from '@/constants/works';
-import WorkSelector from '@/components/WorkSelector';
+import WorkLinkList from '@/components/WorkLinkList';
 
 const HEIGHT_PER_WORK = 600;
 const DEFAULT_SCROLL_SPEED = 1;
@@ -17,13 +17,6 @@ export default function Home() {
 
   const scrollFieldHeight = scrollFieldRef.current?.clientHeight || 0;
   const scrollAmount = scrollFieldRef.current?.scrollTop || 0;
-
-  const handleWorkSelectorClick = useCallback((index: number) => {
-    if (!scrollFieldRef.current) return;
-
-    const newScrollAmount = (index + 0.5) * HEIGHT_PER_WORK;
-    scrollFieldRef.current.scrollTop = newScrollAmount;
-  }, []);
 
   const handleScroll = useCallback(() => {
     if (!scrollFieldRef.current) return;
@@ -83,9 +76,9 @@ export default function Home() {
           <div style={{height: scrollFieldHeight - 16}} />
         </div>
         <div className="flex w-full items-center justify-center bg-white px-0 py-12 md:px-8">
-          <WorkSelector
+          <WorkLinkList
             currentIndex={currentIndex}
-            onClick={handleWorkSelectorClick}
+            onClick={() => {}}
             works={WORKS}
           />
         </div>

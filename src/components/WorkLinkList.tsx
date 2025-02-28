@@ -3,19 +3,19 @@ import { Work } from '@/constants/works';
 import Link from 'next/link';
 import { useEffect, useRef } from 'react';
 
-interface WorkSelectorProps {
+interface WorkLinkListProps {
   currentIndex: number;
   onClick: (index: number) => void;
   works: Work[];
   isInverted?: boolean;
 }
 
-export default function WorkSelector({
+export default function WorkLinkList({
   currentIndex,
   onClick,
   works,
   isInverted,
-}: WorkSelectorProps) {
+}: WorkLinkListProps) {
   const worksLength = works.length;
   const buttonRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 

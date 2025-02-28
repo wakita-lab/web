@@ -28,7 +28,7 @@ export default function WorkSelector({
 
     const timer = setTimeout(() => {
       onClick((currentIndex + (isInverted ? -1 : 1) + worksLength) % worksLength);
-    }, 8000);
+    }, 10000);
 
     return () => clearTimeout(timer);
   }, [currentIndex, worksLength, onClick, isInverted]);

@@ -1,23 +1,31 @@
 import XCheckbox from '@/components/XCheckbox';
 import { Work } from '@/constants/works';
 import Link from 'next/link';
-import { useEffect, useRef } from 'react';
+import { useCallback, useEffect, useRef } from 'react';
 
 interface WorkLinkListProps {
   currentIndex: number;
-  onClick: (index: number) => void;
   works: Work[];
   isInverted?: boolean;
 }
 
 export default function WorkLinkList({
   currentIndex,
-  onClick,
   works,
   isInverted,
 }: WorkLinkListProps) {
   const worksLength = works.length;
   const buttonRefs = useRef<(HTMLAnchorElement | null)[]>([]);
+
+  const selectNext = useCallback((currentIndex: number) => {
+    const nextIndex = (currentIndex + 1) % works.length;
+    location.href = `#${works[nextIndex].id}`;
+  }, [works]);
+
+  const selectPrev = useCallback((currentIndex: number) => {
+    const prevIndex = (currentIndex - 1 + works.length) % works.length;
+    location.href = `#${works[prevIndex].id}`;
+  }, [works]);
 
   useEffect(() => {
     buttonRefs.current[currentIndex]?.scrollIntoView({
@@ -27,15 +35,18 @@ export default function WorkLinkList({
     });
 
     const timer = setTimeout(() => {
-      onClick((currentIndex + (isInverted ? -1 : 1) + worksLength) % worksLength);
+      if (isInverted)
+        selectPrev(currentIndex);
+      else
+        selectNext(currentIndex);
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, [currentIndex, worksLength, onClick, isInverted]);
+  }, [currentIndex, selectNext, selectPrev, isInverted]);
 
   return (
     <div className="flex w-full items-center justify-center md:gap-4">
-      <button onClick={() => onClick((currentIndex - 1 + worksLength) % worksLength)} name="prev" className="p-4 max-md:pr-2">
+      <button onClick={() => selectPrev(currentIndex)} name="prev" className="p-4 max-md:pr-2">
         <XCheckbox selected={currentIndex === 0} />
       </button>
       <div className="scrollbar-hidden flex max-w-full gap-0 overflow-x-scroll md:gap-4">
@@ -45,7 +56,6 @@ export default function WorkLinkList({
             ref={el => {
               buttonRefs.current[index] = el;
             }}
-            onClick={() => onClick(index)}
             className="flex items-center gap-2 text-nowrap px-2 tracking-tighter"
             href={index === currentIndex ? `/works/about/${work.id}` : `#${work.id}`}
           >
@@ -54,7 +64,7 @@ export default function WorkLinkList({
           </Link>
         ))}
       </div>
-      <button onClick={() => onClick((currentIndex + 1) % worksLength)} name="next" className="p-4 max-md:pl-2">
+      <button onClick={() => selectNext(currentIndex)} name="next" className="p-4 max-md:pl-2">
         <XCheckbox selected={currentIndex === worksLength - 1} />
       </button>
     </div>

@@ -10,32 +10,26 @@ const HEIGHT_PER_WORK = 600;
 const AUTO_SCROLL_SPEED = 1;
 
 export default function Home() {
-  const [scrollAmount, setScrollAmount] = useState(0);
-  const [scrollAmountDelta, setScrollAmountDelta] = useState(1);
+  const [scrollAmountDelta, setScrollAmountDelta] = useState(AUTO_SCROLL_SPEED);
 
   const scrollFieldRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number>(0);
 
   const scrollFieldHeight = scrollFieldRef.current?.clientHeight || 0;
+  const scrollAmount = scrollFieldRef.current?.scrollTop || 0;
 
   const handleWorkSelectorClick = useCallback((index: number) => {
     if (!scrollFieldRef.current) return;
 
     const newScrollAmount = index * HEIGHT_PER_WORK;
-
     scrollFieldRef.current.scrollTop = newScrollAmount;
-    setScrollAmount(newScrollAmount);
   }, []);
 
   const handleScroll = useCallback(() => {
-    setScrollAmount((prev) => {
-      const newScrollAmount = scrollFieldRef.current?.scrollTop || 0;
-      const scrollAmountDelta = newScrollAmount - prev;
-      setScrollAmountDelta(scrollAmountDelta);
-
-      return newScrollAmount;
-    });
-  }, []);
+    const newScrollAmount = scrollFieldRef.current?.scrollTop || 0;
+    const scrollAmountDelta = newScrollAmount - scrollAmount;
+    setScrollAmountDelta(scrollAmountDelta);
+  }, [scrollAmount]);
 
   useEffect(() => {
     const loop = () => {
@@ -43,12 +37,14 @@ export default function Home() {
         const scrollAmountDeltaTarget = AUTO_SCROLL_SPEED * (prev < 0 ? -1 : 1);
 
         const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.1 + prev;
-        if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1) {
-          setScrollAmount((prev) =>
+        if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1 && scrollFieldRef.current) {
+          const newScrollAmount =
             (
-              (WORKS.length * HEIGHT_PER_WORK) + (prev + newScrollAmountDelta)
-            ) % (WORKS.length * HEIGHT_PER_WORK),
-          );
+              scrollFieldRef.current.scrollTop +
+              newScrollAmountDelta +
+              HEIGHT_PER_WORK * WORKS.length
+            ) % (HEIGHT_PER_WORK * WORKS.length);
+          scrollFieldRef.current.scrollTop = newScrollAmount;
         }
 
         return newScrollAmountDelta;

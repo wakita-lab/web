@@ -9,7 +9,7 @@ interface WorkSelectorProps {
 }
 
 export default function WorkSelector({ currentIndex, onClick, works }: WorkSelectorProps) {
-  const length = works.length;
+  const worksLength = works.length;
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   useEffect(() => {
@@ -18,7 +18,13 @@ export default function WorkSelector({ currentIndex, onClick, works }: WorkSelec
       block: 'nearest',
       inline: 'nearest',
     });
-  }, [currentIndex]);
+
+    const timer = setTimeout(() => {
+      onClick((currentIndex + 1) % worksLength);
+    }, 10000);
+
+    return () => clearTimeout(timer);
+  }, [currentIndex, worksLength, onClick]);
 
   return (
     <div className="flex w-full items-center justify-center md:gap-4">
@@ -40,8 +46,8 @@ export default function WorkSelector({ currentIndex, onClick, works }: WorkSelec
           </button>
         ))}
       </div>
-      <button onClick={() => currentIndex < length - 1 && onClick(currentIndex + 1)} name="next" className="p-4 max-md:pl-2">
-        <XCheckbox selected={currentIndex === length - 1} />
+      <button onClick={() => currentIndex < worksLength - 1 && onClick(currentIndex + 1)} name="next" className="p-4 max-md:pl-2">
+        <XCheckbox selected={currentIndex === worksLength - 1} />
       </button>
     </div>
   );

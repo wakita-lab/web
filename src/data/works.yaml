@@ -367,3 +367,18 @@
       For further information, please visit here.
       Akira Wakita Website
       >http://akirawakita.com/#works/ff2
+
+- id: humanbodyvisualizationworkshop
+  publishTime: 2014-12-30
+  images:
+    - /works/humanbodyvisualizationworkshop.jpg
+  title:
+    en: Human Body Visualization Workshop
+    ja: Human Body Visualization Workshop
+  description:
+    ja: |
+      このプロジェクトは、フリーソフトウェアやオープンデータを用いて人体の3次元ビジュアライゼーション環境を構築し、多くの人にその利用体験を提供するために実施されました。CTやMRIを用いた人体の3次元再構築は、かつては高速なワークステーションや高度な幾何モデリング技術が必要であったため、医師や画像工学者などプロフェッショナルのためのツールとして利用されてきました。しかし、近年のPCの高速化とオープンソフトウェアの普及により、一般ユーザでも3次元の医療情報を閲覧したり、再利用できる時代が到来しつつあります。このような人体データ利用の民主化は我々の医療や教育を大きく変える可能性を持っています。SFC脇田研究室では、OSIRIXやopenFrameworksなど無償で利用可能なソフトウェアを利用して、人体の3次元ビジュアライゼーションを環境をアジャイルに開発しました。
+      2014年のSFC Open Research Forumにおいて、この環境を用いたワークショップを開催し、その有効性を検討しました。PC用のビューアはopenframeworksを用いて僅か2週間で開発したものですが、そのパワーはとても強力であり、教材や科学コミュニケーションのツールとして有効であることが実証されました。ワークショップでは人体の美しい構造美に魅せられる参加者が多く観察されました。リアルタイムの3次元ビジュアライゼーションは複雑なものを分かりやすく表示するツールであるのみならず、センス・オブ・ワンダーを喚起するメディアとしても多くの未開拓の可能性が残されていると考えられます。
+    en: |
+      This project was aimed to construct 3d visualization environment of human body and to provide 3d visualization experiences for many people. Since 3d reconstruction of human body by CT and MRI required sophisticated geometric modeling technics, it was only used as professional tools for image engineers and doctors. But due to the acceleration of speed and open reduction of personal computers, it has led to the opening of the where we could freely reuse the open 3d medical data.The democratization of human body data has immeasurable possibilities to change our system of medical treatment and education.In SFC Wakita lab, we succeeded in creating 3d visualization environment for human body by the use of free software such as OSIRIX and openFrameworks(in agile).
+      At the SFC Open Research Forum in 2014, we hosted a workshop using this environment to validate the efficiency. The viewer for personal computer had been developed only in two weeks by openframeworks. Despite the short term of development, the power was proved to be strong enough for educational, scientific communication tools.We were able to observe many participants charmed by the structural beauty of human body.We strongly believe that real time 3d visualization not only simplifies the complexes but obtains the unexplored possibilities as a media which arouse sense of wonder.

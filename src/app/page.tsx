@@ -6,7 +6,7 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { WORKS } from '@/constants/works';
 import WorkSelector from '@/components/WorkSelector';
 
-const HEIGHT_PER_WORK = 1000;
+const HEIGHT_PER_WORK = 600;
 const AUTO_SCROLL_SPEED = 1;
 
 export default function Home() {

@@ -70,7 +70,7 @@ export default function Home() {
     <>
       <ParticleBackground
         imagePath={currentWork.images[0]}
-        particleSpeed={scrollAmountDelta * 0.01}
+        particleSpeed={scrollAmountDelta * 0.012}
       />
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">

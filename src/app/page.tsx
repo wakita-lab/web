@@ -78,7 +78,6 @@ export default function Home() {
         <div className="flex w-full items-center justify-center bg-white px-0 py-12 md:px-8">
           <WorkLinkList
             currentIndex={currentIndex}
-            onClick={() => {}}
             works={WORKS}
           />
         </div>

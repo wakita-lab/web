@@ -14,7 +14,6 @@ export default function WorkLinkList({
   works,
   isInverted,
 }: WorkLinkListProps) {
-  const worksLength = works.length;
   const buttonRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
   const selectNext = useCallback((currentIndex: number) => {
@@ -46,9 +45,9 @@ export default function WorkLinkList({
 
   return (
     <div className="flex w-full items-center justify-center md:gap-4">
-      <button onClick={() => selectPrev(currentIndex)} name="prev" className="p-4 max-md:pr-2">
+      <Link className="p-4 max-md:pr-2" href={currentIndex === 0 ? `#${works[works.length - 1].id}` : `#${works[currentIndex - 1].id}`}>
         <XCheckbox selected={currentIndex === 0} />
-      </button>
+      </Link>
       <div className="scrollbar-hidden flex max-w-full gap-0 overflow-x-scroll md:gap-4">
         {works.map((work, index) => (
           <Link
@@ -64,9 +63,9 @@ export default function WorkLinkList({
           </Link>
         ))}
       </div>
-      <button onClick={() => selectNext(currentIndex)} name="next" className="p-4 max-md:pl-2">
-        <XCheckbox selected={currentIndex === worksLength - 1} />
-      </button>
+      <Link className="p-4 max-md:pl-2" href={currentIndex === works.length - 1 ? `#${works[0].id}` : `#${works[currentIndex + 1].id}`}>
+        <XCheckbox selected={currentIndex === works.length - 1} />
+      </Link>
     </div>
   );
 }

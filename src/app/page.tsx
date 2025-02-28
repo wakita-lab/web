@@ -21,7 +21,7 @@ export default function Home() {
   const handleWorkSelectorClick = useCallback((index: number) => {
     if (!scrollFieldRef.current) return;
 
-    const newScrollAmount = index * HEIGHT_PER_WORK;
+    const newScrollAmount = (index + 0.5) * HEIGHT_PER_WORK;
     scrollFieldRef.current.scrollTop = newScrollAmount;
   }, []);
 
@@ -30,8 +30,6 @@ export default function Home() {
 
     const newScrollAmount = scrollFieldRef.current.scrollTop || 0;
     const scrollAmountDelta = newScrollAmount - scrollAmount;
-
-    console.log(scrollAmountDelta);
 
     if (scrollAmountDelta === 0) {
       setScrollAmountDelta(AUTO_SCROLL_SPEED);
@@ -49,16 +47,16 @@ export default function Home() {
 
         const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.2 + prev;
 
-        if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1 && scrollFieldRef.current) {
-          const newScrollAmount =
-            (
-              scrollFieldRef.current.scrollTop +
-              newScrollAmountDelta +
-              HEIGHT_PER_WORK * WORKS.length
-            ) % (HEIGHT_PER_WORK * WORKS.length);
+        // if (Math.abs(newScrollAmountDelta) < AUTO_SCROLL_SPEED * 1.1 && scrollFieldRef.current) {
+        //   const newScrollAmount =
+        //     (
+        //       scrollFieldRef.current.scrollTop +
+        //       newScrollAmountDelta +
+        //       HEIGHT_PER_WORK * WORKS.length
+        //     ) % (HEIGHT_PER_WORK * WORKS.length);
 
-          scrollFieldRef.current.scrollTop = newScrollAmount;
-        }
+        //   scrollFieldRef.current.scrollTop = newScrollAmount;
+        // }
 
         return newScrollAmountDelta;
       });
@@ -87,7 +85,7 @@ export default function Home() {
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">
         <div className="flex w-full items-center justify-center bg-white py-12 text-lg">
-          Akira Wakita Lab.
+          Akira Wakita Lab. {scrollAmount}
         </div>
         <div
           ref={scrollFieldRef}

@@ -7,10 +7,10 @@ import { WORKS } from '@/constants/works';
 import WorkSelector from '@/components/WorkSelector';
 
 const HEIGHT_PER_WORK = 600;
-const AUTO_SCROLL_SPEED = 1;
+const DEFAULT_SCROLL_SPEED = 1;
 
 export default function Home() {
-  const [scrollAmountDelta, setScrollAmountDelta] = useState(AUTO_SCROLL_SPEED);
+  const [scrollAmountDelta, setScrollAmountDelta] = useState(DEFAULT_SCROLL_SPEED);
 
   const scrollFieldRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number>(0);
@@ -31,18 +31,13 @@ export default function Home() {
     const newScrollAmount = scrollFieldRef.current.scrollTop || 0;
     const scrollAmountDelta = newScrollAmount - scrollAmount;
 
-    if (scrollAmountDelta === 0) {
-      setScrollAmountDelta(AUTO_SCROLL_SPEED);
-      return;
-    }
-
     setScrollAmountDelta(scrollAmountDelta);
   }, [scrollAmount]);
 
   useEffect(() => {
     const loop = () => {
       setScrollAmountDelta((prev) => {
-        const scrollAmountDeltaTarget = AUTO_SCROLL_SPEED * (prev < 0 ? -1 : 1);
+        const scrollAmountDeltaTarget = DEFAULT_SCROLL_SPEED * (prev < 0 ? -1 : 1);
         console.log(scrollAmountDeltaTarget);
 
         const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.2 + prev;
@@ -80,7 +75,7 @@ export default function Home() {
     <>
       <ParticleBackground
         imagePath={currentWork.images[0]}
-        particleSpeed={scrollAmountDelta * 0.01}
+        particleSpeed={scrollAmountDelta * 0.015}
       />
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">

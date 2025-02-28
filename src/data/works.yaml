@@ -186,3 +186,125 @@
       For further information, please visit here.
       Akira Wakita Website
       >http://akirawakita.com/#works/activator
+
+- id: homeelectronics
+  publishTime: 2017-12-31
+  images:
+    - /works/homeelectronics.jpg
+  title:
+    en: Home Electronics
+    ja: Home Electronics
+  description:
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/homeelectronics
+    en: |
+      This work is prof. Wakita's private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/homeelectronics
+
+- id: newsyn
+  publishTime: 2017-12-30
+  images:
+    - /works/newsyn.jpg
+  title:
+    en: New Synthesis
+    ja: New Synthesis
+  description:
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/newsyn
+    en: |
+      This work is prof. Wakita's private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/newsyn
+
+- id: amp
+  publishTime: 2017-12-29
+  images:
+    - /works/amp.jpg
+  title:
+    en: Amplification
+    ja: Amplification
+  description:
+    ja: |
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/amp
+    en: |
+      This work is prof. Wakita's private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/amp
+
+- id: Visualization of Air Conditioner 
+  publishTime: 2017-12-28
+  images:
+    - /works/visualizationofairconditioner.png
+  title:
+    en: Visualization of Air Conditioner
+    ja: Visualization of Air Conditioner
+  description:
+    ja: |
+      このソフトウェアは慶應義塾大学SFC脇田研究室とダイキンデザインの共同研究から生まれました。プロジェクトの目的は、アートとサイエンスの視点から、室内の風の流れを美しく可視化し、エアコンへの再解釈を引き出すことです。 エアコンは、室内の空気を調整し、住空間を快適化する装置です。しかし、肉眼で捉えられない空気の流れをコントロールすることは容易ではありません。我々はリモコンを通して送風口の向きと強さを調整しますが、そこから生成される空気の流れを詳細に知ることはできません。 このプロジェクトでは室内の空気の流れを美しく可視化することにチャレンジしました。風の向き、強さ、障害物の位置や大きさ、アロマが行き渡る様子、室内温の変化など、様々な要素を3次元で可視化することができます。障害物の位置と形を変えることで、家具を移動させた際の風の変化を把握できます。視点をフライスルーさせることで、室内のもっとも快適な場所を見つけることもできます。 風の生態系を視覚的に把握することで、エアコンというプロダクトは新しいパラダイムに突入することでしょう。それは、空気を調整する装置(Conditioner)から、風を組み立てる装置（Composer)への進化です。室内の間取りを決めるのと同じ感覚で、室内の風の構図を組み立てることができる未来を想像してみてください。 本プロジェクトで実現したアートとサイエンスの新しい結合は、私たちの世界の認識を新たにします。エアコンのシミュレーションとビジュアライゼーションから、あなたは部屋の中の隠された絶景を発見することになるでしょう。
+    en: |
+      This software was developed by the joint research project of Keio University SFC Wakita Laboratory and Daikin Design. The aim of this project is to visualize indoor airflow from art and science perspective. The intention is for users to reinterpret the recognition of air conditioner. Air conditioner is an equipment used to sustain comfortable living spaces by adjusting the air. Nevertheless it is not easy to control the airflow invisible to human eyes. We could control the direction of air vent and the air strength by remote controls, but wouldn't be able to understand the air flow itself in details. In this project, we challenged to visualize the beauty of indoor air flow. We can visualize various factors in three dimensions such as the direction and the strength of air, the position and the size of obstacles, the spread of moisture, and the temperature change. We could understand the difference of airflow by moving and changing the obstacles. We could also find the most comfortable spot in the space by overlooking perspective. By visually grasping the state of air, air conditioner as a product will enter a new paradigm. It is an evolution from an equipment adjusting the air (conditioner) into an equipment assembling the air (composer). Please imagine the future where we could construct the airflow within the space in the same sense as deciding your floor plan. The new binding of art and science established in this project will renew our understanding of the world. You will witness a superb view hidden in your room through the air conditioner simulation and visualization.
+  credits:
+    ja: |
+      慶應義塾大学SFC脇田玲研究室（計良風太, 山辺真幸, 守田幸洋, 脇田玲）
+      ダイキン工業 テクノロジー・イノベーションセンター
+    en: |
+      Keio Univeristy SFC (Futa Kera, Masaki Yamabe, Yukihiro Morita, Akira Wakita)
+      Technology and Innovation Center, Daikin Industries, Ltd.
+
+- id: oceangeneralcirculationsimulation
+  publishTime: 2016-12-31
+  images:
+    - /works/oceangeneralcirculationsimulation.png
+  title:
+    en: Ocean General Circulation Simulation
+    ja: Ocean General Circulation Simulation
+  description:
+    ja: |
+      脇田研究室は日本科学未来館のジオ・プリズムに流体ビジュアライゼーションを提供しました。 ジオ・プリズムは、AR（拡張現実感）技術を用いて、全球型ディスプレイ「ジオ･コスモス」にデータやシミュレーションを重ねて表示できるシステムです。 このビジュアライゼーションでは、海洋研究開発機構（JAMSTEC）のスーパーコンピューター「地球シミュレータ」によって計算された超高解像度海洋大循環モデルOFESのデータを使い、地球上の波の動きを3つの詳細度で可視化しています。
+    en: |
+      We have developed Ocean Current Visualization for the Geo-Prism system of Mirakan. Geo-prism is the new augmented reality system for Geo-Cosmos which is the symbol exhibit of Miraikan, produces high precision images on its sphere surface. Geo-Prism, developed by Rhizomatiks, is a framework to which new contents can be embedded. Keio SFC Wakita Lab has developed a super high resolution visualization of ocean behavior by using a set of simulation data that is calculated by JAMSTEC with their super computer, Earth Simulator. 
+  credits:
+    ja: |
+      海流ビジュアライゼーション開発：慶應義塾大学SFC脇田研究室（山辺真幸、中野亜希人、脇田玲）
+      データ提供：海洋研究開発機構（JAMSTEC）
+      ジオ・プリズム システム開発：ライゾマティクスリサーチ
+    en: |
+      Visualization: Keio University SFC, Akira Wakita Laboratory 
+      Data provided by: Japan Agency for Marine-Earth Science and Technology (JAMSTEC)
+      Geo-Prism System Development: Rhizomatiks Research
+
+- id: scalarfieldofshoes
+  publishTime: 2015-12-31
+  images:
+    - /works/scalarfieldofshoes.jpg
+  title:
+    en: Scalar Field of Shoes
+    ja: Scalar Field of Shoes
+  description:
+    ja: |
+      本作は靴のソールが作り出す圧力場のヴィジュアライゼーションである。イタリアのファッションブランド TOD’S が作り出す美しい靴を実例として、空気中に圧力が伝播していく様子を4K映像として可視化した。
+
+      この作品は脇田教授の個人プロジェクトです。
+      詳細はこちらをご覧下さい。
+      Akira Wakita Website
+      >http://akirawakita.com/#works/sfos
+    en: |
+      This work visualizes the pressure field around the sole of a shoe. Using elegant shoes produced by Italian fashion brand TOD'S as a sample, the propagation of pressure in air was visualized and recorded in 4K video.
+
+      This work is prof. Wakita’s private project.
+      For further information, please visit here.
+      Akira Wakita Website
+      >http://akirawakita.com/#works/sfos

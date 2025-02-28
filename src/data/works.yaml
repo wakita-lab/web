@@ -276,7 +276,7 @@
       脇田研究室は日本科学未来館のジオ・プリズムに流体ビジュアライゼーションを提供しました。 ジオ・プリズムは、AR（拡張現実感）技術を用いて、全球型ディスプレイ「ジオ･コスモス」にデータやシミュレーションを重ねて表示できるシステムです。 このビジュアライゼーションでは、海洋研究開発機構（JAMSTEC）のスーパーコンピューター「地球シミュレータ」によって計算された超高解像度海洋大循環モデルOFESのデータを使い、地球上の波の動きを3つの詳細度で可視化しています。
     en: |
       We have developed Ocean Current Visualization for the Geo-Prism system of Mirakan. Geo-prism is the new augmented reality system for Geo-Cosmos which is the symbol exhibit of Miraikan, produces high precision images on its sphere surface. Geo-Prism, developed by Rhizomatiks, is a framework to which new contents can be embedded. Keio SFC Wakita Lab has developed a super high resolution visualization of ocean behavior by using a set of simulation data that is calculated by JAMSTEC with their super computer, Earth Simulator. 
-  credits:
+  designTeam:
     ja: |
       海流ビジュアライゼーション開発：慶應義塾大学SFC脇田研究室（山辺真幸、中野亜希人、脇田玲）
       データ提供：海洋研究開発機構（JAMSTEC）
@@ -382,3 +382,52 @@
     en: |
       This project was aimed to construct 3d visualization environment of human body and to provide 3d visualization experiences for many people. Since 3d reconstruction of human body by CT and MRI required sophisticated geometric modeling technics, it was only used as professional tools for image engineers and doctors. But due to the acceleration of speed and open reduction of personal computers, it has led to the opening of the where we could freely reuse the open 3d medical data.The democratization of human body data has immeasurable possibilities to change our system of medical treatment and education.In SFC Wakita lab, we succeeded in creating 3d visualization environment for human body by the use of free software such as OSIRIX and openFrameworks(in agile).
       At the SFC Open Research Forum in 2014, we hosted a workshop using this environment to validate the efficiency. The viewer for personal computer had been developed only in two weeks by openframeworks. Despite the short term of development, the power was proved to be strong enough for educational, scientific communication tools.We were able to observe many participants charmed by the structural beauty of human body.We strongly believe that real time 3d visualization not only simplifies the complexes but obtains the unexplored possibilities as a media which arouse sense of wonder.
+
+- id: unda
+  publishTime: 2013-12-31
+  images:
+    - /works/unda.jpg
+  title:
+    en: UNDA
+    ja: UNDA
+  description:
+    en: |
+      UNDA (Latin for "wave") is an organic interface that was born through collaboration between Toyota InfoTechnology Center and Keio University’s Wakita Lab. As a result of the serious pursuit of intuitiveness for an in-car interface, we have envisioned a sensuous operation surface that organically combines life-like transformation and elastic property. UNDA has been prototyped as one example of this concept. The biggest challenge in this project was the realization of the "undulating concept" for a next-generation operation surface that synchronizes the wavelengths of the user and the machine.
+      The soft outer skin that covers the top face of UNDA generates an extraordinary variety of surface shapes through the coordination of internal actuators. The shape, motion, and light emissions of the surface work as a kinetic display, which presents a variety of information. The user interacts with UNDA by making full use of not only their visual sense but also their haptic sense and kinesthesia. Each of 12 elevating buttons, to which unique functions are attached, is lifted when it is available, based on the context. It is also possible to generate a large button by operating multiple buttons simultaneously. The soft skin-like material that covers the surface allows various operations such as pushing, tracing, pinching, or sweeping.
+    ja: |
+      ラテン語で「波」を意味する名前が付けられたこの有機的なインターフェイスは、トヨタIT開発センターと慶應義塾大学脇田研究室との共同研究の中から生まれました。我々は、自動車インターフェイスの直感性を真摯に追求した結果、生物的な変形としなやかな素材性が有機的に連動したセンシュアスな操作曲面というビジョンに逢着しました。その一事例としてプロトタイピングされたのがUNDAです。このプロジェクトで我々が目指したのは、ユーザの波長とマシンの波長がシンクロする次世代のオペレーション -Undulating Concept- の具現化です。
+      UNDAの上面を覆う人肌のように柔らかな外皮は、内包されたアクチュエータの動作と連動して驚くほど多彩な曲面形状を生成します。曲面の形状／動き／発光は多様な情報を提示するキネティックなディスプレイになっており、UNDAのユーザは視覚のみならず触覚や筋感覚を駆使してマシンと対話することになります。12個の昇降するボタンにはそれぞれに独立した機能が付与されており、コンテクストに応じて利用可能なものだけが隆起します。複数のボタンが連携して同時に動くことで、一塊の大きなボタンを生成することも可能です。人肌のように柔らかな素材は、押す／軌跡をたどる／つまむ／手の平で掃くなどの多様な操作言語をユーザにアフォードします。
+  designTeam:
+    en: |
+      Concept and Direction: AKIRA WAKITA
+      Art Direction: KOHEI TSUJI
+      Technical Direction: HISAKAZU HADA
+      Hardware Development: TATSUYA KAIHO
+      Project Management : SAYAKA YOSHIZU
+      Technical Advisor : CHIHIRO SANNOMIYA
+    ja: |
+      コンセプト＋ディレクション : 脇田 玲
+      アートディレクション : 辻 航平
+      技術ディレクション : 羽田久一
+      ハードウェア開発 : 海宝竜也
+      プロジェクトマネジメント : 吉津沙耶香
+      技術アドバイザ : 三宮千尋
+
+- id: origamiandslowtech
+  publishTime: 2013-12-30
+  images:
+    - /works/origamiandslowtech.jpg
+  title:
+    en: ORIGAMI AND SLOW-TECH
+    ja: ORIGAMI AND SLOW-TECH
+  description:
+    en: |
+      TIME AND EFFORT
+      Paper works by origami sometimes have value beyond mere paper sculptures. From ancient times, there is a common custom in japan to represent the feeling by spending a lot of time and care on the gift. As shown in noshi(paper design emblem used in gift giving) and a thousand cranes(get-well-soon gift), origami works require a lot of time and effort. Through the folding labor, the feeling that cares about other people has been also folded into origami works. A set of these works is an attempt to explore the possibility of extra time and effort based on digital technology through the reinvention of origami materials. This is not only the contemporary interpretation of origami. This is also a trial to indicate new direction of "slow technology" which assume the character of japanese traditional state of mind as the alternative to today's "fast technology" which focuses on speed and convenience.
+      EXTRA TIME AND EFFORT BY DIGITAL TECHNOLOGY
+      This reinvented origami paper, coated with conductive inks and thermochromic inks, is able to change colors of any regions depending on electric signals from computers. By utilizing origami sensors made with the variation of another inks, users can add interactivity to their works. In order to interpose into paper creatively while maintaining origami's materiality and spirituality, this new origami material is composed of only existing printing techniques and normal japanese papers. This enables embedding electric functions into papers without interfering elastic materiality. Origami is social media equipped with meme of the spirit that represent the feeling to other people through time and effort. For contemporary people in the midst of rapid progress of technology, it seems to be important to remind the affluence to spending a lot of time and effort.
+    ja: |
+      折り紙と手間
+      折り紙による作品は単なる紙の造形物を超えた価値を持つ事がある。古くから日本には贈り物に手間をかけることで相手への思いを表す習慣があり、熨斗（のし）や千羽鶴に見られるように、直接自分の手を使い時間をかけて折るという「手間」によって、相手対する想いもその作品に折り込められてきた。これらの作品群は、折り紙の材料そのものを再発明することで、電子技術によるもう「ひと手間」の可能性を探る試みである。 それは折り紙の意味を現代的に解釈するのみならず、早さや便利さのみに注力しがちな今日のテクノロジー(Fast Technology)のオルタナティブとして、日本古来の精神を帯びたテクノロジー(Slow Technology)の方向性を指し示す行為でもある。
+      電子技術によるもうひと手間
+      この折り紙には導電インクとサーモクロミックインクが塗布されており、コンピュータからの信号によって任意の場所の色彩を変えることができる。異なるインクの組み合わせによって作られた「折り紙のセンサ」を使えば、作品に対話性を与えることもできる。折り紙の素材性や精神性を活かしつつも、そこに電子技術を創造的に干渉させるために、この特殊な紙は一般的な和紙と既存の印刷技術の組み合わせのみで実現されており、しなやかな紙の素材性を損なうことなく電子的な機能の埋め込みを可能にしている。折り紙は手間をかけることによって相手への思いを表す精神をミームとして具備する社会的メディアである。急速な技術の進歩のただ中にある我々現代人には、ゆっくりと手間をかけることの豊かさを思い出すことも大切であるように思える。

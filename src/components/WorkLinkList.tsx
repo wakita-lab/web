@@ -1,7 +1,7 @@
 import XCheckbox from '@/components/XCheckbox';
 import { Work } from '@/constants/works';
 import Link from 'next/link';
-import { useCallback, useEffect, useRef } from 'react';
+import { useEffect, useRef } from 'react';
 
 interface WorkLinkListProps {
   currentIndex: number;
@@ -16,16 +16,6 @@ export default function WorkLinkList({
 }: WorkLinkListProps) {
   const buttonRefs = useRef<(HTMLAnchorElement | null)[]>([]);
 
-  const selectNext = useCallback((currentIndex: number) => {
-    const nextIndex = (currentIndex + 1) % works.length;
-    location.href = `#${works[nextIndex].id}`;
-  }, [works]);
-
-  const selectPrev = useCallback((currentIndex: number) => {
-    const prevIndex = (currentIndex - 1 + works.length) % works.length;
-    location.href = `#${works[prevIndex].id}`;
-  }, [works]);
-
   useEffect(() => {
     buttonRefs.current[currentIndex]?.scrollIntoView({
       behavior: 'smooth',
@@ -34,14 +24,12 @@ export default function WorkLinkList({
     });
 
     const timer = setTimeout(() => {
-      if (isInverted)
-        selectPrev(currentIndex);
-      else
-        selectNext(currentIndex);
+      const newIndex = (currentIndex + 1) % works.length;
+      location.href = `#${works[newIndex].id}`;
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, [currentIndex, selectNext, selectPrev, isInverted]);
+  }, [currentIndex, isInverted, works]);
 
   return (
     <div className="flex w-full items-center justify-center md:gap-4">

@@ -74,7 +74,7 @@ export default function Home() {
           className="scrollbar-hidden w-full grow overflow-y-scroll"
           onScroll={handleScroll}
         >
-          {/* Add a little padding to the top, since chrome has a very weird scroll bug */}
+          {/* Add a little padding to the top, since Android chrome has a very weird scroll bug */}
           <div style={{height: 16}} />
           {WORKS.map((work) => (
             <div key={work.id} id={work.id} style={{height: HEIGHT_PER_WORK}} />

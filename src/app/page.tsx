@@ -26,7 +26,9 @@ export default function Home() {
   }, []);
 
   const handleScroll = useCallback(() => {
-    const newScrollAmount = scrollFieldRef.current?.scrollTop || 0;
+    if (!scrollFieldRef.current) return;
+
+    const newScrollAmount = scrollFieldRef.current.scrollTop || 0;
     const scrollAmountDelta = newScrollAmount - scrollAmount;
 
     if (scrollAmountDelta === 0) return;
@@ -80,7 +82,7 @@ export default function Home() {
 
       <main className="fixed flex h-svh w-full flex-col items-center justify-between font-light leading-loose tracking-tighter">
         <div className="flex w-full items-center justify-center bg-white py-12 text-lg">
-          Akira Wakita Lab. {scrollAmountDelta}
+          Akira Wakita Lab.
         </div>
         <div
           ref={scrollFieldRef}

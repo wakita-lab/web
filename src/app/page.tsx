@@ -99,6 +99,7 @@ export default function Home() {
             currentIndex={currentIndex}
             onClick={handleWorkSelectorClick}
             works={WORKS}
+            isInverted={scrollAmountDelta < 0}
           />
         </div>
       </main>

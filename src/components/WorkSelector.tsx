@@ -6,9 +6,15 @@ interface WorkSelectorProps {
   currentIndex: number;
   onClick: (index: number) => void;
   works: Work[];
+  isInverted?: boolean;
 }
 
-export default function WorkSelector({ currentIndex, onClick, works }: WorkSelectorProps) {
+export default function WorkSelector({
+  currentIndex,
+  onClick,
+  works,
+  isInverted,
+}: WorkSelectorProps) {
   const worksLength = works.length;
   const buttonRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
@@ -20,11 +26,11 @@ export default function WorkSelector({ currentIndex, onClick, works }: WorkSelec
     });
 
     const timer = setTimeout(() => {
-      onClick((currentIndex + 1) % worksLength);
+      onClick((currentIndex + (isInverted ? -1 : 1) + worksLength) % worksLength);
     }, 10000);
 
     return () => clearTimeout(timer);
-  }, [currentIndex, worksLength, onClick]);
+  }, [currentIndex, worksLength, onClick, isInverted]);
 
   return (
     <div className="flex w-full items-center justify-center md:gap-4">

@@ -44,7 +44,7 @@ export default function WorkLinkList({
               buttonRefs.current[index] = el;
             }}
             className={`flex items-center gap-2 text-nowrap px-2 tracking-tighter ${
-              index === currentIndex ? 'text-blue-500' : 'text-black'
+              index === currentIndex ? 'text-black' : 'text-black'
             }`}
             href={index === currentIndex ? `/works/about/${work.id}` : `#${work.id}`}
           >

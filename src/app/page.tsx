@@ -9,23 +9,19 @@ import WorkLinkList from '@/components/WorkLinkList';
 const HEIGHT_PER_WORK = 600;
 const DEFAULT_SCROLL_SPEED = 1;
 
-export default function Home() {
-  const [scrollAmountDelta, setScrollAmountDelta] = useState(DEFAULT_SCROLL_SPEED);
+function useScrollAmount(defaultSpeed: number) {
+  const [scrollAmountDelta, setScrollAmountDelta] = useState(defaultSpeed);
 
-  const scrollFieldRef = useRef<HTMLDivElement>(null);
   const animationFrameRef = useRef<number>(0);
+  const scrollAmountRef = useRef(0);
 
-  const scrollFieldHeight = scrollFieldRef.current?.clientHeight || 0;
-  const scrollAmount = scrollFieldRef.current?.scrollTop || 0;
+  const onScroll: React.UIEventHandler = useCallback((event) => {
+    const newScrollAmount = event.currentTarget.scrollTop || 0;
+    const scrollAmountDelta = newScrollAmount - scrollAmountRef.current;
 
-  const handleScroll = useCallback(() => {
-    if (!scrollFieldRef.current) return;
-
-    const newScrollAmount = scrollFieldRef.current.scrollTop || 0;
-    const scrollAmountDelta = newScrollAmount - scrollAmount;
-
+    scrollAmountRef.current = newScrollAmount;
     setScrollAmountDelta(scrollAmountDelta);
-  }, [scrollAmount]);
+  }, []);
 
   useEffect(() => {
     const loop = () => {
@@ -44,6 +40,17 @@ export default function Home() {
       cancelAnimationFrame(animationFrameRef.current);
     };
   }, []);
+
+  return { scrollAmountDelta, onScroll };
+}
+
+export default function Home() {
+  const { scrollAmountDelta, onScroll } = useScrollAmount(DEFAULT_SCROLL_SPEED);
+
+  const scrollFieldRef = useRef<HTMLDivElement>(null);
+
+  const scrollFieldHeight = scrollFieldRef.current?.clientHeight || 0;
+  const scrollAmount = scrollFieldRef.current?.scrollTop || 0;
 
   const currentIndex = Math.max(
     0,
@@ -65,7 +72,7 @@ export default function Home() {
         <div
           ref={scrollFieldRef}
           className="scrollbar-hidden w-full grow overflow-y-scroll"
-          onScroll={handleScroll}
+          onScroll={onScroll}
         >
           {/* Add a little padding to the top, since Android chrome has a very weird scroll bug */}
           <div style={{height: 16}} />

@@ -14,7 +14,6 @@ export default function Home() {
   const { scrollAmountDelta, onScroll } = useScrollAmount(DEFAULT_SCROLL_SPEED);
 
   const scrollFieldRef = useRef<HTMLDivElement>(null);
-
   const scrollFieldHeight = scrollFieldRef.current?.clientHeight || 0;
   const scrollAmount = scrollFieldRef.current?.scrollTop || 0;
 

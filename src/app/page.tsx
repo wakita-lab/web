@@ -1,48 +1,14 @@
 'use client';
 
 import ParticleBackground from '@/components/ParticleBackground';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useRef } from 'react';
 
 import { WORKS } from '@/constants/works';
 import WorkLinkList from '@/components/WorkLinkList';
+import { useScrollAmount } from '@/hooks/useScrollAmount';
 
 const HEIGHT_PER_WORK = 600;
 const DEFAULT_SCROLL_SPEED = 1;
-
-function useScrollAmount(defaultSpeed: number) {
-  const [scrollAmountDelta, setScrollAmountDelta] = useState(defaultSpeed);
-
-  const animationFrameRef = useRef<number>(0);
-  const scrollAmountRef = useRef(0);
-
-  const onScroll: React.UIEventHandler = useCallback((event) => {
-    const newScrollAmount = event.currentTarget.scrollTop || 0;
-    const scrollAmountDelta = newScrollAmount - scrollAmountRef.current;
-
-    scrollAmountRef.current = newScrollAmount;
-    setScrollAmountDelta(scrollAmountDelta);
-  }, []);
-
-  useEffect(() => {
-    const loop = () => {
-      setScrollAmountDelta((prev) => {
-        const scrollAmountDeltaTarget = DEFAULT_SCROLL_SPEED * (prev < 0 ? -1 : 1);
-
-        const newScrollAmountDelta = (scrollAmountDeltaTarget - prev) * 0.2 + prev;
-        return newScrollAmountDelta;
-      });
-
-      animationFrameRef.current = requestAnimationFrame(loop);
-    };
-    loop();
-
-    return () => {
-      cancelAnimationFrame(animationFrameRef.current);
-    };
-  }, []);
-
-  return { scrollAmountDelta, onScroll };
-}
 
 export default function Home() {
   const { scrollAmountDelta, onScroll } = useScrollAmount(DEFAULT_SCROLL_SPEED);

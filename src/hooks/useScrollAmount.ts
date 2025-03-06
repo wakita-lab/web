@@ -29,9 +29,7 @@ export function useScrollAmount(defaultSpeed: number) {
     };
     loop();
 
-    return () => {
-      cancelAnimationFrame(animationFrameRef.current);
-    };
+    return () => cancelAnimationFrame(animationFrameRef.current);
   }, []);
 
   return { scrollAmountDelta, onScroll };

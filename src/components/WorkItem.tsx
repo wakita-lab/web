@@ -6,32 +6,52 @@ interface WorkItemProps {
   work: Work;
 }
 
-// URLを検出する正規表現
-const URL_PATTERN = /^https?:\/\/[^\s]+$/;
+// Regular expression to detect URLs
+const URL_PATTERN = /https?:\/\/[^\s]+/g;
 
-// テキストを行に分割し、各行を適切なコンポーネントに変換する
+// Convert URLs in text to Link components
+const renderTextWithLinks = (text: string) => {
+  // Split text into segments by URLs
+  const segments = text.split(URL_PATTERN);
+  const urls = text.match(URL_PATTERN) || [];
+
+  // Alternate between text segments and URLs
+  return segments.map((segment, index) => {
+    const elements = [];
+
+    // Regular text segment
+    if (segment) {
+      elements.push(segment);
+    }
+
+    // URL segment
+    if (urls[index]) {
+      elements.push(
+        <Link
+          key={`link-${index}`}
+          href={urls[index]}
+          className="text-blue-600 hover:underline"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {urls[index]}
+        </Link>,
+      );
+    }
+
+    return elements;
+  }).flat();
+};
+
+// Split text into lines and convert each line into appropriate components
 const renderLines = (text: string, className: string = '') => {
   return text.split('\n').map((line, index) => {
     const trimmedLine = line.trim();
     if (!trimmedLine) return null;
 
-    if (URL_PATTERN.test(trimmedLine)) {
-      return (
-        <Link
-          key={index}
-          href={trimmedLine}
-          className={`block ${className} text-blue-600 hover:underline`}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {trimmedLine}
-        </Link>
-      );
-    }
-
     return (
       <p key={index} className={className}>
-        {trimmedLine}
+        {renderTextWithLinks(trimmedLine)}
       </p>
     );
   });
@@ -41,13 +61,15 @@ export const WorkItem = ({ work }: WorkItemProps) => {
   return (
     <div className="mb-16 flex flex-col gap-6">
       <div className="relative aspect-video w-full">
-        <Image
-          src={work.images[0]}
-          alt={work.title.en}
-          fill
-          className="object-cover"
-          priority
-        />
+        <Link id={work.id} href={`#${work.id}`}>
+          <Image
+            src={work.images[0]}
+            alt={work.title.en}
+            fill
+            className="object-cover"
+            priority
+          />
+        </Link>
       </div>
 
       <div className="flex flex-col gap-4">
@@ -61,7 +83,7 @@ export const WorkItem = ({ work }: WorkItemProps) => {
         </div>
 
         {work.description && (
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-4">
             <div className="space-y-2">
               {renderLines(work.description.en, 'text-gray-800')}
             </div>

@@ -7,8 +7,7 @@ export default function XCheckbox({selected}: { selected: boolean }) {
           d="M2 2 L14 14"
           className="transition-[stroke-dashoffset] duration-200 ease-in-out"
           strokeDasharray="17"
-          // strokeDashoffset={selected ? '0' : '17'}
-          style={{strokeDashoffset: selected ? '0' : '17'}}
+          strokeDashoffset={selected ? '0' : '17'}
         />
         <path
           d="M14 2 L2 14"

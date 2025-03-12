@@ -1,9 +1,41 @@
 import { Work } from '@/constants/works';
 import Image from 'next/image';
+import Link from 'next/link';
 
 interface WorkItemProps {
   work: Work;
 }
+
+// URLを検出する正規表現
+const URL_PATTERN = /^https?:\/\/[^\s]+$/;
+
+// テキストを行に分割し、各行を適切なコンポーネントに変換する
+const renderLines = (text: string, className: string = '') => {
+  return text.split('\n').map((line, index) => {
+    const trimmedLine = line.trim();
+    if (!trimmedLine) return null;
+
+    if (URL_PATTERN.test(trimmedLine)) {
+      return (
+        <Link
+          key={index}
+          href={trimmedLine}
+          className={`block ${className} text-blue-600 hover:underline`}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {trimmedLine}
+        </Link>
+      );
+    }
+
+    return (
+      <p key={index} className={className}>
+        {trimmedLine}
+      </p>
+    );
+  });
+};
 
 export const WorkItem = ({ work }: WorkItemProps) => {
   return (
@@ -30,8 +62,12 @@ export const WorkItem = ({ work }: WorkItemProps) => {
 
         {work.description && (
           <div className="flex flex-col gap-2">
-            <p className="text-gray-800">{work.description.en}</p>
-            <p className="text-gray-800">{work.description.ja}</p>
+            <div className="space-y-2">
+              {renderLines(work.description.en, 'text-gray-800')}
+            </div>
+            <div className="space-y-2">
+              {renderLines(work.description.ja, 'text-gray-800')}
+            </div>
           </div>
         )}
       </div>

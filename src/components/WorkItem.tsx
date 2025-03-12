@@ -57,7 +57,7 @@ const renderLines = (text: string, className: string = '') => {
   });
 };
 
-export const WorkItem = ({ work }: WorkItemProps) => {
+export function WorkItem({ work }: WorkItemProps) {
   return (
     <div className="mb-16 flex flex-col gap-6">
       <div className="relative aspect-video w-full">

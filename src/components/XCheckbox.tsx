@@ -1,4 +1,4 @@
-export default function XCheckbox({selected}: { selected: boolean }) {
+export default function XCheckbox({ selected } : { selected: boolean }) {
   return (
     <div className="cursor-pointer">
       <svg width="16" height="16" stroke="currentColor" fill="none" strokeWidth={1} viewBox="0 0 16 16">

@@ -64,15 +64,15 @@ export function WorkItem({ work }: WorkItemProps) {
 
   return (
     <div className="mb-16 flex flex-col gap-4" style={{ marginRight: `${margin}%`, marginLeft: `${25 - margin}%` }} id={work.id}>
-      <div className="relative aspect-video w-full">
+      <Link href={`/works/${work.id}`} className="relative block aspect-video w-full">
         <Image
           src={work.images[0]}
           alt={work.title.en}
           fill
-          className="object-cover"
+          className="object-cover transition-transform duration-300 hover:scale-105"
           priority
         />
-      </div>
+      </Link>
 
       <div className="flex flex-col gap-4">
         <Link href={`#${work.id}`}>

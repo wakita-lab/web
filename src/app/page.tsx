@@ -11,7 +11,7 @@ export default function Home() {
         <h1>Akira Wakita Lab.</h1>
       </Link>
 
-      <div className="scrollbar-hidden z-0 w-full max-w-7xl flex-1 overflow-y-auto scroll-smooth px-8 sm:px-16">
+      <div className="scrollbar-hidden z-0 w-full max-w-7xl flex-1 overflow-y-auto scroll-smooth px-8 sm:px-8">
         <div id="1" />
         {WORKS.map((work) => (
           <WorkItem key={work.id} work={work} />

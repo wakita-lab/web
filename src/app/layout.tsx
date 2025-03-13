@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="font-inter leading-loose tracking-tighter">
+      <body className="font-inter">
         <HamburgerMenu />
         {children}
         <Analytics />

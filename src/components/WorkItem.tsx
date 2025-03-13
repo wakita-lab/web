@@ -73,9 +73,9 @@ export function WorkItem({ work }: WorkItemProps) {
       </div>
 
       <div className="flex flex-col gap-4">
-        <div className="text-sm text-gray-500">
+        <time className="text-sm text-gray-500">
           {work.publishTime.toLocaleDateString('ja-JP')}
-        </div>
+        </time>
 
         <div className="flex flex-col gap-2">
           <h2 className="text-xl font-medium">{work.title.en}</h2>

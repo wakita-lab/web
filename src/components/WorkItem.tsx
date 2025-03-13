@@ -60,8 +60,8 @@ const renderLines = (text: string, className: string = '') => {
 export function WorkItem({ work }: WorkItemProps) {
   return (
     <div className="mb-16 flex flex-col gap-6">
-      <div className="relative aspect-video w-full">
-        <Link id={work.id} href={`#${work.id}`}>
+      <Link id={work.id} href={`#${work.id}`}>
+        <div className="relative aspect-video w-full">
           <Image
             src={work.images[0]}
             alt={work.title.en}
@@ -69,8 +69,8 @@ export function WorkItem({ work }: WorkItemProps) {
             className="object-cover"
             priority
           />
-        </Link>
-      </div>
+        </div>
+      </Link>
 
       <div className="flex flex-col gap-4">
         <time className="text-sm text-gray-500">

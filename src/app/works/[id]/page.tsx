@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 interface WorkPageProps {
-  params: {
+  params: Promise<{
     id: string;
-  };
+  }>;
 }
 
 export function generateStaticParams() {
@@ -15,8 +15,9 @@ export function generateStaticParams() {
   }));
 }
 
-export default function WorkPage({ params }: WorkPageProps) {
-  const work = WORKS.find((w: Work) => w.id === params.id);
+export default async function WorkPage({ params }: WorkPageProps) {
+  const { id } = await params;
+  const work = WORKS.find((w: Work) => w.id === id);
 
   if (!work) {
     notFound();

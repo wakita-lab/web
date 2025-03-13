@@ -53,15 +53,15 @@ export default function WorkPage({ params }: WorkPageProps) {
           </div>
 
           {work.description && (
-            <div className="flex flex-col gap-6 text-base leading-relaxed">
-              <div className="space-y-4">
+            <div className="flex flex-col gap-4 text-base leading-loose lg:flex-row">
+              <div className="flex-1">
                 {work.description.en.split('\n').map((line: string, index: number) => (
                   <p key={`en-${index}`} className="text-gray-800">
                     {line}
                   </p>
                 ))}
               </div>
-              <div className="space-y-4">
+              <div className="flex-1">
                 {work.description.ja.split('\n').map((line: string, index: number) => (
                   <p key={`ja-${index}`} className="text-gray-800">
                     {line}

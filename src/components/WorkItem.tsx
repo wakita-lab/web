@@ -60,26 +60,26 @@ const renderLines = (text: string, className: string = '') => {
 
 export function WorkItem({ work }: WorkItemProps) {
   const rand = seedrandom(work.id);
-  const margin = rand() * 20;
+  const margin = rand() * 25;
 
   return (
-    <div className="mb-16 flex flex-col gap-4" style={{ marginRight: `${margin}rem`, marginLeft: `${20 - margin}rem` }}>
-      <Link id={work.id} href={`#${work.id}`}>
-        <div className="relative aspect-video w-full">
-          <Image
-            src={work.images[0]}
-            alt={work.title.en}
-            fill
-            className="object-cover"
-            priority
-          />
-        </div>
-      </Link>
+    <div className="mb-16 flex flex-col gap-4" style={{ marginRight: `${margin}%`, marginLeft: `${25 - margin}%` }} id={work.id}>
+      <div className="relative aspect-video w-full">
+        <Image
+          src={work.images[0]}
+          alt={work.title.en}
+          fill
+          className="object-cover"
+          priority
+        />
+      </div>
 
       <div className="flex flex-col gap-4">
-        <time className="text-xs text-gray-500">
-          {work.publishTime.toLocaleDateString('ja-JP')}
-        </time>
+        <Link href={`#${work.id}`}>
+          <time className="text-xs text-gray-500 underline-offset-2 hover:underline">
+            {work.publishTime.toLocaleDateString('ja-JP')}
+          </time>
+        </Link>
 
         <div className="flex flex-col gap-2">
           <h2 className="text-base font-medium">{work.title.en}</h2>

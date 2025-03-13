@@ -28,7 +28,7 @@ export default function WorkPage({ params }: WorkPageProps) {
         href="/"
         className="mb-8 inline-block text-sm text-gray-500 hover:text-gray-400"
       >
-        ← Back to works
+        {'<--'} Back to works
       </Link>
 
       <article className="flex flex-col gap-8">

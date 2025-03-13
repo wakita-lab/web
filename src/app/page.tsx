@@ -7,7 +7,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <main className="flex h-svh w-full flex-col items-center font-light">
-      <Link className="top-0 flex w-full items-center justify-center bg-white py-12 text-xl font-extrabold" href="#1">
+      <Link className="top-0 flex w-full items-center justify-start bg-white p-4 px-6 text-xl font-extrabold" href="#1">
         <h1>Akira Wakita Lab.</h1>
       </Link>
 

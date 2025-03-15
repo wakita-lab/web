@@ -9,9 +9,14 @@ export function StaggeredWorkList() {
       {WORKS.map((work) => {
         const rand = seedrandom(work.id);
         const colstart = Math.trunc(rand() * 5) + 1;
+        const colstartClassname =
+          colstart === 1 ? 'col-start-1' :
+            colstart === 2 ? 'col-start-2' :
+              colstart === 3 ? 'col-start-3' :
+                colstart === 4 ? 'col-start-4' : 'col-start-5';
 
         return (
-          <div key={work.id} style={{ gridColumnStart: colstart, gridColumnEnd: 'span 16' }}>
+          <div key={work.id} style={{ gridColumnEnd: 'span 16' }} className={`${colstartClassname}`}>
             <WorkItem work={work} />
           </div>
         );

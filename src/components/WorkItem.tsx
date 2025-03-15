@@ -36,7 +36,7 @@ export function WorkItem({ work }: WorkItemProps) {
         </section>
 
         {work.description && (
-          <section className="flex flex-col gap-4 text-sm leading-loose">
+          <section className="flex flex-col gap-4 break-words pr-2 text-sm leading-loose">
             <div>
               <FormattedText text={work.description.en} className="text-gray-800" />
             </div>

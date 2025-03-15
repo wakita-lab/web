@@ -2,15 +2,15 @@ import { Work } from '@/constants/works';
 import { FormattedText } from '@/utils/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
-import seedrandom from 'seedrandom';
+// import seedrandom from 'seedrandom';
 
 interface WorkItemProps {
   work: Work;
 }
 
 export function WorkItem({ work }: WorkItemProps) {
-  const rand = seedrandom(work.id);
-  const margin = rand() * 25;
+  // const rand = seedrandom(work.id);
+  // const colstart = rand() * 25;
 
   return (
     <article className="mb-16 flex flex-col gap-4" id={work.id}>

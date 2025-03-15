@@ -42,7 +42,7 @@ interface FormattedTextProps {
   className?: string;
 }
 
-export function FormattedText({ text, className = '' }: FormattedTextProps) {
+export function FormattedText({ text, className }: FormattedTextProps) {
   return text.split('\n').map((line, index) => {
     const trimmedLine = line.trim();
     if (!trimmedLine) return null;

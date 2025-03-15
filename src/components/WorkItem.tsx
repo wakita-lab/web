@@ -88,10 +88,10 @@ export function WorkItem({ work }: WorkItemProps) {
 
         {work.description && (
           <div className="flex flex-col gap-4 text-sm leading-loose">
-            <div className="space-y-2">
+            <div className="flex flex-col gap-0">
               {renderLines(work.description.en, 'text-gray-800')}
             </div>
-            <div className="space-y-2">
+            <div className="flex flex-col gap-0">
               {renderLines(work.description.ja, 'text-gray-800')}
             </div>
           </div>

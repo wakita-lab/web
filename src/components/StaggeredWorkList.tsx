@@ -9,6 +9,8 @@ export function StaggeredWorkList() {
       {WORKS.map((work) => {
         const rand = seedrandom(work.id);
         const colstart = Math.trunc(rand() * 5) + 1;
+
+        // Since className is not capable of dynamic class names, we need to use a bunch of ternary operators
         const colstartClassname =
           colstart === 1 ? 'col-start-1' :
             colstart === 2 ? 'col-start-2' :

@@ -69,7 +69,7 @@ export function WorkItem({ work }: WorkItemProps) {
           src={work.images[0]}
           alt={work.title.en}
           fill
-          className="object-cover transition-transform duration-300 hover:scale-105"
+          className="object-cover transition-transform duration-300"
           priority
         />
       </Link>
@@ -88,10 +88,10 @@ export function WorkItem({ work }: WorkItemProps) {
 
         {work.description && (
           <div className="flex flex-col gap-4 text-sm leading-loose">
-            <div className="flex flex-col gap-0">
+            <div>
               {renderLines(work.description.en, 'text-gray-800')}
             </div>
-            <div className="flex flex-col gap-0">
+            <div>
               {renderLines(work.description.ja, 'text-gray-800')}
             </div>
           </div>

@@ -13,7 +13,7 @@ export function WorkItem({ work }: WorkItemProps) {
   const margin = rand() * 25;
 
   return (
-    <div className="mb-16 flex flex-col gap-4" style={{ marginRight: `${margin}%`, marginLeft: `${25 - margin}%` }} id={work.id}>
+    <article className="mb-16 flex flex-col gap-4" style={{ marginRight: `${margin}%`, marginLeft: `${25 - margin}%` }} id={work.id}>
       <Link href={`/works/${work.id}`} className="relative block aspect-video w-full">
         <Image
           src={work.images[0]}
@@ -31,22 +31,22 @@ export function WorkItem({ work }: WorkItemProps) {
           </time>
         </Link>
 
-        <div className="flex flex-col gap-2">
+        <section className="flex flex-col gap-2">
           <h2 className="text-base font-medium">{work.title.en}</h2>
           <h3 className="text-sm">{work.title.ja}</h3>
-        </div>
+        </section>
 
         {work.description && (
-          <div className="flex flex-col gap-4 text-sm leading-loose">
+          <section className="flex flex-col gap-4 text-sm leading-loose">
             <div>
               <FormattedText text={work.description.en} className="text-gray-800" />
             </div>
             <div>
               <FormattedText text={work.description.ja} className="text-gray-800" />
             </div>
-          </div>
+          </section>
         )}
       </div>
-    </div>
+    </article>
   );
 };

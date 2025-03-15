@@ -18,7 +18,7 @@ export function StaggeredWorkList() {
                 colstart === 4 ? 'col-start-4' : 'col-start-5';
 
         return (
-          <div key={work.id} className={`${colstartClassname} col-span-16`}>
+          <div key={work.id} className={`col-span-16 ${colstartClassname}`}>
             <WorkItem work={work} />
           </div>
         );

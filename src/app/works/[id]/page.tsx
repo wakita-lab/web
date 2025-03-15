@@ -1,4 +1,5 @@
 import { Work, WORKS } from '@/constants/works';
+import { FormattedText } from '@/utils/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -7,12 +8,6 @@ interface WorkPageProps {
   params: Promise<{
     id: string;
   }>;
-}
-
-export function generateStaticParams() {
-  return WORKS.map((work: Work) => ({
-    id: work.id,
-  }));
 }
 
 export default async function WorkPage({ params }: WorkPageProps) {
@@ -26,7 +21,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
   return (
     <main className="container mx-auto px-4 py-8">
       <Link
-        href="/"
+        href={`/#${work.id}`}
         className="mb-8 inline-block text-sm text-gray-500 hover:text-gray-400"
       >
         {'<--'} Back to works
@@ -56,18 +51,10 @@ export default async function WorkPage({ params }: WorkPageProps) {
           {work.description && (
             <div className="flex flex-col gap-4 text-base leading-loose lg:flex-row">
               <div className="flex-1">
-                {work.description.en.split('\n').map((line: string, index: number) => (
-                  <p key={`en-${index}`} className="text-gray-800">
-                    {line}
-                  </p>
-                ))}
+                <FormattedText text={work.description.en} className="text-gray-800" />
               </div>
               <div className="flex-1">
-                {work.description.ja.split('\n').map((line: string, index: number) => (
-                  <p key={`ja-${index}`} className="text-gray-800">
-                    {line}
-                  </p>
-                ))}
+                <FormattedText text={work.description.ja} className="text-gray-800" />
               </div>
             </div>
           )}

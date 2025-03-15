@@ -1,4 +1,5 @@
 import { Work } from '@/constants/works';
+import { FormattedText } from '@/utils/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
 import seedrandom from 'seedrandom';
@@ -6,57 +7,6 @@ import seedrandom from 'seedrandom';
 interface WorkItemProps {
   work: Work;
 }
-
-// Regular expression to detect URLs
-const URL_PATTERN = /https?:\/\/[^\s]+/g;
-
-// Convert URLs in text to Link components
-const renderTextWithLinks = (text: string) => {
-  // Split text into segments by URLs
-  const segments = text.split(URL_PATTERN);
-  const urls = text.match(URL_PATTERN) || [];
-
-  // Alternate between text segments and URLs
-  return segments.map((segment, index) => {
-    const elements = [];
-
-    // Regular text segment
-    if (segment) {
-      elements.push(segment);
-    }
-
-    // URL segment
-    if (urls[index]) {
-      elements.push(
-        <Link
-          key={`link-${index}`}
-          href={urls[index]}
-          className="text-gray-500 underline underline-offset-2 hover:text-gray-400"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {urls[index]}
-        </Link>,
-      );
-    }
-
-    return elements;
-  }).flat();
-};
-
-// Split text into lines and convert each line into appropriate components
-const renderLines = (text: string, className: string = '') => {
-  return text.split('\n').map((line, index) => {
-    const trimmedLine = line.trim();
-    if (!trimmedLine) return null;
-
-    return (
-      <p key={index} className={className}>
-        {renderTextWithLinks(trimmedLine)}
-      </p>
-    );
-  });
-};
 
 export function WorkItem({ work }: WorkItemProps) {
   const rand = seedrandom(work.id);
@@ -89,10 +39,10 @@ export function WorkItem({ work }: WorkItemProps) {
         {work.description && (
           <div className="flex flex-col gap-4 text-sm leading-loose">
             <div>
-              {renderLines(work.description.en, 'text-gray-800')}
+              <FormattedText text={work.description.en} className="text-gray-800" />
             </div>
             <div>
-              {renderLines(work.description.ja, 'text-gray-800')}
+              <FormattedText text={work.description.ja} className="text-gray-800" />
             </div>
           </div>
         )}

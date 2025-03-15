@@ -8,6 +8,9 @@ export default {
   ],
   theme: {
     extend: {
+      gridTemplateColumns: {
+        '20': 'repeat(20, minmax(0, 1fr))',
+      },
       fontFamily: {
         inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
       },

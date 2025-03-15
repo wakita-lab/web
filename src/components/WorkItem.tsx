@@ -5,12 +5,11 @@ import Link from 'next/link';
 
 interface WorkItemProps {
   work: Work;
-  className?: string;
 }
 
-export function WorkItem({ work, className }: WorkItemProps) {
+export function WorkItem({ work }: WorkItemProps) {
   return (
-    <article className={`flex flex-col gap-4 ${className}`} id={work.id}>
+    <article className="flex w-full flex-col gap-4" id={work.id}>
       <Link href={`/works/${work.id}`} className="relative block aspect-video w-full">
         <Image
           src={work.images[0]}

@@ -13,7 +13,7 @@ export function WorkItem({ work }: WorkItemProps) {
   const margin = rand() * 25;
 
   return (
-    <article className="mb-16 flex flex-col gap-4" style={{ marginRight: `${margin}%`, marginLeft: `${25 - margin}%` }} id={work.id}>
+    <article className="mb-16 flex flex-col gap-4" id={work.id}>
       <Link href={`/works/${work.id}`} className="relative block aspect-video w-full">
         <Image
           src={work.images[0]}
@@ -25,13 +25,12 @@ export function WorkItem({ work }: WorkItemProps) {
       </Link>
 
       <div className="flex flex-col gap-4">
-        <Link href={`#${work.id}`}>
-          <time className="text-xs text-gray-500 underline-offset-2 hover:underline">
-            {work.publishTime.toLocaleDateString('ja-JP')}
-          </time>
-        </Link>
-
         <section className="flex flex-col gap-2">
+          <Link href={`#${work.id}`}>
+            <time className="text-xs text-gray-500 underline-offset-2 hover:underline">
+              {work.publishTime.toLocaleDateString('ja-JP')}
+            </time>
+          </Link>
           <h2 className="text-base font-medium">{work.title.en}</h2>
           <h3 className="text-sm">{work.title.ja}</h3>
         </section>

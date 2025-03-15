@@ -18,7 +18,7 @@ export function StaggeredWorkList() {
                 colstart === 4 ? 'col-start-4' : 'col-start-5';
 
         return (
-          <div key={work.id} style={{ gridColumnEnd: 'span 16' }} className={`${colstartClassname}`}>
+          <div key={work.id} className={`${colstartClassname} col-span-16`}>
             <WorkItem work={work} />
           </div>
         );

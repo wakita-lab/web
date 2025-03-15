@@ -5,24 +5,24 @@ export interface Work {
   publishTime: Date;
   images: string[];
   title: {
-    ja: string;
     en: string;
+    ja: string;
   };
   description?: {
-    ja: string;
     en: string;
+    ja: string;
   };
   credits?: {
-    ja: string;
     en: string;
+    ja: string;
   };
   designTeam?: {
-    ja: string;
     en: string;
+    ja: string;
   };
   press?: {
-    ja: string;
     en: string;
+    ja: string;
   };
 }
 

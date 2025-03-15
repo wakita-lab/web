@@ -7,9 +7,10 @@ export const HamburgerMenu = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="fixed right-0 top-0 z-50">
+    <>
+      {/* Hamburger */}
       <button
-        className="z-50 flex items-center justify-center gap-2 p-4"
+        className="z-50 flex items-center justify-center gap-2 px-6 py-4"
         onClick={() => setIsOpen(!isOpen)}
         aria-label="メニュー"
       >
@@ -17,6 +18,7 @@ export const HamburgerMenu = () => {
         <XCheckbox selected={isOpen} />
       </button>
 
+      {/* Menu */}
       <div
         className={`fixed right-0 top-0 -z-50 h-full w-64 border-l border-gray-300 bg-white transition-transform duration-300 ease-in-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
@@ -30,6 +32,6 @@ export const HamburgerMenu = () => {
           />
         </div>
       </div>
-    </div>
+    </>
   );
 };

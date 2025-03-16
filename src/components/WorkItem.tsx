@@ -34,10 +34,10 @@ export function WorkItem({ work }: WorkItemProps) {
         {work.description && (
           <section className="flex flex-col gap-4 break-words text-sm leading-loose">
             <div>
-              <FormattedText text={work.description.en} className="text-gray-800" />
+              <FormattedText text={work.description.en} />
             </div>
             <div>
-              <FormattedText text={work.description.ja} className="text-gray-800" />
+              <FormattedText text={work.description.ja} />
             </div>
           </section>
         )}

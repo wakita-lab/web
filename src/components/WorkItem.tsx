@@ -20,8 +20,8 @@ export function WorkItem({ work }: WorkItemProps) {
         />
       </Link>
 
-      <div className="flex flex-col gap-4">
-        <section className="flex flex-col gap-2">
+      <section className="flex flex-col gap-4">
+        <div className="flex flex-col gap-2">
           <Link href={`#${work.id}`}>
             <time className="text-xs text-gray-500 underline-offset-2 hover:underline">
               {work.publishTime.toLocaleDateString('ja-JP')}
@@ -29,19 +29,15 @@ export function WorkItem({ work }: WorkItemProps) {
           </Link>
           <h2 className="text-base font-medium">{work.title.en}</h2>
           <h3 className="text-sm">{work.title.ja}</h3>
-        </section>
+        </div>
 
         {work.description && (
-          <section className="flex flex-col gap-4 break-words text-sm leading-loose">
-            <div>
-              <FormattedText text={work.description.en} />
-            </div>
-            <div>
-              <FormattedText text={work.description.ja} />
-            </div>
-          </section>
+          <div className="flex flex-col gap-4 break-words text-sm leading-loose">
+            <FormattedText text={work.description.en} />
+            {work.description.ja && <FormattedText text={work.description.ja} />}
+          </div>
         )}
-      </div>
+      </section>
     </article>
   );
 };

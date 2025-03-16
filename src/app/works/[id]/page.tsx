@@ -28,7 +28,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
       </Link>
 
       <article className="flex flex-col gap-8">
-        <div className="relative aspect-video w-full">
+        <section className="relative aspect-video w-full">
           <Image
             src={work.images[0]}
             alt={work.title.en}
@@ -36,9 +36,9 @@ export default async function WorkPage({ params }: WorkPageProps) {
             className="object-cover"
             priority
           />
-        </div>
+        </section>
 
-        <div className="flex flex-col gap-8">
+        <section className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <time className="text-sm text-gray-500">
               {work.publishTime.toLocaleDateString('ja-JP')}
@@ -53,11 +53,11 @@ export default async function WorkPage({ params }: WorkPageProps) {
                 <FormattedText text={work.description.en} />
               </div>
               <div className="flex flex-col">
-                <FormattedText text={work.description.ja} />
+                {work.description.ja && <FormattedText text={work.description.ja} />}
               </div>
             </div>
           )}
-        </div>
+        </section>
       </article>
     </main>
   );

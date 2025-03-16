@@ -14,7 +14,7 @@ export default function WorksPage() {
           >
             <Image
               src={work.images[0]}
-              alt={work.title.ja}
+              alt={work.title.en}
               width={400}
               height={400}
               className="aspect-square object-cover"

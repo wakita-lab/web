@@ -28,6 +28,10 @@ export interface Work {
     en: string;
     ja?: string;
   };
+  exhibition?: {
+    en: string;
+    ja?: string;
+  };
 }
 
 // YAMLから読み込んだデータをWork[]の形式に変換

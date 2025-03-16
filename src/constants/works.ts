@@ -16,7 +16,7 @@ export interface Work {
     en: string;
     ja: string;
   };
-  designTeam?: {
+  team?: {
     en: string;
     ja: string;
   };

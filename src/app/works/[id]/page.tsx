@@ -21,7 +21,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
   return (
     <main className="mx-auto px-6 pb-12 pt-4 md:px-8 lg:px-16">
       <Link
-        href={`/#${work.id}`}
+        href="/works"
         className="mb-8 inline-block text-sm text-gray-500 hover:text-gray-400"
       >
         {'<--'} Back to works

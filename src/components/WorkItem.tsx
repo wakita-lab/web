@@ -1,5 +1,5 @@
 import { Work } from '@/constants/works';
-import { FormattedText } from '@/utils/FormattedText';
+import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
 

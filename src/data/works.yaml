@@ -230,7 +230,7 @@
       脇田研究室は日本科学未来館のジオ・プリズムに流体ビジュアライゼーションを提供しました。 ジオ・プリズムは、AR（拡張現実感）技術を用いて、全球型ディスプレイ「ジオ･コスモス」にデータやシミュレーションを重ねて表示できるシステムです。 このビジュアライゼーションでは、海洋研究開発機構（JAMSTEC）のスーパーコンピューター「地球シミュレータ」によって計算された超高解像度海洋大循環モデルOFESのデータを使い、地球上の波の動きを3つの詳細度で可視化しています。
     en: |
       We have developed Ocean Current Visualization for the Geo-Prism system of Mirakan. Geo-prism is the new augmented reality system for Geo-Cosmos which is the symbol exhibit of Miraikan, produces high precision images on its sphere surface. Geo-Prism, developed by Rhizomatiks, is a framework to which new contents can be embedded. Keio SFC Wakita Lab has developed a super high resolution visualization of ocean behavior by using a set of simulation data that is calculated by JAMSTEC with their super computer, Earth Simulator. 
-  designTeam:
+  team:
     ja: |
       海流ビジュアライゼーション開発：慶應義塾大学SFC脇田研究室（山辺真幸、中野亜希人、脇田玲）
       データ提供：海洋研究開発機構（JAMSTEC）
@@ -334,7 +334,7 @@
     ja: |
       ラテン語で「波」を意味する名前が付けられたこの有機的なインターフェイスは、トヨタIT開発センターと慶應義塾大学脇田研究室との共同研究の中から生まれました。我々は、自動車インターフェイスの直感性を真摯に追求した結果、生物的な変形としなやかな素材性が有機的に連動したセンシュアスな操作曲面というビジョンに逢着しました。その一事例としてプロトタイピングされたのがUNDAです。このプロジェクトで我々が目指したのは、ユーザの波長とマシンの波長がシンクロする次世代のオペレーション -Undulating Concept- の具現化です。
       UNDAの上面を覆う人肌のように柔らかな外皮は、内包されたアクチュエータの動作と連動して驚くほど多彩な曲面形状を生成します。曲面の形状／動き／発光は多様な情報を提示するキネティックなディスプレイになっており、UNDAのユーザは視覚のみならず触覚や筋感覚を駆使してマシンと対話することになります。12個の昇降するボタンにはそれぞれに独立した機能が付与されており、コンテクストに応じて利用可能なものだけが隆起します。複数のボタンが連携して同時に動くことで、一塊の大きなボタンを生成することも可能です。人肌のように柔らかな素材は、押す／軌跡をたどる／つまむ／手の平で掃くなどの多様な操作言語をユーザにアフォードします。
-  designTeam:
+  team:
     en: |
       Concept and Direction: AKIRA WAKITA
       Art Direction: KOHEI TSUJI

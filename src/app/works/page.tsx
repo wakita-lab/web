@@ -4,8 +4,8 @@ import { WORKS } from '@/constants/works';
 
 export default function WorksPage() {
   return (
-    <div className="m-auto flex max-w-7xl items-end gap-4 p-4 pb-32">
-      <div className="grid w-full grid-cols-1 gap-px sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+    <div className="m-auto flex max-w-7xl items-end gap-4 p-4 pb-24">
+      <div className="grid w-full grid-cols-1 gap-px sm:grid-cols-2 md:grid-cols-3">
         {WORKS.map((work) => (
           <Link
             key={work.id}
@@ -22,8 +22,8 @@ export default function WorksPage() {
           </Link>
         ))}
       </div>
-      <time className="sticky bottom-32 font-semibold leading-none">
-        2025
+      <time className="sticky bottom-24 tabular-nums leading-none">
+        2024
       </time>
     </div>
   );

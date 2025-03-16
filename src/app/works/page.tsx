@@ -19,6 +19,9 @@ export default function WorksPage() {
               className="object-cover"
               sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw"
             />
+            <div className="absolute inset-x-0 bottom-0 bg-white py-2 pr-16">
+              <h2 className="text-sm uppercase">{work.title.en}</h2>
+            </div>
           </Link>
         ))}
       </div>

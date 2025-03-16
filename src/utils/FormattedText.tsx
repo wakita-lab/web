@@ -43,14 +43,18 @@ interface FormattedTextProps {
 }
 
 export function FormattedText({ text, className }: FormattedTextProps) {
-  return text.split('\n').map((line, index) => {
-    const trimmedLine = line.trim();
-    if (!trimmedLine) return null;
+  return (
+    <div className={className}>
+      {text.split('\n').map((line, index) => {
+        const trimmedLine = line.trim();
+        if (!trimmedLine) return null;
 
-    return (
-      <p key={index} className={className}>
-        {renderTextWithLinks(trimmedLine)}
-      </p>
-    );
-  });
+        return (
+          <p key={index} className={className}>
+            {renderTextWithLinks(trimmedLine)}
+          </p>
+        );
+      })}
+    </div>
+  );
 }

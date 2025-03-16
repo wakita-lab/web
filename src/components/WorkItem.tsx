@@ -10,7 +10,7 @@ interface WorkItemProps {
 export function WorkItem({ work }: WorkItemProps) {
   return (
     <article className="flex w-full flex-col gap-4" id={work.id}>
-      <Link href={`/works/${work.id}`} className="relative block aspect-video w-full">
+      <Link href={`/works/${work.id}`} className="relative block aspect-square w-full sm:aspect-video">
         <Image
           src={work.images[0]}
           alt={work.title.en}

@@ -16,11 +16,11 @@ export interface Work {
     en: string;
     ja: string;
   };
-  team?: {
+  press?: {
     en: string;
     ja: string;
   };
-  press?: {
+  team?: {
     en: string;
     ja: string;
   };

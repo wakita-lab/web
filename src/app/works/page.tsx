@@ -15,8 +15,8 @@ export default function WorksPage() {
             <Image
               src={work.images[0]}
               alt={work.title.ja}
-              width={512}
-              height={512}
+              width={400}
+              height={400}
               className="aspect-square object-cover"
             />
             <div className="bg-white py-2 pr-16">

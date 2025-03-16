@@ -15,7 +15,7 @@ export function WorkItem({ work }: WorkItemProps) {
           src={work.images[0]}
           alt={work.title.en}
           fill
-          className="object-cover transition-transform duration-300"
+          className="object-cover"
           priority
         />
       </Link>

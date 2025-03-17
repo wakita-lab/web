@@ -38,12 +38,12 @@ const renderTextWithLinks = (text: string) => {
 };
 
 interface FormattedTextProps {
-  text: string;
+  text?: string;
   className?: string;
 }
 
 export function FormattedText({ text, className }: FormattedTextProps) {
-  return (
+  return text ? (
     <div className={className}>
       {text.split('\n').map((line, index) => {
         const trimmedLine = line.trim();
@@ -56,5 +56,5 @@ export function FormattedText({ text, className }: FormattedTextProps) {
         );
       })}
     </div>
-  );
+  ) : null;
 }

@@ -49,11 +49,71 @@ export default async function WorkPage({ params }: WorkPageProps) {
 
           {work.description && (
             <div className="grid grid-cols-1 gap-8 text-base leading-loose md:grid-cols-2">
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-4">
                 <FormattedText text={work.description.en} />
+                {work.credits && (
+                  <div>
+                    <h3 className="font-medium">Credits</h3>
+                    <FormattedText text={work.credits.en} />
+                  </div>
+                )}
+                {work.publication && (
+                  <div>
+                    <h3 className="font-medium">Publication</h3>
+                    <FormattedText text={work.publication.en} />
+                  </div>
+                )}
+                {work.press && (
+                  <div>
+                    <h3 className="font-medium">Press</h3>
+                    <FormattedText text={work.press.en} />
+                  </div>
+                )}
+                {work.team && (
+                  <div>
+                    <h3 className="font-medium">Team</h3>
+                    <FormattedText text={work.team.en} />
+                  </div>
+                )}
+                {work.exhibition && (
+                  <div>
+                    <h3 className="font-medium">Exhibition</h3>
+                    <FormattedText text={work.exhibition.en} />
+                  </div>
+                )}
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col gap-4">
                 {work.description.ja && <FormattedText text={work.description.ja} />}
+                {work.credits?.ja && (
+                  <div>
+                    <h3 className="font-medium">Credits</h3>
+                    <FormattedText text={work.credits.ja} />
+                  </div>
+                )}
+                {work.publication?.ja && (
+                  <div>
+                    <h3 className="font-medium">Publication</h3>
+                    <FormattedText text={work.publication.ja} />
+                  </div>
+                )}
+                {work.press?.ja && (
+                  <div>
+                    <h3 className="font-medium">Press</h3>
+                    <FormattedText text={work.press.ja} />
+                  </div>
+                )}
+                {work.team?.ja && (
+                  <div>
+                    <h3 className="font-medium">Team</h3>
+                    <FormattedText text={work.team.ja} />
+                  </div>
+                )}
+                {work.exhibition?.ja && (
+                  <div>
+                    <h3 className="font-medium">Exhibitipon</h3>
+                    <FormattedText text={work.exhibition.ja} />
+                  </div>
+                )}
               </div>
             </div>
           )}

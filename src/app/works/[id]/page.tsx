@@ -69,12 +69,6 @@ export default async function WorkPage({ params }: WorkPageProps) {
                     <FormattedText text={work.press.en} />
                   </div>
                 )}
-                {work.team && (
-                  <div>
-                    <h3 className="font-medium">Team</h3>
-                    <FormattedText text={work.team.en} />
-                  </div>
-                )}
                 {work.exhibition && (
                   <div>
                     <h3 className="font-medium">Exhibition</h3>
@@ -100,12 +94,6 @@ export default async function WorkPage({ params }: WorkPageProps) {
                   <div>
                     <h3 className="font-medium">Press</h3>
                     <FormattedText text={work.press.ja} />
-                  </div>
-                )}
-                {work.team?.ja && (
-                  <div>
-                    <h3 className="font-medium">Team</h3>
-                    <FormattedText text={work.team.ja} />
                   </div>
                 )}
                 {work.exhibition?.ja && (

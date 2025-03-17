@@ -48,41 +48,41 @@ export default async function WorkPage({ params }: WorkPageProps) {
           </div>
 
           <div className="flex flex-col gap-8">
-            <div className="grid grid-cols-1 gap-8 text-base leading-loose md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-x-8 gap-y-2 text-base leading-loose md:grid-cols-2">
               {work.description?.en && <FormattedText text={work.description.en} />}
               {work.description?.ja && <FormattedText text={work.description.ja} />}
             </div>
             {work.credits && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-4 sm:gap-2">
                 <h3 className="font-medium">Credits</h3>
-                <div className="grid grid-cols-1 gap-8 text-base leading-loose md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-2 text-base leading-loose md:grid-cols-2">
                   <FormattedText text={work.credits.en} />
                   <FormattedText text={work.credits.ja} />
                 </div>
               </div>
             )}
             {work.publication && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-4 sm:gap-2">
                 <h3 className="font-medium">Publication</h3>
-                <div className="grid grid-cols-1 gap-8 text-base leading-loose md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-2 text-base leading-loose md:grid-cols-2">
                   <FormattedText text={work.publication.en} />
                   <FormattedText text={work.publication.ja} />
                 </div>
               </div>
             )}
             {work.press && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-4 sm:gap-2">
                 <h3 className="font-medium">Press</h3>
-                <div className="grid grid-cols-1 gap-8 text-base leading-loose md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-2 text-base leading-loose md:grid-cols-2">
                   <FormattedText text={work.press.en} />
                   <FormattedText text={work.press.ja} />
                 </div>
               </div>
             )}
             {work.exhibition && (
-              <div className="flex flex-col gap-2">
+              <div className="flex flex-col gap-4 sm:gap-2">
                 <h3 className="font-medium">Exhibition</h3>
-                <div className="grid grid-cols-1 gap-8 text-base leading-loose md:grid-cols-2">
+                <div className="grid grid-cols-1 gap-x-8 gap-y-2 text-base leading-loose md:grid-cols-2">
                   <FormattedText text={work.exhibition.en} />
                   <FormattedText text={work.exhibition.ja} />
                 </div>

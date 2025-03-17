@@ -4,8 +4,8 @@ import { WORKS } from '@/constants/works';
 
 export default function WorksPage() {
   return (
-    <div className="m-auto flex max-w-7xl items-end gap-4 p-4 pb-24">
-      <div className="grid w-full grid-cols-1 gap-x-px gap-y-8 sm:grid-cols-2 md:grid-cols-3">
+    <div className="m-auto flex max-w-7xl items-end p-8 pb-24">
+      <div className="grid w-full grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
         {WORKS.map((work) => (
           <Link
             key={work.id}
@@ -19,13 +19,13 @@ export default function WorksPage() {
               height={400}
               className="aspect-square object-cover"
             />
-            <div className="bg-white py-2 pr-16">
-              <h2 className="text-sm uppercase">{work.title.en}</h2>
+            <div className="w-full overflow-hidden text-nowrap bg-white py-1 pr-16">
+              <h2 className="text-sm">{work.title.en}</h2>
             </div>
           </Link>
         ))}
       </div>
-      <time className="sticky bottom-24 py-2 tabular-nums">
+      <time className="sticky bottom-24 py-2 pl-4 tabular-nums">
         2024
       </time>
     </div>

@@ -16,19 +16,15 @@ export interface Work {
     en: string;
     ja?: string;
   };
+  exhibition?: {
+    en: string;
+    ja?: string;
+  };
   publication?: {
     en: string;
     ja?: string;
   };
   press?: {
-    en: string;
-    ja?: string;
-  };
-  team?: {
-    en: string;
-    ja?: string;
-  };
-  exhibition?: {
     en: string;
     ja?: string;
   };

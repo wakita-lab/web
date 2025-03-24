@@ -18,7 +18,7 @@ export const HamburgerMenu = ({ isOpen }: HamburgerMenuProps) => {
         placeholder="Search"
         className="w-full border border-gray-300 px-2 py-1 text-center text-sm focus:border-gray-500 focus:outline-none"
       />
-      <div className="flex flex-col items-end gap-1">
+      <div className="flex flex-col gap-1">
         <Link href="/works">Works</Link>
         <Link href="/about">About</Link>
         <Link href="/member">Member</Link>

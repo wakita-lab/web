@@ -29,7 +29,7 @@ export default function WorksPage() {
                         : 'matrix(1, -0.6, -0.4, 1, 0, 0)',
             }}
           />
-          <div className="z-20 w-full overflow-hidden text-nowrap bg-white">
+          <div className="z-20 w-full -translate-y-96 overflow-hidden text-nowrap bg-white">
             {work.title.en}
           </div>
         </Link>

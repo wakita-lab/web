@@ -19,9 +19,7 @@ export default function WorksPage() {
             className="aspect-[9/20] object-cover"
           />
           <div className="w-full overflow-hidden text-nowrap bg-white">
-            <h2 className="text-base">
-              {work.title.en}
-            </h2>
+            {work.title.en}
           </div>
         </Link>
       ))}

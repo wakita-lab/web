@@ -63,7 +63,7 @@ export default function WorksPage() {
               className="absolute left-48 -z-40 aspect-[9/20] object-cover transition-transform hover:transform-none"
               style={{ transform: transformStyle }}
             />
-            <div className="z-20 w-full -translate-y-96 overflow-hidden text-nowrap bg-white">
+            <div className="absolute z-20 w-full translate-y-96 overflow-hidden text-nowrap bg-white">
               {work.title.en}
             </div>
           </Link>

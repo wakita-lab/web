@@ -16,7 +16,7 @@ export default function About() {
         AWARD / EXHIBITION
       </h2>
 
-      <ul>
+      <ul className="ml-4 list-disc">
         <li>グッドデザイン賞 8Kデータビジュアライゼーション [新型コロナウイルスの進化地図] 公益財団法人日本デザイン振興会（山辺真幸）, 2022.</li>
 
         <li>第33期学会賞（技術賞） 新型コロナウイルスゲノム系統樹の3次元可視化 一般社団法人 可視化情報学会 （山辺真幸）, 2022.</li>
@@ -103,12 +103,12 @@ export default function About() {
       </h2>
 
       <h3 className="font-bold">教授 / Professor</h3>
-      <ul>
+      <ul className="ml-4 list-disc">
         <li>脇田　玲 / Akira Wakita</li>
       </ul>
 
       <h3 className="font-bold">大学院博士課程 / Ph.D. Student</h3>
-      <ul>
+      <ul className="ml-4 list-disc">
         <li>山辺 真幸 / Masaki Yamabe</li>
         <li>傅 然 / Fu Ran</li>
         <li>川崎 和也 / Kazuya Kawasaki</li>
@@ -116,12 +116,12 @@ export default function About() {
       </ul>
 
       <h3 className="font-bold">大学院修士課程 / Master Student</h3>
-      <ul>
+      <ul className="ml-4 list-disc">
         <li>諸藤 勇太 / Yuta Morofuji</li>
       </ul>
 
       <h3 className="font-bold">学部生 / Undergraduate Student</h3>
-      <ul>
+      <ul className="ml-4 list-disc">
         <li>小川　楽生 / Rakuki Ogawa</li>
         <li>武谷　梨紗子 / Risako Takeya</li>
         <li>眞鍋　創人 / Soto Manabe</li>
@@ -141,7 +141,7 @@ export default function About() {
       </ul>
 
       <h3 className="font-bold">卒業生 / ALUMNI</h3>
-      <ul>
+      <ul className="ml-4 list-disc">
         <li>丹治 基浩 / Motohiro Tanji</li>
         <li>栗林 賢 / Satoshi Kuribayashi</li>
         <li>堀 太誌 / Taishi Hori</li>

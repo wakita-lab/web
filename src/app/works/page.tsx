@@ -16,7 +16,79 @@ export default function WorksPage() {
             alt={work.title.en}
             width={512}
             height={512}
-            className="aspect-[9/20] object-cover transition-transform group-hover:transform-none"
+            className="aspect-[9/20] object-cover transition-transform hover:transform-none"
+            style={{
+              transform:
+                index % 5 === 0 ? 'matrix(1, 0.1, 0.2, 1, 0, 0)' :
+                  index % 5 === 1
+                    ? 'matrix(1, -0.4, -0.6, 1, 0, 0)'
+                    : index % 5 === 2
+                      ? 'matrix(1, -0.8, 0.2, 1, 0, 0)'
+                      : index % 5 === 3
+                        ? 'matrix(1, -1.2, 0.8, 1, 0, 0)'
+                        : 'matrix(1, -0.6, -0.4, 1, 0, 0)',
+            }}
+          />
+          <Image
+            src={work.images[0]}
+            alt={work.title.en}
+            width={512}
+            height={512}
+            className="absolute left-8 -z-10 aspect-[9/20] object-cover transition-transform hover:transform-none"
+            style={{
+              transform:
+                index % 5 === 0 ? 'matrix(1, 0.1, 0.2, 1, 0, 0)' :
+                  index % 5 === 1
+                    ? 'matrix(1, -0.4, -0.6, 1, 0, 0)'
+                    : index % 5 === 2
+                      ? 'matrix(1, -0.8, 0.2, 1, 0, 0)'
+                      : index % 5 === 3
+                        ? 'matrix(1, -1.2, 0.8, 1, 0, 0)'
+                        : 'matrix(1, -0.6, -0.4, 1, 0, 0)',
+            }}
+          />
+          <Image
+            src={work.images[0]}
+            alt={work.title.en}
+            width={512}
+            height={512}
+            className="absolute left-20 -z-20 aspect-[9/20] object-cover transition-transform hover:transform-none"
+            style={{
+              transform:
+                index % 5 === 0 ? 'matrix(1, 0.1, 0.2, 1, 0, 0)' :
+                  index % 5 === 1
+                    ? 'matrix(1, -0.4, -0.6, 1, 0, 0)'
+                    : index % 5 === 2
+                      ? 'matrix(1, -0.8, 0.2, 1, 0, 0)'
+                      : index % 5 === 3
+                        ? 'matrix(1, -1.2, 0.8, 1, 0, 0)'
+                        : 'matrix(1, -0.6, -0.4, 1, 0, 0)',
+            }}
+          />
+          <Image
+            src={work.images[0]}
+            alt={work.title.en}
+            width={512}
+            height={512}
+            className="absolute left-32 -z-30 aspect-[9/20] object-cover transition-transform hover:transform-none"
+            style={{
+              transform:
+                index % 5 === 0 ? 'matrix(1, 0.1, 0.2, 1, 0, 0)' :
+                  index % 5 === 1
+                    ? 'matrix(1, -0.4, -0.6, 1, 0, 0)'
+                    : index % 5 === 2
+                      ? 'matrix(1, -0.8, 0.2, 1, 0, 0)'
+                      : index % 5 === 3
+                        ? 'matrix(1, -1.2, 0.8, 1, 0, 0)'
+                        : 'matrix(1, -0.6, -0.4, 1, 0, 0)',
+            }}
+          />
+          <Image
+            src={work.images[0]}
+            alt={work.title.en}
+            width={512}
+            height={512}
+            className="absolute left-48 -z-40 aspect-[9/20] object-cover transition-transform hover:transform-none"
             style={{
               transform:
                 index % 5 === 0 ? 'matrix(1, 0.1, 0.2, 1, 0, 0)' :

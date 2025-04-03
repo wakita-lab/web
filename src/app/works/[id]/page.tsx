@@ -45,6 +45,18 @@ export default async function WorkPage({ params }: WorkPageProps) {
             </time>
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
             <h2 className="text-xl">{work.title.ja}</h2>
+            {work.tags && work.tags.length > 0 && (
+              <div className="mt-3 flex flex-wrap gap-2">
+                {work.tags.map((tag) => (
+                  <span
+                    key={tag}
+                    className="inline-block rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-700"
+                  >
+                    {tag.replace(/_/g, ' ')}
+                  </span>
+                ))}
+              </div>
+            )}
           </div>
 
           <div className="flex flex-col gap-8">

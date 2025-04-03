@@ -22,6 +22,7 @@ export const HamburgerMenu = ({ isOpen }: HamburgerMenuProps) => {
         <Link href="/works">Works</Link>
         <Link href="/about">About</Link>
         <Link href="/member">Member</Link>
+        <Link href="/archivements">Archivements</Link>
       </div>
     </div>
   );

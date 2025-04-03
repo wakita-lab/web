@@ -21,7 +21,7 @@ export default function WorksPage() {
           <Link
             key={work.id}
             href={`/works/${work.id}`}
-            className="group relative flex flex-col gap-1"
+            className="group relative -z-50 flex flex-col gap-1"
           >
             <Image
               src={work.images[0]}
@@ -63,7 +63,7 @@ export default function WorksPage() {
               className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover transition-transform hover:transform-none"
               style={{ transform: transformStyle }}
             />
-            <div className="absolute z-20 w-full translate-y-96 overflow-hidden text-nowrap bg-white">
+            <div className="absolute z-20 w-full translate-y-96 overflow-hidden text-nowrap bg-white group-hover:z-50 group-hover:w-auto group-hover:min-w-full group-hover:overflow-visible group-hover:pr-4">
               {work.title.en}
             </div>
           </Link>

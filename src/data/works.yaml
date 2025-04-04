@@ -2,6 +2,9 @@
   publishTime: 2019-01-01
   images:
     - /works/speculativefakecollege.jpg
+  tags:
+    - installation
+    - performance
   title:
     en: Speculative Fake College - Social Credit Score Admission
     ja: 虚構大学SFC 2019入学試験
@@ -45,6 +48,8 @@
   publishTime: 2018-01-09
   images:
     - /works/worldsvesselroutes.png
+  tags:
+    - visualization
   title:
     en: Visualization of the World's Vessel Routes in the 18th Century
     ja: Visualization of the World's Vessel Routes in the 18th Century
@@ -65,6 +70,10 @@
   publishTime: 2018-01-08
   images:
     - /works/dismantle.jpg
+  tags:
+    - installation
+    - visualization
+    - material
   title:
     en: Dismantling Awe
     ja: Dismantling Awe
@@ -80,6 +89,8 @@
   publishTime: 2018-01-07
   images:
     - /works/scenery.jpg
+  tags:
+    - installation
   title:
     en: Scenery
     ja: Scenery
@@ -95,6 +106,9 @@
   publishTime: 2018-01-06
   images:
     - /works/cosmetics.jpg
+  tags:
+    - installation
+    - visualization
   title:
     en: Scalar Field of Cosmetics
     ja: Scalar Field of Cosmetics
@@ -110,6 +124,8 @@
   publishTime: 2018-01-05
   images:
     - /works/xhiasma.jpg
+  tags:
+    - performance
   title:
     en: XHIASMA
     ja: XHIASMA
@@ -127,6 +143,8 @@
   publishTime: 2018-01-04
   images:
     - /works/overdisplay_2.jpg
+  tags:
+    - mixed_media
   title:
     en: Over Display - Materiality
     ja: Over Display - Materiality
@@ -142,6 +160,8 @@
   publishTime: 2018-01-03
   images:
     - /works/overdisplay.jpg
+  tags:
+    - mixed_media
   title:
     en: Over Display - Modality
     ja: Over Display - Modality
@@ -157,6 +177,8 @@
   publishTime: 2018-01-02
   images:
     - /works/nonlinear.jpg
+  tags:
+    - visualization
   title:
     en: (Non) Linear
     ja: (Non) Linear
@@ -172,6 +194,8 @@
   publishTime: 2018-01-01
   images:
     - /works/activator.jpg
+  tags:
+    - visualization
   title:
     en: Activator / Inhibitor
     ja: Activator / Inhibitor
@@ -187,6 +211,8 @@
   publishTime: 2017-12-31
   images:
     - /works/homeelectronics.jpg
+  tags:
+    - installation
   title:
     en: Home Electronics
     ja: Home Electronics
@@ -202,6 +228,9 @@
   publishTime: 2017-12-30
   images:
     - /works/newsyn.jpg
+  tags:
+    - installation
+    - visualization
   title:
     en: New Synthesis
     ja: New Synthesis
@@ -217,6 +246,9 @@
   publishTime: 2017-12-29
   images:
     - /works/amp.jpg
+  tags:
+    - performance
+    - visualization
   title:
     en: Amplification
     ja: Amplification
@@ -232,6 +264,8 @@
   publishTime: 2017-12-28
   images:
     - /works/visualizationofairconditioner.png
+  tags:
+    - visualization
   title:
     en: Visualization of Air Conditioner
     ja: Visualization of Air Conditioner
@@ -252,6 +286,8 @@
   publishTime: 2016-12-31
   images:
     - /works/oceangeneralcirculationsimulation.png
+  tags:
+    - visualization
   title:
     en: Ocean General Circulation Simulation
     ja: Ocean General Circulation Simulation
@@ -274,6 +310,9 @@
   publishTime: 2015-12-31
   images:
     - /works/scalarfieldofshoes.jpg
+  tags:
+    - installation
+    - visualization
   title:
     en: Scalar Field of Shoes
     ja: Scalar Field of Shoes
@@ -292,6 +331,9 @@
   publishTime: 2015-12-30
   images:
     - /works/fina.jpg
+  tags:
+    - human_machine_interaction
+    - visualization
   title:
     en: FINA
     ja: FINA
@@ -305,6 +347,9 @@
   publishTime: 2015-12-29
   images:
     - /works/flora.jpg
+  tags:
+    - installation
+    - visualization
   title:
     en: FLORA
     ja: FLORA
@@ -322,6 +367,9 @@
   publishTime: 2014-12-31
   images:
     - /works/furnishedfluid.jpg
+  tags:
+    - installation
+    - visualization
   title:
     en: FURNISHED FLUID
     ja: FURNISHED FLUID
@@ -339,6 +387,8 @@
   publishTime: 2014-12-30
   images:
     - /works/humanbodyvisualizationworkshop.jpg
+  tags:
+    - visualization
   title:
     en: Human Body Visualization Workshop
     ja: Human Body Visualization Workshop
@@ -354,6 +404,10 @@
   publishTime: 2013-12-31
   images:
     - /works/unda.jpg
+  tags:
+    - human_machine_interaction
+    - robotics
+    - material
   title:
     en: UNDA
     ja: UNDA
@@ -384,6 +438,9 @@
   publishTime: 2013-12-30
   images:
     - /works/origamiandslowtech.jpg
+  tags:
+    - material
+    - user_interface
   title:
     en: ORIGAMI AND SLOW-TECH
     ja: ORIGAMI AND SLOW-TECH

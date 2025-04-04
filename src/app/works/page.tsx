@@ -61,8 +61,8 @@ export default function WorksPage() {
               <line
                 x1="20%"
                 y1="20%"
-                x2={`calc(50% + ${endX}px)`}
-                y2={`calc(50% + ${endY}px)`}
+                x2={`calc(20% + ${endX}px)`}
+                y2={`calc(70% + ${endY}px)`}
                 stroke={strokeColor}
                 strokeWidth="1.5"
               />

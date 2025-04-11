@@ -37,7 +37,6 @@ export default function WorksPage() {
               endX,
               endY,
               strokeColor: tagColor,
-              strokeWidth: 0.5 + Math.random() * 1.5, // 線の太さもランダムに
               tag, // タグ情報も保持
             };
           });
@@ -61,7 +60,7 @@ export default function WorksPage() {
                   x2={`calc(50% + ${line.endX}px)`}
                   y2={`calc(50% + ${line.endY}px)`}
                   stroke={line.strokeColor}
-                  strokeWidth={line.strokeWidth}
+                  strokeWidth={1}
                 />
               ))}
             </svg>

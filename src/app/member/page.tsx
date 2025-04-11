@@ -12,39 +12,63 @@ export default function About() {
 
       <h3 className="font-bold">大学院博士課程 / Ph.D. Student</h3>
       <ul className="ml-4 list-disc">
-        <li>山辺 真幸 / Masaki Yamabe</li>
         <li>傅 然 / Fu Ran</li>
-        <li>川崎 和也 / Kazuya Kawasaki</li>
-        <li>石原 航 / Ko Ishihara</li>
       </ul>
 
       <h3 className="font-bold">大学院修士課程 / Master Student</h3>
       <ul className="ml-4 list-disc">
-        <li>諸藤 勇太 / Yuta Morofuji</li>
       </ul>
 
       <h3 className="font-bold">学部生 / Undergraduate Student</h3>
       <ul className="ml-4 list-disc">
-        <li>小川　楽生 / Rakuki Ogawa</li>
-        <li>武谷　梨紗子 / Risako Takeya</li>
-        <li>眞鍋　創人 / Soto Manabe</li>
-        <li>佐久間 基就 / Motonari Sakuma</li>
-        <li>鈴木　一生 / Issei Suzuki</li>
-        <li>長島　康生 / Nagashima Koki</li>
-        <li>柴原　佳範 / Shibahara Yoshinori</li>
-        <li>リ　ボクカン / Li Muhan</li>
-        <li>山下　光 / Yamashita Rei</li>
-        <li>山本　愛 / Yamamoto Ai</li>
-        <li>植田　理紗子 / Ueda Risako</li>
-        <li>松村　萌々音 / Matsumura Momone</li>
-        <li>永田　一樹 / Nagata Kazuki</li>
-        <li>宇田川　まや / Udagawa Maya</li>
-        <li>徐　嘉曼 / Xu Jiaman</li>
         <li>桑島　侑己 / Kuwashima Yuki</li>
+        <li>井上　柊 / Shu Inoue</li>
+        <li>菊田　有祐 / Yusuke Kikuta</li>
+        <li>形山　竜一 / Ryuichi Katayama</li>
+        <li>西原　大生 / Taisho Nishihara</li>
+        <li>池田　悠生 / Ryusei Ikeda</li>
+        <li>湊　真之 / Masayuki Minato</li>
+        <li>土田　篤弥 / Atsuya Tsuchida</li>
+        <li>三澤　龍大 / Ryudai Misawa</li>
+        <li>蛯名　寿亮 / Jusuke Ebina</li>
+        <li>八代　有希 / Yuki Yashiro</li>
+        <li>大倉　怜 / Ryo Okura</li>
+        <li>平野　福 / Fuku Hirano</li>
+        <li>伏見　太杜 / Taito Fushimi</li>
+        <li>井坂　勇午 / Yuma Isaka</li>
       </ul>
 
       <h3 className="font-bold">卒業生 / ALUMNI</h3>
       <ul className="ml-4 list-disc">
+        <li>武谷　梨紗子 / Risako Takeya</li>
+        <li>眞鍋　創人 / Soto Manabe</li>
+        <li>鈴木　一生 / Issei Suzuki</li>
+        <li>長島　康生 / Nagashima Koki</li>
+        <li>柴原　佳範 / Shibahara Yoshinori</li>
+        <li>リ　ボクカン / Li Muhan</li>
+        <li>徐　嘉曼 / Xu Jiaman</li>
+        <li>山下　光 / Yamashita Rei</li>
+        <li>山本　愛 / Yamamoto Ai</li>
+        <li>植田　理紗子 / Ueda Risako</li>
+        <li>松村　萌々音 / Matsumura Momone</li>
+        <li>宇田川　まや / Udagawa Maya</li>
+        <li>諸藤 勇太 / Yuta Morofuji</li>
+        <li>吉井　仁実 / Hiromi Yoshii</li>
+        <li>山辺 真幸 / Masaki Yamabe</li>
+        <li>甲斐　優介 / Yusuke Kai</li>
+        <li>柴原　佳範 / Yoshinori Shibahara</li>
+        <li>永田　周世 / Shusei Nagata</li>
+        <li>石橋　優希 / Yuuki Ishibashi</li>
+        <li>吉田　裕紀 / Yuki Yoshida</li>
+        <li>川崎 和也 / Kazuya Kawasaki</li>
+        <li>石原 航 / Ko Ishihara</li>
+        <li>小川　楽生 / Rakuki Ogawa</li>
+        <li>村井　琴音 / Kotone Murai</li>
+        <li>永田　一樹 / Nagata Kazuki</li>
+        <li>須田　梨花子 / Rikako Suda</li>
+        <li>春名　海里 / Kairi Haruna</li>
+        <li>穴山　桃羽 / Momoha Anayama</li>
+        <li>佐久間 基就 / Motonari Sakuma</li>
         <li>丹治 基浩 / Motohiro Tanji</li>
         <li>栗林 賢 / Satoshi Kuribayashi</li>
         <li>堀 太誌 / Taishi Hori</li>

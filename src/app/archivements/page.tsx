@@ -7,6 +7,27 @@ export default function About() {
 
       <h3 className="font-bold">受賞</h3>
       <ul className="ml-4 list-disc">
+        <li>令和6年度文化庁メディア芸術クリエイター育成支援事業 採択（吉田裕紀）, 2024.</li>
+        <li>International Student Creative Award 2024 優秀賞（菊田有祐）, 2024.</li>
+        <li>SIW IMPACT＜GOOD INNOVATOR＞ GOOD INNOVATOR部門　ノミネート（菊田有祐）, 2024.</li>
+        <li>Asia Digital Art Award 2024 入賞（菊田有祐）, 2024.</li>
+        <li>WIRED CREATIVE HACK AWARD 2024 ファイナリスト（菊田有祐）, 2024.</li>
+        <li>SFC STUDENT AWARD 2024 受賞（菊田有祐）, 2024.</li>
+        <li>テラスアート湘南アワード Terrace Art Shonan AWARD 2024 オーディエンス賞（永田一樹、小川楽生）, 2024.</li>
+        <li>biscuit gallery 第2回 若手キュレーター支援事業採択「帰路にまざまざと知る」（小川楽生）, 2024.</li>
+        <li>ギャラリー無量キュレーション公募採択「おもはゆいふかみ」（小川楽生）, 2024.</li>
+        <li>文化庁メディア芸術クリエイター育成支援事業 採択（永田一樹）, 2024.</li>
+        <li>第29回学生CGコンテスト アート＆ニューメディア部門 入選（永田一樹）, 2024.</li>
+        <li>SIGGRAPH ASIA 2024 &quot;ART GALLERY&quot; 採択（永田一樹）, 2024.</li>
+        <li>第3回横浜国際ヴァイオリンコンクール 第2位（佐久間基就）, 2024.</li>
+        <li>第24回ルーマニア国際音楽コンクール 第3位、ICon Arts Transylvania賞、Apollonia賞（佐久間基就）, 2024.</li>
+        <li>第20回チェコ国際音楽コンクール 第3位（佐久間基就）, 2024.</li>
+        <li>第26回 日本演奏家コンクール 第1位（佐久間基就）, 2024.</li>
+        <li>第34回 日本クラシック音楽コンクール 第4位（佐久間基就）, 2024.</li>
+        <li>日テレイマジナリウムアワード フリースタイルコンピューティング部門 Bronze Prize（永田一樹）, 2023.</li>
+        <li>NeurIPS 2023 &quot;Machine Learning for Creativity and Design&quot; 採択（永田一樹）, 2023.</li>
+        <li>第1回Kヴァイオリンコンクール 第3位（佐久間基就）, 2022.</li>
+        <li>CIL Cultural Innovation Leadership（小川楽生）, 2021.</li>
         <li>グッドデザイン賞 8Kデータビジュアライゼーション [新型コロナウイルスの進化地図] 公益財団法人日本デザイン振興会（山辺真幸）, 2022.</li>
         <li>第33期学会賞（技術賞） 新型コロナウイルスゲノム系統樹の3次元可視化 一般社団法人 可視化情報学会 （山辺真幸）, 2022.</li>
         <li>渋谷アートアワード 2022（若月泰生）, 2022.</li>

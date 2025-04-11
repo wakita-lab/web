@@ -24,7 +24,7 @@ export default function WorksPage() {
           const tagColor = getTagColor(tag);
 
           // 各タグにつき3本の線を生成
-          return Array(3).fill(0).map(() => {
+          return Array(2).fill(0).map(() => {
             // 直線の角度をランダムに生成（0〜360度）
             const randomAngle = Math.floor(Math.random() * 360);
             // 角度からラジアンに変換

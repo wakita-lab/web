@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { WORKS } from '@/constants/works';
+import { getTagColor } from '@/constants/tags';
 
 const TransformMatrixes = [
   [1, 0.1, 0.2, 1, 0, 0],
@@ -17,30 +18,29 @@ export default function WorksPage() {
         const transformMatrix = TransformMatrixes[index % 5];
         const transformStyle = `matrix(${transformMatrix.join(',')})`;
 
-        // 10本の線を生成するための配列
-        const lines = Array(10).fill(0).map(() => {
-          // 直線の角度をランダムに生成（0〜360度）
-          const randomAngle = Math.floor(Math.random() * 360);
-          // 角度からラジアンに変換
-          const angleInRadians = (randomAngle * Math.PI) / 180;
-          // 直線の終点座標を計算（長さ10000px）
-          const endX = Math.cos(angleInRadians) * 10000;
-          const endY = Math.sin(angleInRadians) * 10000;
+        // タグごとに3本の線を生成
+        const lines = work.tags.flatMap(tag => {
+          // タグの色を取得
+          const tagColor = getTagColor(tag);
 
-          // ランダムな色を選択
-          const strokeColor = [
-            '#bbbb00',
-            '#bb00bb',
-            '#00bbbb',
-            '#444444',
-          ][Math.floor(Math.random() * 4)];
+          // 各タグにつき3本の線を生成
+          return Array(3).fill(0).map(() => {
+            // 直線の角度をランダムに生成（0〜360度）
+            const randomAngle = Math.floor(Math.random() * 360);
+            // 角度からラジアンに変換
+            const angleInRadians = (randomAngle * Math.PI) / 180;
+            // 直線の終点座標を計算（長さ10000px）
+            const endX = Math.cos(angleInRadians) * 10000;
+            const endY = Math.sin(angleInRadians) * 10000;
 
-          return {
-            endX,
-            endY,
-            strokeColor,
-            strokeWidth: 0.5 + Math.random() * 1.5, // 線の太さもランダムに
-          };
+            return {
+              endX,
+              endY,
+              strokeColor: tagColor,
+              strokeWidth: 0.5 + Math.random() * 1.5, // 線の太さもランダムに
+              tag, // タグ情報も保持
+            };
+          });
         });
 
         return (
@@ -49,7 +49,7 @@ export default function WorksPage() {
             href={`/works/${work.id}`}
             className="group relative -z-50 flex flex-col gap-1"
           >
-            {/* ランダムな方向に伸びる直線（10本） */}
+            {/* タグごとに3本ずつランダムな方向に伸びる直線 */}
             <svg
               className="pointer-events-none absolute left-0 top-0 size-full overflow-visible"
             >

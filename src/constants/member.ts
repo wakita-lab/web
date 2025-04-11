@@ -1,11 +1,13 @@
 import memberData from '../data/member.yaml';
 
-export type Degree = 'professor' | 'bachelor' | 'master' | 'doctor' | 'alumni';
+export type Role = 'professor' | 'bachelor' | 'master' | 'doctor' | 'alumni';
 
 export interface Member {
-  ja: string;
-  en: string;
-  degree: Degree;
+  name: {
+    ja: string;
+    en: string;
+  };
+  role: Role;
 }
 
 // YAMLから読み込んだデータをMember[]の形式に変換

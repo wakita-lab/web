@@ -12,7 +12,7 @@ export const Header = () => {
     <>
       <header className="sticky inset-x-0 top-0 z-20 flex w-full justify-between text-white mix-blend-difference">
         <Link href="/" className="p-4 md:px-6">
-          Akira Wakita Lab.
+          Akira Wakita Lab. Keio SFC
         </Link>
         <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
       </header>

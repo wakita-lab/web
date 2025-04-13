@@ -1,0 +1,507 @@
+# 教授 / Professor
+- name:
+    ja: 脇田 玲
+    en: Akira Wakita
+  role: professor
+
+# 大学院博士課程 / Ph.D. Student
+- name:
+    ja: 傅 然
+    en: Fu Ran
+  role: doctor
+
+# 学部生 / Undergraduate Student
+- name:
+    ja: 桑島 侑己
+    en: Kuwashima Yuki
+  role: bachelor
+- name:
+    ja: 井上 柊
+    en: Shu Inoue
+  role: bachelor
+- name:
+    ja: 菊田 有祐
+    en: Yusuke Kikuta
+  role: bachelor
+- name:
+    ja: 形山 竜一
+    en: Ryuichi Katayama
+  role: bachelor
+- name:
+    ja: 西原 大生
+    en: Taisho Nishihara
+  role: bachelor
+- name:
+    ja: 池田 悠生
+    en: Ryusei Ikeda
+  role: bachelor
+- name:
+    ja: 湊 真之
+    en: Masayuki Minato
+  role: bachelor
+- name:
+    ja: 土田 篤弥
+    en: Atsuya Tsuchida
+  role: bachelor
+- name:
+    ja: 三澤 龍大
+    en: Ryudai Misawa
+  role: bachelor
+- name:
+    ja: 蛯名 寿亮
+    en: Jusuke Ebina
+  role: bachelor
+- name:
+    ja: 八代 有希
+    en: Yuki Yashiro
+  role: bachelor
+- name:
+    ja: 大倉 怜
+    en: Ryo Okura
+  role: bachelor
+- name:
+    ja: 平野 福
+    en: Fuku Hirano
+  role: bachelor
+- name:
+    ja: 伏見 太杜
+    en: Taito Fushimi
+  role: bachelor
+- name:
+    ja: 井坂 勇午
+    en: Yuma Isaka
+  role: bachelor
+
+# 卒業生 / ALUMNI
+- name:
+    ja: 武谷 梨紗子
+    en: Risako Takeya
+  role: alumni
+- name:
+    ja: 眞鍋 創人
+    en: Soto Manabe
+  role: alumni
+- name:
+    ja: 鈴木 一生
+    en: Issei Suzuki
+  role: alumni
+- name:
+    ja: 長島 康生
+    en: Nagashima Koki
+  role: alumni
+- name:
+    ja: 柴原 佳範
+    en: Shibahara Yoshinori
+  role: alumni
+- name:
+    ja: リ ボクカン
+    en: Li Muhan
+  role: alumni
+- name:
+    ja: 徐 嘉曼
+    en: Xu Jiaman
+  role: alumni
+- name:
+    ja: 山下 光
+    en: Yamashita Rei
+  role: alumni
+- name:
+    ja: 山本 愛
+    en: Yamamoto Ai
+  role: alumni
+- name:
+    ja: 植田 理紗子
+    en: Ueda Risako
+  role: alumni
+- name:
+    ja: 松村 萌々音
+    en: Matsumura Momone
+  role: alumni
+- name:
+    ja: 宇田川 まや
+    en: Udagawa Maya
+  role: alumni
+- name:
+    ja: 諸藤 勇太
+    en: Yuta Morofuji
+  role: alumni
+- name:
+    ja: 吉井 仁実
+    en: Hiromi Yoshii
+  role: alumni
+- name:
+    ja: 山辺 真幸
+    en: Masaki Yamabe
+  role: alumni
+- name:
+    ja: 甲斐 優介
+    en: Yusuke Kai
+  role: alumni
+- name:
+    ja: 柴原 佳範
+    en: Yoshinori Shibahara
+  role: alumni
+- name:
+    ja: 永田 周世
+    en: Shusei Nagata
+  role: alumni
+- name:
+    ja: 石橋 優希
+    en: Yuuki Ishibashi
+  role: alumni
+- name:
+    ja: 吉田 裕紀
+    en: Yuki Yoshida
+  role: alumni
+- name:
+    ja: 川崎 和也
+    en: Kazuya Kawasaki
+  role: alumni
+- name:
+    ja: 石原 航
+    en: Ko Ishihara
+  role: alumni
+- name:
+    ja: 小川 楽生
+    en: Rakuki Ogawa
+  role: alumni
+- name:
+    ja: 村井 琴音
+    en: Kotone Murai
+  role: alumni
+- name:
+    ja: 永田 一樹
+    en: Nagata Kazuki
+  role: alumni
+- name:
+    ja: 須田 梨花子
+    en: Rikako Suda
+  role: alumni
+- name:
+    ja: 春名 海里
+    en: Kairi Haruna
+  role: alumni
+- name:
+    ja: 穴山 桃羽
+    en: Momoha Anayama
+  role: alumni
+- name:
+    ja: 佐久間 基就
+    en: Motonari Sakuma
+  role: alumni
+- name:
+    ja: 丹治 基浩
+    en: Motohiro Tanji
+  role: alumni
+- name:
+    ja: 栗林 賢
+    en: Satoshi Kuribayashi
+  role: alumni
+- name:
+    ja: 堀 太誌
+    en: Taishi Hori
+  role: alumni
+- name:
+    ja: 関口 智子
+    en: Tomoko Sekiguchi
+  role: alumni
+- name:
+    ja: 渋谷 みどり
+    en: Midori Shibutani
+  role: alumni
+- name:
+    ja: 深川 夏子
+    en: Natsuko Fukagawa
+  role: alumni
+- name:
+    ja: 岩井 貴史
+    en: Takafumi Iwai
+  role: alumni
+- name:
+    ja: 北田 荘平
+    en: Sohei Kitada
+  role: alumni
+- name:
+    ja: 渡邊 康太郎
+    en: Kotaro Watanabe
+  role: alumni
+- name:
+    ja: 神谷 久泰
+    en: Hisayasu Kamiya
+  role: alumni
+- name:
+    ja: 檜垣 万里子
+    en: Mariko Higaki
+  role: alumni
+- name:
+    ja: 貝嶋 一哉
+    en: Kazuya Kaijima
+  role: alumni
+- name:
+    ja: 石塚 賢
+    en: Ken Ishizuka
+  role: alumni
+- name:
+    ja: 出口 美月
+    en: Mizuki Deguchi
+  role: alumni
+- name:
+    ja: 服部 大祐
+    en: Daisuke Hattori
+  role: alumni
+- name:
+    ja: 谷口 靖太郎
+    en: Seitaro Taniguchi
+  role: alumni
+- name:
+    ja: 森山 篤
+    en: Atsushi Moriyama
+  role: alumni
+- name:
+    ja: 川原田 えり
+    en: Eri Kawarada
+  role: alumni
+- name:
+    ja: 長谷川 智祥
+    en: Tomoyoshi Hasegawa
+  role: alumni
+- name:
+    ja: 長島 禎
+    en: Tadashi Nagashima
+  role: alumni
+- name:
+    ja: 空閑 なつか
+    en: Natsuka Kuga
+  role: alumni
+- name:
+    ja: 中嶋 亮介
+    en: Ryosuke Nakajima
+  role: alumni
+- name:
+    ja: 野原 恵祐
+    en: Keisuke Nohara
+  role: alumni
+- name:
+    ja: 平田 英子
+    en: Hanako Hirata
+  role: alumni
+- name:
+    ja: 斉 友華
+    en: Yuka Sai
+  role: alumni
+- name:
+    ja: 中村 光一
+    en: Koichi Nakamura
+  role: alumni
+- name:
+    ja: 本堂 莉理
+    en: Lily Hondo
+  role: alumni
+- name:
+    ja: 酒井 瑛一
+    en: Eiichi Sakai
+  role: alumni
+- name:
+    ja: 勝沼 千秋
+    en: Chiaki Katsunuma
+  role: alumni
+- name:
+    ja: マラン 黎
+    en: Ray Malan
+  role: alumni
+- name:
+    ja: 田中 れな
+    en: Rena Tanaka
+  role: alumni
+- name:
+    ja: 佐藤 巡
+    en: Jun Sato
+  role: alumni
+- name:
+    ja: 鈴木 貴昭
+    en: Takaaki Suzuki
+  role: alumni
+- name:
+    ja: 上野 道彦
+    en: Michihiko Uenos
+  role: alumni
+- name:
+    ja: 姉崎 祐樹
+    en: Yuki Anezaki
+  role: alumni
+- name:
+    ja: 小林 展啓
+    en: Nobuhiro Kobayashi
+  role: alumni
+- name:
+    ja: 平瀬 謙太朗
+    en: Kentaro Hirase
+  role: alumni
+- name:
+    ja: 藤田 貴史
+    en: Takafumi Fujita
+  role: alumni
+- name:
+    ja: 山口 春花
+    en: Haruka Yamaguchi
+  role: alumni
+- name:
+    ja: 宮脇 亮
+    en: Ryo Miyawaki
+  role: alumni
+- name:
+    ja: 道幸 寛尚
+    en: Hironao Doko
+  role: alumni
+- name:
+    ja: 倉脇 達郎
+    en: Tatsuro Kurawaki
+  role: alumni
+- name:
+    ja: 金子 結
+    en: Yui Kaneko
+  role: alumni
+- name:
+    ja: 首藤 まり江
+    en: Marie Shuto
+  role: alumni
+- name:
+    ja: 戸塚 翔三
+    en: Shozo Totsuka
+  role: alumni
+- name:
+    ja: 根岸 明子
+    en: Akiko Negishi
+  role: alumni
+- name:
+    ja: 鬼久保 綾子
+    en: Ayako Onikubo
+  role: alumni
+- name:
+    ja: 叶多 祥子
+    en: Shoko Kanouta
+  role: alumni
+- name:
+    ja: 堀 晃
+    en: Hikaru Hori
+  role: alumni
+- name:
+    ja: 中嶋 颯
+    en: Sou Nakajima
+  role: alumni
+- name:
+    ja: 松根 佑眞
+    en: Yuuma Matsune
+  role: alumni
+- name:
+    ja: 牛込 陽介
+    en: Yosuke Ushigome
+  role: alumni
+- name:
+    ja: 中安 晶
+    en: Akira Nakayasu
+  role: alumni
+- name:
+    ja: 石井 健
+    en: Ken Ishii
+  role: alumni
+- name:
+    ja: 松橋 百葉
+    en: Matsuhashi Momoha
+  role: alumni
+- name:
+    ja: 周 南一
+    en: Zhou Nanyi
+  role: alumni
+- name:
+    ja: 若月 泰生
+    en: Taiki Wakatsuki
+  role: alumni
+- name:
+    ja: 矢島 光
+    en: Hikaru Yajima
+  role: alumni
+- name:
+    ja: 辻 航平
+    en: Kohei Tsuji
+  role: alumni
+- name:
+    ja: 佐藤 鐘成
+    en: Syosei Sato
+  role: alumni
+- name:
+    ja: 裏出 祐太
+    en: Yuta Urade
+  role: alumni
+- name:
+    ja: 新見 大暉
+    en: Taiki Niimi
+  role: alumni
+- name:
+    ja: 松山 彩香
+    en: Ayaka Matsuyama
+  role: alumni
+- name:
+    ja: 寺澤 佑那
+    en: Yuna Terasawa
+  role: alumni
+- name:
+    ja: 瀧 隆一郎
+    en: Ryuichirou Taki
+  role: alumni
+- name:
+    ja: 村松 充
+    en: Mitsuru Muramatsu
+  role: alumni
+- name:
+    ja: 海宝 竜也
+    en: Tatsuya Kaiho
+  role: alumni
+- name:
+    ja: 亀田 菜都子
+    en: Natsuko Kameda
+  role: alumni
+- name:
+    ja: 栗原 美樹
+    en: Miki Kurihara
+  role: alumni
+- name:
+    ja: 大河 遼太
+    en: Ryota Okawa
+  role: alumni
+- name:
+    ja: 髙橋 俊成
+    en: Seibe Takahashi
+  role: alumni
+- name:
+    ja: 大江 智之
+    en: Tomoyuki Oe
+  role: alumni
+- name:
+    ja: 中野 亜希人
+    en: Akito Nakano
+  role: alumni
+- name:
+    ja: 田畑 諒也
+    en: Ryoya Tabata
+  role: alumni
+- name:
+    ja: 中村 真実
+    en: Mami Nakamura
+  role: alumni
+- name:
+    ja: 計良 風太
+    en: Futa Kera
+  role: alumni
+- name:
+    ja: 滝 ゆうり
+    en: Yuri Taki
+  role: alumni
+- name:
+    ja: 瀧本 花乃介
+    en: Hananosuke Takimoto
+  role: alumni
+- name:
+    ja: 守田 幸洋
+    en: Yukihiro Morita
+  role: alumni

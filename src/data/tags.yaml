@@ -1,0 +1,77 @@
+- id: material
+  name:
+    en: Material
+    ja: マテリアル
+  color: "#2a9d8f"
+
+- id: user_interface
+  name:
+    en: User Interface
+    ja: ユーザーインターフェース
+  color: "#f4a261"
+
+- id: fashion
+  name:
+    en: Fashion
+    ja: ファッション
+  color: "#e76f51"
+
+- id: design_tool
+  name:
+    en: Design Tool
+    ja: デザインツール
+  color: "#457b9d"
+
+- id: robotics
+  name:
+    en: Robotics
+    ja: ロボティクス
+  color: "#1d3557"
+
+- id: visualization
+  name:
+    en: Visualization
+    ja: ビジュアライゼーション
+  color: "#457b9d"
+
+- id: book
+  name:
+    en: Book
+    ja: 書籍
+  color: "#8d99ae"
+
+- id: human_machine_interaction
+  name:
+    en: Human-Machine Interaction
+    ja: ヒューマンマシンインタラクション
+  color: "#8338ec"
+
+- id: installation
+  name:
+    en: Installation
+    ja: インスタレーション
+  color: "#e63946"
+
+- id: performance
+  name:
+    en: Performance
+    ja: パフォーマンス
+  color: "#f1c453"
+
+- id: mixed_media
+  name:
+    en: Mixed Media
+    ja: ミクストメディア
+  color: "#e76f51"
+
+- id: speculative_design
+  name:
+    en: Speculative Design
+    ja: スペキュラティブデザイン
+  color: "#3a86ff"
+
+- id: stereophonic_sound
+  name:
+    en: Stereophonic Sound
+    ja: ステレオフォニックサウンド
+  color: "#fb5607"

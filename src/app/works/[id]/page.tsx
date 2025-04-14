@@ -47,13 +47,13 @@ export default async function WorkPage({ params }: WorkPageProps) {
             </time>
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
             <h2 className="text-xl">{work.title.ja}</h2>
-            {work.tags && (
+            <div className="mt-5">
               <TagList
                 tags={work.tags}
                 getTagColor={getTagColor}
                 getTagName={getTagName}
               />
-            )}
+            </div>
           </div>
 
           <div className="flex flex-col gap-8">

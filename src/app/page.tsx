@@ -46,7 +46,7 @@ export default function Home() {
           <Link
             key={work.id}
             href={`/works/${work.id}`}
-            className="group relative -z-50 flex flex-col gap-1"
+            className="group relative z-0 flex flex-col gap-1"
           >
             {/* タグごとに3本ずつランダムな方向に伸びる直線 */}
             <svg
@@ -69,7 +69,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="aspect-[9/20] object-cover transition-transform hover:transform-none"
+              className="aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -77,7 +77,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-8 top-2 -z-10 aspect-[9/20] object-cover transition-transform hover:transform-none"
+              className="absolute left-8 top-2 -z-10 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -85,7 +85,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-20 top-4 -z-20 aspect-[9/20] object-cover transition-transform hover:transform-none"
+              className="absolute left-20 top-4 -z-20 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -93,7 +93,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-32 top-6 -z-30 aspect-[9/20] object-cover transition-transform hover:transform-none"
+              className="absolute left-32 top-6 -z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -101,7 +101,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover transition-transform hover:transform-none"
+              className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <div className="absolute z-20 w-full translate-y-96 overflow-hidden text-nowrap bg-white group-hover:z-50 group-hover:w-auto group-hover:min-w-full group-hover:overflow-visible group-hover:pr-4">

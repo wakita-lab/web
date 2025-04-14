@@ -104,7 +104,7 @@ export default function Home() {
               className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
-            <div className="absolute z-20 w-full translate-y-96 overflow-hidden text-nowrap bg-white group-hover:z-50 group-hover:w-auto group-hover:min-w-full group-hover:overflow-visible group-hover:pr-4">
+            <div className="absolute z-20 w-full translate-y-96 overflow-hidden text-nowrap bg-white">
               {work.title.en}
             </div>
           </Link>

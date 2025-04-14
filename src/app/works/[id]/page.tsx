@@ -1,5 +1,6 @@
 import { Work, WORKS } from '@/constants/works';
 import { FormattedText } from '@/components/FormattedText';
+import { getTagColor, getTagName } from '@/constants/tags';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -22,7 +23,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
     <main className="mx-auto p-4 pb-12 md:px-8 lg:px-16">
       <Link
         href="/works"
-        className="mb-8 inline-block text-sm text-gray-500 hover:text-gray-400"
+        className="mb-8 inline-block text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
       >
         {'<--'} Back to works
       </Link>
@@ -46,14 +47,16 @@ export default async function WorkPage({ params }: WorkPageProps) {
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
             <h2 className="text-xl">{work.title.ja}</h2>
             {work.tags && work.tags.length > 0 && (
-              <div className="mt-3 flex flex-wrap gap-2">
-                {work.tags.map((tag) => (
-                  <span
-                    key={tag}
-                    className="inline-block rounded-full bg-gray-100 px-3 py-1 text-xs text-gray-700"
-                  >
-                    {tag.replace(/_/g, ' ')}
-                  </span>
+              <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
+                {work.tags.map((tag, index) => (
+                  <div key={tag} className="flex items-center gap-1">
+                    <div
+                      className="mr-1 h-4 w-2"
+                      style={{ backgroundColor: getTagColor(tag) }}
+                    />
+                    <span>{getTagName(tag, 'en')}</span>
+                    {index < work.tags.length - 1 && <span className="ml-1 size-0.5 rounded-full bg-neutral-700"></span>}
+                  </div>
                 ))}
               </div>
             )}

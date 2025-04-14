@@ -1,0 +1,35 @@
+import React from 'react';
+
+import { Tag } from '@/constants/works';
+
+interface TagListProps {
+  tags: Tag[];
+  getTagColor: (tag: Tag) => string;
+  getTagName: (tag: Tag, lang: 'en' | 'ja') => string;
+}
+
+const TagList: React.FC<TagListProps> = ({ tags, getTagColor, getTagName }) => {
+  if (!tags || tags.length === 0) return null;
+
+  return (
+    <div className="flex flex-wrap items-center gap-2 text-sm">
+      {tags.map((tag, index) => (
+        <div key={tag} className="flex items-center gap-2">
+          <div>
+            <div className="h-1 w-2 bg-black" />
+            <div
+              className="h-3 w-2"
+              style={{ backgroundColor: getTagColor(tag) }}
+            />
+          </div>
+          <span>{getTagName(tag, 'en')}</span>
+          {index < tags.length - 1 && (
+            <span className="size-0.5 rounded-full bg-neutral-700"></span>
+          )}
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default TagList;

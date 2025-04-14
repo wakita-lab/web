@@ -1,4 +1,5 @@
 import { Work, WORKS } from '@/constants/works';
+import TagList from '@/components/TagList';
 import { FormattedText } from '@/components/FormattedText';
 import { getTagColor, getTagName } from '@/constants/tags';
 import Image from 'next/image';
@@ -46,22 +47,12 @@ export default async function WorkPage({ params }: WorkPageProps) {
             </time>
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
             <h2 className="text-xl">{work.title.ja}</h2>
-            {work.tags && work.tags.length > 0 && (
-              <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
-                {work.tags.map((tag, index) => (
-                  <div key={tag} className="flex items-center gap-1">
-                    <div>
-                      <div className="mr-1 h-1 w-2 bg-black" />
-                      <div
-                        className="mr-1 h-3 w-2"
-                        style={{ backgroundColor: getTagColor(tag) }}
-                      />
-                    </div>
-                    <span>{getTagName(tag, 'en')}</span>
-                    {index < work.tags.length - 1 && <span className="ml-1 size-0.5 rounded-full bg-neutral-700"></span>}
-                  </div>
-                ))}
-              </div>
+            {work.tags && (
+              <TagList
+                tags={work.tags}
+                getTagColor={getTagColor}
+                getTagName={getTagName}
+              />
             )}
           </div>
 

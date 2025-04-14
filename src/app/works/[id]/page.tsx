@@ -1,7 +1,6 @@
 import { Work, WORKS } from '@/constants/works';
 import TagList from '@/components/TagList';
 import { FormattedText } from '@/components/FormattedText';
-import { getTagColor, getTagName } from '@/constants/tags';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
@@ -48,11 +47,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
             <h2 className="text-xl">{work.title.ja}</h2>
             <div className="mt-5">
-              <TagList
-                tags={work.tags}
-                getTagColor={getTagColor}
-                getTagName={getTagName}
-              />
+              <TagList tags={work.tags}/>
             </div>
           </div>
 

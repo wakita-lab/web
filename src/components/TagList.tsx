@@ -1,14 +1,13 @@
 import React from 'react';
 
 import { Tag } from '@/constants/works';
+import { getTagColor, getTagName } from '@/constants/tags';
 
 interface TagListProps {
   tags: Tag[];
-  getTagColor: (tag: Tag) => string;
-  getTagName: (tag: Tag, lang: 'en' | 'ja') => string;
 }
 
-const TagList: React.FC<TagListProps> = ({ tags, getTagColor, getTagName }) => {
+export default function TagList({ tags }: TagListProps) {
   if (!tags || tags.length === 0) return null;
 
   return (
@@ -31,5 +30,3 @@ const TagList: React.FC<TagListProps> = ({ tags, getTagColor, getTagName }) => {
     </div>
   );
 };
-
-export default TagList;

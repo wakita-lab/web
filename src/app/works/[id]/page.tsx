@@ -50,10 +50,13 @@ export default async function WorkPage({ params }: WorkPageProps) {
               <div className="mt-3 flex flex-wrap items-center gap-2 text-sm">
                 {work.tags.map((tag, index) => (
                   <div key={tag} className="flex items-center gap-1">
-                    <div
-                      className="mr-1 h-4 w-2"
-                      style={{ backgroundColor: getTagColor(tag) }}
-                    />
+                    <div>
+                      <div className="mr-1 h-1 w-2 bg-black" />
+                      <div
+                        className="mr-1 h-3 w-2"
+                        style={{ backgroundColor: getTagColor(tag) }}
+                      />
+                    </div>
                     <span>{getTagName(tag, 'en')}</span>
                     {index < work.tags.length - 1 && <span className="ml-1 size-0.5 rounded-full bg-neutral-700"></span>}
                   </div>

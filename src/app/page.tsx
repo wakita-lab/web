@@ -16,26 +16,7 @@ export default function Home() {
     <div className="m-auto grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:grid-cols-2 sm:gap-8 sm:px-24 lg:grid-cols-3">
       {WORKS.map((work, index) => {
         const transformMatrix = TransformMatrixes[index % 5];
-        const transformStyle = `matrix(${transformMatrix.join(',')})`;
-
-        // タグごとに3本の線を生成
-        const lines = work.tags.flatMap(tag => {
-          const tagColor = getTagColor(tag);
-
-          return Array(1).fill(0).map(() => {
-            const randomAngle = Math.floor(Math.random() * 360);
-            const angleInRadians = (randomAngle * Math.PI) / 180;
-            const endX = Math.cos(angleInRadians) * 10000;
-            const endY = Math.sin(angleInRadians) * 10000;
-
-            return {
-              endX,
-              endY,
-              strokeColor: tagColor,
-              tag,
-            };
-          });
-        });
+        const transformStyle = `matrix(${transformMatrix.map(String).join(',')})`;
 
         return (
           <Link
@@ -43,22 +24,6 @@ export default function Home() {
             href={`/works/${work.id}`}
             className="group relative z-0 flex flex-col gap-1"
           >
-            {/* タグごとに3本ずつランダムな方向に伸びる直線 */}
-            <svg
-              className="pointer-events-none absolute left-0 top-0 size-full overflow-visible"
-            >
-              {lines.map((line, lineIndex) => (
-                <line
-                  key={lineIndex}
-                  x1="50%"
-                  y1="50%"
-                  x2={`calc(50% + ${line.endX}px)`}
-                  y2={`calc(50% + ${line.endY}px)`}
-                  stroke={line.strokeColor}
-                  strokeWidth={1}
-                />
-              ))}
-            </svg>
             <Image
               src={work.images[0]}
               alt={work.title.en}

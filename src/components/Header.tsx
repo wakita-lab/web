@@ -10,7 +10,7 @@ export const Header = () => {
 
   return (
     <>
-      <header className="sticky inset-x-0 top-0 z-20 mx-0 flex w-auto justify-between text-white mix-blend-difference backdrop-grayscale md:mx-[100px]">
+      <header className="sticky inset-x-0 top-0 z-20 mx-0 flex w-auto justify-between text-white mix-blend-difference backdrop-grayscale md:mx-[108px]">
         <Link href="/" className="p-4 md:px-6">
           Akira Wakita Lab. Keio SFC
         </Link>

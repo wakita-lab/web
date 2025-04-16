@@ -99,8 +99,17 @@ export default function Home() {
               className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
-            <div className="absolute z-20 w-full translate-y-96 overflow-hidden text-nowrap bg-white">
-              {work.title.en}
+            <div className="absolute top-1/2 z-20 flex w-full flex-col">
+              <div className="overflow-hidden text-nowrap bg-white leading-5">
+                {work.title.en}
+              </div>
+              <div className="flex h-1">
+                {work.tags.map((tag, index) => (
+                  <div key={index} className="grow" style={
+                    { backgroundColor: getTagColor(tag) }
+                  } />
+                ))}
+              </div>
             </div>
           </Link>
         );

@@ -3,6 +3,7 @@ import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
 import seedrandom from 'seedrandom';
+import TagList from '@/components/TagList';
 
 function WorkItem({ work }: { work: Work }) {
   return (
@@ -34,6 +35,8 @@ function WorkItem({ work }: { work: Work }) {
             {work.description.ja && <FormattedText text={work.description.ja} />}
           </div>
         )}
+
+        <TagList tags={work.tags} />
       </section>
     </article>
   );

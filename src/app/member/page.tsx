@@ -22,7 +22,7 @@ export default function MemberPage() {
 
   return (
     <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-8 leading-loose">
-      <h1 className="text-2xl font-medium">Member</h1>
+      <h1 className="bg-accent text-2xl font-medium">Member</h1>
 
       {roleOrder.map(role => {
         const members = groupedMembers[role] || [];
@@ -30,7 +30,7 @@ export default function MemberPage() {
 
         return (
           <div key={role}>
-            <h3 className="font-bold">{roleHeadings[role]}</h3>
+            <h3 className="mb-2 bg-accent leading-6">{roleHeadings[role]}</h3>
             <ul className="ml-4 list-disc">
               {members.map((member) => (
                 <li key={member.name.en}>

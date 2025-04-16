@@ -100,7 +100,7 @@ export default function Home() {
               style={{ transform: transformStyle }}
             />
             <div className="absolute top-1/2 z-20 flex w-full flex-col">
-              <div className="overflow-hidden text-nowrap bg-white leading-5">
+              <div className="overflow-hidden text-nowrap bg-neutral-50 leading-5">
                 {work.title.en}
               </div>
               <div className="flex h-1 bg-current" />

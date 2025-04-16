@@ -64,7 +64,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="aspect-[9/20] w-12 object-cover"
+              className="aspect-[9/20] w-16 object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -72,7 +72,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-8 top-2 -z-10 aspect-[9/20] w-12 object-cover"
+              className="absolute left-14 top-2 -z-10 aspect-[9/20] w-16 object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -80,7 +80,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-20 top-4 -z-20 aspect-[9/20] w-12 object-cover"
+              className="absolute left-32 top-4 -z-20 aspect-[9/20] w-16 object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -88,7 +88,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-32 top-6 -z-30 aspect-[9/20] w-12 object-cover"
+              className="absolute left-52 top-6 -z-30 aspect-[9/20] w-16 object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -96,7 +96,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-48 top-8 -z-40 aspect-[9/20] w-12 object-cover"
+              className="absolute left-72 top-8 -z-40 aspect-[9/20] w-16 object-cover"
               style={{ transform: transformStyle }}
             />
             <div className="absolute top-1/2 z-20 flex w-full flex-col">
@@ -118,7 +118,7 @@ export default function Home() {
         );
       })}
 
-      {/* <time className="sticky bottom-24 right-16 w-12 tabular-nums">
+      {/* <time className="sticky bottom-24 right-16 w-16 tabular-nums">
         2024
       </time> */}
     </div>

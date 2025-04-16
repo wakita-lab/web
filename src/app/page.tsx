@@ -20,16 +20,11 @@ export default function Home() {
 
         // タグごとに3本の線を生成
         const lines = work.tags.flatMap(tag => {
-          // タグの色を取得
           const tagColor = getTagColor(tag);
 
-          // 各タグにつき3本の線を生成
           return Array(1).fill(0).map(() => {
-            // 直線の角度をランダムに生成（0〜360度）
             const randomAngle = Math.floor(Math.random() * 360);
-            // 角度からラジアンに変換
             const angleInRadians = (randomAngle * Math.PI) / 180;
-            // 直線の終点座標を計算（長さ10000px）
             const endX = Math.cos(angleInRadians) * 10000;
             const endY = Math.sin(angleInRadians) * 10000;
 
@@ -37,7 +32,7 @@ export default function Home() {
               endX,
               endY,
               strokeColor: tagColor,
-              tag, // タグ情報も保持
+              tag,
             };
           });
         });

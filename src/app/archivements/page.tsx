@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-8 leading-loose">
+    <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-8 px-4 leading-loose">
       <h1 className="bg-accent text-2xl font-medium">Archivements</h1>
 
       <h3 className="bg-accent">受賞</h3>

@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { WORKS } from '@/constants/works';
-import { getTagColor } from '@/constants/tags';
+import { getTagColor, getTagName } from '@/constants/tags';
 
 const TransformMatrixes = [
   [1, 0.1, 0.2, 1, 0, 0],
@@ -103,11 +103,14 @@ export default function Home() {
               <div className="overflow-hidden text-nowrap bg-white leading-5">
                 {work.title.en}
               </div>
-              <div className="flex h-1">
+              <div className="flex h-1 bg-current" />
+              <div className="flex h-4 ">
                 {work.tags.map((tag, index) => (
-                  <div key={index} className="grow" style={
+                  <div key={index} className="grow overflow-hidden pl-0.5 text-xs leading-4 text-transparent group-hover:text-white" style={
                     { backgroundColor: getTagColor(tag) }
-                  } />
+                  } >
+                    {getTagName(tag, 'en')}
+                  </div>
                 ))}
               </div>
             </div>

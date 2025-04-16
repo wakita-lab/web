@@ -106,7 +106,7 @@ export default function Home() {
               <div className="flex h-1 bg-current" />
               <div className="flex h-4 ">
                 {work.tags.map((tag, index) => (
-                  <div key={index} className="grow overflow-hidden pl-0.5 text-xs leading-4 text-transparent group-hover:text-white" style={
+                  <div key={index} className="grow overflow-hidden pl-0.5 text-xs leading-4 text-transparent transition-colors group-hover:text-white" style={
                     { backgroundColor: getTagColor(tag) }
                   } >
                     {getTagName(tag, 'en')}

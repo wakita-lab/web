@@ -31,7 +31,7 @@ export default function MemberPage() {
         return (
           <div key={role}>
             <h3 className="mb-2 bg-accent">{roleHeadings[role]}</h3>
-            <ul className="ml-4 list-disc">
+            <ul className="ml-4 list-hyphen">
               {members.map((member) => (
                 <li key={member.name.en}>
                   {member.name.ja} / {member.name.en}

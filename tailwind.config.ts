@@ -22,6 +22,9 @@ export default {
         foreground: 'var(--foreground)',
         accent: 'var(--accent)',
       },
+      listStyleType: {
+        hyphen: 'hyphen',
+      },
     },
   },
   plugins: [],

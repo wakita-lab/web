@@ -11,9 +11,9 @@ export default function TagList({ tags }: TagListProps) {
   if (!tags || tags.length === 0) return null;
 
   return (
-    <div className="flex flex-wrap items-center gap-2 text-sm">
+    <ul className="flex flex-wrap items-center gap-2 text-sm">
       {tags.map((tag, index) => (
-        <div key={tag} className="flex items-center gap-2">
+        <li key={tag} className="flex items-center gap-2">
           <div>
             <div className="h-1 w-2 bg-black" />
             <div
@@ -25,8 +25,8 @@ export default function TagList({ tags }: TagListProps) {
           {index < tags.length - 1 && (
             <span className="size-0.5 rounded-full bg-neutral-700"></span>
           )}
-        </div>
+        </li>
       ))}
-    </div>
+    </ul>
   );
 };

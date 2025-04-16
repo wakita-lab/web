@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable}>
-      <body className="overflow-x-hidden overscroll-none font-inter font-light">
+      <body className="overflow-x-hidden overscroll-none font-inter text-sm font-light">
         <Header />
         {children}
         <Analytics />

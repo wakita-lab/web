@@ -23,7 +23,7 @@ export default function About() {
 
       <section className="flex flex-col gap-4">
         <h2 className="font-bold">
-          21世紀のアーティストを育成する - Nurturing Artists for the 21st Century
+          Nurturing Artists for the 21st Century - 21世紀のアーティストを育成する
         </h2>
         <p>
           早くも21世紀の4分の1が経過しました。21世紀の現代だからこそ実現しうるアートとはどのようなものなのでしょうか？300年後に語られる2025年当時のアートとはどのようなものになるのでしょうか？慶應義塾大学SFC脇田研究室では次代のアートを切り開く新しいアーティスト／キュレーター／プロデューサーを育成していきます。

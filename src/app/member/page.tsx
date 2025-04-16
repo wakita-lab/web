@@ -22,9 +22,8 @@ export default function MemberPage() {
 
   return (
     <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-8 leading-loose">
-      <h2 className="font-bold">
-        MEMBER
-      </h2>
+      <h1 className="text-2xl font-medium">Member</h1>
+
       {roleOrder.map(role => {
         const members = groupedMembers[role] || [];
         if (members.length === 0) return null;

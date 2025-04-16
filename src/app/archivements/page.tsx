@@ -1,9 +1,7 @@
 export default function About() {
   return (
     <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-8 leading-loose">
-      <h2 className="font-bold">
-        ACHIEVEMENTS
-      </h2>
+      <h1 className="text-2xl font-medium">Archivements</h1>
 
       <h3 className="font-bold">受賞</h3>
       <ul className="ml-4 list-disc">

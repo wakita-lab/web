@@ -21,7 +21,7 @@ export default function MemberPage() {
   }, {} as Record<string, typeof MEMBERS>);
 
   return (
-    <div className="mx-auto mb-24 flex max-w-xl flex-col justify-center gap-8 px-4 leading-loose">
+    <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-8 px-4 leading-loose">
       <h1 className="mt-8 bg-accent text-2xl font-medium">Member</h1>
 
       {roleOrder.map(role => {

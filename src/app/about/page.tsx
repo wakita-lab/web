@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <div className="mx-auto mb-24 flex max-w-xl flex-col justify-center gap-12 px-4 leading-loose">
+    <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-12 px-4 leading-loose">
       <h1 className="mt-8 border-b bg-accent text-2xl font-medium">About</h1>
 
       <section className="flex flex-col gap-4">

@@ -63,7 +63,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="aspect-[9/20] w-20 object-cover"
+              className="aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -71,7 +71,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-12 top-2 -z-10 aspect-[9/20] w-20 object-cover"
+              className="absolute left-12 top-2 -z-10 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -79,7 +79,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-28 top-4 -z-20 aspect-[9/20] w-20 object-cover"
+              className="absolute left-28 top-4 -z-20 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -87,7 +87,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-48 top-6 -z-30 aspect-[9/20] w-20 object-cover"
+              className="absolute left-48 top-6 -z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -95,31 +95,20 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-72 top-8 -z-40 aspect-[9/20] w-20 object-cover"
+              className="absolute left-72 top-8 -z-40 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <div className="absolute top-1/2 z-20 flex w-full flex-col">
               <div className="overflow-hidden text-nowrap bg-neutral-50 leading-5">
                 {work.title.en}
               </div>
-              <div className="flex h-1 bg-current" />
-              <div className="flex h-4 ">
-                {work.tags.map((tag, index) => (
-                  <div key={index} className="grow overflow-hidden text-xs" style={
-                    { backgroundColor: getTagColor(tag) }
-                  } >
-                    <div className="w-fit bg-foreground px-1 text-white opacity-0 transition-opacity group-hover:opacity-100">
-                      {getTagName(tag, 'en')}
-                    </div>
-                  </div>
-                ))}
-              </div>
+
             </div>
           </Link>
         );
       })}
 
-      {/* <time className="sticky bottom-24 right-16 w-20 tabular-nums">
+      {/* <time className="sticky bottom-24 right-16 tabular-nums">
         2024
       </time> */}
     </div>

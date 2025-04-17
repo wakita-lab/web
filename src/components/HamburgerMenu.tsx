@@ -16,7 +16,7 @@ export const HamburgerMenu = ({ isOpen }: HamburgerMenuProps) => {
       <input
         type="text"
         placeholder="Search"
-        className="w-64 border-b border-neutral-700 bg-transparent py-1 placeholder:text-neutral-700 focus:outline-none focus:placeholder:text-neutral-500"
+        className="w-64 border-b border-neutral-700 bg-transparent placeholder:text-neutral-700 focus:outline-none focus:placeholder:text-neutral-500"
       />
       <div className="flex flex-col gap-1">
         <Link href="/">Home</Link>

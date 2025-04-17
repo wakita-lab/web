@@ -30,7 +30,7 @@ export default function MemberPage() {
 
         return (
           <div key={role}>
-            <h3 className="mb-2 bg-accent">{roleHeadings[role]}</h3>
+            <h3 className="mb-2 bg-accent px-1">{roleHeadings[role]}</h3>
             <ul className="list-hyphen">
               {members.map((member) => (
                 <li key={member.name.en}>

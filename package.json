@@ -12,6 +12,7 @@
     "@react-three/drei": "^10.0.2",
     "@react-three/fiber": "^9.0.4",
     "@vercel/analytics": "^1.5.0",
+    "framer-motion": "^12.7.3",
     "glsl-noise": "^0.0.0",
     "js-yaml-loader": "^1.2.2",
     "next": "15.1.6",

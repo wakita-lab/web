@@ -17,7 +17,7 @@ export default function Template({ children }: { children: React.ReactNode }) {
       exit="exit"
       transition={{
         type: 'linear',
-        duration: 1,
+        duration: 1.5,
       }}
     >
       {children}

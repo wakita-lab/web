@@ -43,7 +43,6 @@ export default function Home() {
             href={`/works/${work.id}`}
             className="group relative z-0 flex flex-col gap-1"
           >
-            {/* タグごとに3本ずつランダムな方向に伸びる直線 */}
             <svg
               className="pointer-events-none absolute left-0 top-0 size-full overflow-visible"
             >

@@ -6,10 +6,6 @@
 
 # 大学院博士課程 / Ph.D. Student
 - name:
-    ja: 傅 然
-    en: Fu Ran
-  role: doctor
-- name:
     ja: 吉田 裕紀
     en: Yuki Yoshida
   role: doctor
@@ -115,82 +111,6 @@
   role: bachelor
 
 # 卒業生 / ALUMNI
-- name:
-    ja: 武谷 梨紗子
-    en: Risako Takeya
-  role: alumni
-- name:
-    ja: 眞鍋 創人
-    en: Soto Manabe
-  role: alumni
-- name:
-    ja: 鈴木 一生
-    en: Issei Suzuki
-  role: alumni
-- name:
-    ja: 長島 康生
-    en: Nagashima Koki
-  role: alumni
-- name:
-    ja: 柴原 佳範
-    en: Shibahara Yoshinori
-  role: alumni
-- name:
-    ja: リ ボクカン
-    en: Li Muhan
-  role: alumni
-- name:
-    ja: 徐 嘉曼
-    en: Xu Jiaman
-  role: alumni
-- name:
-    ja: 山下 光
-    en: Yamashita Rei
-  role: alumni
-- name:
-    ja: 山本 愛
-    en: Yamamoto Ai
-  role: alumni
-- name:
-    ja: 植田 理紗子
-    en: Ueda Risako
-  role: alumni
-- name:
-    ja: 松村 萌々音
-    en: Matsumura Momone
-  role: alumni
-- name:
-    ja: 宇田川 まや
-    en: Udagawa Maya
-  role: alumni
-- name:
-    ja: 諸藤 勇太
-    en: Yuta Morofuji
-  role: alumni
-- name:
-    ja: 吉井 仁実
-    en: Hiromi Yoshii
-  role: alumni
-- name:
-    ja: 山辺 真幸
-    en: Masaki Yamabe
-  role: alumni
-- name:
-    ja: 甲斐 優介
-    en: Yusuke Kai
-  role: alumni
-- name:
-    ja: 柴原 佳範
-    en: Yoshinori Shibahara
-  role: alumni
-- name:
-    ja: 永田 周世
-    en: Shusei Nagata
-  role: alumni
-- name:
-    ja: 石橋 優希
-    en: Yuuki Ishibashi
-  role: alumni
 - name:
     ja: 丹治 基浩
     en: Motohiro Tanji
@@ -498,4 +418,84 @@
 - name:
     ja: 滝 ゆうり
     en: Yuri Taki
+  role: alumni
+- name:
+    ja: 傅 然
+    en: Fu Ran
+  role: doctor
+- name:
+    ja: 武谷 梨紗子
+    en: Risako Takeya
+  role: alumni
+- name:
+    ja: 眞鍋 創人
+    en: Soto Manabe
+  role: alumni
+- name:
+    ja: 鈴木 一生
+    en: Issei Suzuki
+  role: alumni
+- name:
+    ja: 長島 康生
+    en: Nagashima Koki
+  role: alumni
+- name:
+    ja: 柴原 佳範
+    en: Shibahara Yoshinori
+  role: alumni
+- name:
+    ja: リ ボクカン
+    en: Li Muhan
+  role: alumni
+- name:
+    ja: 徐 嘉曼
+    en: Xu Jiaman
+  role: alumni
+- name:
+    ja: 山下 光
+    en: Yamashita Rei
+  role: alumni
+- name:
+    ja: 山本 愛
+    en: Yamamoto Ai
+  role: alumni
+- name:
+    ja: 植田 理紗子
+    en: Ueda Risako
+  role: alumni
+- name:
+    ja: 松村 萌々音
+    en: Matsumura Momone
+  role: alumni
+- name:
+    ja: 宇田川 まや
+    en: Udagawa Maya
+  role: alumni
+- name:
+    ja: 諸藤 勇太
+    en: Yuta Morofuji
+  role: alumni
+- name:
+    ja: 吉井 仁実
+    en: Hiromi Yoshii
+  role: alumni
+- name:
+    ja: 山辺 真幸
+    en: Masaki Yamabe
+  role: alumni
+- name:
+    ja: 甲斐 優介
+    en: Yusuke Kai
+  role: alumni
+- name:
+    ja: 柴原 佳範
+    en: Yoshinori Shibahara
+  role: alumni
+- name:
+    ja: 永田 周世
+    en: Shusei Nagata
+  role: alumni
+- name:
+    ja: 石橋 優希
+    en: Yuuki Ishibashi
   role: alumni

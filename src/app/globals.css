@@ -23,6 +23,19 @@ body {
   .scrollbar-hidden {
     scrollbar-width: none;
   }
+
+  .list-hyphen {
+    list-style-type: none;
+  }
+  
+  .list-hyphen li {
+    display: flex;
+    gap: 4px;
+  }
+
+  .list-hyphen li::before {
+    content: "-";
+  }
 }
 
 a:hover {

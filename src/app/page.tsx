@@ -99,7 +99,7 @@ export default function Home() {
               style={{ transform: transformStyle }}
             />
             <div className="absolute top-1/2 z-20 flex w-full">
-              <div className="overflow-hidden text-nowrap bg-neutral-50 leading-5">
+              <div className="w-full overflow-hidden text-nowrap bg-neutral-50 leading-5">
                 {work.title.en}
               </div>
               {/* <div className="flex h-4 ">

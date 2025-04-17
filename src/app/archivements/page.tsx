@@ -4,7 +4,7 @@ export default function About() {
       <h1 className="mt-8 bg-accent text-2xl font-medium">Archivements</h1>
 
       <h3 className="bg-accent">受賞</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>令和6年度文化庁メディア芸術クリエイター育成支援事業 採択（吉田裕紀）, 2024.</li>
         <li>International Student Creative Award 2024 優秀賞（菊田有祐）, 2024.</li>
         <li>SIW IMPACT＜GOOD INNOVATOR＞ GOOD INNOVATOR部門　ノミネート（菊田有祐）, 2024.</li>
@@ -53,7 +53,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">展示</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>総務省OPEN異能Vation, 日比谷ミッドタウン（石原航）, 2023</li>
         <li>Ars Electronica 2019, Post City, 2019</li>
         <li>ARIGATO SAKURAGAOKA Produced by Art Photo Tokyo, 渋谷, 2018</li>
@@ -113,7 +113,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">国際会議</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>Masayuki Yamabe, So Nakagawa, Akira Wakita, VIZBI 2021, Time-space-based visualization of SARS-CoV-2 phylogeny, Posters, 2021.</li>
         <li>Masayuki Yamabe, Resonant Media – Possibilities of 8K Visualization , 2021.</li>
         <li>Ko Ishihara, Ars Electronica Future Innovators Sumit 2019 Future Trust, Post City, 2019</li>
@@ -142,7 +142,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">国内学会</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>松橋百葉, 脇田玲, 演者不在状況での空間的パフォーマンスを可能にする可動ディスプレイとその動作システムの提案, インタラクション 2022, 2022</li>
         <li>若月泰生, 脇田玲, 量子表現のためのクリエイティブ・コーディングツールキットの開発, エンタテイメントコンピューティング 2022, 2022</li>
         <li>山辺真幸, 脇田玲, 18世紀の貿易航路を全地球的に可視化するデータ・アート, 日本図学会秋季大会, 2018年12月8日, 口頭発表（一般）, 2018</li>
@@ -172,7 +172,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">学術論文誌</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>Akito Nakano, John N Bohn, and Akira Wakita, Development of educational-use computational fluid dynamics programming environment and workshop, International Journal of Architectural Computing, 14(2).</li>
         <li>辻航平, 脇田玲, Material Syncretism: 紙とコンピュテーションの調和による表現の開拓, 日本ヴァーチャルリアリティ学会論文誌 Vol.18 No.3.</li>
         <li>中野亜希人, 脇田玲, 磁性ゲル形状ディスプレイの開発とインタラクション手法の検討, 情報処理学会論文誌 Vol.54 No.4, pp.1528-1537.</li>
@@ -180,7 +180,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">ワークショップ</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>The Massive and the minute, SCI-Arc/法政/東大/SFC 合同ワークショップ, 2017.</li>
         <li>THERMODYNAMIC TOKYO, SCI-Arc/法政/東大/SFC 合同ワークショップ, 2015.</li>
         <li>Tokyo Emakimono, SCI-Arc/法政/東大/SFC 合同ワークショップ, 2014.</li>
@@ -189,7 +189,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">書籍</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>vanitas -ファッションの批評誌, no.003, Interview 脇田玲＋松川昌平 「アルゴリズミックデザインとファッション」,pp.60-83, 2014年6月.</li>
         <li>脇田 玲 『Access to Materials - デザイン／アート／建築の ためのマテリアルコンピューティング入門』, BNN, 2013.</li>
         <li>脇田 玲「素材化するコンピュータ」, 山中俊治、脇田玲、田中浩也（編）『x-DESIGN ー未来をプロトタイピングするために』, 慶應義塾大学出版会, 2013.</li>
@@ -200,12 +200,12 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">雑誌</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>「革新的な製品を生み出すためのプロトタイピング能力」日経デザイン, 2010年7月号, p.18.</li>
       </ul>
 
       <h3 className="bg-accent">メディア掲載</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>松橋百葉インタービュー, 2023</li>
         <li>The Future of Textiles (Article by Lynne Bruning), SURFACE DESIGN JOURNAL, Vol 37, No 3, Spring 2013.</li>
         <li>DigInfo TV, Transience - Dynamic color changing calligraphy harmonizes tradition with technology, 2012/11/28 &gt; DigInfo TV,</li>
@@ -219,7 +219,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">新聞 / TV</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>Tokyo MX TV バラ色ダンディ 「令和の芸術家」 ネット社会への反抗 石原航, 2021</li>
         <li>「タッチでカラフル紙」テレビ東京, ワールドビジネスサテライト, トレンドたまご, 2011年3月4日 &gt; ワールドビジネスサテライト</li>
         <li>「絵を触ると色変わる紙 慶大、特殊インク活用」日経産業新聞, 2011年2月28日</li>
@@ -233,7 +233,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">講演</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>Akira Wakita, Blob Motility, Technarte (International Conference on Art and Technology), Invited Talk, Bilbao Spain, 19 April 2011. &gt; Technarte 2011</li>
         <li>Adobe Station 5 Seminar「デザインエンジニアの養成」, 2010年5月23日, 表参道 the Gallery.</li>
         <li>「先端テクノロジー・デジタルメディアとデザインの関係性 特別対談 永原康史x脇田玲」, +DESIGNING, 2009年11月号</li>
@@ -241,7 +241,7 @@ export default function About() {
       </ul>
 
       <h3 className="bg-accent">解説記事</h3>
-      <ul className="ml-4 list-hyphen">
+      <ul className="list-hyphen">
         <li>脇田玲, スマートテキスタイルがつくる布と人工物の未来（解説記事）, 日本繊維製品消費科学会誌, Vol.50, No.7, pp.532-535, 2009.</li>
       </ul>
     </div>

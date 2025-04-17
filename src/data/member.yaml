@@ -9,6 +9,48 @@
     ja: 傅 然
     en: Fu Ran
   role: doctor
+- name:
+    ja: 吉田 裕紀
+    en: Yuki Yoshida
+  role: doctor
+- name:
+    ja: 川崎 和也
+    en: Kazuya Kawasaki
+  role: doctor
+- name:
+    ja: 石原 航
+    en: Ko Ishihara
+  role: doctor
+
+# 大学院修士課程 / Master Student
+- name:
+    ja: 小川 楽生
+    en: Rakuki Ogawa
+  role: master
+- name:
+    ja: 村井 琴音
+    en: Kotone Murai
+  role: master
+- name:
+    ja: 永田 一樹
+    en: Nagata Kazuki
+  role: master
+- name:
+    ja: 須田 梨花子
+    en: Rikako Suda
+  role: master
+- name:
+    ja: 春名 海里
+    en: Kairi Haruna
+  role: master
+- name:
+    ja: 穴山 桃羽
+    en: Momoha Anayama
+  role: master
+- name:
+    ja: 佐久間 基就
+    en: Motonari Sakuma
+  role: master
 
 # 学部生 / Undergraduate Student
 - name:
@@ -148,46 +190,6 @@
 - name:
     ja: 石橋 優希
     en: Yuuki Ishibashi
-  role: alumni
-- name:
-    ja: 吉田 裕紀
-    en: Yuki Yoshida
-  role: alumni
-- name:
-    ja: 川崎 和也
-    en: Kazuya Kawasaki
-  role: alumni
-- name:
-    ja: 石原 航
-    en: Ko Ishihara
-  role: alumni
-- name:
-    ja: 小川 楽生
-    en: Rakuki Ogawa
-  role: alumni
-- name:
-    ja: 村井 琴音
-    en: Kotone Murai
-  role: alumni
-- name:
-    ja: 永田 一樹
-    en: Nagata Kazuki
-  role: alumni
-- name:
-    ja: 須田 梨花子
-    en: Rikako Suda
-  role: alumni
-- name:
-    ja: 春名 海里
-    en: Kairi Haruna
-  role: alumni
-- name:
-    ja: 穴山 桃羽
-    en: Momoha Anayama
-  role: alumni
-- name:
-    ja: 佐久間 基就
-    en: Motonari Sakuma
   role: alumni
 - name:
     ja: 丹治 基浩
@@ -496,12 +498,4 @@
 - name:
     ja: 滝 ゆうり
     en: Yuri Taki
-  role: alumni
-- name:
-    ja: 瀧本 花乃介
-    en: Hananosuke Takimoto
-  role: alumni
-- name:
-    ja: 守田 幸洋
-    en: Yukihiro Morita
   role: alumni

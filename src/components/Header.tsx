@@ -18,6 +18,10 @@ export const Header = () => {
       </header>
 
       <HamburgerMenu isOpen={isOpen} />
+      {
+        isOpen &&
+        <div className="fixed inset-0 z-10" onClick={() => setIsOpen(false)} />
+      }
     </>
   );
 };

@@ -16,6 +16,7 @@ export default {
       },
       fontFamily: {
         inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        bevietnam: ['var(--font-be-vietnam-pro)', 'Be Vietnam Pro', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',

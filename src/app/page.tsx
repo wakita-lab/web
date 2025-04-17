@@ -13,7 +13,7 @@ const TransformMatrixes = [
 
 export default function Home() {
   return (
-    <div className="m-auto mt-8 grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:gap-8 sm:gap-y-16 sm:px-24 md:grid-cols-2 xl:grid-cols-3">
+    <div className="m-auto mt-16 grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:gap-8 sm:gap-y-16 sm:px-24 md:grid-cols-2 xl:grid-cols-3">
       {WORKS.map((work, index) => {
         const transformMatrix = TransformMatrixes[index % 5];
         const transformStyle = `matrix(${transformMatrix.join(',')})`;

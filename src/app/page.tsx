@@ -13,7 +13,7 @@ const TransformMatrixes = [
 
 export default function Home() {
   return (
-    <div className="m-auto grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:grid-cols-2 sm:gap-8 sm:gap-y-16 sm:px-24 lg:grid-cols-3">
+    <div className="m-auto mt-8 grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:grid-cols-2 sm:gap-8 sm:gap-y-16 sm:px-24 lg:grid-cols-3">
       {WORKS.map((work, index) => {
         const transformMatrix = TransformMatrixes[index % 5];
         const transformStyle = `matrix(${transformMatrix.join(',')})`;
@@ -106,7 +106,7 @@ export default function Home() {
               <div className="flex h-1 bg-current" />
               <div className="flex h-4 ">
                 {work.tags.map((tag, index) => (
-                  <div key={index} className="grow overflow-hidden text-xs transition-[filter] group-hover:grayscale" style={
+                  <div key={index} className="grow overflow-hidden text-xs" style={
                     { backgroundColor: getTagColor(tag) }
                   } >
                     <div className="w-fit bg-foreground px-1 text-white opacity-0 transition-opacity group-hover:opacity-100">

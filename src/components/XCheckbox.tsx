@@ -11,7 +11,7 @@ export default function XCheckbox({ selected } : { selected: boolean }) {
         />
         <path
           d="M14 2 L2 14"
-          className="transition-[stroke-dashoffset] delay-100 duration-200 ease-in-out"
+          className="transition-[stroke-dashoffset] delay-150 duration-200 ease-in-out"
           strokeDasharray="17"
           strokeDashoffset={selected ? '0' : '17'}
         />

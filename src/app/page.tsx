@@ -13,7 +13,7 @@ const TransformMatrixes = [
 
 export default function Home() {
   return (
-    <div className="m-auto grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:grid-cols-2 sm:gap-8 sm:px-24 lg:grid-cols-3">
+    <div className="m-auto mt-8 grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:grid-cols-2 sm:gap-8 sm:gap-y-16 sm:px-24 lg:grid-cols-3">
       {WORKS.map((work, index) => {
         const transformMatrix = TransformMatrixes[index % 5];
         const transformStyle = `matrix(${transformMatrix.map(String).join(',')})`;
@@ -29,7 +29,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="aspect-[9/20] w-12 object-cover"
+              className="aspect-[9/20] w-20 object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -37,7 +37,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-14 top-2 -z-10 aspect-[9/20] w-12 object-cover"
+              className="absolute left-14 top-2 -z-10 aspect-[9/20] w-20 object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -45,7 +45,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-32 top-4 -z-20 aspect-[9/20] w-12 object-cover"
+              className="absolute left-32 top-4 -z-20 aspect-[9/20] w-20 object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -53,7 +53,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-52 top-6 -z-30 aspect-[9/20] w-12 object-cover"
+              className="absolute left-52 top-6 -z-30 aspect-[9/20] w-20 object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -61,7 +61,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-72 top-8 -z-40 aspect-[9/20] w-12 object-cover"
+              className="absolute left-72 top-8 -z-40 aspect-[9/20] w-20 object-cover"
               style={{ transform: transformStyle }}
             />
             <div className="absolute top-1/2 z-20 flex w-full flex-col">
@@ -71,10 +71,12 @@ export default function Home() {
               <div className="flex h-1 bg-current" />
               <div className="flex h-4 ">
                 {work.tags.map((tag, index) => (
-                  <div key={index} className="grow overflow-hidden pl-0.5 text-xs leading-4 text-transparent group-hover:text-white" style={
+                  <div key={index} className="grow overflow-hidden text-xs" style={
                     { backgroundColor: getTagColor(tag) }
                   } >
-                    {getTagName(tag, 'en')}
+                    <div className="w-fit bg-foreground px-1 text-white opacity-0 transition-opacity group-hover:opacity-100">
+                      {getTagName(tag, 'en')}
+                    </div>
                   </div>
                 ))}
               </div>
@@ -83,7 +85,7 @@ export default function Home() {
         );
       })}
 
-      {/* <time className="sticky bottom-24 right-16 w-12 tabular-nums">
+      {/* <time className="sticky bottom-24 right-16 w-20 tabular-nums">
         2024
       </time> */}
     </div>

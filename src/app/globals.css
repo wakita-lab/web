@@ -5,7 +5,7 @@
 :root {
   --background: #e5e5e5;
   --foreground: #171717;
-  --accent: #9bff44;
+  --accent: #e9ff44;
 }
 
 body {
@@ -22,5 +22,18 @@ body {
 
   .scrollbar-hidden {
     scrollbar-width: none;
+  }
+
+  .list-hyphen {
+    list-style-type: none;
+  }
+  
+  .list-hyphen li {
+    display: flex;
+    gap: 4px;
+  }
+
+  .list-hyphen li::before {
+    content: "-";
   }
 }

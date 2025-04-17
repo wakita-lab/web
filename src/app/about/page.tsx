@@ -1,10 +1,10 @@
 export default function About() {
   return (
-    <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-12 px-2 leading-loose">
-      <h1 className="bg-accent text-2xl font-medium">About</h1>
+    <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-12 px-4 leading-loose">
+      <h1 className="mt-8 border-b bg-accent px-1 text-2xl font-medium">About</h1>
 
       <section className="flex flex-col gap-4">
-        <h2 className="bg-accent">
+        <h2 className="bg-accent px-1">
           Nature Interpretation by Coding - 世界を解釈するためのコーディング
         </h2>
         <p>
@@ -13,7 +13,7 @@ export default function About() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="bg-accent">
+        <h2 className="bg-accent px-1">
           Art in the age of invisibility - 不可視化する時代のアート
         </h2>
         <p>
@@ -22,7 +22,7 @@ export default function About() {
       </section>
 
       <section className="flex flex-col gap-4">
-        <h2 className="bg-accent">
+        <h2 className="bg-accent px-1">
           Nurturing Artists for the 21st Century - 21世紀のアーティストを育成する
         </h2>
         <p>

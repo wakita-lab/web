@@ -30,7 +30,7 @@ body {
   
   .list-hyphen li {
     display: flex;
-    gap: 4px;
+    gap: 6px;
   }
 
   .list-hyphen li::before {

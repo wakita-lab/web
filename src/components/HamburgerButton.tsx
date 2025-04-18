@@ -10,7 +10,7 @@ interface HamburgerButtonProps {
 export const HamburgerButton = ({ isOpen, setIsOpen }: HamburgerButtonProps) => {
   return (
     <button
-      className="z-50 flex items-center justify-center gap-2 p-4 py-3 text-white"
+      className="z-50 flex items-center justify-center gap-2 p-7 py-3 text-white"
       onClick={() => setIsOpen(!isOpen)}
       aria-label="メニュー"
     >

@@ -4,7 +4,7 @@ import { Karla } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 
-// const inter = Inter({ subsets: ['latin'], variable: '--font-inter', weight: 'variable' });
+// const inter = Inter({ subsets: ['latin'], variable: '--font-sans-en', weight: 'variable' });
 const karla = Karla({ subsets: ['latin'], variable: '--font-sans-en', weight: 'variable' });
 
 export const metadata: Metadata = {

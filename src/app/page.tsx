@@ -63,23 +63,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="aspect-[9/20] object-cover"
-              style={{ transform: transformStyle }}
-            />
-            <Image
-              src={work.images[0]}
-              alt={work.title.en}
-              width={512}
-              height={512}
-              className="absolute left-8 top-2 -z-10 aspect-[9/20] object-cover"
-              style={{ transform: transformStyle }}
-            />
-            <Image
-              src={work.images[0]}
-              alt={work.title.en}
-              width={512}
-              height={512}
-              className="absolute left-20 top-4 -z-20 aspect-[9/20] object-cover"
+              className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -95,7 +79,23 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover"
+              className="absolute left-20 top-4 -z-30 aspect-[9/20] object-cover"
+              style={{ transform: transformStyle }}
+            />
+            <Image
+              src={work.images[0]}
+              alt={work.title.en}
+              width={512}
+              height={512}
+              className="absolute left-8 top-2 -z-30 aspect-[9/20] object-cover"
+              style={{ transform: transformStyle }}
+            />
+            <Image
+              src={work.images[0]}
+              alt={work.title.en}
+              width={512}
+              height={512}
+              className="-z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <div className="absolute top-1/2 z-20 flex w-full">

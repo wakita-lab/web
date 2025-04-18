@@ -25,9 +25,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
         href="/works"
         className="mb-8 inline-block text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
       >
-        <span className="tracking-normal">
-          {'<-- '}
-        </span>
+        {'<-- '}
         Back to works
       </Link>
 

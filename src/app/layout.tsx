@@ -1,10 +1,11 @@
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
-import { Inter } from 'next/font/google';
+import { Karla } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter', weight: 'variable' });
+// const inter = Inter({ subsets: ['latin'], variable: '--font-inter', weight: 'variable' });
+const karla = Karla({ subsets: ['latin'], variable: '--font-sans-en', weight: 'variable' });
 
 export const metadata: Metadata = {
   title: 'Akira Wakita Lab.',
@@ -17,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={inter.variable}>
-      <body className="overflow-x-hidden overscroll-none font-inter text-sm font-light tracking-widest">
+    <html lang="en" className={karla.variable}>
+      <body className="overflow-x-hidden overscroll-none font-sans-en text-sm font-light tracking-widest">
         <Header />
         {children}
         <Analytics />

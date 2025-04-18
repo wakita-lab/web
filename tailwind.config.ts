@@ -15,8 +15,8 @@ export default {
         '20': 'repeat(20, minmax(0, 1fr))',
       },
       fontFamily: {
-        inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
-        bevietnam: ['var(--font-be-vietnam-pro)', 'Be Vietnam Pro', 'sans-serif'],
+        'sans-en': ['var(--font-sans-en)', 'Inter', 'sans-serif'],
+        'sans-ja': ['var(--font-sans-ja)', 'Karla', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',

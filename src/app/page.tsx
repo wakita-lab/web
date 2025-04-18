@@ -99,20 +99,16 @@ export default function Home() {
               style={{ transform: transformStyle }}
             />
             <div className="absolute top-1/2 z-20 flex w-full">
-              <div className="w-full overflow-hidden text-nowrap bg-neutral-50 leading-5">
+              <div className="flex w-2 min-w-2 flex-col">
+                {work.tags.map((tag, index) => (
+                  <div key={index} className="grow" style={
+                    { backgroundColor: getTagColor(tag) }
+                  } />
+                ))}
+              </div>
+              <div className="grow overflow-hidden text-nowrap bg-neutral-50 leading-5">
                 {work.title.en}
               </div>
-              {/* <div className="flex h-4 ">
-                {work.tags.map((tag, index) => (
-                  <div key={index} className="grow overflow-hidden text-xs" style={
-                    { backgroundColor: getTagColor(tag) }
-                  } >
-                    <div className="w-fit bg-foreground px-1 text-white opacity-0 transition-opacity group-hover:opacity-100">
-                      {getTagName(tag, 'en')}
-                    </div>
-                  </div>
-                ))}
-              </div> */}
             </div>
           </Link>
         );

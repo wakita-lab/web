@@ -44,7 +44,7 @@ export default function Home() {
             className="group relative z-0 flex flex-col gap-1"
           >
             <svg
-              className="pointer-events-none absolute left-0 top-0 size-full overflow-visible"
+              className="pointer-events-none absolute size-full overflow-visible"
             >
               {lines.map((line, lineIndex) => (
                 <line
@@ -98,7 +98,7 @@ export default function Home() {
               className="-z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
-            <div className="absolute top-1/2 z-20 flex w-full -translate-y-1/2">
+            <div className="absolute z-20 flex w-full">
               <div className="flex min-w-2 flex-col">
                 {work.tags.map((tag, index) => (
                   <div key={index} className="grow" style={

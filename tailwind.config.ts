@@ -26,6 +26,9 @@ export default {
       listStyleType: {
         hyphen: 'hyphen',
       },
+      screens: {
+        '3xl': { 'min': '1800px' },
+      },
     },
   },
   plugins: [],

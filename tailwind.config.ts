@@ -15,7 +15,7 @@ export default {
         '20': 'repeat(20, minmax(0, 1fr))',
       },
       fontFamily: {
-        'sans-adobe': ['akzidenz-grotesk-next-pro', 'sans-serif'],
+        'sans-adobe': ['akzidenz-grotesk-next-pro', 'a-otf-gothic-mb101-pr6n', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',

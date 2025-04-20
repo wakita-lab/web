@@ -6,6 +6,8 @@
   --background: #e5e5e5;
   --foreground: #171717;
   /* --accent: #e9ff44; */
+  overflow-x: clip;
+  overscroll-behavior: none;
 }
 
 body {

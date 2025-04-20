@@ -46,7 +46,10 @@ export default async function WorkPage({ params }: WorkPageProps) {
               {work.publishTime.toLocaleDateString('ja-JP')}
             </time>
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
-            <h2 className="text-xl">{work.title.ja}</h2>
+            {
+              work.title.ja && work.title.ja !== work.title.en &&
+              <h2 className="text-xl">{work.title.ja}</h2>
+            }
             <div className="mt-5">
               <TagList tags={work.tags}/>
             </div>

@@ -26,7 +26,10 @@ function WorkItem({ work }: { work: Work }) {
             </time>
           </Link>
           <h2 className="text-base font-medium">{work.title.en}</h2>
-          <h3 className="text-sm">{work.title.ja}</h3>
+          {
+            work.title.ja && work.title.ja !== work.title.en &&
+              <h2 className="text-sm">{work.title.ja}</h2>
+          }
         </div>
 
         {work.description && (

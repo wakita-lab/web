@@ -21,7 +21,7 @@ export default function TagList({ tags }: TagListProps) {
               style={{ backgroundColor: getTagColor(tag) }}
             />
           </div>
-          <span>{getTagName(tag, 'en')}</span>
+          <span className="pt-1">{getTagName(tag, 'en')}</span>
           {index < tags.length - 1 && (
             <span className="size-0.5 rounded-full bg-neutral-700"></span>
           )}

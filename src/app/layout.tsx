@@ -1,11 +1,8 @@
 import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
-import { Karla } from 'next/font/google';
 import './globals.css';
 import { Header } from '@/components/Header';
-
-// const inter = Inter({ subsets: ['latin'], variable: '--font-sans-en', weight: 'variable' });
-const karla = Karla({ subsets: ['latin'], variable: '--font-sans-en', weight: 'variable' });
+import TypekitLoader from '@/components/TypekitLoader';
 
 export const metadata: Metadata = {
   title: 'Akira Wakita Lab.',
@@ -18,8 +15,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={karla.variable}>
-      <body className="overflow-x-hidden overscroll-none font-sans-en text-sm font-light tracking-widest">
+    <html lang="en">
+      <head>
+        <TypekitLoader kitId="fut0vgb" />
+        <link rel="stylesheet" href="https://use.typekit.net/fte5vza.css" />
+      </head>
+      <body className="overflow-x-hidden overscroll-none font-sans-adobe text-sm font-light tracking-widest">
         <Header />
         {children}
         <Analytics />

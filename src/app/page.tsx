@@ -105,7 +105,7 @@ export default function Home() {
                   } />
                 ))}
               </div>
-              <div className="grow overflow-hidden text-nowrap bg-neutral-50 pt-[3px] leading-4">
+              <div className="grow overflow-hidden text-nowrap bg-neutral-50 pt-1 leading-4">
                 {work.title.en}
               </div>
             </div>

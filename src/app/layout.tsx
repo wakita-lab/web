@@ -20,7 +20,7 @@ export default function RootLayout({
         <TypekitLoader kitId="fut0vgb" />
         <link rel="stylesheet" href="https://use.typekit.net/fte5vza.css" />
       </head>
-      <body className="overflow-x-clip overscroll-none font-sans-adobe text-sm font-light tracking-widest">
+      <body className="overflow-x-clip overscroll-none font-sans-adobe text-sm font-normal tracking-widest">
         <Header />
         {children}
         <Analytics />

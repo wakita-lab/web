@@ -18,15 +18,13 @@ export default function Home() {
         const transformMatrix = TransformMatrixes[index % 5];
         const transformStyle = `matrix(${transformMatrix.join(',')})`;
 
-        // タグごとに3本の線を生成
         const lines = work.tags.flatMap(tag => {
           const tagColor = getTagColor(tag);
 
-          return Array(1).fill(0).map(() => {
-            const randomAngle = Math.floor(Math.random() * 360);
-            const angleInRadians = (randomAngle * Math.PI) / 180;
-            const endX = Math.cos(angleInRadians) * 10000;
-            const endY = Math.sin(angleInRadians) * 10000;
+          return Array(3).fill(0).map(() => {
+            const angle = Math.random() * Math.PI * 2;
+            const endX = Math.cos(angle) * 10000;
+            const endY = Math.sin(angle) * 10000;
 
             return {
               endX,
@@ -55,6 +53,7 @@ export default function Home() {
                   y2={`calc(50% + ${line.endY}px)`}
                   stroke={line.strokeColor}
                   strokeWidth={1}
+                  strokeDasharray="20 4"
                 />
               ))}
             </svg>

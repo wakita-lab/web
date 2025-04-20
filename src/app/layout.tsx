@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/Header';
+import TypekitLoader from '@/components/TypekitLoader';
 
 export const metadata: Metadata = {
   title: 'Akira Wakita Lab.',
@@ -16,6 +17,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <TypekitLoader kitId="fut0vgb" />
         <link rel="stylesheet" href="https://use.typekit.net/fte5vza.css" />
       </head>
       <body className="overflow-x-hidden overscroll-none font-sans-adobe text-sm font-light tracking-widest">

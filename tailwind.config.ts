@@ -15,8 +15,8 @@ export default {
         '20': 'repeat(20, minmax(0, 1fr))',
       },
       fontFamily: {
-        'sans-en': ['var(--font-sans-en)', 'Inter', 'sans-serif'],
-        'sans-ja': ['var(--font-sans-ja)', 'Karla', 'sans-serif'],
+        'sans-en': ['var(--font-sans-en)', 'sans-serif'],
+        'sans-ja': ['var(--font-sans-ja)', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',

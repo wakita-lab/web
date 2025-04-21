@@ -14,7 +14,7 @@ const TransformMatrixes = [
   [1, -0.6, -0.4, 1, 0, 0],
 ];
 
-// 線を描画するためのコンポーネント
+// Component for drawing lines
 type CategoryLinesProps = {
   workRefs: React.RefObject<HTMLDivElement | null>[];
   works: typeof WORKS;
@@ -25,14 +25,14 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
-    // 画面サイズが変わったときに線を再計算
+    // Recalculate lines when screen size changes
     const handleResize = () => {
       calculateLines();
     };
 
     window.addEventListener('resize', handleResize);
 
-    // 初回レンダリング時と要素の位置が変わったときに線を計算
+    // Calculate lines on initial rendering and when element positions change
     calculateLines();
 
     return () => {
@@ -44,65 +44,65 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
   const calculateLines = () => {
     if (!svgRef.current) return;
 
-    // SVGの位置を取得
+    // Get SVG position
     const svgRect = svgRef.current.getBoundingClientRect();
     const svgOffsetX = svgRect.left;
     const svgOffsetY = svgRect.top;
 
-    // 全てのタグを取得
+    // Get all tags
     const allTags = Array.from(new Set(works.flatMap(work => work.tags)));
 
     const newLines: { x1: number; y1: number; x2: number; y2: number; tag: Tag }[] = [];
 
-    // 有効なタグとそのタグを持つ作品のインデックスを収集
+    // Collect valid tags and indices of works that have those tags
     const validTags: { tag: Tag; workIndices: number[] }[] = [];
 
     allTags.forEach(tag => {
-      // そのタグを持つ作品のインデックスを取得
+      // Get indices of works that have this tag
       const workIndicesWithTag = works
         .map((work, index) => ({ work, index }))
         .filter(({ work }) => work.tags.includes(tag))
         .map(({ index }) => index);
 
-      // 2つ以上の作品がそのタグを持っている場合のみ有効
+      // Only valid if two or more works have this tag
       if (workIndicesWithTag.length >= 2) {
         validTags.push({ tag, workIndices: workIndicesWithTag });
       }
     });
 
-    // 有効なタグがない場合は終了
+    // Exit if there are no valid tags
     if (validTags.length === 0) {
       setLines([]);
       return;
     }
 
-    // 合計で100本の線を引く
+    // Draw a total of 200 lines
     const totalLinesToDraw = 200;
 
-    // 各タグに均等に線を割り当てる
+    // Allocate lines evenly to each tag
     const linesPerTag = Math.floor(totalLinesToDraw / validTags.length);
     let remainingLines = totalLinesToDraw - (linesPerTag * validTags.length);
 
-    // 各タグに線を割り当てる
+    // Assign lines to each tag
     for (let i = 0; i < validTags.length && newLines.length < totalLinesToDraw; i++) {
       const { tag, workIndices } = validTags[i];
 
-      // このタグに割り当てる線の数
+      // Number of lines to assign to this tag
       let linesToDrawForTag = linesPerTag;
 
-      // 残りの線を割り当てる
+      // Assign remaining lines
       if (remainingLines > 0) {
         linesToDrawForTag++;
         remainingLines--;
       }
 
-      // このタグの線を描画
+      // Draw lines for this tag
       for (let j = 0; j < linesToDrawForTag && newLines.length < totalLinesToDraw; j++) {
-        // ランダムに2つの異なるインデックスを選択
+        // Randomly select two different indices
         const idx1 = Math.floor(Math.random() * workIndices.length);
         let idx2 = Math.floor(Math.random() * workIndices.length);
 
-        // 同じインデックスを選ばないようにする
+        // Ensure we don't select the same index
         while (idx2 === idx1) {
           idx2 = Math.floor(Math.random() * workIndices.length);
         }
@@ -117,7 +117,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
           const rect1 = ref1.current.getBoundingClientRect();
           const rect2 = ref2.current.getBoundingClientRect();
 
-          // 作品の中心座標を計算
+          // Calculate center coordinates of the works
           const x1 = rect1.left + rect1.width / 2 - svgOffsetX;
           const y1 = rect1.top + rect1.height / 2 - svgOffsetY;
           const x2 = rect2.left + rect2.width / 2 - svgOffsetX;
@@ -131,40 +131,40 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     setLines(newLines);
   };
 
-  // カテナリー曲線のパスを生成する関数
+  // Function to generate catenary curve path
   const generateCatenaryPath = (x1: number, y1: number, x2: number, y2: number): string => {
-    // 2点間の直線距離を計算
+    // Calculate straight-line distance between two points
     const dx = x2 - x1;
     const dy = y2 - y1;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
-    // 曲線の長さをランダムに決定（直線距離 + 100〜200ピクセル）
-    const extraLength = 100 + Math.random() * 100; // 100〜200の範囲でランダム
+    // Randomly determine curve length (straight-line distance + 100-200 pixels)
+    const extraLength = 100 + Math.random() * 100; // Random value in the range of 100-200
 
-    // 中点を計算
+    // Calculate midpoint
     const midX = (x1 + x2) / 2;
     const midY = (y1 + y2) / 2;
 
-    // 左右の高さの違いを計算
+    // Calculate height difference between left and right
     const heightDifference = y2 - y1;
 
-    // 垂直方向のオフセットを計算（カテナリー曲線の垂れ具合）
-    // 距離が長いほど、垂れ具合も大きくする
+    // Calculate vertical offset (sag of the catenary curve)
+    // The longer the distance, the greater the sag
     const verticalOffset = (distance + extraLength) * 0.2 * (1 + Math.random() * 0.5);
 
-    // 高さの違いに応じて制御点の位置を調整
-    // 高さの違いが大きい場合、曲線の形状を調整して自然なカテナリー曲線に近づける
-    const heightFactor = Math.abs(heightDifference) / (distance + 1); // 0に近いほど水平、1に近いほど傾斜が急
+    // Adjust control point positions based on height difference
+    // For large height differences, adjust curve shape to approximate a natural catenary curve
+    const heightFactor = Math.abs(heightDifference) / (distance + 1); // Closer to 0 means more horizontal, closer to 1 means steeper slope
 
-    // 制御点の位置を計算（中点を基準に）
-    // 高さの違いを考慮して、制御点を調整
+    // Calculate control point positions (based on midpoint)
+    // Adjust control points considering height difference
     const controlPoint1X = midX - distance * 0.25;
     const controlPoint1Y = midY - heightDifference * 0.25 + verticalOffset * (1 - heightFactor * 0.5);
 
     const controlPoint2X = midX + distance * 0.25;
     const controlPoint2Y = midY + heightDifference * 0.25 + verticalOffset * (1 - heightFactor * 0.5);
 
-    // SVGのパスデータを生成（三次ベジェ曲線）
+    // Generate SVG path data (cubic Bezier curve)
     return `M ${x1} ${y1} C ${controlPoint1X} ${controlPoint1Y}, ${controlPoint2X} ${controlPoint2Y}, ${x2} ${y2}`;
   };
 
@@ -187,12 +187,12 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 }
 
 export default function Home() {
-  // 各作品のDOM要素への参照を保持する配列
+  // Array to hold references to DOM elements for each work
   const workRefs = WORKS.map(() => createRef<HTMLDivElement>());
 
   return (
     <div className="relative m-auto mt-16 grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:gap-8 sm:gap-y-16 sm:px-24 md:grid-cols-2 xl:grid-cols-3 3xl:max-w-[1680px] 3xl:grid-cols-4">
-      {/* 線を描画するコンポーネント */}
+      {/* Component for drawing lines */}
       <CategoryLines workRefs={workRefs} works={WORKS} />
       {WORKS.map((work, index) => {
         const transformMatrix = TransformMatrixes[index % 5];
@@ -205,7 +205,7 @@ export default function Home() {
             className="group relative z-0 flex flex-col gap-1"
           >
             <div ref={workRefs[index]} className="absolute inset-0 z-0">
-              {/* 位置参照用の要素 */}
+              {/* Element for position reference */}
             </div>
             <Image
               src={work.images[0]}

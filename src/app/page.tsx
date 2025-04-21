@@ -131,6 +131,43 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     setLines(newLines);
   };
 
+  // カテナリー曲線のパスを生成する関数
+  const generateCatenaryPath = (x1: number, y1: number, x2: number, y2: number): string => {
+    // 2点間の直線距離を計算
+    const dx = x2 - x1;
+    const dy = y2 - y1;
+    const distance = Math.sqrt(dx * dx + dy * dy);
+
+    // 曲線の長さをランダムに決定（直線距離 + 100〜200ピクセル）
+    const extraLength = 100 + Math.random() * 100; // 100〜200の範囲でランダム
+
+    // 中点を計算
+    const midX = (x1 + x2) / 2;
+    const midY = (y1 + y2) / 2;
+
+    // 左右の高さの違いを計算
+    const heightDifference = y2 - y1;
+
+    // 垂直方向のオフセットを計算（カテナリー曲線の垂れ具合）
+    // 距離が長いほど、垂れ具合も大きくする
+    const verticalOffset = (distance + extraLength) * 0.2 * (1 + Math.random() * 0.5);
+
+    // 高さの違いに応じて制御点の位置を調整
+    // 高さの違いが大きい場合、曲線の形状を調整して自然なカテナリー曲線に近づける
+    const heightFactor = Math.abs(heightDifference) / (distance + 1); // 0に近いほど水平、1に近いほど傾斜が急
+
+    // 制御点の位置を計算（中点を基準に）
+    // 高さの違いを考慮して、制御点を調整
+    const controlPoint1X = midX - distance * 0.25;
+    const controlPoint1Y = midY - heightDifference * 0.25 + verticalOffset * (1 - heightFactor * 0.5);
+
+    const controlPoint2X = midX + distance * 0.25;
+    const controlPoint2Y = midY + heightDifference * 0.25 + verticalOffset * (1 - heightFactor * 0.5);
+
+    // SVGのパスデータを生成（三次ベジェ曲線）
+    return `M ${x1} ${y1} C ${controlPoint1X} ${controlPoint1Y}, ${controlPoint2X} ${controlPoint2Y}, ${x2} ${y2}`;
+  };
+
   return (
     <svg
       ref={svgRef}
@@ -138,14 +175,12 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       style={{ minHeight: '100vh' }}
     >
       {lines.map((line, index) => (
-        <line
+        <path
           key={index}
-          x1={line.x1}
-          y1={line.y1}
-          x2={line.x2}
-          y2={line.y2}
+          d={generateCatenaryPath(line.x1, line.y1, line.x2, line.y2)}
           stroke={getTagColor(line.tag)}
           strokeWidth="1"
+          fill="none"
         />
       ))}
     </svg>

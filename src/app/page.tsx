@@ -63,9 +63,15 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     const newLines: Line[] = [];
 
-    // Collect valid tags and indices of works that have those tags
-    const validTags: { tag: Tag; workIndices: number[] }[] = [];
+    // Create a Set to store all available work pairs that share at least one tag
+    // We use a string representation of the pair as the key to ensure uniqueness
+    const availableWorkPairs = new Set<{
+      index1: number;
+      index2: number;
+      tag: Tag;
+    }>();
 
+    // Find all pairs of works that share at least one tag
     allTags.forEach(tag => {
       // Get indices of works that have this tag
       const workIndicesWithTag = works
@@ -73,69 +79,65 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
         .filter(({ work }) => work.tags.includes(tag))
         .map(({ index }) => index);
 
-      // Only valid if two or more works have this tag
+      // Only proceed if two or more works have this tag
       if (workIndicesWithTag.length >= 2) {
-        validTags.push({ tag, workIndices: workIndicesWithTag });
+        // Generate all possible pairs of works with this tag
+        for (let i = 0; i < workIndicesWithTag.length; i++) {
+          for (let j = i + 1; j < workIndicesWithTag.length; j++) {
+            const index1 = workIndicesWithTag[i];
+            const index2 = workIndicesWithTag[j];
+
+            // Add the pair to the set
+            availableWorkPairs.add({
+              index1,
+              index2,
+              tag,
+            });
+          }
+        }
       }
     });
 
-    // Exit if there are no valid tags
-    if (validTags.length === 0) {
+    // Convert the Set to an Array for random sampling
+    const workPairsArray = Array.from(availableWorkPairs);
+
+    // Exit if there are no valid pairs
+    if (workPairsArray.length === 0) {
       setLines([]);
       return;
     }
 
-    // Draw a total of 200 lines
-    const totalLinesToDraw = 200;
+    // Draw a total of 200 lines or less if there aren't enough pairs
+    const totalLinesToDraw = Math.min(200, workPairsArray.length);
 
-    // Allocate lines evenly to each tag
-    const linesPerTag = Math.floor(totalLinesToDraw / validTags.length);
-    let remainingLines = totalLinesToDraw - (linesPerTag * validTags.length);
+    // Randomly select pairs without replacement
+    const selectedPairs = new Set<number>();
 
-    // Assign lines to each tag
-    for (let i = 0; i < validTags.length && newLines.length < totalLinesToDraw; i++) {
-      const { tag, workIndices } = validTags[i];
-
-      // Number of lines to assign to this tag
-      let linesToDrawForTag = linesPerTag;
-
-      // Assign remaining lines
-      if (remainingLines > 0) {
-        linesToDrawForTag++;
-        remainingLines--;
-      }
-
-      // Draw lines for this tag
-      for (let j = 0; j < linesToDrawForTag && newLines.length < totalLinesToDraw; j++) {
-        // Randomly select two different indices
-        const idx1 = Math.floor(Math.random() * workIndices.length);
-        let idx2 = Math.floor(Math.random() * workIndices.length);
-
-        // Ensure we don't select the same index
-        while (idx2 === idx1) {
-          idx2 = Math.floor(Math.random() * workIndices.length);
-        }
-
-        const index1 = workIndices[idx1];
-        const index2 = workIndices[idx2];
-
-        const ref1 = workRefs[index1];
-        const ref2 = workRefs[index2];
-
-        if (ref1.current && ref2.current) {
-          const rect1 = ref1.current.getBoundingClientRect();
-          const rect2 = ref2.current.getBoundingClientRect();
-
-          // Calculate center coordinates of the works
-          const x1 = rect1.left + rect1.width / 2 - svgOffsetX;
-          const y1 = rect1.top + rect1.height / 2 - svgOffsetY;
-          const x2 = rect2.left + rect2.width / 2 - svgOffsetX;
-          const y2 = rect2.top + rect2.height / 2 - svgOffsetY;
-
-          newLines.push({ x1, y1, x2, y2, tag });
-        }
-      }
+    while (selectedPairs.size < totalLinesToDraw) {
+      const randomIndex = Math.floor(Math.random() * workPairsArray.length);
+      selectedPairs.add(randomIndex);
     }
+
+    // Create lines for the selected pairs
+    selectedPairs.forEach(pairIndex => {
+      const { index1, index2, tag } = workPairsArray[pairIndex];
+
+      const ref1 = workRefs[index1];
+      const ref2 = workRefs[index2];
+
+      if (ref1.current && ref2.current) {
+        const rect1 = ref1.current.getBoundingClientRect();
+        const rect2 = ref2.current.getBoundingClientRect();
+
+        // Calculate center coordinates of the works
+        const x1 = rect1.left + rect1.width / 2 - svgOffsetX;
+        const y1 = rect1.top + rect1.height / 2 - svgOffsetY;
+        const x2 = rect2.left + rect2.width / 2 - svgOffsetX;
+        const y2 = rect2.top + rect2.height / 2 - svgOffsetY;
+
+        newLines.push({ x1, y1, x2, y2, tag });
+      }
+    });
 
     setLines(newLines);
   };
@@ -190,6 +192,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
           stroke={getTagColor(line.tag)}
           strokeWidth="1"
           fill="none"
+          strokeDasharray="16, 4"
         />
       ))}
     </svg>

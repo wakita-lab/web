@@ -77,7 +77,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     }
 
     // 合計で100本の線を引く
-    const totalLinesToDraw = 100;
+    const totalLinesToDraw = 200;
 
     // 各タグに均等に線を割り当てる
     const linesPerTag = Math.floor(totalLinesToDraw / validTags.length);
@@ -172,7 +172,6 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     <svg
       ref={svgRef}
       className="pointer-events-none absolute left-0 top-0 z-10 size-full"
-      style={{ minHeight: '100vh' }}
     >
       {lines.map((line, index) => (
         <path

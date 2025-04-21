@@ -181,6 +181,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     <svg
       ref={svgRef}
       className="pointer-events-none absolute left-0 top-0 z-10 size-full"
+      overflow="visible"
     >
       {lines.map((line, index) => (
         <path

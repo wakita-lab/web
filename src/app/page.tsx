@@ -53,7 +53,6 @@ export default function Home() {
                   y2={`calc(50% + ${line.endY}px)`}
                   stroke={line.strokeColor}
                   strokeWidth={1}
-                  strokeDasharray="20 4"
                 />
               ))}
             </svg>

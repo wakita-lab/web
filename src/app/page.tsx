@@ -128,40 +128,6 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       }
     }
 
-    // もし100本に満たない場合は、ランダムにタグを選んで追加の線を引く
-    while (newLines.length < totalLinesToDraw) {
-      const randomTagIndex = Math.floor(Math.random() * validTags.length);
-      const { tag, workIndices } = validTags[randomTagIndex];
-
-      // ランダムに2つの異なるインデックスを選択
-      const idx1 = Math.floor(Math.random() * workIndices.length);
-      let idx2 = Math.floor(Math.random() * workIndices.length);
-
-      // 同じインデックスを選ばないようにする
-      while (idx2 === idx1) {
-        idx2 = Math.floor(Math.random() * workIndices.length);
-      }
-
-      const index1 = workIndices[idx1];
-      const index2 = workIndices[idx2];
-
-      const ref1 = workRefs[index1];
-      const ref2 = workRefs[index2];
-
-      if (ref1.current && ref2.current) {
-        const rect1 = ref1.current.getBoundingClientRect();
-        const rect2 = ref2.current.getBoundingClientRect();
-
-        // 作品の中心座標を計算
-        const x1 = rect1.left + rect1.width / 2 - svgOffsetX;
-        const y1 = rect1.top + rect1.height / 2 - svgOffsetY;
-        const x2 = rect2.left + rect2.width / 2 - svgOffsetX;
-        const y2 = rect2.top + rect2.height / 2 - svgOffsetY;
-
-        newLines.push({ x1, y1, x2, y2, tag });
-      }
-    }
-
     setLines(newLines);
   };
 

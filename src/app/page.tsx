@@ -149,8 +149,8 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     const dy = y2 - y1;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
-    // Randomly determine curve length (straight-line distance + 100-200 pixels)
-    const extraLength = 100 + Math.random() * 100; // Random value in the range of 100-200
+    // Randomly determine curve length (straight-line distance + 200-400 pixels)
+    const extraLength = 100 + Math.random() * 300; // Random value in the range of 200-400
 
     // Calculate midpoint
     const midX = (x1 + x2) / 2;

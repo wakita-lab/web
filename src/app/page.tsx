@@ -20,8 +20,17 @@ type CategoryLinesProps = {
   works: typeof WORKS;
 };
 
+// Line interface definition
+type Line = {
+  x1: number;
+  y1: number;
+  x2: number;
+  y2: number;
+  tag: Tag;
+};
+
 function CategoryLines({ workRefs, works }: CategoryLinesProps) {
-  const [lines, setLines] = useState<{ x1: number; y1: number; x2: number; y2: number; tag: Tag }[]>([]);
+  const [lines, setLines] = useState<Line[]>([]);
   const svgRef = useRef<SVGSVGElement>(null);
 
   useEffect(() => {
@@ -52,7 +61,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     // Get all tags
     const allTags = Array.from(new Set(works.flatMap(work => work.tags)));
 
-    const newLines: { x1: number; y1: number; x2: number; y2: number; tag: Tag }[] = [];
+    const newLines: Line[] = [];
 
     // Collect valid tags and indices of works that have those tags
     const validTags: { tag: Tag; workIndices: number[] }[] = [];

@@ -21,7 +21,7 @@ export default function Home() {
         const lines = work.tags.flatMap(tag => {
           const tagColor = getTagColor(tag);
 
-          return Array(3).fill(0).map(() => {
+          return Array(2).fill(0).map(() => {
             const angle = Math.random() * Math.PI * 2;
             const endX = Math.cos(angle) * 10000;
             const endY = Math.sin(angle) * 10000;

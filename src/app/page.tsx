@@ -29,9 +29,25 @@ type Line = {
   tag: Tag;
 };
 
+// SelectedPair interface definition
+type SelectedPair = {
+  index1: number;
+  index2: number;
+  tag: Tag;
+};
+
 function CategoryLines({ workRefs, works }: CategoryLinesProps) {
   const [lines, setLines] = useState<Line[]>([]);
+  const [selectedPairs, setSelectedPairs] = useState<SelectedPair[]>([]);
   const svgRef = useRef<SVGSVGElement>(null);
+
+  // 初回レンダリング時にのみランダムな曲線のペアを選択する
+  useEffect(() => {
+    // ランダムな曲線のペアを選択
+    const pairs = selectRandomLines(works);
+    setSelectedPairs(pairs);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   useEffect(() => {
     // Recalculate lines when screen size changes
@@ -48,28 +64,15 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       window.removeEventListener('resize', handleResize);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [workRefs, works]);
+  }, [workRefs, works, selectedPairs]);
 
-  const calculateLines = () => {
-    if (!svgRef.current) return;
-
-    // Get SVG position
-    const svgRect = svgRef.current.getBoundingClientRect();
-    const svgOffsetX = svgRect.left;
-    const svgOffsetY = svgRect.top;
-
+  // ランダムに曲線のペアを選択する関数
+  const selectRandomLines = (works: typeof WORKS): SelectedPair[] => {
     // Get all tags
     const allTags = Array.from(new Set(works.flatMap(work => work.tags)));
 
-    const newLines: Line[] = [];
-
     // Create a Set to store all available work pairs that share at least one tag
-    // We use a string representation of the pair as the key to ensure uniqueness
-    const availableWorkPairs = new Set<{
-      index1: number;
-      index2: number;
-      tag: Tag;
-    }>();
+    const availableWorkPairs = new Set<SelectedPair>();
 
     // Find all pairs of works that share at least one tag
     allTags.forEach(tag => {
@@ -100,22 +103,33 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     // Exit if there are no valid pairs
     if (availableWorkPairs.size === 0) {
-      setLines([]);
-      return;
+      return [];
     }
 
     const totalLinesToDraw = 100;
 
-    const selectedPairs = new Array(totalLinesToDraw)
+    // ランダムにペアを選択
+    return new Array(totalLinesToDraw)
       .fill(0)
       .map(() => {
         const randomIndex = Math.floor(Math.random() * availableWorkPairs.size);
         const pairIndex = Array.from(availableWorkPairs)[randomIndex];
         return pairIndex;
       });
+  };
+
+  const calculateLines = () => {
+    if (!svgRef.current || selectedPairs.length === 0) return;
+
+    // Get SVG position
+    const svgRect = svgRef.current.getBoundingClientRect();
+    const svgOffsetX = svgRect.left;
+    const svgOffsetY = svgRect.top;
+
+    const newLines: Line[] = [];
 
     // Create lines for the selected pairs
-    selectedPairs.forEach(({ index1, index2, tag }) => {
+    selectedPairs.forEach(({ index1, index2, tag }: SelectedPair) => {
       const ref1 = workRefs[index1];
       const ref2 = workRefs[index2];
 

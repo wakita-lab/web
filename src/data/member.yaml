@@ -6,9 +6,47 @@
 
 # 大学院博士課程 / Ph.D. Student
 - name:
-    ja: 傅 然
-    en: Fu Ran
+    ja: 吉田 裕紀
+    en: Yuki Yoshida
   role: doctor
+- name:
+    ja: 川崎 和也
+    en: Kazuya Kawasaki
+  role: doctor
+- name:
+    ja: 石原 航
+    en: Ko Ishihara
+  role: doctor
+
+# 大学院修士課程 / Master Student
+- name:
+    ja: 小川 楽生
+    en: Rakuki Ogawa
+  role: master
+- name:
+    ja: 村井 琴音
+    en: Kotone Murai
+  role: master
+- name:
+    ja: 永田 一樹
+    en: Nagata Kazuki
+  role: master
+- name:
+    ja: 須田 梨花子
+    en: Rikako Suda
+  role: master
+- name:
+    ja: 春名 海里
+    en: Kairi Haruna
+  role: master
+- name:
+    ja: 穴山 桃羽
+    en: Momoha Anayama
+  role: master
+- name:
+    ja: 佐久間 基就
+    en: Motonari Sakuma
+  role: master
 
 # 学部生 / Undergraduate Student
 - name:
@@ -73,122 +111,6 @@
   role: bachelor
 
 # 卒業生 / ALUMNI
-- name:
-    ja: 武谷 梨紗子
-    en: Risako Takeya
-  role: alumni
-- name:
-    ja: 眞鍋 創人
-    en: Soto Manabe
-  role: alumni
-- name:
-    ja: 鈴木 一生
-    en: Issei Suzuki
-  role: alumni
-- name:
-    ja: 長島 康生
-    en: Nagashima Koki
-  role: alumni
-- name:
-    ja: 柴原 佳範
-    en: Shibahara Yoshinori
-  role: alumni
-- name:
-    ja: リ ボクカン
-    en: Li Muhan
-  role: alumni
-- name:
-    ja: 徐 嘉曼
-    en: Xu Jiaman
-  role: alumni
-- name:
-    ja: 山下 光
-    en: Yamashita Rei
-  role: alumni
-- name:
-    ja: 山本 愛
-    en: Yamamoto Ai
-  role: alumni
-- name:
-    ja: 植田 理紗子
-    en: Ueda Risako
-  role: alumni
-- name:
-    ja: 松村 萌々音
-    en: Matsumura Momone
-  role: alumni
-- name:
-    ja: 宇田川 まや
-    en: Udagawa Maya
-  role: alumni
-- name:
-    ja: 諸藤 勇太
-    en: Yuta Morofuji
-  role: alumni
-- name:
-    ja: 吉井 仁実
-    en: Hiromi Yoshii
-  role: alumni
-- name:
-    ja: 山辺 真幸
-    en: Masaki Yamabe
-  role: alumni
-- name:
-    ja: 甲斐 優介
-    en: Yusuke Kai
-  role: alumni
-- name:
-    ja: 柴原 佳範
-    en: Yoshinori Shibahara
-  role: alumni
-- name:
-    ja: 永田 周世
-    en: Shusei Nagata
-  role: alumni
-- name:
-    ja: 石橋 優希
-    en: Yuuki Ishibashi
-  role: alumni
-- name:
-    ja: 吉田 裕紀
-    en: Yuki Yoshida
-  role: alumni
-- name:
-    ja: 川崎 和也
-    en: Kazuya Kawasaki
-  role: alumni
-- name:
-    ja: 石原 航
-    en: Ko Ishihara
-  role: alumni
-- name:
-    ja: 小川 楽生
-    en: Rakuki Ogawa
-  role: alumni
-- name:
-    ja: 村井 琴音
-    en: Kotone Murai
-  role: alumni
-- name:
-    ja: 永田 一樹
-    en: Nagata Kazuki
-  role: alumni
-- name:
-    ja: 須田 梨花子
-    en: Rikako Suda
-  role: alumni
-- name:
-    ja: 春名 海里
-    en: Kairi Haruna
-  role: alumni
-- name:
-    ja: 穴山 桃羽
-    en: Momoha Anayama
-  role: alumni
-- name:
-    ja: 佐久間 基就
-    en: Motonari Sakuma
-  role: alumni
 - name:
     ja: 丹治 基浩
     en: Motohiro Tanji
@@ -498,10 +420,82 @@
     en: Yuri Taki
   role: alumni
 - name:
-    ja: 瀧本 花乃介
-    en: Hananosuke Takimoto
+    ja: 傅 然
+    en: Fu Ran
   role: alumni
 - name:
-    ja: 守田 幸洋
-    en: Yukihiro Morita
+    ja: 武谷 梨紗子
+    en: Risako Takeya
+  role: alumni
+- name:
+    ja: 眞鍋 創人
+    en: Soto Manabe
+  role: alumni
+- name:
+    ja: 鈴木 一生
+    en: Issei Suzuki
+  role: alumni
+- name:
+    ja: 長島 康生
+    en: Nagashima Koki
+  role: alumni
+- name:
+    ja: 柴原 佳範
+    en: Shibahara Yoshinori
+  role: alumni
+- name:
+    ja: リ ボクカン
+    en: Li Muhan
+  role: alumni
+- name:
+    ja: 徐 嘉曼
+    en: Xu Jiaman
+  role: alumni
+- name:
+    ja: 山下 光
+    en: Yamashita Rei
+  role: alumni
+- name:
+    ja: 山本 愛
+    en: Yamamoto Ai
+  role: alumni
+- name:
+    ja: 植田 理紗子
+    en: Ueda Risako
+  role: alumni
+- name:
+    ja: 松村 萌々音
+    en: Matsumura Momone
+  role: alumni
+- name:
+    ja: 宇田川 まや
+    en: Udagawa Maya
+  role: alumni
+- name:
+    ja: 諸藤 勇太
+    en: Yuta Morofuji
+  role: alumni
+- name:
+    ja: 吉井 仁実
+    en: Hiromi Yoshii
+  role: alumni
+- name:
+    ja: 山辺 真幸
+    en: Masaki Yamabe
+  role: alumni
+- name:
+    ja: 甲斐 優介
+    en: Yusuke Kai
+  role: alumni
+- name:
+    ja: 柴原 佳範
+    en: Yoshinori Shibahara
+  role: alumni
+- name:
+    ja: 永田 周世
+    en: Shusei Nagata
+  role: alumni
+- name:
+    ja: 石橋 優希
+    en: Yuuki Ishibashi
   role: alumni

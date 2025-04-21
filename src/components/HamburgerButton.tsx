@@ -4,14 +4,14 @@ import XCheckbox from './XCheckbox';
 
 interface HamburgerButtonProps {
   isOpen: boolean;
-  setIsOpen: (isOpen: boolean) => void;
+  onClick: () => void;
 }
 
-export const HamburgerButton = ({ isOpen, setIsOpen }: HamburgerButtonProps) => {
+export const HamburgerButton = ({ isOpen, onClick }: HamburgerButtonProps) => {
   return (
     <button
-      className="z-50 flex items-center justify-center gap-2 p-4 py-3 text-white mix-blend-difference outline-none"
-      onClick={() => setIsOpen(!isOpen)}
+      className="z-50 flex items-center justify-center gap-2 px-4 py-3 text-white lg:px-7"
+      onClick={onClick}
       aria-label="メニュー"
     >
       Menu

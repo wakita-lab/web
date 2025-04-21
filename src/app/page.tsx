@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { WORKS } from '@/constants/works';
-import { getTagColor, getTagName } from '@/constants/tags';
+import { getTagColor } from '@/constants/tags';
 
 const TransformMatrixes = [
   [1, 0.1, 0.2, 1, 0, 0],
@@ -13,10 +13,27 @@ const TransformMatrixes = [
 
 export default function Home() {
   return (
-    <div className="m-auto mt-8 grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:grid-cols-2 sm:gap-8 sm:gap-y-16 sm:px-24 lg:grid-cols-3">
+    <div className="mx-auto mb-24 mt-16 grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 sm:gap-8 sm:gap-y-16 sm:px-24 md:grid-cols-2 xl:grid-cols-3 3xl:max-w-[1680px] 3xl:grid-cols-4">
       {WORKS.map((work, index) => {
         const transformMatrix = TransformMatrixes[index % 5];
-        const transformStyle = `matrix(${transformMatrix.map(String).join(',')})`;
+        const transformStyle = `matrix(${transformMatrix.join(',')})`;
+
+        const lines = work.tags.flatMap(tag => {
+          const tagColor = getTagColor(tag);
+
+          return Array(3).fill(0).map(() => {
+            const angle = Math.random() * Math.PI * 2;
+            const endX = Math.cos(angle) * 10000;
+            const endY = Math.sin(angle) * 10000;
+
+            return {
+              endX,
+              endY,
+              strokeColor: tagColor,
+              tag,
+            };
+          });
+        });
 
         return (
           <Link
@@ -24,12 +41,28 @@ export default function Home() {
             href={`/works/${work.id}`}
             className="group relative z-0 flex flex-col gap-1"
           >
+            <svg
+              className="pointer-events-none absolute size-full overflow-visible"
+            >
+              {lines.map((line, lineIndex) => (
+                <line
+                  key={lineIndex}
+                  x1="50%"
+                  y1="50%"
+                  x2={`calc(50% + ${line.endX}px)`}
+                  y2={`calc(50% + ${line.endY}px)`}
+                  stroke={line.strokeColor}
+                  strokeWidth={1}
+                  strokeDasharray="20 4"
+                />
+              ))}
+            </svg>
             <Image
               src={work.images[0]}
               alt={work.title.en}
               width={512}
               height={512}
-              className="aspect-[9/20] w-20 object-cover"
+              className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -37,7 +70,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-14 top-2 -z-10 aspect-[9/20] w-20 object-cover"
+              className="absolute left-32 top-6 -z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -45,7 +78,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-32 top-4 -z-20 aspect-[9/20] w-20 object-cover"
+              className="absolute left-20 top-4 -z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -53,7 +86,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-52 top-6 -z-30 aspect-[9/20] w-20 object-cover"
+              className="absolute left-8 top-2 -z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -61,31 +94,26 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-72 top-8 -z-40 aspect-[9/20] w-20 object-cover"
+              className="-z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
             />
-            <div className="absolute top-1/2 z-20 flex w-full flex-col">
-              <div className="overflow-hidden text-nowrap bg-neutral-50 leading-5">
-                {work.title.en}
-              </div>
-              <div className="flex h-1 bg-current" />
-              <div className="flex h-4 ">
+            <div className="absolute inset-y-0 z-20 m-auto flex h-fit w-full">
+              <div className="flex min-w-2 flex-col">
                 {work.tags.map((tag, index) => (
-                  <div key={index} className="grow overflow-hidden text-xs" style={
+                  <div key={index} className="grow" style={
                     { backgroundColor: getTagColor(tag) }
-                  } >
-                    <div className="w-fit bg-foreground px-1 text-white opacity-0 transition-opacity group-hover:opacity-100">
-                      {getTagName(tag, 'en')}
-                    </div>
-                  </div>
+                  } />
                 ))}
+              </div>
+              <div className="grow overflow-hidden text-nowrap bg-neutral-50 pt-[0.2em] leading-4">
+                {work.title.en}
               </div>
             </div>
           </Link>
         );
       })}
 
-      {/* <time className="sticky bottom-24 right-16 w-20 tabular-nums">
+      {/* <time className="sticky bottom-24 right-16 tabular-nums">
         2024
       </time> */}
     </div>

@@ -26,7 +26,10 @@ function WorkItem({ work }: { work: Work }) {
             </time>
           </Link>
           <h2 className="text-base font-medium">{work.title.en}</h2>
-          <h3 className="text-sm">{work.title.ja}</h3>
+          {
+            work.title.ja && work.title.ja !== work.title.en &&
+              <h2 className="text-sm">{work.title.ja}</h2>
+          }
         </div>
 
         {work.description && (
@@ -44,7 +47,7 @@ function WorkItem({ work }: { work: Work }) {
 
 export default function WorksPage() {
   return (
-    <main className="flex w-full flex-col items-center px-4 pb-16 pt-4 font-light sm:px-8">
+    <main className="flex w-full flex-col items-center px-4 pb-16 pt-4 sm:px-8">
       <div className="z-0 grid w-full max-w-6xl flex-1 grid-cols-20 gap-x-2 gap-y-8 scroll-smooth">
         {WORKS.map((work) => {
           const rand = seedrandom(work.id);

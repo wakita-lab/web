@@ -10,14 +10,14 @@ export const Header = () => {
 
   return (
     <>
-      <header className="sticky inset-x-0 top-0 z-30 mx-0 flex w-auto justify-between text-white mix-blend-difference backdrop-grayscale md:mx-[108px]">
-        <Link href="/" className="px-4 py-3 md:px-6">
-          Akira Wakita Lab., Keio Univ. S.F.C.
+      <header className="sticky inset-x-0 top-0 z-30 mx-0 flex w-auto justify-between text-white mix-blend-difference lg:mx-24">
+        <Link href="/" className="py-3 pl-4 md:px-6">
+          Akira Wakita Lab., Keio Univ. SFC
         </Link>
-        <HamburgerButton isOpen={isOpen} setIsOpen={setIsOpen} />
+        <HamburgerButton isOpen={isOpen} onClick={() => setIsOpen(!isOpen)} />
       </header>
 
-      <HamburgerMenu isOpen={isOpen} />
+      <HamburgerMenu isOpen={isOpen} onClick={() => setIsOpen(false)} />
       {
         isOpen &&
         <div className="fixed inset-0 z-10" onClick={() => setIsOpen(false)} />

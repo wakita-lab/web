@@ -25,7 +25,8 @@ export default async function WorkPage({ params }: WorkPageProps) {
         href="/works"
         className="mb-8 inline-block text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
       >
-        {'<--'} Back to works
+        {'<-- '}
+        Back to works
       </Link>
 
       <article className="flex flex-col gap-8">
@@ -45,7 +46,10 @@ export default async function WorkPage({ params }: WorkPageProps) {
               {work.publishTime.toLocaleDateString('ja-JP')}
             </time>
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
-            <h2 className="text-xl">{work.title.ja}</h2>
+            {
+              work.title.ja && work.title.ja !== work.title.en &&
+              <h2 className="text-xl">{work.title.ja}</h2>
+            }
             <div className="mt-5">
               <TagList tags={work.tags}/>
             </div>

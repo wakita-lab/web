@@ -21,16 +21,16 @@ export default function MemberPage() {
   }, {} as Record<string, typeof MEMBERS>);
 
   return (
-    <div className="mx-auto mb-24 flex max-w-2xl flex-col justify-center gap-8 px-4 leading-loose">
-      <h1 className="mt-8 bg-accent px-1 text-2xl font-medium">Member</h1>
+    <div className="mx-auto mb-24 mt-8 flex max-w-2xl flex-col justify-center gap-12 px-4 leading-loose">
+      <h1 className="bg-accent text-2xl font-medium">Member</h1>
 
       {roleOrder.map(role => {
         const members = groupedMembers[role] || [];
         if (members.length === 0) return null;
 
         return (
-          <div key={role}>
-            <h3 className="mb-2 bg-accent">{roleHeadings[role]}</h3>
+          <section className="flex flex-col gap-4" key={role}>
+            <h3 className="bg-accent">{roleHeadings[role]}</h3>
             <ul className="list-hyphen">
               {members.map((member) => (
                 <li key={member.name.en}>
@@ -38,7 +38,7 @@ export default function MemberPage() {
                 </li>
               ))}
             </ul>
-          </div>
+          </section>
         );
       })}
     </div>

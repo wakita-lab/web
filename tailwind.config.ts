@@ -15,7 +15,7 @@ export default {
         '20': 'repeat(20, minmax(0, 1fr))',
       },
       fontFamily: {
-        inter: ['var(--font-inter)', 'Inter', 'sans-serif'],
+        'sans-adobe': ['aktiv-grotesk', 'hiragino-kaku-gothic-pron', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',
@@ -24,6 +24,9 @@ export default {
       },
       listStyleType: {
         hyphen: 'hyphen',
+      },
+      screens: {
+        '3xl': { 'min': '1800px' },
       },
     },
   },

@@ -166,7 +166,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     // Calculate vertical offset (sag of the catenary curve)
     // The longer the distance, the greater the sag
-    const verticalOffset = distance * 0.2 * (1 + Math.random() * 3.0);
+    const verticalOffset = distance * (0.2 + Math.random() * 0.4);
 
     // Adjust control point positions based on height difference
     // For large height differences, adjust curve shape to approximate a natural catenary curve

@@ -98,30 +98,24 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       }
     });
 
-    // Convert the Set to an Array for random sampling
-    const workPairsArray = Array.from(availableWorkPairs);
-
     // Exit if there are no valid pairs
-    if (workPairsArray.length === 0) {
+    if (availableWorkPairs.size === 0) {
       setLines([]);
       return;
     }
 
-    // Draw a total of 200 lines or less if there aren't enough pairs
-    const totalLinesToDraw = Math.min(200, workPairsArray.length);
+    const totalLinesToDraw = 200;
 
-    // Randomly select pairs without replacement
-    const selectedPairs = new Set<number>();
-
-    while (selectedPairs.size < totalLinesToDraw) {
-      const randomIndex = Math.floor(Math.random() * workPairsArray.length);
-      selectedPairs.add(randomIndex);
-    }
+    const selectedPairs = new Array(totalLinesToDraw)
+      .fill(0)
+      .map(() => {
+        const randomIndex = Math.floor(Math.random() * availableWorkPairs.size);
+        const pairIndex = Array.from(availableWorkPairs)[randomIndex];
+        return pairIndex;
+      });
 
     // Create lines for the selected pairs
-    selectedPairs.forEach(pairIndex => {
-      const { index1, index2, tag } = workPairsArray[pairIndex];
-
+    selectedPairs.forEach(({ index1, index2, tag }) => {
       const ref1 = workRefs[index1];
       const ref2 = workRefs[index2];
 
@@ -149,8 +143,8 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     const dy = y2 - y1;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
-    // Randomly determine curve length (straight-line distance + 200-400 pixels)
-    const extraLength = 100 + Math.random() * 300; // Random value in the range of 200-400
+    // Randomly determine curve length (straight-line distance + 100-400 pixels)
+    const extraLength = 100 + Math.random() * 300; // Random value in the range of 100-400
 
     // Calculate midpoint
     const midX = (x1 + x2) / 2;

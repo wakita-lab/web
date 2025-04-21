@@ -46,8 +46,8 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     // SVGの位置を取得
     const svgRect = svgRef.current.getBoundingClientRect();
-    const svgOffsetX = svgRect.left + window.scrollX;
-    const svgOffsetY = svgRect.top + window.scrollY;
+    const svgOffsetX = svgRect.left;
+    const svgOffsetY = svgRect.top;
 
     // 全てのタグを取得
     const allTags = Array.from(new Set(works.flatMap(work => work.tags)));

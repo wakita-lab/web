@@ -104,7 +104,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       return;
     }
 
-    const totalLinesToDraw = 200;
+    const totalLinesToDraw = 100;
 
     const selectedPairs = new Array(totalLinesToDraw)
       .fill(0)
@@ -143,9 +143,6 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     const dy = y2 - y1;
     const distance = Math.sqrt(dx * dx + dy * dy);
 
-    // Randomly determine curve length (straight-line distance + 100-400 pixels)
-    const extraLength = 100 + Math.random() * 300; // Random value in the range of 100-400
-
     // Calculate midpoint
     const midX = (x1 + x2) / 2;
     const midY = (y1 + y2) / 2;
@@ -155,7 +152,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     // Calculate vertical offset (sag of the catenary curve)
     // The longer the distance, the greater the sag
-    const verticalOffset = (distance + extraLength) * 0.2 * (1 + Math.random() * 0.5);
+    const verticalOffset = distance * 0.2 * (1 + Math.random() * 3.0);
 
     // Adjust control point positions based on height difference
     // For large height differences, adjust curve shape to approximate a natural catenary curve
@@ -186,7 +183,6 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
           stroke={getTagColor(line.tag)}
           strokeWidth="1"
           fill="none"
-          strokeDasharray="16, 4"
         />
       ))}
     </svg>
@@ -253,7 +249,7 @@ export default function Home() {
               height={512}
               className="-z-30 aspect-[9/20] object-cover"
               style={{ transform: transformStyle }}
-            />
+            /> {/* $0 */ }
             <div className="absolute inset-y-0 z-20 m-auto flex h-fit w-full">
               <div className="flex min-w-2 flex-col">
                 {work.tags.map((tag, index) => (
@@ -262,7 +258,7 @@ export default function Home() {
                   } />
                 ))}
               </div>
-              <div className="grow overflow-hidden text-nowrap bg-neutral-50 pt-[0.2em] leading-4">
+              <div className="grow overflow-hidden text-nowrap bg-neutral-50 pt-[0.2em] leading-4"> {/* $1 */ }
                 {work.title.en}
               </div>
             </div>

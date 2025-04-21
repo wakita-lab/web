@@ -106,7 +106,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       return [];
     }
 
-    const totalLinesToDraw = 100;
+    const totalLinesToDraw = 200;
 
     // ランダムにペアを選択
     return new Array(totalLinesToDraw)
@@ -166,7 +166,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     // Calculate vertical offset (sag of the catenary curve)
     // The longer the distance, the greater the sag
-    const verticalOffset = distance * (0.2 + Math.random() * 0.4);
+    const verticalOffset = distance * (0.2 + Math.random() * 0.6);
 
     // Adjust control point positions based on height difference
     // For large height differences, adjust curve shape to approximate a natural catenary curve
@@ -229,7 +229,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover"
+              className="absolute left-48 top-8 -z-40 aspect-[9/20] object-cover opacity-15"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -237,7 +237,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-32 top-6 -z-30 aspect-[9/20] object-cover"
+              className="absolute left-32 top-6 -z-30 aspect-[9/20] object-cover opacity-30"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -245,7 +245,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-20 top-4 -z-30 aspect-[9/20] object-cover"
+              className="absolute left-20 top-4 -z-30 aspect-[9/20] object-cover opacity-45"
               style={{ transform: transformStyle }}
             />
             <Image
@@ -253,7 +253,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className="absolute left-8 top-2 -z-30 aspect-[9/20] object-cover"
+              className="absolute left-8 top-2 -z-30 aspect-[9/20] object-cover opacity-70"
               style={{ transform: transformStyle }}
             />
             <Image

@@ -54,7 +54,9 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     const newLines: { x1: number; y1: number; x2: number; y2: number; tag: Tag }[] = [];
 
-    // 各タグごとに、そのタグを持つ作品間に線を引く
+    // 有効なタグとそのタグを持つ作品のインデックスを収集
+    const validTags: { tag: Tag; workIndices: number[] }[] = [];
+
     allTags.forEach(tag => {
       // そのタグを持つ作品のインデックスを取得
       const workIndicesWithTag = works
@@ -62,32 +64,103 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
         .filter(({ work }) => work.tags.includes(tag))
         .map(({ index }) => index);
 
-      // 2つ以上の作品がそのタグを持っている場合のみ線を引く
+      // 2つ以上の作品がそのタグを持っている場合のみ有効
       if (workIndicesWithTag.length >= 2) {
-        for (let i = 0; i < workIndicesWithTag.length - 1; i++) {
-          for (let j = i + 1; j < workIndicesWithTag.length; j++) {
-            const index1 = workIndicesWithTag[i];
-            const index2 = workIndicesWithTag[j];
-
-            const ref1 = workRefs[index1];
-            const ref2 = workRefs[index2];
-
-            if (ref1.current && ref2.current) {
-              const rect1 = ref1.current.getBoundingClientRect();
-              const rect2 = ref2.current.getBoundingClientRect();
-
-              // 作品の中心座標を計算
-              const x1 = rect1.left + rect1.width / 2 - svgOffsetX;
-              const y1 = rect1.top + rect1.height / 2 - svgOffsetY;
-              const x2 = rect2.left + rect2.width / 2 - svgOffsetX;
-              const y2 = rect2.top + rect2.height / 2 - svgOffsetY;
-
-              newLines.push({ x1, y1, x2, y2, tag });
-            }
-          }
-        }
+        validTags.push({ tag, workIndices: workIndicesWithTag });
       }
     });
+
+    // 有効なタグがない場合は終了
+    if (validTags.length === 0) {
+      setLines([]);
+      return;
+    }
+
+    // 合計で100本の線を引く
+    const totalLinesToDraw = 100;
+
+    // 各タグに均等に線を割り当てる
+    const linesPerTag = Math.floor(totalLinesToDraw / validTags.length);
+    let remainingLines = totalLinesToDraw - (linesPerTag * validTags.length);
+
+    // 各タグに線を割り当てる
+    for (let i = 0; i < validTags.length && newLines.length < totalLinesToDraw; i++) {
+      const { tag, workIndices } = validTags[i];
+
+      // このタグに割り当てる線の数
+      let linesToDrawForTag = linesPerTag;
+
+      // 残りの線を割り当てる
+      if (remainingLines > 0) {
+        linesToDrawForTag++;
+        remainingLines--;
+      }
+
+      // このタグの線を描画
+      for (let j = 0; j < linesToDrawForTag && newLines.length < totalLinesToDraw; j++) {
+        // ランダムに2つの異なるインデックスを選択
+        const idx1 = Math.floor(Math.random() * workIndices.length);
+        let idx2 = Math.floor(Math.random() * workIndices.length);
+
+        // 同じインデックスを選ばないようにする
+        while (idx2 === idx1) {
+          idx2 = Math.floor(Math.random() * workIndices.length);
+        }
+
+        const index1 = workIndices[idx1];
+        const index2 = workIndices[idx2];
+
+        const ref1 = workRefs[index1];
+        const ref2 = workRefs[index2];
+
+        if (ref1.current && ref2.current) {
+          const rect1 = ref1.current.getBoundingClientRect();
+          const rect2 = ref2.current.getBoundingClientRect();
+
+          // 作品の中心座標を計算
+          const x1 = rect1.left + rect1.width / 2 - svgOffsetX;
+          const y1 = rect1.top + rect1.height / 2 - svgOffsetY;
+          const x2 = rect2.left + rect2.width / 2 - svgOffsetX;
+          const y2 = rect2.top + rect2.height / 2 - svgOffsetY;
+
+          newLines.push({ x1, y1, x2, y2, tag });
+        }
+      }
+    }
+
+    // もし100本に満たない場合は、ランダムにタグを選んで追加の線を引く
+    while (newLines.length < totalLinesToDraw) {
+      const randomTagIndex = Math.floor(Math.random() * validTags.length);
+      const { tag, workIndices } = validTags[randomTagIndex];
+
+      // ランダムに2つの異なるインデックスを選択
+      const idx1 = Math.floor(Math.random() * workIndices.length);
+      let idx2 = Math.floor(Math.random() * workIndices.length);
+
+      // 同じインデックスを選ばないようにする
+      while (idx2 === idx1) {
+        idx2 = Math.floor(Math.random() * workIndices.length);
+      }
+
+      const index1 = workIndices[idx1];
+      const index2 = workIndices[idx2];
+
+      const ref1 = workRefs[index1];
+      const ref2 = workRefs[index2];
+
+      if (ref1.current && ref2.current) {
+        const rect1 = ref1.current.getBoundingClientRect();
+        const rect2 = ref2.current.getBoundingClientRect();
+
+        // 作品の中心座標を計算
+        const x1 = rect1.left + rect1.width / 2 - svgOffsetX;
+        const y1 = rect1.top + rect1.height / 2 - svgOffsetY;
+        const x2 = rect2.left + rect2.width / 2 - svgOffsetX;
+        const y2 = rect2.top + rect2.height / 2 - svgOffsetY;
+
+        newLines.push({ x1, y1, x2, y2, tag });
+      }
+    }
 
     setLines(newLines);
   };

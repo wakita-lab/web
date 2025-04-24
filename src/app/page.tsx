@@ -29,11 +29,17 @@ type Line = {
   tag: Tag;
 };
 
+type WorkPair = {
+  indexA: number; // index of the first work
+  indexB: number; // index of the second work
+  tag: Tag; // tag shared by both works
+};
+
 // SelectedPair interface definition
 type SelectedPair = {
-  index1: number;
-  index2: number;
-  tag: Tag;
+  workPair: WorkPair;
+  indexAratio: number; // 0.0 to 1.0
+  indexBratio: number; // 0.0 to 1.0
 };
 
 function CategoryLines({ workRefs, works }: CategoryLinesProps) {
@@ -72,7 +78,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     const allTags = Array.from(new Set(works.flatMap(work => work.tags)));
 
     // Create a Set to store all available work pairs that share at least one tag
-    const availableWorkPairs = new Set<SelectedPair>();
+    const availableWorkPairs = new Set<WorkPair>();
 
     // Find all pairs of works that share at least one tag
     allTags.forEach(tag => {
@@ -87,13 +93,13 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
         // Generate all possible pairs of works with this tag
         for (let i = 0; i < workIndicesWithTag.length; i++) {
           for (let j = i + 1; j < workIndicesWithTag.length; j++) {
-            const index1 = workIndicesWithTag[i];
-            const index2 = workIndicesWithTag[j];
+            const indexA = workIndicesWithTag[i];
+            const indexB = workIndicesWithTag[j];
 
             // Add the pair to the set
             availableWorkPairs.add({
-              index1,
-              index2,
+              indexA,
+              indexB,
               tag,
             });
           }
@@ -111,11 +117,11 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     // ランダムにペアを選択
     return new Array(totalLinesToDraw)
       .fill(0)
-      .map(() => {
-        const randomIndex = Math.floor(Math.random() * availableWorkPairs.size);
-        const pairIndex = Array.from(availableWorkPairs)[randomIndex];
-        return pairIndex;
-      });
+      .map(() => ({
+        workPair: Array.from(availableWorkPairs)[Math.floor(Math.random() * availableWorkPairs.size)],
+        indexAratio: Math.random(),
+        indexBratio: Math.random(),
+      }));
   };
 
   const calculateLines = () => {
@@ -129,19 +135,21 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     const newLines: Line[] = [];
 
     // Create lines for the selected pairs
-    selectedPairs.forEach(({ index1, index2, tag }: SelectedPair) => {
-      const ref1 = workRefs[index1];
-      const ref2 = workRefs[index2];
+    selectedPairs.forEach(({ workPair, indexAratio, indexBratio }: SelectedPair) => {
+      const { indexA, indexB, tag } = workPair;
+
+      const ref1 = workRefs[indexA];
+      const ref2 = workRefs[indexB];
 
       if (ref1.current && ref2.current) {
         const rect1 = ref1.current.getBoundingClientRect();
         const rect2 = ref2.current.getBoundingClientRect();
 
         // Calculate center coordinates of the works
-        const x1 = rect1.left + rect1.width / 2 - svgOffsetX;
-        const y1 = rect1.top + rect1.height / 2 - svgOffsetY;
-        const x2 = rect2.left + rect2.width / 2 - svgOffsetX;
-        const y2 = rect2.top + rect2.height / 2 - svgOffsetY;
+        const x1 = rect1.left + rect1.width * indexAratio - svgOffsetX;
+        const y1 = rect1.top + rect1.height / 2 - svgOffsetY + 9.4;
+        const x2 = rect2.left + rect2.width * indexBratio - svgOffsetX;
+        const y2 = rect2.top + rect2.height / 2 - svgOffsetY + 9.4;
 
         newLines.push({ x1, y1, x2, y2, tag });
       }

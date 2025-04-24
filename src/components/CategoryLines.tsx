@@ -6,10 +6,10 @@ import { getTagColor } from '@/constants/tags';
 
 // Line interface definition
 type Line = {
-  x1: number;
-  y1: number;
-  x2: number;
-  y2: number;
+  ax: number;
+  ay: number;
+  bx: number;
+  by: number;
   tag: Tag;
 };
 
@@ -42,25 +42,22 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     // ランダムな曲線のペアを選択
     const pairs = selectRandomLines(works);
     setSelectedPairs(pairs);
+    calculateLines();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   useEffect(() => {
-    // Recalculate lines when screen size changes
     const handleResize = () => {
       calculateLines();
     };
 
     window.addEventListener('resize', handleResize);
 
-    // Calculate lines on initial rendering and when element positions change
-    calculateLines();
-
     return () => {
       window.removeEventListener('resize', handleResize);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [workRefs, works, selectedPairs]);
+  }, []);
 
   // ランダムに曲線のペアを選択する関数
   const selectRandomLines = (works: typeof WORKS): SelectedPair[] => {
@@ -136,12 +133,12 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
         const rect2 = ref2.current.getBoundingClientRect();
 
         // Calculate center coordinates of the works
-        const x1 = rect1.left + rect1.width * indexAratio - svgOffsetX;
-        const y1 = rect1.top + rect1.height / 2 - svgOffsetY + 8.5;
-        const x2 = rect2.left + rect2.width * indexBratio - svgOffsetX;
-        const y2 = rect2.top + rect2.height / 2 - svgOffsetY + 8.5;
+        const ax = rect1.left + rect1.width * indexAratio - svgOffsetX;
+        const ay = rect1.top + rect1.height / 2 - svgOffsetY + 8.5;
+        const bx = rect2.left + rect2.width * indexBratio - svgOffsetX;
+        const by = rect2.top + rect2.height / 2 - svgOffsetY + 8.5;
 
-        newLines.push({ x1, y1, x2, y2, tag });
+        newLines.push({ ax, ay, bx, by, tag });
       }
     });
 
@@ -149,9 +146,10 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
   };
 
   // Function to generate catenary curve path
-  const generateCatenaryPath = (x1: number, y1: number, x2: number, y2: number): string => {
+  const generateCatenaryPath = (ax: number, ay: number, bx: number, by: number): string => {
+
     // Generate SVG path data (cubic Bezier curve)
-    return `M ${x1} ${y1}, ${x2} ${y2}`;
+    return `M ${ax} ${ay}, ${bx} ${by}`;
   };
 
   return (
@@ -163,7 +161,7 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       {lines.map((line, index) => (
         <path
           key={index}
-          d={generateCatenaryPath(line.x1, line.y1, line.x2, line.y2)}
+          d={generateCatenaryPath(line.ax, line.ay, line.bx, line.by)}
           stroke={getTagColor(line.tag)}
           strokeWidth="1"
           fill="none"

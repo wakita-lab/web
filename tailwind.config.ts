@@ -15,7 +15,7 @@ export default {
         '20': 'repeat(20, minmax(0, 1fr))',
       },
       fontFamily: {
-        'sans-adobe': ['aktiv-grotesk', 'hiragino-kaku-gothic-pron', 'sans-serif'],
+        'sans-adobe': ['akzidenz-grotesk-next-pro', 'hiragino-kaku-gothic-pron', 'sans-serif'],
       },
       colors: {
         background: 'var(--background)',

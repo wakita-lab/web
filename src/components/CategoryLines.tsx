@@ -42,7 +42,6 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     // ランダムな曲線のペアを選択
     const pairs = selectRandomLines(works);
     setSelectedPairs(pairs);
-    calculateLines();
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -53,11 +52,13 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     window.addEventListener('resize', handleResize);
 
+    calculateLines();
+
     return () => {
       window.removeEventListener('resize', handleResize);
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [selectedPairs]);
 
   // ランダムに曲線のペアを選択する関数
   const selectRandomLines = (works: typeof WORKS): SelectedPair[] => {

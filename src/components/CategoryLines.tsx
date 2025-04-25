@@ -148,9 +148,26 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
   // Function to generate catenary curve path
   const generateCatenaryPath = (ax: number, ay: number, bx: number, by: number): string => {
+    // カテナリー曲線のパラメータを計算
+    const dx = bx - ax;
+    const dy = by - ay;
+    const distance = Math.sqrt(dx * dx + dy * dy);
 
-    // Generate SVG path data (cubic Bezier curve)
-    return `M ${ax} ${ay}, ${bx} ${by}`;
+    // 曲線の「たるみ」を調整するパラメータ
+    // 距離に応じて適切なたるみを設定（距離が長いほどたるみが大きくなる）
+    const sag = Math.min(distance * 0.5, 200); // たるみをさらに大きくするために係数と最大値を増加
+
+    // 制御点の計算（三次ベジェ曲線でカテナリー曲線を近似）
+    // 中点を基準に制御点を配置し、下方向にたるみを作る
+
+    // 制御点の位置を調整（よりたるみを強調）
+    const cp1x = ax + dx / 4; // 制御点をより内側に
+    const cp1y = ay + dy / 8 + sag * 1.5; // 係数をさらに大きくしてたるみを強調
+    const cp2x = bx - dx / 4; // 制御点をより内側に
+    const cp2y = by - dy / 8 + sag * 1.5; // 係数をさらに大きくしてたるみを強調
+
+    // 三次ベジェ曲線のSVGパスを生成
+    return `M ${ax} ${ay} C ${cp1x} ${cp1y}, ${cp2x} ${cp2y}, ${bx} ${by}`;
   };
 
   return (

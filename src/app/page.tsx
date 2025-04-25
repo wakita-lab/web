@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { WORKS } from '@/constants/works';
 import { getTagColor } from '@/constants/tags';
-import React, { createRef } from 'react';
+import { createRef } from 'react';
 import CategoryLines from '@/components/CategoryLines';
 
 

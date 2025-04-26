@@ -2,7 +2,6 @@ import { WORKS, Work } from '@/constants/works';
 import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
-import seedrandom from 'seedrandom';
 import TagList from '@/components/TagList';
 
 function WorkItem({ work }: { work: Work }) {
@@ -48,19 +47,10 @@ function WorkItem({ work }: { work: Work }) {
 export default function WorksPage() {
   return (
     <main className="flex w-full flex-col items-center px-4 pb-16 pt-4 sm:px-8">
-      <div className="z-0 grid w-full max-w-6xl flex-1 grid-cols-20 gap-x-2 gap-y-8 scroll-smooth">
+      <div className="z-0 grid w-full max-w-screen-2xl flex-1 grid-cols-1 gap-x-2 gap-y-8 scroll-smooth xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
         {WORKS.map((work) => {
-          const rand = seedrandom(work.id);
-          const colstart = Math.trunc(rand() * 5) + 1;
-
-          const colstartClassname =
-            colstart === 1 ? 'md:col-start-1' :
-              colstart === 2 ? 'md:col-start-2' :
-                colstart === 3 ? 'md:col-start-3' :
-                  colstart === 4 ? 'md:col-start-4' : 'md:col-start-5';
-
           return (
-            <div key={work.id} className={`col-span-full md:col-span-16 ${colstartClassname}`}>
+            <div key={work.id} className="">
               <WorkItem work={work} />
             </div>
           );

@@ -47,7 +47,7 @@ function WorkItem({ work }: { work: Work }) {
 export default function WorksPage() {
   return (
     <main className="flex w-full flex-col items-center px-4 pb-16 pt-4 sm:px-8">
-      <div className="z-0 grid w-full max-w-screen-2xl flex-1 grid-cols-1 gap-x-2 gap-y-8 scroll-smooth xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 2xl:grid-cols-7">
+      <div className="z-0 grid w-full max-w-screen-xl flex-1 grid-cols-1 gap-x-2 gap-y-8 scroll-smooth xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
         {WORKS.map((work) => {
           return (
             <div key={work.id} className="">

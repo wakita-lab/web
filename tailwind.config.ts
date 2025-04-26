@@ -8,12 +8,6 @@ export default {
   ],
   theme: {
     extend: {
-      gridColumn: {
-        'span-16': 'span 16 / span 16',
-      },
-      gridTemplateColumns: {
-        '20': 'repeat(20, minmax(0, 1fr))',
-      },
       fontFamily: {
         'sans-adobe': ['akzidenz-grotesk-next-pro', 'hiragino-kaku-gothic-pron', 'sans-serif'],
       },
@@ -22,11 +16,9 @@ export default {
         foreground: 'var(--foreground)',
         accent: 'var(--accent)',
       },
-      listStyleType: {
-        hyphen: 'hyphen',
-      },
       screens: {
-        '3xl': { 'min': '1800px' },
+        'xs': '420px',
+        '3xl': '1800px',
       },
     },
   },

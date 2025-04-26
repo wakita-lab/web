@@ -106,7 +106,7 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       return [];
     }
 
-    const totalLinesToDraw = 200;
+    const totalLinesToDraw = 100;
 
     // ランダムにペアを選択
     return new Array(totalLinesToDraw)
@@ -152,36 +152,36 @@ function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
   // Function to generate catenary curve path
   const generateCatenaryPath = (x1: number, y1: number, x2: number, y2: number): string => {
-    // Calculate straight-line distance between two points
-    const dx = x2 - x1;
-    const dy = y2 - y1;
-    const distance = Math.sqrt(dx * dx + dy * dy);
+    // // Calculate straight-line distance between two points
+    // const dx = x2 - x1;
+    // const dy = y2 - y1;
+    // const distance = Math.sqrt(dx * dx + dy * dy);
 
-    // Calculate midpoint
-    const midX = (x1 + x2) / 2;
-    const midY = (y1 + y2) / 2;
+    // // Calculate midpoint
+    // const midX = (x1 + x2) / 2;
+    // const midY = (y1 + y2) / 2;
 
-    // Calculate height difference between left and right
-    const heightDifference = y2 - y1;
+    // // Calculate height difference between left and right
+    // const heightDifference = y2 - y1;
 
-    // Calculate vertical offset (sag of the catenary curve)
-    // The longer the distance, the greater the sag
-    const verticalOffset = distance * (0.2 + Math.random() * 0.6);
+    // // Calculate vertical offset (sag of the catenary curve)
+    // // The longer the distance, the greater the sag
+    // const verticalOffset = distance * (0.2 + Math.random() * 0.6);
 
-    // Adjust control point positions based on height difference
-    // For large height differences, adjust curve shape to approximate a natural catenary curve
-    const heightFactor = Math.abs(heightDifference) / (distance + 1); // Closer to 0 means more horizontal, closer to 1 means steeper slope
+    // // Adjust control point positions based on height difference
+    // // For large height differences, adjust curve shape to approximate a natural catenary curve
+    // const heightFactor = Math.abs(heightDifference) / (distance + 1); // Closer to 0 means more horizontal, closer to 1 means steeper slope
 
-    // Calculate control point positions (based on midpoint)
-    // Adjust control points considering height difference
-    const controlPoint1X = midX - distance * 0.25;
-    const controlPoint1Y = midY - heightDifference * 0.25 + verticalOffset * (1 - heightFactor * 0.5);
+    // // Calculate control point positions (based on midpoint)
+    // // Adjust control points considering height difference
+    // const controlPoint1X = midX - distance * 0.25;
+    // const controlPoint1Y = midY - heightDifference * 0.25 + verticalOffset * (1 - heightFactor * 0.5);
 
-    const controlPoint2X = midX + distance * 0.25;
-    const controlPoint2Y = midY + heightDifference * 0.25 + verticalOffset * (1 - heightFactor * 0.5);
+    // const controlPoint2X = midX + distance * 0.25;
+    // const controlPoint2Y = midY + heightDifference * 0.25 + verticalOffset * (1 - heightFactor * 0.5);
 
     // Generate SVG path data (cubic Bezier curve)
-    return `M ${x1} ${y1} C ${controlPoint1X} ${controlPoint1Y}, ${controlPoint2X} ${controlPoint2Y}, ${x2} ${y2}`;
+    return `M ${x1} ${y1}, ${x2} ${y2}`;
   };
 
   return (

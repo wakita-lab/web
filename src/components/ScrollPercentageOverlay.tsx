@@ -2,20 +2,15 @@
 
 import { useEffect, useState, useRef } from 'react';
 
-/**
- * スクロールパーセンテージを画面中央に表示するコンポーネント
- * スクロール時に表示され、スクロールが停止すると徐々に透明になる
- */
 export const ScrollPercentageOverlay: React.FC = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const overlayRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    // スクロール位置を計算する関数
     const calculateScrollPercentage = () => {
       const scrollTop = window.scrollY;
-      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+      const scrollHeight = Math.floor(document.documentElement.scrollHeight) - window.innerHeight;
       const percentage = scrollHeight > 0 ? Math.round((scrollTop / scrollHeight) * 100) : 0;
 
       setScrollPercentage(percentage);
@@ -54,7 +49,11 @@ export const ScrollPercentageOverlay: React.FC = () => {
     <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
       <div
         ref={overlayRef}
-        className="rounded-lg border border-foreground bg-white px-3 py-1.5 text-foreground"
+        className={`rounded-lg border border-foreground px-3 py-1.5 ${
+          scrollPercentage === 100
+            ? 'border-white bg-foreground text-white'
+            : ' bg-white text-foreground'
+        }`}
       >
         {scrollPercentage}%
       </div>

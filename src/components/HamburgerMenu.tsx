@@ -14,12 +14,12 @@ export const HamburgerMenu = ({ isOpen, onClick }: HamburgerMenuProps) => {
         isOpen ? 'translate-x-0' : 'translate-x-full'
       }`}
     >
-      <input
+      {/* <input
         type="text"
         placeholder="Search"
         className="border-b border-neutral-700 bg-transparent placeholder:text-neutral-700 focus:outline-none focus:placeholder:text-neutral-500"
-      />
-      <div className="flex flex-col gap-1">
+      /> */}
+      <div className="flex flex-col gap-2">
         <Link href="/" onClick={onClick}>Home</Link>
         <Link href="/works" onClick={onClick}>Works</Link>
         <Link href="/about" onClick={onClick}>About</Link>

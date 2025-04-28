@@ -1,10 +1,11 @@
 'use client';
 
+import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 
 export function ScrollPercentageOverlay() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
-  const overlayRef = useRef<HTMLDivElement>(null);
+  const overlayRef = useRef<HTMLAnchorElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -24,12 +25,14 @@ export function ScrollPercentageOverlay() {
         clearTimeout(timeoutRef.current);
       }
 
+      const debounceDuration = percentage === 100 ? 1000 : 500;
+
       timeoutRef.current = setTimeout(() => {
         if (overlayRef.current) {
           overlayRef.current.style.transition = 'opacity 2000ms';
           overlayRef.current.style.opacity = '0';
         }
-      }, 1000);
+      }, debounceDuration);
     };
 
     window.addEventListener('scroll', calculateScrollPercentage);
@@ -44,17 +47,16 @@ export function ScrollPercentageOverlay() {
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
-      <div
-        ref={overlayRef}
-        className={`rounded-lg border border-foreground px-3 py-1.5 opacity-0 ${
-          scrollPercentage === 100
-            ? 'border-white bg-foreground text-white'
-            : 'bg-white text-foreground'
-        }`}
-      >
-        Scroll: {scrollPercentage}%
-      </div>
-    </div>
+    <Link
+      ref={overlayRef}
+      className={`fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 rounded-lg border border-foreground px-3 py-1.5 opacity-0 hover:no-underline ${
+        scrollPercentage === 100
+          ? 'border-white bg-foreground text-white'
+          : 'bg-white text-foreground'
+      }`}
+      href="#top"
+    >
+      Scroll: {scrollPercentage}%
+    </Link>
   );
 };

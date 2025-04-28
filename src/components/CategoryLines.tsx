@@ -135,9 +135,9 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
         // Calculate center coordinates of the works
         const ax = rect1.left + rect1.width * indexAratio - svgOffsetX;
-        const ay = rect1.top + rect1.height / 2 - svgOffsetY + 8.5;
+        const ay = rect1.top + rect1.height / 2 - svgOffsetY + 10.5;
         const bx = rect2.left + rect2.width * indexBratio - svgOffsetX;
-        const by = rect2.top + rect2.height / 2 - svgOffsetY + 8.5;
+        const by = rect2.top + rect2.height / 2 - svgOffsetY + 10.5;
 
         newLines.push({ ax, ay, bx, by, tag });
       }

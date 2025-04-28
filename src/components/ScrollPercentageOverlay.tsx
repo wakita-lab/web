@@ -52,7 +52,7 @@ export function ScrollPercentageOverlay() {
       className={`fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 rounded-lg border border-foreground px-3 py-1.5 opacity-0 hover:no-underline ${
         scrollPercentage === 100
           ? 'border-white bg-foreground text-white'
-          : 'bg-white text-foreground'
+          : 'pointer-events-none bg-white text-foreground'
       }`}
       href="#top"
     >

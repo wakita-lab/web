@@ -20,12 +20,21 @@ export default async function WorkPage({ params }: WorkPageProps) {
   }
 
   return (
-    <main className="mx-auto mb-24 p-4 md:px-8 lg:px-16">
+    <main className="mx-auto mb-24 p-4 md:px-8 lg:px-20 xl:px-32">
       <Link
         href="/works"
-        className="mb-8 inline-block text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
+        className="mb-8 flex items-center gap-2 text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
       >
-        {'<-- '}
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 40 16"
+          strokeWidth={1}
+          stroke="currentColor"
+          className="mt-0.5 h-4"
+        >
+          <path d="M7,3 1,8 7,13 M1,8 39,8"/>
+        </svg>
         Back to works
       </Link>
 

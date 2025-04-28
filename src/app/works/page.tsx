@@ -52,16 +52,18 @@ export default function WorksPage() {
   const isSmallScreen = useResponsiveBreakPoint({ min: 'xs', max: 'sm'});
   const isMediumScreen = useResponsiveBreakPoint({ min: 'sm', max: 'md' });
   const isLargeScreen = useResponsiveBreakPoint({ min: 'md', max: 'lg' });
-  const isExtraLargeScreen = useResponsiveBreakPoint({ min: 'lg', max: 'xl' });
+  const isExtraLargeScreen = useResponsiveBreakPoint({ min: 'lg', max: '2xl' });
+  const is2ExtraLargeScreen = useResponsiveBreakPoint({ min: '2xl', max: '3xl' });
 
   const columns = isExtraSmallScreen ? 1 :
     isSmallScreen ? 2 :
       isMediumScreen ? 2 :
         isLargeScreen ? 3 :
-          isExtraLargeScreen ? 4 : 5;
+          isExtraLargeScreen ? 4 :
+            is2ExtraLargeScreen ? 5 : 6;
 
   return (
-    <main className="mx-auto mb-24 flex max-w-screen-xl gap-2.5 px-4 pt-4 sm:px-8">
+    <main className="mx-auto mb-24 flex max-w-screen-xl gap-2.5 px-4 pt-4 sm:px-8 3xl:max-w-screen-2xl">
       {
         Array.from({ length: columns }, (_, index) => (
           <div

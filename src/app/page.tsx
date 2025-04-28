@@ -77,7 +77,7 @@ export default function Home() {
                   } />
                 ))}
               </div>
-              <div className="grow overflow-hidden text-nowrap bg-neutral-50 leading-4">
+              <div className="grow overflow-hidden text-nowrap bg-neutral-50 text-base leading-5">
                 {work.title.en}
               </div>
             </div>

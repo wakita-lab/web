@@ -6,7 +6,7 @@ import TagList from '@/components/TagList';
 
 function WorkItem({ work }: { work: Work }) {
   return (
-    <article className="flex w-full flex-col gap-4" id={work.id}>
+    <article className="mt-4 flex w-full flex-col gap-4" id={work.id}>
       <Link href={`/works/${work.id}`} className="relative block aspect-square w-full sm:aspect-video">
         <Image
           src={work.images[0]}
@@ -31,14 +31,14 @@ function WorkItem({ work }: { work: Work }) {
           }
         </div>
 
+        <TagList tags={work.tags} />
+
         {work.description && (
           <div className="flex flex-col gap-4 break-words text-sm leading-loose">
             <FormattedText text={work.description.en} />
             {work.description.ja && <FormattedText text={work.description.ja} />}
           </div>
         )}
-
-        <TagList tags={work.tags} />
       </section>
     </article>
   );
@@ -47,7 +47,7 @@ function WorkItem({ work }: { work: Work }) {
 export default function WorksPage() {
   return (
     <main className="flex w-full flex-col items-center px-4 pb-16 pt-4 sm:px-8">
-      <div className="z-0 grid w-full max-w-screen-xl flex-1 grid-cols-1 gap-x-2 gap-y-8 scroll-smooth xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div className="z-0 max-w-screen-xl columns-5 grid-cols-1">
         {WORKS.map((work) => {
           return (
             <div key={work.id} className="">

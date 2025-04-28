@@ -52,7 +52,7 @@ export function ScrollPercentageOverlay() {
         className={`rounded-lg border border-foreground px-3 py-1.5 opacity-0 ${
           scrollPercentage === 100
             ? 'border-white bg-foreground text-white'
-            : ' bg-white text-foreground'
+            : 'bg-white text-foreground'
         }`}
       >
         {scrollPercentage}%

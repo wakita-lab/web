@@ -48,15 +48,17 @@ function WorkItem({ work }: { work: Work }) {
 }
 
 export default function WorksPage() {
-  const isSmallScreen = useResponsiveBreakPoint({ max: 'sm'});
+  const isExtraSmallScreen = useResponsiveBreakPoint({ max: 'xs' });
+  const isSmallScreen = useResponsiveBreakPoint({ min: 'xs', max: 'sm'});
   const isMediumScreen = useResponsiveBreakPoint({ min: 'sm', max: 'md' });
   const isLargeScreen = useResponsiveBreakPoint({ min: 'md', max: 'lg' });
   const isExtraLargeScreen = useResponsiveBreakPoint({ min: 'lg', max: 'xl' });
 
-  const columns = isSmallScreen ? 1 :
-    isMediumScreen ? 2 :
-      isLargeScreen ? 3 :
-        isExtraLargeScreen ? 4 : 5;
+  const columns = isExtraSmallScreen ? 1 :
+    isSmallScreen ? 2 :
+      isMediumScreen ? 2 :
+        isLargeScreen ? 3 :
+          isExtraLargeScreen ? 4 : 5;
 
   return (
     <main className="mx-auto flex max-w-screen-xl gap-2.5 px-4 pb-16 pt-4 sm:px-8">
@@ -64,7 +66,7 @@ export default function WorksPage() {
         Array.from({ length: columns }, (_, index) => (
           <div
             key={index}
-            className="flex flex-1 flex-col gap-8"
+            className="flex flex-1 flex-col gap-4"
           >
             {
               WORKS.filter((_, workIndex) => workIndex % columns === index)

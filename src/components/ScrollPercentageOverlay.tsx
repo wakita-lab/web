@@ -32,7 +32,7 @@ export function ScrollPercentageOverlay() {
       }, 500);
     };
 
-    calculateScrollPercentage();
+    // calculateScrollPercentage();
 
     window.addEventListener('scroll', calculateScrollPercentage);
     window.addEventListener('resize', calculateScrollPercentage);
@@ -49,7 +49,7 @@ export function ScrollPercentageOverlay() {
     <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
       <div
         ref={overlayRef}
-        className={`rounded-lg border border-foreground px-3 py-1.5 ${
+        className={`rounded-lg border border-foreground px-3 py-1.5 opacity-0 ${
           scrollPercentage === 100
             ? 'border-white bg-foreground text-white'
             : ' bg-white text-foreground'

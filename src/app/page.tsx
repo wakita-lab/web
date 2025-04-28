@@ -18,16 +18,16 @@ export default function Home() {
       <CategoryLines workRefs={workRefs} works={WORKS} />
       {WORKS.map((work, index) => {
         const matrixIndex = index % 5 + 1;
-        const animationClass =
+        const affineMatrixClassName =
           matrixIndex === 1
-            ? 'animate-matrix-1'
+            ? 'work-affine-matrix-1'
             : matrixIndex === 2
-              ? 'animate-matrix-2'
+              ? 'work-affine-matrix-2'
               : matrixIndex === 3
-                ? 'animate-matrix-3'
+                ? 'work-affine-matrix-3'
                 : matrixIndex === 4
-                  ? 'animate-matrix-4'
-                  : 'animate-matrix-5';
+                  ? 'work-affine-matrix-4'
+                  : 'work-affine-matrix-5';
 
         return (
           <Link
@@ -43,35 +43,35 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className={`absolute left-48 top-8 -z-40 aspect-[9/20] object-cover opacity-15 ${animationClass}`}
+              className={`absolute left-48 top-8 -z-40 aspect-[9/20] object-cover opacity-15 ${affineMatrixClassName}`}
             />
             <Image
               src={work.images[0]}
               alt={work.title.en}
               width={512}
               height={512}
-              className={`absolute left-32 top-6 -z-30 aspect-[9/20] object-cover opacity-30 ${animationClass}`}
+              className={`absolute left-32 top-6 -z-30 aspect-[9/20] object-cover opacity-30 ${affineMatrixClassName}`}
             />
             <Image
               src={work.images[0]}
               alt={work.title.en}
               width={512}
               height={512}
-              className={`absolute left-20 top-4 -z-30 aspect-[9/20] object-cover opacity-45 ${animationClass}`}
+              className={`absolute left-20 top-4 -z-30 aspect-[9/20] object-cover opacity-45 ${affineMatrixClassName}`}
             />
             <Image
               src={work.images[0]}
               alt={work.title.en}
               width={512}
               height={512}
-              className={`absolute left-8 top-2 -z-30 aspect-[9/20] object-cover opacity-70 ${animationClass}`}
+              className={`absolute left-8 top-2 -z-30 aspect-[9/20] object-cover opacity-70 ${affineMatrixClassName}`}
             />
             <Image
               src={work.images[0]}
               alt={work.title.en}
               width={512}
               height={512}
-              className={`-z-30 aspect-[9/20] object-cover ${animationClass}`}
+              className={`-z-30 aspect-[9/20] object-cover opacity-5 ${affineMatrixClassName}`}
             /> {/* $0 */ }
             <div className="absolute inset-y-0 z-20 m-auto flex h-fit w-full">
               <div className="flex min-w-2 flex-col">

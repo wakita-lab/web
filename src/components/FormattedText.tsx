@@ -22,7 +22,7 @@ const renderTextWithLinks = (text: string) => {
     if (urls[index]) {
       elements.push(
         <Link
-          key={`link-${index}`}
+          key={index}
           href={urls[index]}
           className="text-gray-500 underline underline-offset-4 hover:text-gray-400"
           target="_blank"

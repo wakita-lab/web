@@ -71,7 +71,7 @@ export default function Home() {
               alt={work.title.en}
               width={512}
               height={512}
-              className={`-z-30 aspect-[9/20] object-cover opacity-5 ${affineMatrixClassName}`}
+              className={`-z-30 aspect-[9/20] object-cover opacity-85 ${affineMatrixClassName}`}
             /> {/* $0 */ }
             <div className="absolute inset-y-0 z-20 m-auto flex h-fit w-full">
               <div className="flex min-w-2 flex-col">

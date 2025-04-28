@@ -34,7 +34,7 @@ function WorkItem({ work }: { work: Work }) {
         <TagList tags={work.tags} />
 
         {work.description && (
-          <div className="flex flex-col gap-4 break-words text-sm leading-loose">
+          <div className="flex flex-col gap-4 text-sm leading-loose">
             <FormattedText text={work.description.en} />
             {work.description.ja && <FormattedText text={work.description.ja} />}
           </div>
@@ -48,7 +48,7 @@ export default function WorksPage() {
   const columns = 5;
 
   return (
-    <main className="mx-auto flex max-w-screen-xl gap-3 px-4 pb-16 pt-4 sm:px-8">
+    <main className="mx-auto flex max-w-screen-xl gap-2.5 px-4 pb-16 pt-4 sm:px-8">
       {
         Array.from({ length: columns }, (_, index) => (
           <div

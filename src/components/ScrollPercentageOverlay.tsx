@@ -2,7 +2,7 @@
 
 import { useEffect, useState, useRef } from 'react';
 
-export const ScrollPercentageOverlay: React.FC = () => {
+export function ScrollPercentageOverlay() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const overlayRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
@@ -11,7 +11,7 @@ export const ScrollPercentageOverlay: React.FC = () => {
     const calculateScrollPercentage = () => {
       const scrollTop = window.scrollY;
       const scrollHeight = Math.floor(document.documentElement.scrollHeight) - window.innerHeight;
-      const percentage = scrollHeight > 0 ? Math.round((scrollTop / scrollHeight) * 100) : 0;
+      const percentage = Math.max(0, Math.min(Math.round((scrollTop / scrollHeight) * 100), 100));
 
       setScrollPercentage(percentage);
 
@@ -60,5 +60,3 @@ export const ScrollPercentageOverlay: React.FC = () => {
     </div>
   );
 };
-
-export default ScrollPercentageOverlay;

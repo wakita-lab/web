@@ -35,9 +35,7 @@ export default function Home() {
             href={`/works/${work.id}`}
             className="group relative z-0 flex flex-col gap-1"
           >
-            <div ref={workRefs[index]} className="absolute inset-0 z-0">
-              {/* Element for position reference */}
-            </div>
+            <div ref={workRefs[index]} className="absolute inset-0 z-0" />
             <Image
               src={work.images[0]}
               alt={work.title.en}
@@ -72,7 +70,7 @@ export default function Home() {
               width={512}
               height={512}
               className={`-z-30 aspect-[9/20] object-cover opacity-85 ${affineMatrixClassName}`}
-            /> {/* $0 */ }
+            />
             <div className="absolute inset-y-0 z-20 m-auto flex h-fit w-full">
               <div className="flex min-w-2 flex-col">
                 {work.tags.map((tag, index) => (
@@ -81,7 +79,7 @@ export default function Home() {
                   } />
                 ))}
               </div>
-              <div className="grow overflow-hidden text-nowrap bg-neutral-50 leading-4"> {/* $1 */ }
+              <div className="grow overflow-hidden text-nowrap bg-neutral-50 leading-4">
                 {work.title.en}
               </div>
             </div>

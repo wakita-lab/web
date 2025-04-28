@@ -1,37 +1,61 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useRef } from 'react';
 
 /**
  * スクロールパーセンテージを画面中央に表示するコンポーネント
+ * スクロール時に表示され、スクロールが停止すると徐々に透明になる
  */
 export const ScrollPercentageOverlay: React.FC = () => {
   const [scrollPercentage, setScrollPercentage] = useState(0);
+  const overlayRef = useRef<HTMLDivElement>(null);
+  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     // スクロール位置を計算する関数
     const calculateScrollPercentage = () => {
-      const scrollTop = window.scrollY || document.documentElement.scrollTop;
-      const scrollHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+      const scrollTop = window.scrollY;
+      const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
       const percentage = scrollHeight > 0 ? Math.round((scrollTop / scrollHeight) * 100) : 0;
+
       setScrollPercentage(percentage);
+
+      if (overlayRef.current) {
+        overlayRef.current.style.transition = 'opacity 100ms';
+        overlayRef.current.style.opacity = '1';
+      }
+
+      if (timeoutRef.current) {
+        clearTimeout(timeoutRef.current);
+      }
+
+      timeoutRef.current = setTimeout(() => {
+        if (overlayRef.current) {
+          overlayRef.current.style.transition = 'opacity 2000ms';
+          overlayRef.current.style.opacity = '0';
+        }
+      }, 500);
     };
 
-    // 初期計算
     calculateScrollPercentage();
 
-    // スクロールイベントリスナーを追加
     window.addEventListener('scroll', calculateScrollPercentage);
+    window.addEventListener('resize', calculateScrollPercentage);
 
-    // クリーンアップ関数
     return () => {
       window.removeEventListener('scroll', calculateScrollPercentage);
+      window.removeEventListener('resize', calculateScrollPercentage);
+      if (timeoutRef.current)
+        clearTimeout(timeoutRef.current);
     };
   }, []);
 
   return (
-    <div className="pointer-events-none fixed inset-0 flex items-center justify-center">
-      <div className="rounded-lg border border-black bg-white px-3 py-2 text-black">
+    <div className="pointer-events-none fixed inset-0 z-50 flex items-center justify-center">
+      <div
+        ref={overlayRef}
+        className="rounded-lg border border-foreground bg-white px-3 py-1.5 text-foreground"
+      >
         {scrollPercentage}%
       </div>
     </div>

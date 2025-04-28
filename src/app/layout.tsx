@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import './globals.css';
 import { Header } from '@/components/Header';
 import TypekitLoader from '@/components/TypekitLoader';
+import { ScrollPercentageOverlay } from '@/components/ScrollPercentageOverlay';
 
 export const metadata: Metadata = {
   title: 'Akira Wakita Lab.',
@@ -23,6 +24,7 @@ export default function RootLayout({
       <body className="overflow-x-clip font-sans-adobe text-sm font-normal tracking-widest">
         <Header />
         {children}
+        <ScrollPercentageOverlay />
         <Analytics />
       </body>
     </html>

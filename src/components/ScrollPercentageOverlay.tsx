@@ -24,11 +24,11 @@ export function ScrollPercentageOverlay() {
         clearTimeout(timeoutRef.current);
       }
 
-      const debounceDuration = percentage === 100 ? 1000 : 500;
+      const debounceDuration = percentage === 100 ? 1000 : 100;
 
       timeoutRef.current = setTimeout(() => {
         if (overlayRef.current) {
-          overlayRef.current.style.transition = 'opacity 2000ms';
+          overlayRef.current.style.transition = 'opacity 500ms';
           overlayRef.current.style.opacity = '0';
         }
       }, debounceDuration);

@@ -100,7 +100,7 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       return [];
     }
 
-    const totalLinesToDraw = 200;
+    const totalLinesToDraw = 80;
 
     // ランダムにペアを選択
     return new Array(totalLinesToDraw)

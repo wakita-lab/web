@@ -9,12 +9,10 @@ import CategoryLines from '@/components/CategoryLines';
 
 
 export default function Home() {
-  // Array to hold references to DOM elements for each work
   const workRefs = WORKS.map(() => createRef<HTMLDivElement>());
 
   return (
     <div className="relative m-auto mt-16 grid w-full max-w-screen-xl grid-cols-1 gap-12 px-12 pb-24 sm:gap-8 sm:gap-y-16 sm:px-24 md:grid-cols-2 xl:grid-cols-3 3xl:max-w-[1680px] 3xl:grid-cols-4">
-      {/* Component for drawing lines */}
       <CategoryLines workRefs={workRefs} works={WORKS} />
       {WORKS.map((work, index) => {
         const matrixIndex = index % 5 + 1;

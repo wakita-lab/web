@@ -23,7 +23,7 @@ function WorkItem({ work }: { work: Work }) {
       <section className="flex flex-col gap-4">
         <div className="flex flex-col gap-2">
           <Link href={`#${work.id}`}>
-            <time className="text-xs text-gray-500 underline-offset-2 hover:underline">
+            <time className="text-xs text-gray-500">
               {work.publishTime.toLocaleDateString('ja-JP')}
             </time>
           </Link>

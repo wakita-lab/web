@@ -20,7 +20,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
   }
 
   return (
-    <main className="mx-auto p-4 pb-12 md:px-8 lg:px-16">
+    <main className="mx-auto mb-24 p-4 md:px-8 lg:px-16">
       <Link
         href="/works"
         className="mb-8 inline-block text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"

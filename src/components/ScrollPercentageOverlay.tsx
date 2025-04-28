@@ -11,7 +11,7 @@ export function ScrollPercentageOverlay() {
     const calculateScrollPercentage = () => {
       const scrollTop = window.scrollY;
       const scrollHeight = Math.floor(document.documentElement.scrollHeight) - window.innerHeight;
-      const percentage = Math.max(0, Math.min(Math.round((scrollTop / scrollHeight) * 100), 100));
+      const percentage = Math.max(0, Math.min(Math.round((scrollTop / scrollHeight) * 100), 100)) || 0;
 
       setScrollPercentage(percentage);
 
@@ -31,8 +31,6 @@ export function ScrollPercentageOverlay() {
         }
       }, 500);
     };
-
-    // calculateScrollPercentage();
 
     window.addEventListener('scroll', calculateScrollPercentage);
     window.addEventListener('resize', calculateScrollPercentage);

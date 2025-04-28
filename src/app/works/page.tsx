@@ -61,7 +61,7 @@ export default function WorksPage() {
           isExtraLargeScreen ? 4 : 5;
 
   return (
-    <main className="mx-auto flex max-w-screen-xl gap-2.5 px-4 pb-16 pt-4 sm:px-8">
+    <main className="mx-auto mb-24 flex max-w-screen-xl gap-2.5 px-4 pt-4 sm:px-8">
       {
         Array.from({ length: columns }, (_, index) => (
           <div

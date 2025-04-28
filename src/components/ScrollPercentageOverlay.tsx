@@ -1,11 +1,10 @@
 'use client';
 
-import Link from 'next/link';
 import { useEffect, useState, useRef } from 'react';
 
 export function ScrollPercentageOverlay() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
-  const overlayRef = useRef<HTMLAnchorElement>(null);
+  const overlayRef = useRef<HTMLButtonElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
@@ -47,16 +46,16 @@ export function ScrollPercentageOverlay() {
   }, []);
 
   return (
-    <Link
+    <button
       ref={overlayRef}
       className={`fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 rounded-lg border border-foreground px-3 py-1.5 opacity-0 hover:no-underline ${
         scrollPercentage === 100
           ? 'border-white bg-foreground text-white'
           : 'pointer-events-none bg-white text-foreground'
       }`}
-      href="#top"
+      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       Scroll: {scrollPercentage}%
-    </Link>
+    </button>
   );
 };

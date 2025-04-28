@@ -1,8 +1,11 @@
+'use client';
+
 import { WORKS, Work } from '@/constants/works';
 import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
 import TagList from '@/components/TagList';
+import { useResponsiveBreakPoint } from '@/hooks/useResponsiveBreakPoint';
 
 function WorkItem({ work }: { work: Work }) {
   return (
@@ -45,7 +48,15 @@ function WorkItem({ work }: { work: Work }) {
 }
 
 export default function WorksPage() {
-  const columns = 5;
+  const isSmallScreen = useResponsiveBreakPoint({ max: 'sm'});
+  const isMediumScreen = useResponsiveBreakPoint({ min: 'sm', max: 'md' });
+  const isLargeScreen = useResponsiveBreakPoint({ min: 'md', max: 'lg' });
+  const isExtraLargeScreen = useResponsiveBreakPoint({ min: 'lg', max: 'xl' });
+
+  const columns = isSmallScreen ? 1 :
+    isMediumScreen ? 2 :
+      isLargeScreen ? 3 :
+        isExtraLargeScreen ? 4 : 5;
 
   return (
     <main className="mx-auto flex max-w-screen-xl gap-2.5 px-4 pb-16 pt-4 sm:px-8">

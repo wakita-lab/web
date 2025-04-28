@@ -24,7 +24,7 @@ const renderTextWithLinks = (text: string) => {
         <Link
           key={index}
           href={urls[index]}
-          className="text-gray-500 underline underline-offset-4 hover:text-gray-400"
+          className="break-all text-gray-500 underline underline-offset-4 hover:text-gray-400"
           target="_blank"
           rel="noopener noreferrer"
         >

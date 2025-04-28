@@ -29,7 +29,7 @@ export function ScrollPercentageOverlay() {
           overlayRef.current.style.transition = 'opacity 2000ms';
           overlayRef.current.style.opacity = '0';
         }
-      }, 500);
+      }, 1000);
     };
 
     window.addEventListener('scroll', calculateScrollPercentage);
@@ -53,7 +53,7 @@ export function ScrollPercentageOverlay() {
             : 'bg-white text-foreground'
         }`}
       >
-        {scrollPercentage}%
+        Scroll: {scrollPercentage}%
       </div>
     </div>
   );

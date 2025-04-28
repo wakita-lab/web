@@ -111,7 +111,7 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     }
 
     // Determine the number of lines to draw (the smaller of the available pairs or the desired number of lines)
-    const totalLinesToDraw = Math.min(40, shuffledPairs.length);
+    const totalLinesToDraw = Math.min(60, shuffledPairs.length);
 
     // Select pairs without duplication
     return shuffledPairs.slice(0, totalLinesToDraw).map(workPair => ({

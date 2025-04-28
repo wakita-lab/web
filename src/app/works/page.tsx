@@ -9,7 +9,7 @@ import { useResponsiveBreakPoint } from '@/hooks/useResponsiveBreakPoint';
 
 function WorkItem({ work }: { work: Work }) {
   return (
-    <article className="flex flex-col gap-4" id={work.id}>
+    <article className="flex flex-col gap-4 pt-2" id={work.id}>
       <Link href={`/works/${work.id}`} className="relative block aspect-square w-full sm:aspect-video">
         <Image
           src={work.images[0]}

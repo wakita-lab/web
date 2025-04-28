@@ -100,16 +100,25 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       return [];
     }
 
-    const totalLinesToDraw = 80;
+    // Get the number of available pairs
+    const availablePairsArray = Array.from(availableWorkPairs);
 
-    // ランダムにペアを選択
-    return new Array(totalLinesToDraw)
-      .fill(0)
-      .map(() => ({
-        workPair: Array.from(availableWorkPairs)[Math.floor(Math.random() * availableWorkPairs.size)],
-        indexAratio: Math.random(),
-        indexBratio: Math.random(),
-      }));
+    // Shuffle the array using the Fisher-Yates algorithm
+    const shuffledPairs = [...availablePairsArray];
+    for (let i = shuffledPairs.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledPairs[i], shuffledPairs[j]] = [shuffledPairs[j], shuffledPairs[i]];
+    }
+
+    // Determine the number of lines to draw (the smaller of the available pairs or the desired number of lines)
+    const totalLinesToDraw = Math.min(40, shuffledPairs.length);
+
+    // Select pairs without duplication
+    return shuffledPairs.slice(0, totalLinesToDraw).map(workPair => ({
+      workPair,
+      indexAratio: Math.random(),
+      indexBratio: Math.random(),
+    }));
   };
 
   const calculateLines = () => {

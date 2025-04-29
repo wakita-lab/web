@@ -460,3 +460,15 @@
       折り紙による作品は単なる紙の造形物を超えた価値を持つ事がある。古くから日本には贈り物に手間をかけることで相手への思いを表す習慣があり、熨斗（のし）や千羽鶴に見られるように、直接自分の手を使い時間をかけて折るという「手間」によって、相手対する想いもその作品に折り込められてきた。これらの作品群は、折り紙の材料そのものを再発明することで、電子技術によるもう「ひと手間」の可能性を探る試みである。 それは折り紙の意味を現代的に解釈するのみならず、早さや便利さのみに注力しがちな今日のテクノロジー(Fast Technology)のオルタナティブとして、日本古来の精神を帯びたテクノロジー(Slow Technology)の方向性を指し示す行為でもある。
       電子技術によるもうひと手間
       この折り紙には導電インクとサーモクロミックインクが塗布されており、コンピュータからの信号によって任意の場所の色彩を変えることができる。異なるインクの組み合わせによって作られた「折り紙のセンサ」を使えば、作品に対話性を与えることもできる。折り紙の素材性や精神性を活かしつつも、そこに電子技術を創造的に干渉させるために、この特殊な紙は一般的な和紙と既存の印刷技術の組み合わせのみで実現されており、しなやかな紙の素材性を損なうことなく電子的な機能の埋め込みを可能にしている。折り紙は手間をかけることによって相手への思いを表す精神をミームとして具備する社会的メディアである。急速な技術の進歩のただ中にある我々現代人には、ゆっくりと手間をかけることの豊かさを思い出すことも大切であるように思える。
+  credits:
+    en: |
+      Tatsuya Kaiho, Akira Wakita
+    ja: |
+      海宝竜也, 脇田玲
+  publication:
+    en: |
+      -Tatsuya Kaiho and Akira Wakita, Electronic Origami with the Color-Changing Function, to appear in 2nd Workshop on Smart Material Interfaces (SMI 2013), Sydney, Dec.12, 2013. > SMI 2013
+      -Tatsuya Kaiho, Akira Wakita, Origamic I/O device: The color controllable origami using functional ink , IPSJ SIG Technical Reports, 2014-HCI-157(76), 1-6, 2014-03-06
+    ja: |
+      -Tatsuya Kaiho and Akira Wakita, Electronic Origami with the Color-Changing Function, to appear in 2nd Workshop on Smart Material Interfaces (SMI 2013), Sydney, Dec.12, 2013. > SMI 2013
+      -海宝竜也, 脇田玲, Origamic I/O device: 機能性インクを用いた色彩制御可能な折り紙, 情報処理学会 第31回 ヒューマンコンピュータインタラクション研究会, 2014/3/15.

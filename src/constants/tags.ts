@@ -1,14 +1,6 @@
 import tagsData from '../../data/tags.yaml';
-import { Tag } from './works';
-
-export interface TagData {
-  id: Tag;
-  name: {
-    en: string;
-    ja: string;
-  };
-  color: string;
-}
+import { Tag } from '../types/tag';
+import { TagData } from '../types/tag';
 
 // YAMLから読み込んだデータをTagData[]の形式に変換
 export const TAGS: TagData[] = tagsData as TagData[];

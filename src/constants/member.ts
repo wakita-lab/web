@@ -1,14 +1,8 @@
 import memberData from '../../data/member.yaml';
+import { Member, Role } from '../types/member';
 
-export type Role = 'professor' | 'bachelor' | 'master' | 'doctor' | 'alumni';
-
-export interface Member {
-  name: {
-    ja: string;
-    en: string;
-  };
-  role: Role;
-}
+// 型定義を再エクスポート
+export type { Role };
 
 // YAMLから読み込んだデータをMember[]の形式に変換
 export const MEMBERS: Member[] = memberData as Member[];

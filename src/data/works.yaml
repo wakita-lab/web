@@ -1,7 +1,7 @@
 - id: speculativefakecollege
   publishTime: 2019-01-01
   images:
-    - /works/speculativefakecollege.jpg
+    - thumb.jpg
   tags:
     - installation
     - performance
@@ -47,7 +47,7 @@
 - id: worldsvesselroutes
   publishTime: 2018-01-09
   images:
-    - /works/worldsvesselroutes.png
+    - thumb.png
   tags:
     - visualization
   title:
@@ -69,7 +69,7 @@
 - id: dismantle
   publishTime: 2018-01-08
   images:
-    - /works/dismantle.jpg
+    - thumb.jpg
   tags:
     - installation
     - visualization
@@ -88,7 +88,7 @@
 - id: scenery
   publishTime: 2018-01-07
   images:
-    - /works/scenery.jpg
+    - thumb.jpg
   tags:
     - installation
   title:
@@ -105,7 +105,7 @@
 - id: cosmetics
   publishTime: 2018-01-06
   images:
-    - /works/cosmetics.jpg
+    - thumb.jpg
   tags:
     - installation
     - visualization
@@ -123,7 +123,7 @@
 - id: xhiasma
   publishTime: 2018-01-05
   images:
-    - /works/xhiasma.jpg
+    - thumb.jpg
   tags:
     - performance
   title:
@@ -142,7 +142,7 @@
 - id: overdisplay_2
   publishTime: 2018-01-04
   images:
-    - /works/overdisplay_2.jpg
+    - thumb.jpg
   tags:
     - mixed_media
   title:
@@ -159,7 +159,7 @@
 - id: overdisplay
   publishTime: 2018-01-03
   images:
-    - /works/overdisplay.jpg
+    - thumb.jpg
   tags:
     - mixed_media
   title:
@@ -176,7 +176,7 @@
 - id: nonlinear
   publishTime: 2018-01-02
   images:
-    - /works/nonlinear.jpg
+    - thumb.jpg
   tags:
     - visualization
   title:
@@ -193,7 +193,7 @@
 - id: activator
   publishTime: 2018-01-01
   images:
-    - /works/activator.jpg
+    - thumb.jpg
   tags:
     - visualization
   title:
@@ -210,7 +210,7 @@
 - id: homeelectronics
   publishTime: 2017-12-31
   images:
-    - /works/homeelectronics.jpg
+    - thumb.jpg
   tags:
     - installation
   title:
@@ -227,7 +227,7 @@
 - id: newsyn
   publishTime: 2017-12-30
   images:
-    - /works/newsyn.jpg
+    - thumb.jpg
   tags:
     - installation
     - visualization
@@ -245,7 +245,7 @@
 - id: amp
   publishTime: 2017-12-29
   images:
-    - /works/amp.jpg
+    - thumb.jpg
   tags:
     - performance
     - visualization
@@ -263,7 +263,7 @@
 - id: visualizationofairconditioner
   publishTime: 2017-12-28
   images:
-    - /works/visualizationofairconditioner.png
+    - thumb.png
   tags:
     - visualization
   title:
@@ -285,7 +285,7 @@
 - id: oceangeneralcirculationsimulation
   publishTime: 2016-12-31
   images:
-    - /works/oceangeneralcirculationsimulation.png
+    - thumb.png
   tags:
     - visualization
   title:
@@ -309,7 +309,7 @@
 - id: scalarfieldofshoes
   publishTime: 2015-12-31
   images:
-    - /works/scalarfieldofshoes.jpg
+    - thumb.jpg
   tags:
     - installation
     - visualization
@@ -330,7 +330,7 @@
 - id: fina
   publishTime: 2015-12-30
   images:
-    - /works/fina.jpg
+    - thumb.jpg
   tags:
     - human_machine_interaction
     - visualization
@@ -346,7 +346,7 @@
 - id: flora
   publishTime: 2015-12-29
   images:
-    - /works/flora.jpg
+    - thumb.jpg
   tags:
     - installation
     - visualization
@@ -366,7 +366,7 @@
 - id: furnishedfluid
   publishTime: 2014-12-31
   images:
-    - /works/furnishedfluid.jpg
+    - thumb.jpg
   tags:
     - installation
     - visualization
@@ -386,7 +386,7 @@
 - id: humanbodyvisualizationworkshop
   publishTime: 2014-12-30
   images:
-    - /works/humanbodyvisualizationworkshop.jpg
+    - thumb.jpg
   tags:
     - visualization
   title:
@@ -403,7 +403,7 @@
 - id: unda
   publishTime: 2013-12-31
   images:
-    - /works/unda.jpg
+    - thumb.jpg
   tags:
     - human_machine_interaction
     - robotics
@@ -437,7 +437,7 @@
 - id: origamiandslowtech
   publishTime: 2013-12-30
   images:
-    - /works/origamiandslowtech.jpg
+    - thumb.jpg
   tags:
     - material
     - user_interface

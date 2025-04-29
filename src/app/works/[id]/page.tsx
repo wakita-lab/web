@@ -106,7 +106,19 @@ export default async function WorkPage({ params }: WorkPageProps) {
               </div>
             )}
           </div>
+        </section>
 
+        <section className="relative flex w-full flex-col">
+          {work.images.slice(1).map((image, index) => (
+            <div key={index} className="relative aspect-video w-full">
+              <Image
+                src={`/images/works/${work.id}/${image}`}
+                alt={work.title.en}
+                fill
+                className="mb-8 aspect-video object-cover"
+              />
+            </div>
+          ))}
         </section>
       </article>
     </main>

@@ -2,6 +2,11 @@
   publishTime: 2019-01-01
   images:
     - thumb.jpg
+    - logo.png
+    - image1.jpg
+    - image2.jpg
+    - image3.jpg
+    - image4.jpg
   tags:
     - installation
     - performance

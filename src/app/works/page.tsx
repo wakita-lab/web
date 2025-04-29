@@ -12,7 +12,7 @@ function WorkItem({ work }: { work: Work }) {
     <article className="flex flex-col gap-4 pt-2" id={work.id}>
       <Link href={`/works/${work.id}`} className="relative block aspect-square w-full sm:aspect-video">
         <Image
-          src={work.images[0]}
+          src={`/images/works/${work.id}/thumb.jpg`}
           alt={work.title.en}
           fill
           className="object-cover"

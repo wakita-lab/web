@@ -35,35 +35,35 @@ export default function Home() {
           >
             <div ref={workRefs[index]} className="absolute inset-0 z-0" />
             <Image
-              src={work.images[0]}
+              src={`/images/works/${work.id}/thumb.jpg`}
               alt={work.title.en}
               width={512}
               height={512}
               className={`absolute left-48 top-8 -z-40 aspect-[9/20] object-cover opacity-15 ${affineMatrixClassName}`}
             />
             <Image
-              src={work.images[0]}
+              src={`/images/works/${work.id}/thumb.jpg`}
               alt={work.title.en}
               width={512}
               height={512}
               className={`absolute left-32 top-6 -z-30 aspect-[9/20] object-cover opacity-30 ${affineMatrixClassName}`}
             />
             <Image
-              src={work.images[0]}
+              src={`/images/works/${work.id}/thumb.jpg`}
               alt={work.title.en}
               width={512}
               height={512}
               className={`absolute left-20 top-4 -z-30 aspect-[9/20] object-cover opacity-45 ${affineMatrixClassName}`}
             />
             <Image
-              src={work.images[0]}
+              src={`/images/works/${work.id}/thumb.jpg`}
               alt={work.title.en}
               width={512}
               height={512}
               className={`absolute left-8 top-2 -z-30 aspect-[9/20] object-cover opacity-70 ${affineMatrixClassName}`}
             />
             <Image
-              src={work.images[0]}
+              src={`/images/works/${work.id}/thumb.jpg`}
               alt={work.title.en}
               width={512}
               height={512}

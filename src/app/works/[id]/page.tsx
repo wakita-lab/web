@@ -1,4 +1,5 @@
-import { Work, WORKS } from '@/constants/works';
+import { WORKS } from '@/constants/works';
+import { Work } from '@/types/work';
 import TagList from '@/components/TagList';
 import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';

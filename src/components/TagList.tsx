@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Tag } from '@/constants/works';
+import { Tag } from '@/types/tag';
 import { getTagColor, getTagName } from '@/constants/tags';
 
 interface TagListProps {

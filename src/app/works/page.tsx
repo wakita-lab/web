@@ -1,6 +1,7 @@
 'use client';
 
-import { WORKS, Work } from '@/constants/works';
+import { WORKS } from '@/constants/works';
+import { Work } from '@/types/work';
 import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';

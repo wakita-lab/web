@@ -1,7 +1,8 @@
 'use client';
 
 import React, { useRef, useEffect, useState } from 'react';
-import { WORKS, Tag } from '@/constants/works';
+import { WORKS } from '@/constants/works';
+import { Tag } from '@/types/tag';
 import { getTagColor } from '@/constants/tags';
 
 // Line interface definition

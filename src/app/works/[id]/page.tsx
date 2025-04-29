@@ -41,7 +41,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
       <article className="flex flex-col gap-8">
         <section className="relative aspect-video w-full">
           <Image
-            src={`/images/works/${work.id}/thumb.jpg`}
+            src={`/images/works/${work.id}/${work.images[0]}`}
             alt={work.title.en}
             fill
             className="object-cover"

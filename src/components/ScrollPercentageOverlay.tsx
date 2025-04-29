@@ -55,7 +55,7 @@ export function ScrollPercentageOverlay() {
       }`}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
-      Scroll: {scrollPercentage}%
+      {scrollPercentage}%
     </button>
   );
 };

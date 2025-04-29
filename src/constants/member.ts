@@ -1,4 +1,4 @@
-import memberData from '../data/member.yaml';
+import memberData from '../../data/member.yaml';
 
 export type Role = 'professor' | 'bachelor' | 'master' | 'doctor' | 'alumni';
 

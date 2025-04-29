@@ -1,4 +1,4 @@
-import tagsData from '../data/tags.yaml';
+import tagsData from '../../data/tags.yaml';
 import { Tag } from './works';
 
 export interface TagData {

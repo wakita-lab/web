@@ -1,4 +1,4 @@
-import worksData from '../data/works.yaml';
+import worksData from '../../data/works.yaml';
 
 export type Tag =
   | 'material'

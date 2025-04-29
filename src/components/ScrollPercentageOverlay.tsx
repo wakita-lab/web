@@ -28,7 +28,7 @@ export function ScrollPercentageOverlay() {
 
       timeoutRef.current = setTimeout(() => {
         if (overlayRef.current) {
-          overlayRef.current.style.transition = 'opacity 500ms';
+          overlayRef.current.style.transition = 'opacity 800ms';
           overlayRef.current.style.opacity = '0';
         }
       }, debounceDuration);

@@ -5,7 +5,6 @@ import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
 import TagList from '@/components/TagList';
-import { useResponsiveBreakPoint } from '@/hooks/useResponsiveBreakPoint';
 
 function WorkItem({ work }: { work: Work }) {
   return (
@@ -48,37 +47,11 @@ function WorkItem({ work }: { work: Work }) {
 }
 
 export default function WorksPage() {
-  const isExtraSmallScreen = useResponsiveBreakPoint({ max: 'xs' });
-  const isSmallScreen = useResponsiveBreakPoint({ min: 'xs', max: 'sm'});
-  const isMediumScreen = useResponsiveBreakPoint({ min: 'sm', max: 'md' });
-  const isLargeScreen = useResponsiveBreakPoint({ min: 'md', max: 'lg' });
-  const isExtraLargeScreen = useResponsiveBreakPoint({ min: 'lg', max: '2xl' });
-  const is2ExtraLargeScreen = useResponsiveBreakPoint({ min: '2xl', max: '3xl' });
-
-  const columns = isExtraSmallScreen ? 1 :
-    isSmallScreen ? 2 :
-      isMediumScreen ? 2 :
-        isLargeScreen ? 3 :
-          isExtraLargeScreen ? 4 :
-            is2ExtraLargeScreen ? 5 : 6;
-
   return (
-    <main className="mx-auto mb-24 flex max-w-screen-xl gap-2.5 px-4 pt-4 sm:px-8 3xl:max-w-screen-2xl">
-      {
-        Array.from({ length: columns }, (_, index) => (
-          <div
-            key={index}
-            className="flex flex-1 flex-col gap-4"
-          >
-            {
-              WORKS.filter((_, workIndex) => workIndex % columns === index)
-                .map(work => (
-                  <WorkItem key={work.id} work={work} />
-                ))
-            }
-          </div>
-        ))
-      }
+    <main className="mx-auto mb-24 grid max-w-screen-xl grid-cols-1 gap-2 px-4 pt-4 sm:grid-cols-2 sm:px-8 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 3xl:max-w-screen-2xl 3xl:grid-cols-6">
+      {WORKS.map(work => (
+        <WorkItem key={work.id} work={work} />
+      ))}
     </main>
   );
 }

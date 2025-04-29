@@ -108,7 +108,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
           </div>
         </section>
 
-        <section className="flex w-full flex-col">
+        <section className="grid grid-cols-1 md:grid-cols-1">
           {work.images.slice(1).map((image, index) => (
             <div key={index} className="relative aspect-video w-full">
               <Image

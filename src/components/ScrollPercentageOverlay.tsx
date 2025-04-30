@@ -25,11 +25,21 @@ export function ScrollPercentageOverlay() {
 
   return (
     <button
-      className="fixed bottom-0 right-3.5 origin-top-right rotate-90 bg-background px-1.5 pt-px text-base md:right-1 lg:right-4"
+      className="fixed bottom-0 right-3.5 flex origin-top-right rotate-90 items-center gap-1.5 bg-background px-1.5 pt-px text-base md:right-1 lg:right-4"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       {scrollPercentage}%
-      {scrollPercentage < 100 && ' →'}
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 16 12"
+        strokeWidth={1}
+        stroke="currentColor"
+        className="h-3 -scale-x-100"
+        overflow="visible"
+      >
+        <path d="M5,2 0,6 5,10 M1,6 16,6"/>
+      </svg>
     </button>
   );
 };

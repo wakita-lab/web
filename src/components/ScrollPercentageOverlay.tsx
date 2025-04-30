@@ -27,7 +27,7 @@ export function ScrollPercentageOverlay() {
   return (
     <button
       ref={overlayRef}
-      className="fixed z-50 px-4 py-3 text-white mix-blend-difference md:left-1/2 md:top-0 md:-translate-x-1/2"
+      className="fixed bottom-0 left-1/2 z-50 -translate-x-1/2 px-4 py-3 text-white mix-blend-difference md:bottom-auto md:top-0"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       {scrollPercentage}%

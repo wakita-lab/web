@@ -39,6 +39,7 @@ export function ScrollPercentageOverlay() {
           && <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
+            viewBox="0 0 16 12"
             strokeWidth={1}
             stroke="currentColor"
             className="-scale-x-100"

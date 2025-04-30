@@ -5,7 +5,6 @@ import { useEffect, useState, useRef } from 'react';
 export function ScrollPercentageOverlay() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const overlayRef = useRef<HTMLButtonElement>(null);
-  const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
     const calculateScrollPercentage = () => {
@@ -14,24 +13,6 @@ export function ScrollPercentageOverlay() {
       const percentage = Math.max(0, Math.min(Math.round((scrollTop / scrollHeight) * 100), 100)) || 0;
 
       setScrollPercentage(percentage);
-
-      if (overlayRef.current) {
-        overlayRef.current.style.transition = 'opacity 100ms';
-        overlayRef.current.style.opacity = '1';
-      }
-
-      if (timeoutRef.current) {
-        clearTimeout(timeoutRef.current);
-      }
-
-      const debounceDuration = percentage === 100 ? 1000 : 100;
-
-      timeoutRef.current = setTimeout(() => {
-        if (overlayRef.current) {
-          overlayRef.current.style.transition = 'opacity 800ms';
-          overlayRef.current.style.opacity = '0';
-        }
-      }, debounceDuration);
     };
 
     window.addEventListener('scroll', calculateScrollPercentage);
@@ -40,19 +21,13 @@ export function ScrollPercentageOverlay() {
     return () => {
       window.removeEventListener('scroll', calculateScrollPercentage);
       window.removeEventListener('resize', calculateScrollPercentage);
-      if (timeoutRef.current)
-        clearTimeout(timeoutRef.current);
     };
   }, []);
 
   return (
     <button
       ref={overlayRef}
-      className={`fixed left-1/2 top-1/2 z-50 -translate-x-1/2 -translate-y-1/2 rounded-lg border border-foreground px-3 py-1.5 opacity-0 hover:no-underline ${
-        scrollPercentage === 100
-          ? 'border-white bg-foreground text-white'
-          : 'pointer-events-none bg-white text-foreground'
-      }`}
+      className="fixed z-50 px-4 py-3 text-white mix-blend-difference md:left-1/2 md:top-0 md:-translate-x-1/2"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       {scrollPercentage}%

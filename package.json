@@ -27,6 +27,7 @@
     "@types/seedrandom": "^3.0.8",
     "eslint": "^9",
     "eslint-config-next": "15.1.6",
+    "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-tailwindcss": "^3.18.0",
     "postcss": "^8",
     "raw-loader": "^4.0.2",

@@ -1,8 +1,9 @@
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
-import { FlatCompat } from '@eslint/eslintrc';
 
+import { FlatCompat } from '@eslint/eslintrc';
 import stylistic from '@stylistic/eslint-plugin';
+import importPlugin from 'eslint-plugin-import';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -26,6 +27,7 @@ const eslintConfig = [
   {
     plugins: {
       '@stylistic': stylistic,
+      'import': importPlugin,
     },
     rules: {
       // 基本的なスタイリングルール
@@ -106,6 +108,19 @@ const eslintConfig = [
       '@stylistic/template-curly-spacing': ['error', 'never'],
       '@stylistic/wrap-iife': ['error', 'outside'],
       '@stylistic/wrap-regex': 'error',
+
+      // importの順序に関するルール
+      'import/order': [
+        'error',
+        {
+          'groups': ['builtin', 'external', 'internal', 'parent', 'sibling', 'index', 'object', 'type'],
+          'alphabetize': {
+            'order': 'asc',
+            'caseInsensitive': true,
+          },
+          'newlines-between': 'always',
+        },
+      ],
     },
   },
   ...compat.extends('next/core-web-vitals', 'next/typescript', 'plugin:tailwindcss/recommended'),

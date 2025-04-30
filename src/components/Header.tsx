@@ -1,9 +1,10 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import { HamburgerMenu } from './HamburgerMenu';
+import { useState } from 'react';
+
 import { HamburgerButton } from './HamburgerButton';
+import { HamburgerMenu } from './HamburgerMenu';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);

@@ -1,11 +1,12 @@
 'use client';
 
-import { WORKS } from '@/constants/works';
-import { Work } from '@/types/work';
-import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { FormattedText } from '@/components/FormattedText';
 import TagList from '@/components/TagList';
+import { WORKS } from '@/constants/works';
+import { Work } from '@/types/work';
 
 function WorkItem({ work }: { work: Work }) {
   return (

@@ -1,10 +1,11 @@
-import { WORKS } from '@/constants/works';
-import { Work } from '@/types/work';
-import TagList from '@/components/TagList';
-import { FormattedText } from '@/components/FormattedText';
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+
+import { FormattedText } from '@/components/FormattedText';
+import TagList from '@/components/TagList';
+import { WORKS } from '@/constants/works';
+import { Work } from '@/types/work';
 
 interface WorkPageProps {
   params: Promise<{

@@ -1,11 +1,12 @@
 'use client';
 
-import Link from 'next/link';
 import Image from 'next/image';
-import { WORKS } from '@/constants/works';
-import { getTagColor } from '@/constants/tags';
+import Link from 'next/link';
 import { createRef } from 'react';
+
 import CategoryLines from '@/components/CategoryLines';
+import { getTagColor } from '@/constants/tags';
+import { WORKS } from '@/constants/works';
 
 export default function Home() {
   const workRefs = WORKS.map(() => createRef<HTMLDivElement>());

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Tag } from '@/types/tag';
 import { getTagColor, getTagName } from '@/constants/tags';
+import { Tag } from '@/types/tag';
 
 interface TagListProps {
   tags: Tag[];

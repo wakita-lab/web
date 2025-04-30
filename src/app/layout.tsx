@@ -1,9 +1,11 @@
 import { Analytics } from '@vercel/analytics/react';
-import type { Metadata } from 'next';
+
 import './globals.css';
 import { Header } from '@/components/Header';
-import TypekitLoader from '@/components/TypekitLoader';
 import { ScrollPercentageOverlay } from '@/components/ScrollPercentageOverlay';
+import TypekitLoader from '@/components/TypekitLoader';
+
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'Akira Wakita Lab.',

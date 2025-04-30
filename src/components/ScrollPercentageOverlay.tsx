@@ -1,10 +1,9 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 
 export function ScrollPercentageOverlay() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
-  const overlayRef = useRef<HTMLButtonElement>(null);
 
   useEffect(() => {
     const calculateScrollPercentage = () => {
@@ -26,7 +25,6 @@ export function ScrollPercentageOverlay() {
 
   return (
     <button
-      ref={overlayRef}
       className="fixed bottom-0 right-3.5 origin-top-right rotate-90 bg-background px-1.5 pt-px text-base md:right-1 lg:right-4"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >

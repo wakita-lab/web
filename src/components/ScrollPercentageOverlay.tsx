@@ -29,17 +29,20 @@ export function ScrollPercentageOverlay() {
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       {scrollPercentage}%
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 16 12"
-        strokeWidth={1}
-        stroke="currentColor"
-        className="h-3 -scale-x-100"
-        overflow="visible"
-      >
-        <path d="M5,2 0,6 5,10 M1,6 16,6"/>
-      </svg>
+      {
+        scrollPercentage < 100 &&
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 16 12"
+            strokeWidth={1}
+            stroke="currentColor"
+            className="h-3 -scale-x-100"
+            overflow="visible"
+          >
+            <path d="M5,2 0,6 5,10 M1,6 16,6"/>
+          </svg>
+      }
     </button>
   );
 };

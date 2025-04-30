@@ -43,10 +43,11 @@ interface FormattedTextProps {
 }
 
 export function FormattedText({ text, className }: FormattedTextProps) {
-  return text ? (
-    <div className={className}>
+  return text
+    ? <div className={className}>
       {text.split('\n').map((line, index) => {
         const trimmedLine = line.trim();
+
         if (!trimmedLine) return null;
 
         return (
@@ -56,5 +57,5 @@ export function FormattedText({ text, className }: FormattedTextProps) {
         );
       })}
     </div>
-  ) : null;
+    : null;
 }

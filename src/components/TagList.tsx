@@ -12,7 +12,7 @@ export default function TagList({ tags }: TagListProps) {
 
   return (
     <ul className="flex flex-wrap items-center gap-2 text-sm">
-      {tags.map((tag, index) => (
+      {tags.map((tag, index) =>
         <li key={tag} className="flex items-center gap-2">
           <div>
             <div className="h-1 w-2 bg-black" />
@@ -22,11 +22,10 @@ export default function TagList({ tags }: TagListProps) {
             />
           </div>
           <span>{getTagName(tag, 'en')}</span>
-          {index < tags.length - 1 && (
-            <span className="size-0.5 rounded-full bg-neutral-700"></span>
-          )}
-        </li>
-      ))}
+          {index < tags.length - 1
+            && <span className="size-0.5 rounded-full bg-neutral-700"></span>
+          }
+        </li>)}
     </ul>
   );
 };

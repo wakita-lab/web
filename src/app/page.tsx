@@ -7,7 +7,6 @@ import { getTagColor } from '@/constants/tags';
 import { createRef } from 'react';
 import CategoryLines from '@/components/CategoryLines';
 
-
 export default function Home() {
   const workRefs = WORKS.map(() => createRef<HTMLDivElement>());
 
@@ -16,8 +15,8 @@ export default function Home() {
       <CategoryLines workRefs={workRefs} works={WORKS} />
       {WORKS.map((work, index) => {
         const matrixIndex = index % 5 + 1;
-        const affineMatrixClassName =
-          matrixIndex === 1
+        const affineMatrixClassName
+          = matrixIndex === 1
             ? 'work-affine-matrix-1'
             : matrixIndex === 2
               ? 'work-affine-matrix-2'
@@ -71,11 +70,10 @@ export default function Home() {
             />
             <div className="absolute inset-y-0 z-20 m-auto flex h-fit w-full">
               <div className="flex min-w-2 flex-col">
-                {work.tags.map((tag, index) => (
+                {work.tags.map((tag, index) =>
                   <div key={index} className="grow" style={
                     { backgroundColor: getTagColor(tag) }
-                  } />
-                ))}
+                  } />)}
               </div>
               <div className="grow overflow-hidden text-nowrap bg-neutral-50 text-base leading-5">
                 {work.title.en}

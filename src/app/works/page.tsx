@@ -29,19 +29,19 @@ function WorkItem({ work }: { work: Work }) {
           </Link>
           <h2 className="text-base font-medium">{work.title.en}</h2>
           {
-            work.title.ja && work.title.ja !== work.title.en &&
-              <h2 className="text-sm">{work.title.ja}</h2>
+            work.title.ja && work.title.ja !== work.title.en
+              && <h2 className="text-sm">{work.title.ja}</h2>
           }
         </div>
 
         <TagList tags={work.tags} />
 
-        {work.description && (
-          <div className="flex flex-col gap-4 text-sm leading-loose">
+        {work.description
+          && <div className="flex flex-col gap-4 text-sm leading-loose">
             <FormattedText text={work.description.en} />
             {work.description.ja && <FormattedText text={work.description.ja} />}
           </div>
-        )}
+        }
       </section>
     </article>
   );
@@ -50,9 +50,8 @@ function WorkItem({ work }: { work: Work }) {
 export default function WorksPage() {
   return (
     <main className="mx-auto mb-24 grid max-w-screen-xl grid-cols-1 gap-2 px-4 pt-4 sm:grid-cols-2 sm:px-8 md:grid-cols-3 lg:grid-cols-4 2xl:grid-cols-5 3xl:max-w-screen-2xl 3xl:grid-cols-6">
-      {WORKS.map(work => (
-        <WorkItem key={work.id} work={work} />
-      ))}
+      {WORKS.map((work) =>
+        <WorkItem key={work.id} work={work} />)}
     </main>
   );
 }

@@ -17,6 +17,7 @@ export default function MemberPage() {
   const groupedMembers = MEMBERS.reduce((acc, member) => {
     if (!acc[member.role]) acc[member.role] = [];
     acc[member.role].push(member);
+
     return acc;
   }, {} as Record<string, typeof MEMBERS>);
 
@@ -24,19 +25,19 @@ export default function MemberPage() {
     <div className="mx-auto mb-24 mt-8 flex max-w-lg flex-col justify-center gap-12 px-4 leading-loose">
       <h1 className="bg-accent text-2xl font-medium">Member</h1>
 
-      {roleOrder.map(role => {
+      {roleOrder.map((role) => {
         const members = groupedMembers[role] || [];
+
         if (members.length === 0) return null;
 
         return (
           <section className="flex flex-col gap-4" key={role}>
             <h3 className="bg-accent">{roleHeadings[role]}</h3>
             <ul className="list-hyphen">
-              {members.map((member) => (
+              {members.map((member) =>
                 <li key={member.name.en}>
                   {member.name.ja} / {member.name.en}
-                </li>
-              ))}
+                </li>)}
             </ul>
           </section>
         );

@@ -19,8 +19,8 @@ export const Header = () => {
 
       <HamburgerMenu isOpen={isOpen} onClick={() => setIsOpen(false)} />
       {
-        isOpen &&
-        <div className="fixed inset-0 z-10" onClick={() => setIsOpen(false)} />
+        isOpen
+        && <div className="fixed inset-0 z-10" onClick={() => setIsOpen(false)} />
       }
     </>
   );

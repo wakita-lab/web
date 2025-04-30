@@ -38,6 +38,7 @@ export function useResponsiveBreakPoint({ min, max } : { min?: BreakPoint, max?:
 
       // Determine if within range
       const result = currentWidth >= minWidth && currentWidth < maxWidth;
+
       setIsInRange(result);
     };
 

@@ -12,8 +12,8 @@ export default function TypekitLoader({ kitId }: { kitId: string }) {
       };
       const h = d.documentElement;
       const t = setTimeout(function () {
-        h.className =
-          h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
+        h.className
+          = h.className.replace(/\bwf-loading\b/g, '') + ' wf-inactive';
       }, config.scriptTimeout);
       const tk = d.createElement('script');
       const s = d.getElementsByTagName('script')[0];
@@ -32,7 +32,7 @@ export default function TypekitLoader({ kitId }: { kitId: string }) {
       };
 
       s.parentNode!.insertBefore(tk, s);
-    })(document);
+    }(document));
   }, [kitId]);
 
   return null;

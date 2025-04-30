@@ -58,8 +58,8 @@ export default async function WorkPage({ params }: WorkPageProps) {
             </time>
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
             {
-              work.title.ja && work.title.ja !== work.title.en &&
-              <h2 className="text-xl">{work.title.ja}</h2>
+              work.title.ja && work.title.ja !== work.title.en
+              && <h2 className="text-xl">{work.title.ja}</h2>
             }
             <div className="mt-5">
               <TagList tags={work.tags}/>
@@ -71,47 +71,47 @@ export default async function WorkPage({ params }: WorkPageProps) {
               {work.description?.en && <FormattedText text={work.description.en} />}
               {work.description?.ja && <FormattedText text={work.description.ja} />}
             </div>
-            {work.credits && (
-              <div className="flex flex-col gap-4 sm:gap-2">
+            {work.credits
+              && <div className="flex flex-col gap-4 sm:gap-2">
                 <h3 className="font-medium">Credits</h3>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-2 leading-loose md:grid-cols-2">
                   <FormattedText text={work.credits.en} />
                   <FormattedText text={work.credits.ja} />
                 </div>
               </div>
-            )}
-            {work.publication && (
-              <div className="flex flex-col gap-4 sm:gap-2">
+            }
+            {work.publication
+              && <div className="flex flex-col gap-4 sm:gap-2">
                 <h3 className="font-medium">Publication</h3>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-2 leading-loose md:grid-cols-2">
                   <FormattedText text={work.publication.en} />
                   <FormattedText text={work.publication.ja} />
                 </div>
               </div>
-            )}
-            {work.press && (
-              <div className="flex flex-col gap-4 sm:gap-2">
+            }
+            {work.press
+              && <div className="flex flex-col gap-4 sm:gap-2">
                 <h3 className="font-medium">Press</h3>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-2 leading-loose md:grid-cols-2">
                   <FormattedText text={work.press.en} />
                   <FormattedText text={work.press.ja} />
                 </div>
               </div>
-            )}
-            {work.exhibition && (
-              <div className="flex flex-col gap-4 sm:gap-2">
+            }
+            {work.exhibition
+              && <div className="flex flex-col gap-4 sm:gap-2">
                 <h3 className="font-medium">Exhibition</h3>
                 <div className="grid grid-cols-1 gap-x-8 gap-y-2 leading-loose md:grid-cols-2">
                   <FormattedText text={work.exhibition.en} />
                   <FormattedText text={work.exhibition.ja} />
                 </div>
               </div>
-            )}
+            }
           </div>
         </section>
 
         <section className="mt-4 grid grid-cols-1 md:grid-cols-2">
-          {work.images.slice(1).map((image, index) => (
+          {work.images.slice(1).map((image, index) =>
             <div key={index} className="relative aspect-video w-full">
               <Image
                 src={`/images/works/${work.id}/${image}`}
@@ -119,8 +119,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
                 fill
                 className="mb-8 object-cover"
               />
-            </div>
-          ))}
+            </div>)}
         </section>
       </article>
     </main>

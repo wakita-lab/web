@@ -42,6 +42,7 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
   useEffect(() => {
     // ランダムな曲線のペアを選択
     const pairs = selectRandomLines(works);
+
     setSelectedPairs(pairs);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
@@ -64,13 +65,13 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
   // ランダムに曲線のペアを選択する関数
   const selectRandomLines = (works: typeof WORKS): SelectedPair[] => {
     // Get all tags
-    const allTags = Array.from(new Set(works.flatMap(work => work.tags)));
+    const allTags = Array.from(new Set(works.flatMap((work) => work.tags)));
 
     // Create a Set to store all available work pairs that share at least one tag
     const availableWorkPairs = new Set<WorkPair>();
 
     // Find all pairs of works that share at least one tag
-    allTags.forEach(tag => {
+    allTags.forEach((tag) => {
       // Get indices of works that have this tag
       const workIndicesWithTag = works
         .map((work, index) => ({ work, index }))
@@ -106,8 +107,10 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
 
     // Shuffle the array using the Fisher-Yates algorithm
     const shuffledPairs = [...availablePairsArray];
+
     for (let i = shuffledPairs.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
+
       [shuffledPairs[i], shuffledPairs[j]] = [shuffledPairs[j], shuffledPairs[i]];
     }
 
@@ -115,7 +118,7 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
     const totalLinesToDraw = Math.min(60, shuffledPairs.length);
 
     // Select pairs without duplication
-    return shuffledPairs.slice(0, totalLinesToDraw).map(workPair => ({
+    return shuffledPairs.slice(0, totalLinesToDraw).map((workPair) => ({
       workPair,
       indexAratio: Math.random(),
       indexBratio: Math.random(),
@@ -186,15 +189,14 @@ export default function CategoryLines({ workRefs, works }: CategoryLinesProps) {
       className="pointer-events-none absolute left-0 top-0 z-10 size-full"
       overflow="visible"
     >
-      {lines.map((line, index) => (
+      {lines.map((line, index) =>
         <path
           key={index}
           d={generateCatenaryPath(line.ax, line.ay, line.bx, line.by)}
           stroke={getTagColor(line.tag)}
           strokeWidth="1"
           fill="none"
-        />
-      ))}
+        />)}
     </svg>
   );
 }

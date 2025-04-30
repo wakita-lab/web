@@ -30,8 +30,8 @@ export function ScrollPercentageOverlay() {
     >
       {scrollPercentage}%
       {
-        scrollPercentage < 100 &&
-          <svg
+        scrollPercentage < 100
+          && <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
             viewBox="0 0 16 12"

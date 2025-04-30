@@ -6,7 +6,8 @@ import { useEffect, useState } from 'react';
 export function ScrollPercentageOverlay() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const pathname = usePathname();
-  const isTransparent = pathname === '/';
+
+  const isMixDiffStyle = pathname === '/';
 
   useEffect(() => {
     const calculateScrollPercentage = () => {
@@ -29,7 +30,7 @@ export function ScrollPercentageOverlay() {
   return (
     <button
       className={`fixed bottom-0 right-3.5 flex origin-top-right rotate-90 items-center gap-1.5 px-1.5 pt-px text-base md:right-1 lg:right-4 ${
-        isTransparent ? 'bg-transparent text-white mix-blend-difference' : 'bg-background'
+        isMixDiffStyle ? 'bg-transparent text-white mix-blend-difference' : 'bg-background'
       }`}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >

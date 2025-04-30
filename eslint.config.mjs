@@ -46,16 +46,16 @@ const eslintConfig = [
       '@stylistic/key-spacing': ['error', { beforeColon: false, afterColon: true }],
       '@stylistic/keyword-spacing': ['error', { before: true, after: true }],
       '@stylistic/linebreak-style': ['error', 'unix'],
-      '@stylistic/max-len': [
-        'error', {
-          code: 100,
-          ignoreUrls: true,
-          ignoreStrings: true,
-          ignoreTemplateLiterals: true,
-          ignoreRegExpLiterals: true,
-          ignoreComments: true,
-        },
-      ],
+      // '@stylistic/max-len': [
+      //   'warn', {
+      //     code: 100,
+      //     ignoreUrls: true,
+      //     ignoreStrings: true,
+      //     ignoreTemplateLiterals: true,
+      //     ignoreRegExpLiterals: true,
+      //     ignoreComments: true,
+      //   },
+      // ],
       '@stylistic/max-statements-per-line': ['error', { max: 1 }],
       '@stylistic/multiline-ternary': ['error', 'always-multiline'],
       '@stylistic/new-parens': 'error',

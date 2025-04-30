@@ -27,11 +27,11 @@ export function ScrollPercentageOverlay() {
   return (
     <button
       ref={overlayRef}
-      className="fixed bottom-0 right-4 origin-top-right rotate-90 bg-background px-1.5 pt-px text-base md:right-1 lg:right-4"
+      className="fixed bottom-0 right-3.5 origin-top-right rotate-90 bg-background px-1.5 pt-px text-base md:right-1 lg:right-4"
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
     >
       {scrollPercentage}%
-      {scrollPercentage < 100 ? ' →' : ''}
+      {scrollPercentage < 100 && ' →'}
     </button>
   );
 };

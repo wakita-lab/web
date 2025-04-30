@@ -53,7 +53,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
         <section className="flex flex-col gap-8">
           <div className="flex flex-col gap-2">
             <time className="text-sm text-gray-500">
-              {work.publishTime.toLocaleDateString('ja-JP')}
+              {work.publishTime.getFullYear()}
             </time>
             <h1 className="text-2xl font-medium">{work.title.en}</h1>
             {

@@ -24,7 +24,7 @@ function WorkItem({ work }: { work: Work }) {
         <div className="flex flex-col gap-2">
           <Link href={`#${work.id}`}>
             <time className="text-xs text-gray-500">
-              {work.publishTime.toLocaleDateString('ja-JP')}
+              {work.publishTime.getFullYear()}
             </time>
           </Link>
           <h2 className="text-base font-medium">{work.title.en}</h2>

@@ -13,6 +13,7 @@ const nextConfig: NextConfig = {
       test: /\.yaml$/,
       use: 'js-yaml-loader',
     });
+
     return config;
   },
 };

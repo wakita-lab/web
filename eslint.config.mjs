@@ -13,6 +13,17 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   {
+    // 特定のファイルやディレクトリをリント対象から除外
+    ignores: [
+      '**/node_modules/**',
+      '.next/**',
+      'dist/**',
+      'build/**',
+      '**/*.min.js',
+      'coverage/**',
+    ],
+  },
+  {
     plugins: {
       '@stylistic': stylistic,
     },

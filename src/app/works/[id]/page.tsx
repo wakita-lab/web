@@ -24,18 +24,18 @@ export default async function WorkPage({ params }: WorkPageProps) {
     <main className="mx-auto mb-24 p-4 md:px-8 lg:px-20 xl:px-32">
       <Link
         href="/works"
-        className="mb-8 flex items-center gap-2 text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
+        className="mb-8 flex w-fit items-center gap-2 text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="0 0 32 16"
+          viewBox="0 0 32 12"
           strokeWidth={1}
           stroke="currentColor"
-          className="h-4"
+          className="h-3"
           overflow="visible"
         >
-          <path d="M6,3 0,8 6,13 M1,8 32,8"/>
+          <path d="M5,2 0,6 5,10 M1,6 32,6"/>
         </svg>
         Back to works
       </Link>

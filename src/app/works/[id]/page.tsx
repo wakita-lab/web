@@ -29,12 +29,13 @@ export default async function WorkPage({ params }: WorkPageProps) {
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
-          viewBox="0 0 40 16"
+          viewBox="0 0 32 16"
           strokeWidth={1}
           stroke="currentColor"
-          className="mt-0.5 h-4"
+          className="h-4"
+          overflow="visible"
         >
-          <path d="M7,3 1,8 7,13 M1,8 39,8"/>
+          <path d="M6,3 0,8 6,13 M1,8 32,8"/>
         </svg>
         Back to works
       </Link>

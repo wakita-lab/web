@@ -39,7 +39,7 @@ export function ScrollPercentageOverlay() {
       {scrollPercentage}%
       {
         scrollPercentage < 100
-          && <ArrowLine isLeft={false} length={16} />
+          && <ArrowLine isRight length={16} />
       }
     </button>
   );

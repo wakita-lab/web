@@ -28,7 +28,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
         href="/works"
         className="mb-8 flex w-fit items-center gap-2 text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
       >
-        <ArrowLine length={12} />
+        <ArrowLine length={16} />
         Back to works
       </Link>
 

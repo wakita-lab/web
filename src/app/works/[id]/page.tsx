@@ -2,6 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
+import { ArrowLine } from '@/components/ArrowLine';
 import { FormattedText } from '@/components/FormattedText';
 import TagList from '@/components/TagList';
 import { WORKS } from '@/constants/works';
@@ -27,18 +28,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
         href="/works"
         className="mb-8 flex w-fit items-center gap-2 text-sm text-gray-500 underline underline-offset-4 hover:text-gray-400"
       >
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 32 12"
-          strokeWidth={1}
-          stroke="currentColor"
-          overflow="visible"
-          width={32}
-          height={12}
-        >
-          <path d="M5,2 0,6 5,10 M1,6 32,6"/>
-        </svg>
+        <ArrowLine length={12} />
         Back to works
       </Link>
 

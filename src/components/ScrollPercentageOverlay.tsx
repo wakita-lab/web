@@ -3,6 +3,8 @@
 import { usePathname } from 'next/navigation';
 import { useEffect, useState } from 'react';
 
+import { ArrowLine } from '@/components/ArrowLine';
+
 export function ScrollPercentageOverlay() {
   const [scrollPercentage, setScrollPercentage] = useState(0);
   const pathname = usePathname();
@@ -37,19 +39,7 @@ export function ScrollPercentageOverlay() {
       {scrollPercentage}%
       {
         scrollPercentage < 100
-          && <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 12 12"
-            strokeWidth={1}
-            stroke="currentColor"
-            className="-scale-x-100"
-            width={16}
-            height={12}
-            overflow="visible"
-          >
-            <path d="M5,2 0,6 5,10 M1,6 16,6"/>
-          </svg>
+          && <ArrowLine isLeft={false} length={16} />
       }
     </button>
   );

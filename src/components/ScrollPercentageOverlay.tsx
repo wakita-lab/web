@@ -40,15 +40,15 @@ export function ScrollPercentageOverlay() {
           && <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 16 12"
+            viewBox="0 0 24 12"
             strokeWidth={1}
             stroke="currentColor"
             className="-scale-x-100"
-            width={16}
+            width={24}
             height={12}
             overflow="visible"
           >
-            <path d="M5,2 0,6 5,10 M1,6 16,6"/>
+            <path d="M5,2 0,6 5,10 M1,6 24,6"/>
           </svg>
       }
     </button>

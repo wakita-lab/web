@@ -24,6 +24,11 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+::selection {
+  background: var(--foreground);
+  color: var(--background);
+}
+
 @layer utilities {
   .scrollbar-hidden::-webkit-scrollbar {
     display: none;

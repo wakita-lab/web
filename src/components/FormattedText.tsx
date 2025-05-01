@@ -1,23 +1,17 @@
 import Link from 'next/link';
 
 // Regular expression to detect URLs
-const URL_PATTERN = /(\[[^\]]+\]\(https?:\/\/[^\s]+\)|https?:\/\/[^\s]+)/g;
-const MARKDOWN_URL_PATTERN = /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)|https?:\/\/[^\s]+/g;
+const URL_PATTERN_SPLIT = /(\[[^\]]+\]\(https?:\/\/[^\s]+\)|https?:\/\/[^\s]+)/g;
+const URL_PATTERN_MATCH = /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)|https?:\/\/[^\s]+/g;
 
 // Convert URLs in text to Link components
 const renderTextWithLinks = (text: string) => {
   // Split text into segments by URLs
-  const segments = text.split(URL_PATTERN).filter(Boolean) || [];
-
-  console.log('text:', text);
-  console.log('segments:', segments);
+  const segments = text.split(URL_PATTERN_SPLIT).filter(Boolean) || [];
 
   return segments.map((segment, index) => {
     // Check if the segment matches the URL pattern
-    const match = MARKDOWN_URL_PATTERN.exec(segment);
-
-    console.log('segment:', segment);
-    console.log('match:', match);
+    const match = URL_PATTERN_MATCH.exec(segment);
 
     if (match) {
       const url = match[2] || match[0]; // Get the URL from the match

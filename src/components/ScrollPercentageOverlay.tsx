@@ -29,7 +29,7 @@ export function ScrollPercentageOverlay() {
 
   return (
     <button
-      className={`fixed bottom-0 right-3.5 flex origin-top-right rotate-90 items-center gap-1.5 px-1.5 pt-px text-base md:right-1 lg:right-4 ${
+      className={`fixed bottom-0 right-3.5 flex origin-top-right rotate-90 items-center gap-2 px-2 pt-px text-base md:right-1 lg:right-4 ${
         isMixDiffStyle ? 'bg-transparent text-white mix-blend-difference' : 'bg-background'
       }`}
       onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
@@ -40,15 +40,15 @@ export function ScrollPercentageOverlay() {
           && <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
-            viewBox="0 0 24 12"
+            viewBox="0 0 12 12"
             strokeWidth={1}
             stroke="currentColor"
             className="-scale-x-100"
-            width={24}
+            width={16}
             height={12}
             overflow="visible"
           >
-            <path d="M5,2 0,6 5,10 M1,6 24,6"/>
+            <path d="M5,2 0,6 5,10 M1,6 16,6"/>
           </svg>
       }
     </button>

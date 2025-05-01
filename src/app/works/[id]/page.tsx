@@ -33,8 +33,9 @@ export default async function WorkPage({ params }: WorkPageProps) {
           viewBox="0 0 32 12"
           strokeWidth={1}
           stroke="currentColor"
-          className="h-3"
           overflow="visible"
+          width={32}
+          height={12}
         >
           <path d="M5,2 0,6 5,10 M1,6 32,6"/>
         </svg>

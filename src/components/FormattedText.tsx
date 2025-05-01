@@ -1,40 +1,37 @@
 import Link from 'next/link';
 
 // Regular expression to detect URLs
-const URL_PATTERN = /https?:\/\/[^\s]+/g;
+const URL_PATTERN_SPLIT = /(\[[^\]]+\]\(https?:\/\/[^\s]+\)|https?:\/\/[^\s]+)/g;
+const URL_PATTERN_MATCH = /\[([^\]]+)\]\((https?:\/\/[^\s]+)\)|https?:\/\/[^\s]+/g;
 
 // Convert URLs in text to Link components
 const renderTextWithLinks = (text: string) => {
   // Split text into segments by URLs
-  const segments = text.split(URL_PATTERN);
-  const urls = text.match(URL_PATTERN) || [];
+  const segments = text.split(URL_PATTERN_SPLIT).filter(Boolean) || [];
 
-  // Alternate between text segments and URLs
   return segments.map((segment, index) => {
-    const elements = [];
+    // Check if the segment matches the URL pattern
+    const match = URL_PATTERN_MATCH.exec(segment);
 
-    // Regular text segment
-    if (segment) {
-      elements.push(segment);
-    }
+    if (match) {
+      const url = match[2] || match[0]; // Get the URL from the match
+      const text = match[1] || match[0]; // Get the display text
 
-    // URL segment
-    if (urls[index]) {
-      elements.push(
+      return (
         <Link
           key={index}
-          href={urls[index]}
-          className="break-all text-gray-500 underline underline-offset-4 hover:text-gray-400"
+          href={url}
           target="_blank"
           rel="noopener noreferrer"
+          className="break-all text-neutral-500 underline underline-offset-4 duration-100 hover:text-neutral-400"
         >
-          {urls[index]}
-        </Link>,
+          {text}
+        </Link>
       );
     }
 
-    return elements;
-  }).flat();
+    return <span key={index}>{segment}</span>;
+  });
 };
 
 interface FormattedTextProps {

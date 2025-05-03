@@ -14,7 +14,7 @@ const compat = new FlatCompat({
 
 const eslintConfig = [
   {
-    // 特定のファイルやディレクトリをリント対象から除外
+    // Exclude specific files or directories from linting
     ignores: [
       '**/node_modules/**',
       '.next/**',
@@ -30,7 +30,7 @@ const eslintConfig = [
       'import': importPlugin,
     },
     rules: {
-      // 基本的なスタイリングルール
+      // Basic styling rules
       '@stylistic/indent': ['error', 2],
       '@stylistic/quotes': ['error', 'single'],
       '@stylistic/semi': ['error', 'always'],
@@ -48,7 +48,7 @@ const eslintConfig = [
       ],
       '@stylistic/jsx-quotes': ['error', 'prefer-double'],
 
-      // 厳格なコードフォーマットルール
+      // Strict code formatting rules
       '@stylistic/array-bracket-newline': ['error', { multiline: true }],
       '@stylistic/array-bracket-spacing': ['error', 'never'],
       '@stylistic/array-element-newline': ['error', 'consistent'],
@@ -109,7 +109,7 @@ const eslintConfig = [
       '@stylistic/wrap-iife': ['error', 'outside'],
       '@stylistic/wrap-regex': 'error',
 
-      // importの順序に関するルール
+      // Rules regarding the order of imports
       'import/order': [
         'error',
         {

@@ -1,5 +1,6 @@
 import { MEMBERS } from '@/constants/member';
 import { Role } from '@/constants/member';
+import { Member } from '@/types/member';
 
 // 学位に応じた見出しを定義
 const roleHeadings: Record<Role, string> = {
@@ -19,7 +20,7 @@ export default function MemberPage() {
     acc[member.role].push(member);
 
     return acc;
-  }, {} as Record<string, typeof MEMBERS>);
+  }, {} as Record<string, Member[]>);
 
   return (
     <div className="mx-auto mb-24 mt-8 flex max-w-2xl flex-col justify-center gap-16 px-4 leading-loose">

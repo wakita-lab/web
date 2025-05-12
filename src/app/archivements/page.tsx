@@ -1,7 +1,7 @@
 export default function About() {
   return (
-    <div className="mx-auto mb-24 mt-8 flex max-w-2xl flex-col justify-center gap-12 px-4 leading-loose">
-      <h1 className="bg-accent text-2xl font-medium">Archivements</h1>
+    <div className="mx-auto mb-24 mt-8 flex max-w-2xl flex-col justify-center gap-16 px-4 leading-loose">
+      <h1 className="bg-accent pb-4 text-2xl font-medium">About</h1>
 
       <section className="flex flex-col gap-4">
         <h3 className="bg-accent">受賞</h3>

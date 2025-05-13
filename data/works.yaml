@@ -53,6 +53,10 @@
   publishTime: 2018-01-09
   images:
     - thumb.png
+    - 2.png
+    - 3.png
+    - 4.png
+    - 5.png
   tags:
     - visualization
   title:
@@ -406,6 +410,10 @@
   publishTime: 2014-12-30
   images:
     - thumb.jpg
+    - inner00-01.jpg
+    - inner00-02.jpg
+    - inner00-03.jpg
+    - inner00-04.jpg
   tags:
     - visualization
   title:

@@ -423,6 +423,10 @@
   publishTime: 2013-12-31
   images:
     - thumb.jpg
+    - inner01-01.jpg
+    - inner01-02.jpg
+    - inner01-03.jpg
+    - inner01-04.jpg
   tags:
     - human_machine_interaction
     - robotics

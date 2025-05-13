@@ -53,6 +53,10 @@
   publishTime: 2018-01-09
   images:
     - thumb.png
+    - 2.png
+    - 3.png
+    - 4.png
+    - 5.png
   tags:
     - visualization
   title:
@@ -269,6 +273,8 @@
   publishTime: 2017-12-28
   images:
     - thumb.png
+    - inner26-01.png
+    - inner26-03.png
   tags:
     - visualization
   title:
@@ -291,6 +297,8 @@
   publishTime: 2016-12-31
   images:
     - thumb.png
+    - inner25-04.jpg
+    - inner25-05.jpg
   tags:
     - visualization
   title:
@@ -406,6 +414,10 @@
   publishTime: 2014-12-30
   images:
     - thumb.jpg
+    - inner00-01.jpg
+    - inner00-02.jpg
+    - inner00-03.jpg
+    - inner00-04.jpg
   tags:
     - visualization
   title:
@@ -423,6 +435,10 @@
   publishTime: 2013-12-31
   images:
     - thumb.jpg
+    - inner01-01.jpg
+    - inner01-02.jpg
+    - inner01-03.jpg
+    - inner01-04.jpg
   tags:
     - human_machine_interaction
     - robotics

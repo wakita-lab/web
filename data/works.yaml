@@ -85,10 +85,10 @@
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
-      http://akirawakita.com/#works/dismantle
+      https://akirawakita.com/#works/dismantle
     en: |
       This work is prof. Wakita's private project. For further information, please visit here. 
-      http://akirawakita.com/#works/dismantle
+      https://akirawakita.com/#works/dismantle
 
 - id: scenery
   publishTime: 2018-01-07
@@ -336,6 +336,15 @@
   publishTime: 2015-12-30
   images:
     - thumb.jpg
+    - inner23-06.jpg
+    - inner23-08.jpg
+    - inner23-09.jpg
+    - inner23-10.jpg
+    - inner23-01.jpg
+    - inner23-02.jpg
+    - inner23-03.jpg
+    - inner23-04.jpg
+    - inner23-05.jpg
   tags:
     - human_machine_interaction
     - visualization
@@ -347,6 +356,11 @@
       FINA(Fluid-HMI Inspired by NAture)は、ドライバーの身体、特にステアリングと直結する上肢に対して情報をマッピングすることで「クルマが感じているであろう」環境情報をドライバーに直感的に伝えることを目指したHMI(Human Machine Interface)です。 一般的に、HMIは人間-対-機械という異質なもの同士の対話の円滑化を目的としています。多くの場合、機械に人間の自然言語（文字や音声）を話すように要求するアプローチが採用されており、ある種、主従関係とも言えるデザインが進められています。一方、本プロジェクトで目指したものは、映像という感覚的な言語を介した、車体と人間、双方の身体の有機的なシンクロニシティです。それはボディ・イメージ（自己の身体の空間的な像）の一部としてクルマを認識することであり、車体のスケールやディメンジョンをより深いレベルで身体化することでもあります。 この目的を実現するために、デザインチームは以下の4つの具体的な開発課題を設定しました。 1)車体の環境情報を有機的で生物的な映像に変換し、それを身体に直接投影する。2)投影する映像は、文字や数値などの明示的な情報ではなく、外部の場(Field)の変化をダイナミックに反映した映像とする。3)身体感覚に直接訴える映像を実現するために、流体シミュレーションやパーティクルシステムなどの物理学に基づくリアルタイム映像を用いる。4)ドライバーの姿勢をセンシングし、投影画像を動的に補正する。 このアプローチにより、車幅感覚を感覚的かつ効果的に習熟させたり、速度や操舵を誘導するといった実用的なシナリオを多く展開できることが明らかになりました。 「自然を模倣した映像言語」と「身体というマテリアル」をクルマのデザインに導入することで、運転をより滑らかで優美な移動へと昇華できると我々は信じています。FINAはこの目的達成に向けての第一歩となるプロトタイプであり、システムの評価とリ・デザインを繰り返しながら、実用性の高いHMIへとバージョンアップさせたいと考えています。
     en: |
       FINA (Fluid-HMI Inspired by Nature) is aimed to intuitively transfer the environmental information which “the car is sensing”. FINA maps the information on the driver’s body especially on the upper limb where it is directly associated with steering gear. Generally, HMI(Human Machine Interface) is aimed to accelerate the communication between different kinds such as human vs. machine. In most cases, the approach taken is demanding the machine to send out human language message (written or in audio form). But it has constructed homage relationship in a sense. What we aimed to accomplish in this project is an organic synchronicity between both human and the car body by transmitting organic image. It means to recognize car as a part of body image (spatial self body image) as well as to embody the scale, the dimension of a car in much deeper level.To achieve this aim, the design team has set tasks in 4 specific developmental levels. 1) To convert the car body’s environmental information into organic, biological images and directly project over human body. 2) The images that is being projected is not explicit information such as with written words or numbers. It should dynamically reflect changes in outer field. 3) To create images, which directly inspire body sensation, we use real-time image based on physics such as fluid simulation and particle system. 4) By sensing the driver’s position, we compensate the projected image dynamically. Using these approaches, we could rehearse the sense of a vehicle width sensibly and effectively. It has also been revealed that there are lots of practical scenarios that could be developed from this study such as inducing the speed and steering gear. By introducing “The bio inspired screen language” and “The human body as material” for car design, we believe that we could sublimate driving into more smooth and elegant transfer. FINA is a first prototype step to accomplish this goal. By repeating the steps of assessing the system and redesigning, we hope to improve HMI into more practical version.
+  exhibition:
+    ja: |
+      AnyTokyo 2015, 増上寺, 2015/10/24〜11/3.
+    en: |
+      AnyTokyo 2015, 24 Oct. - 3 Nov. 2015, Zojoji, Tokyo.
 
 - id: flora
   publishTime: 2015-12-29

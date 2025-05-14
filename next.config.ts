@@ -1,9 +1,6 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
-  devIndicators: {
-    appIsrStatus: false,
-  },
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(vert|frag)$/,

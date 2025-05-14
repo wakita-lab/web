@@ -5,6 +5,7 @@ export interface Work {
   publishTime: Date;
   images: string[];
   vimeos?: string[];
+  youtubes?: string[];
   tags: Tag[];
   title: {
     en: string;

@@ -116,6 +116,21 @@ export default async function WorkPage({ params }: WorkPageProps) {
                 />
               </div>)}
           </section>}
+
+          {work.youtubes && work.youtubes.length > 0
+          && <section className="col-span-full grid grid-cols-1 gap-8">
+            {work.youtubes.map((youtubeId, index) =>
+              <div key={index} className="relative aspect-video w-full">
+                <iframe
+                  src={`https://www.youtube.com/embed/${youtubeId}`}
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  className="absolute left-0 top-0 size-full"
+                  title={`${work.title.en} - Video ${index + 1}`}
+                />
+              </div>)}
+          </section>}
+
           {work.images.slice(1).map((image, index) =>
             <div key={index} className="relative aspect-video w-full">
               <Image

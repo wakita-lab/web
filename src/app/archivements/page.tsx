@@ -1,7 +1,7 @@
-export default function About() {
+export default function ArchivementsPage() {
   return (
     <div className="mx-auto mb-24 mt-8 flex max-w-2xl flex-col justify-center gap-16 px-4 leading-loose">
-      <h1 className="bg-accent pb-4 text-2xl font-medium">About</h1>
+      <h1 className="bg-accent pb-4 text-2xl font-medium">Archivements</h1>
 
       <section className="flex flex-col gap-4">
         <h3 className="bg-accent">受賞</h3>

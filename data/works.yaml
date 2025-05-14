@@ -414,6 +414,8 @@
 
 - id: humanbodyvisualizationworkshop
   publishTime: 2014-12-30
+  vimeos:
+    - 133994828
   images:
     - thumb.jpg
     - inner00-01.jpg

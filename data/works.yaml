@@ -1,5 +1,11 @@
 - id: speculativefakecollege
   publishTime: 2019-01-01
+  title:
+    en: Speculative Fake College - Social Credit Score Admission
+    ja: 虚構大学SFC 2019入学試験
+  tags:
+    - installation
+    - performance
   images:
     - thumb.jpg
     - logo.png
@@ -7,12 +13,6 @@
     - image2.jpg
     - image3.jpg
     - image4.jpg
-  tags:
-    - installation
-    - performance
-  title:
-    en: Speculative Fake College - Social Credit Score Admission
-    ja: 虚構大学SFC 2019入学試験
   description:
     ja: |
       教員や学生による相次ぐ不祥事、入学試験の男女差別、体育会の軍隊的なガバナンスなど、大学にまつわる刺激的なゴシップが世間の注目を集めています。ここ数年で学校という場のあり方が揺らいでいることは間違いありません。同時に、人工知能やIoTの普及に伴い「知能とは何か」という問いと向き合うべき時代が始まっています。大学が使う主要な財は知能です。これからの時代の知能のあり方についての議論が求められています。虚構大学（Speculative Fake College、略してSFC）はこのような問題意識の元に設立されました。もちろん虚構の大学です。未来の教育のスペキュラティブデザインを通して、学校とは何か、知能とは何か、皆さんと一緒に考えていくことが私たちの目的です。
@@ -51,17 +51,17 @@
 
 - id: worldsvesselroutes
   publishTime: 2018-01-09
+  title:
+    en: Visualization of the World's Vessel Routes in the 18th Century
+    ja: Visualization of the World's Vessel Routes in the 18th Century
+  tags:
+    - visualization
   images:
     - thumb.png
     - 2.png
     - 3.png
     - 4.png
     - 5.png
-  tags:
-    - visualization
-  title:
-    en: Visualization of the World's Vessel Routes in the 18th Century
-    ja: Visualization of the World's Vessel Routes in the 18th Century
   description:
     ja: |
       1750年から1850年のヨーロッパ諸国の商船（帆船）の航跡を、当時の航海日誌に基づく位置情報を使用して全地球上に可視化した。自律的な動力を持たずに、風と海流を頼りに富を求め移動する様子は、複雑で有機的な生命活動の様相を呈している。産業革命前夜、その原資となる資金をヨーロッパ諸国にもたらしたのは、三角貿易に代表される、外洋を移動する航海術の発達にあった。その航路を全地球的に可視化した本作品は、現代まで続く産業資本主義の原始的なイメージでもある。
@@ -77,15 +77,15 @@
 
 - id: dismantle
   publishTime: 2018-01-08
-  images:
-    - thumb.jpg
+  title:
+    en: Dismantling Awe
+    ja: Dismantling Awe
   tags:
     - installation
     - visualization
     - material
-  title:
-    en: Dismantling Awe
-    ja: Dismantling Awe
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -96,13 +96,13 @@
 
 - id: scenery
   publishTime: 2018-01-07
-  images:
-    - thumb.jpg
-  tags:
-    - installation
   title:
     en: Scenery
     ja: Scenery
+  tags:
+    - installation
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -113,14 +113,14 @@
 
 - id: cosmetics
   publishTime: 2018-01-06
-  images:
-    - thumb.jpg
-  tags:
-    - installation
-    - visualization
   title:
     en: Scalar Field of Cosmetics
     ja: Scalar Field of Cosmetics
+  tags:
+    - installation
+    - visualization
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -131,13 +131,13 @@
 
 - id: xhiasma
   publishTime: 2018-01-05
-  images:
-    - thumb.jpg
-  tags:
-    - performance
   title:
     en: XHIASMA
     ja: XHIASMA
+  tags:
+    - performance
+  images:
+    - thumb.jpg
   description:
     ja: |
       廣川玉枝、湯浅永麻、脇田玲のコラボレーションとして一夜限りで実現したパフォーマンス。ファッション、レーザー映像、ダンスの融合による新しい舞台表現を目指した。
@@ -150,13 +150,13 @@
 
 - id: overdisplay_2
   publishTime: 2018-01-04
-  images:
-    - thumb.jpg
-  tags:
-    - mixed_media
   title:
     en: Over Display - Materiality
     ja: Over Display - Materiality
+  tags:
+    - mixed_media
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -167,13 +167,13 @@
 
 - id: overdisplay
   publishTime: 2018-01-03
-  images:
-    - thumb.jpg
-  tags:
-    - mixed_media
   title:
     en: Over Display - Modality
     ja: Over Display - Modality
+  tags:
+    - mixed_media
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -184,13 +184,13 @@
 
 - id: nonlinear
   publishTime: 2018-01-02
-  images:
-    - thumb.jpg
-  tags:
-    - visualization
   title:
     en: (Non) Linear
     ja: (Non) Linear
+  tags:
+    - visualization
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -201,13 +201,13 @@
 
 - id: activator
   publishTime: 2018-01-01
-  images:
-    - thumb.jpg
-  tags:
-    - visualization
   title:
     en: Activator / Inhibitor
     ja: Activator / Inhibitor
+  tags:
+    - visualization
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -218,13 +218,13 @@
 
 - id: homeelectronics
   publishTime: 2017-12-31
-  images:
-    - thumb.jpg
-  tags:
-    - installation
   title:
     en: Home Electronics
     ja: Home Electronics
+  tags:
+    - installation
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -235,14 +235,14 @@
 
 - id: newsyn
   publishTime: 2017-12-30
-  images:
-    - thumb.jpg
-  tags:
-    - installation
-    - visualization
   title:
     en: New Synthesis
     ja: New Synthesis
+  tags:
+    - installation
+    - visualization
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -253,14 +253,14 @@
 
 - id: amp
   publishTime: 2017-12-29
-  images:
-    - thumb.jpg
-  tags:
-    - performance
-    - visualization
   title:
     en: Amplification
     ja: Amplification
+  tags:
+    - performance
+    - visualization
+  images:
+    - thumb.jpg
   description:
     ja: |
       この作品は脇田教授の個人プロジェクトです。詳細はこちらをご覧下さい。
@@ -271,15 +271,17 @@
 
 - id: visualizationofairconditioner
   publishTime: 2017-12-28
+  title:
+    en: Visualization of Air Conditioner
+    ja: Visualization of Air Conditioner
+  tags:
+    - visualization
   images:
     - thumb.png
     - inner26-01.png
     - inner26-03.png
-  tags:
-    - visualization
-  title:
-    en: Visualization of Air Conditioner
-    ja: Visualization of Air Conditioner
+  vimeos:
+    - 231993089
   description:
     ja: |
       このソフトウェアは慶應義塾大学SFC脇田研究室とダイキンデザインの共同研究から生まれました。プロジェクトの目的は、アートとサイエンスの視点から、室内の風の流れを美しく可視化し、エアコンへの再解釈を引き出すことです。 エアコンは、室内の空気を調整し、住空間を快適化する装置です。しかし、肉眼で捉えられない空気の流れをコントロールすることは容易ではありません。我々はリモコンを通して送風口の向きと強さを調整しますが、そこから生成される空気の流れを詳細に知ることはできません。 このプロジェクトでは室内の空気の流れを美しく可視化することにチャレンジしました。風の向き、強さ、障害物の位置や大きさ、アロマが行き渡る様子、室内温の変化など、様々な要素を3次元で可視化することができます。障害物の位置と形を変えることで、家具を移動させた際の風の変化を把握できます。視点をフライスルーさせることで、室内のもっとも快適な場所を見つけることもできます。 風の生態系を視覚的に把握することで、エアコンというプロダクトは新しいパラダイムに突入することでしょう。それは、空気を調整する装置(Conditioner)から、風を組み立てる装置（Composer)への進化です。室内の間取りを決めるのと同じ感覚で、室内の風の構図を組み立てることができる未来を想像してみてください。 本プロジェクトで実現したアートとサイエンスの新しい結合は、私たちの世界の認識を新たにします。エアコンのシミュレーションとビジュアライゼーションから、あなたは部屋の中の隠された絶景を発見することになるでしょう。
@@ -295,15 +297,15 @@
 
 - id: oceangeneralcirculationsimulation
   publishTime: 2016-12-31
+  title:
+    en: Ocean General Circulation Simulation
+    ja: Ocean General Circulation Simulation
+  tags:
+    - visualization
   images:
     - thumb.png
     - inner25-04.jpg
     - inner25-05.jpg
-  tags:
-    - visualization
-  title:
-    en: Ocean General Circulation Simulation
-    ja: Ocean General Circulation Simulation
   description:
     ja: |
       脇田研究室は日本科学未来館のジオ・プリズムに流体ビジュアライゼーションを提供しました。 ジオ・プリズムは、AR（拡張現実感）技術を用いて、全球型ディスプレイ「ジオ･コスモス」にデータやシミュレーションを重ねて表示できるシステムです。 このビジュアライゼーションでは、海洋研究開発機構（JAMSTEC）のスーパーコンピューター「地球シミュレータ」によって計算された超高解像度海洋大循環モデルOFESのデータを使い、地球上の波の動きを3つの詳細度で可視化しています。
@@ -321,14 +323,14 @@
 
 - id: scalarfieldofshoes
   publishTime: 2015-12-31
-  images:
-    - thumb.jpg
-  tags:
-    - installation
-    - visualization
   title:
     en: Scalar Field of Shoes
     ja: Scalar Field of Shoes
+  tags:
+    - installation
+    - visualization
+  images:
+    - thumb.jpg
   description:
     ja: |
       本作は靴のソールが作り出す圧力場のヴィジュアライゼーションである。イタリアのファッションブランド TOD’S が作り出す美しい靴を実例として、空気中に圧力が伝播していく様子を4K映像として可視化した。
@@ -342,6 +344,12 @@
 
 - id: fina
   publishTime: 2015-12-30
+  title:
+    en: FINA
+    ja: FINA
+  tags:
+    - human_machine_interaction
+    - visualization
   images:
     - thumb.jpg
     - inner23-06.jpg
@@ -353,12 +361,8 @@
     - inner23-03.jpg
     - inner23-04.jpg
     - inner23-05.jpg
-  tags:
-    - human_machine_interaction
-    - visualization
-  title:
-    en: FINA
-    ja: FINA
+  vimeos:
+    - 135181161
   description:
     ja: |
       FINA(Fluid-HMI Inspired by NAture)は、ドライバーの身体、特にステアリングと直結する上肢に対して情報をマッピングすることで「クルマが感じているであろう」環境情報をドライバーに直感的に伝えることを目指したHMI(Human Machine Interface)です。 一般的に、HMIは人間-対-機械という異質なもの同士の対話の円滑化を目的としています。多くの場合、機械に人間の自然言語（文字や音声）を話すように要求するアプローチが採用されており、ある種、主従関係とも言えるデザインが進められています。一方、本プロジェクトで目指したものは、映像という感覚的な言語を介した、車体と人間、双方の身体の有機的なシンクロニシティです。それはボディ・イメージ（自己の身体の空間的な像）の一部としてクルマを認識することであり、車体のスケールやディメンジョンをより深いレベルで身体化することでもあります。 この目的を実現するために、デザインチームは以下の4つの具体的な開発課題を設定しました。 1)車体の環境情報を有機的で生物的な映像に変換し、それを身体に直接投影する。2)投影する映像は、文字や数値などの明示的な情報ではなく、外部の場(Field)の変化をダイナミックに反映した映像とする。3)身体感覚に直接訴える映像を実現するために、流体シミュレーションやパーティクルシステムなどの物理学に基づくリアルタイム映像を用いる。4)ドライバーの姿勢をセンシングし、投影画像を動的に補正する。 このアプローチにより、車幅感覚を感覚的かつ効果的に習熟させたり、速度や操舵を誘導するといった実用的なシナリオを多く展開できることが明らかになりました。 「自然を模倣した映像言語」と「身体というマテリアル」をクルマのデザインに導入することで、運転をより滑らかで優美な移動へと昇華できると我々は信じています。FINAはこの目的達成に向けての第一歩となるプロトタイプであり、システムの評価とリ・デザインを繰り返しながら、実用性の高いHMIへとバージョンアップさせたいと考えています。
@@ -372,14 +376,14 @@
 
 - id: flora
   publishTime: 2015-12-29
-  images:
-    - thumb.jpg
-  tags:
-    - installation
-    - visualization
   title:
     en: FLORA
     ja: FLORA
+  tags:
+    - installation
+    - visualization
+  images:
+    - thumb.jpg
   description:
     ja: |
       FLORAは、自然界の植物の成長過程をモデル化し、それをデザインに応用することで、新しいデザインプロセスを提案するプロジェクトです。植物の成長は、自然界における最も効率的なデザインプロセスの一つと言えます。植物は、自らの成長過程を通じて、環境に適応し、最適な形状を獲得します。このプロジェクトでは、植物の成長過程を数理モデル化し、それをデザインに応用することで、新しいデザインプロセスを提案します。具体的には、植物の成長過程を数理モデル化し、それを3Dプリンターによる造形に応用します。植物の成長過程を数理モデル化することで、植物の成長過程をデザインに応用することが可能となります。植物の成長過程をデザインに応用することで、新しいデザインプロセスが提案されます。このプロジェクトは、植物の成長過程を数理モデル化し、それをデザインに応用することで、新しいデザインプロセスを提案することを目指します。
@@ -392,14 +396,14 @@
 
 - id: furnishedfluid
   publishTime: 2014-12-31
-  images:
-    - thumb.jpg
-  tags:
-    - installation
-    - visualization
   title:
     en: FURNISHED FLUID
     ja: FURNISHED FLUID
+  tags:
+    - installation
+    - visualization
+  images:
+    - thumb.jpg
   description:
     ja: |
       Furnished Fluidは、流体シミュレーションを用いて、家具のデザインを行うプロジェクトです。家具のデザインは、家具の形状や材質、機能性など、様々な要素を考慮して行われます。しかし、家具のデザインにおいて、流体シミュレーションを用いることは一般的ではありません。本プロジェクトでは、流体シミュレーションを用いて、家具のデザインを行います。具体的には、家具の形状を流体シミュレーションによって決定し、その形状を3Dプリンターによって造形します。流体シミュレーションを用いることで、家具の形状を自然な形状に近づけることが可能となります。家具の形状を自然な形状に近づけることで、家具のデザインに新しい可能性が生まれます。このプロジェクトは、流体シミュレーションを用いて、家具のデザインを行うことで、新しいデザインプロセスを提案することを目指します。
@@ -412,17 +416,19 @@
 
 - id: humanbodyvisualizationworkshop
   publishTime: 2014-12-30
+  title:
+    en: Human Body Visualization Workshop
+    ja: Human Body Visualization Workshop
+  tags:
+    - visualization
   images:
     - thumb.jpg
     - inner00-01.jpg
     - inner00-02.jpg
     - inner00-03.jpg
     - inner00-04.jpg
-  tags:
-    - visualization
-  title:
-    en: Human Body Visualization Workshop
-    ja: Human Body Visualization Workshop
+  vimeos:
+    - 133994828
   description:
     ja: |
       このプロジェクトは、フリーソフトウェアやオープンデータを用いて人体の3次元ビジュアライゼーション環境を構築し、多くの人にその利用体験を提供するために実施されました。CTやMRIを用いた人体の3次元再構築は、かつては高速なワークステーションや高度な幾何モデリング技術が必要であったため、医師や画像工学者などプロフェッショナルのためのツールとして利用されてきました。しかし、近年のPCの高速化とオープンソフトウェアの普及により、一般ユーザでも3次元の医療情報を閲覧したり、再利用できる時代が到来しつつあります。このような人体データ利用の民主化は我々の医療や教育を大きく変える可能性を持っています。SFC脇田研究室では、OSIRIXやopenFrameworksなど無償で利用可能なソフトウェアを利用して、人体の3次元ビジュアライゼーションを環境をアジャイルに開発しました。
@@ -433,19 +439,21 @@
 
 - id: unda
   publishTime: 2013-12-31
+  title:
+    en: UNDA
+    ja: UNDA
+  tags:
+    - human_machine_interaction
+    - robotics
+    - material
   images:
     - thumb.jpg
     - inner01-01.jpg
     - inner01-02.jpg
     - inner01-03.jpg
     - inner01-04.jpg
-  tags:
-    - human_machine_interaction
-    - robotics
-    - material
-  title:
-    en: UNDA
-    ja: UNDA
+  vimeos:
+    - 79174492
   description:
     en: |
       UNDA (Latin for "wave") is an organic interface that was born through collaboration between Toyota InfoTechnology Center and Keio University’s Wakita Lab. As a result of the serious pursuit of intuitiveness for an in-car interface, we have envisioned a sensuous operation surface that organically combines life-like transformation and elastic property. UNDA has been prototyped as one example of this concept. The biggest challenge in this project was the realization of the "undulating concept" for a next-generation operation surface that synchronizes the wavelengths of the user and the machine.
@@ -471,18 +479,20 @@
 
 - id: origamiandslowtech
   publishTime: 2013-12-30
+  title:
+    en: ORIGAMI AND SLOW-TECH
+    ja: ORIGAMI AND SLOW-TECH
+  tags:
+    - material
+    - user_interface
   images:
     - thumb.jpg
     - inner02-01.jpg
     - inner02-02.jpg
     - inner02-03.jpg
     - inner02-04.jpg
-  tags:
-    - material
-    - user_interface
-  title:
-    en: ORIGAMI AND SLOW-TECH
-    ja: ORIGAMI AND SLOW-TECH
+  vimeos:
+    - 80030888
   description:
     en: |
       TIME AND EFFORT

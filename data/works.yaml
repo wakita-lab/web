@@ -7,6 +7,8 @@
     - image2.jpg
     - image3.jpg
     - image4.jpg
+  vimeos:
+    - 123456789
   tags:
     - installation
     - performance
@@ -433,6 +435,8 @@
 
 - id: unda
   publishTime: 2013-12-31
+  vimeos:
+    - 79174492
   images:
     - thumb.jpg
     - inner01-01.jpg

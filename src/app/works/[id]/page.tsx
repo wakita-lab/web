@@ -32,7 +32,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
         Back to works
       </Link>
 
-      <article className="flex flex-col gap-8">
+      <article className="flex flex-col gap-12">
         <section className="relative aspect-video w-full">
           <Image
             src={`/images/works/${work.id}/${work.images[0]}`}
@@ -58,7 +58,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
             </div>
           </div>
 
-          <div className="flex flex-col gap-8">
+          <div className="mb-4 flex flex-col gap-8">
             <div className="grid grid-cols-1 gap-x-8 gap-y-2 leading-loose md:grid-cols-2">
               {work.description?.en && <FormattedText text={work.description.en} />}
               {work.description?.ja && <FormattedText text={work.description.ja} />}
@@ -102,7 +102,20 @@ export default async function WorkPage({ params }: WorkPageProps) {
           </div>
         </section>
 
-        <section className="mt-4 grid grid-cols-1 md:grid-cols-2">
+        <section className="grid grid-cols-1 md:grid-cols-2">
+          {work.vimeos && work.vimeos.length > 0
+          && <section className="col-span-full grid grid-cols-1 gap-8">
+            {work.vimeos.map((vimeoId, index) =>
+              <div key={index} className="relative aspect-video w-full">
+                <iframe
+                  src={`https://player.vimeo.com/video/${vimeoId}`}
+                  allow="autoplay; fullscreen; picture-in-picture"
+                  allowFullScreen
+                  className="absolute left-0 top-0 size-full"
+                  title={`${work.title.en} - Video ${index + 1}`}
+                />
+              </div>)}
+          </section>}
           {work.images.slice(1).map((image, index) =>
             <div key={index} className="relative aspect-video w-full">
               <Image

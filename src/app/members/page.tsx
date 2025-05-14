@@ -14,7 +14,7 @@ const roleHeadings: Record<Role, string> = {
 // 学位の表示順序を定義
 const roleOrder: Role[] = ['professor', 'doctor', 'master', 'bachelor', 'alumni'];
 
-export default function MemberPage() {
+export default function MembersPage() {
   const groupedMembers = MEMBERS.reduce((acc, member) => {
     if (!acc[member.role]) acc[member.role] = [];
     acc[member.role].push(member);
@@ -24,7 +24,7 @@ export default function MemberPage() {
 
   return (
     <div className="mx-auto mb-24 mt-8 flex max-w-2xl flex-col justify-center gap-16 px-4 leading-loose">
-      <h1 className="bg-accent pb-4 text-2xl font-medium">About</h1>
+      <h1 className="bg-accent pb-4 text-2xl font-medium">Members</h1>
 
       {roleOrder.map((role) => {
         const members = groupedMembers[role] || [];

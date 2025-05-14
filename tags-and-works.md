@@ -1,0 +1,59 @@
+# Tags
+- material
+- user interface
+- fashion
+- design tool
+- robotics
+- visualization
+- book
+- human machine interaction
+- installation
+- performance
+- mixed media
+- speculative design
+- stereophonic sound
+
+# Works
+- Over Billions of Years (installation, visualization, stereophonic sound)
+- Climatic Reflector (installation, visualization)
+- Mother Fluctuation (installation, visualization, stereophonic sound)
+- Speculative Fake Collage (installation, performance)
+- Visualization of the World’s Vessel Routes in the 18th Century (visualization)
+- Dismantling Awe (installation, visualization, material)
+- scenery (installation)
+- Scalar Field of Cosmetics (installation, visualization)
+- XHIASMA (performance)
+- Over Display - Materiality (mixed media)
+- Over Display - Modality (mixed media)
+- (Non)Linear (visualization)
+- Activator / Inhibitor (visualization)
+- Home Electronics (installation)
+- New Synergetics (installation, visualization)
+- Amplification (performance, visualization)
+- Visualization of Air Conditioner (visualization)
+- Ocean General Circulation Simulation (visualization)
+- Scalar Field of Shoes (installation, visualization)
+- FINA (human machine interaction, visualization)
+- FLORA (installation, visualization)
+- Furnished Fluid (installation, visualization)
+- Human Body Visualization (visualization)
+- UNDA (human machine interaction, robotics, material)
+- ORIGAMI AND SLOW-TECH (material, user interface)
+- Access to Materials (book)
+- TRANSIENCE (material)
+- Blob Manipulation (material)
+- ANABIOSIS (material)
+- Blob Motility II - Colony (material)
+- SMAAD Surface (design tool, material)
+- Blob Motility (material)
+- Intuino (design tool)
+- Living Textile (material)
+- quatre unité (fashion, material)
+- KERIDO (material)
+- Evoku (visualization)
+- Ephyra (robotics, material)
+- Algorithmic Couture (fashion, material)
+- Fabcell (material)
+- ORF Paravision (user interface)
+- Plant Display (user interface)
+- Wearable Synthesis (fashion, material)

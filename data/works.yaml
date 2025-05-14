@@ -271,6 +271,8 @@
 
 - id: visualizationofairconditioner
   publishTime: 2017-12-28
+  vimeos:
+    - 231993089
   images:
     - thumb.png
     - inner26-01.png
@@ -342,6 +344,8 @@
 
 - id: fina
   publishTime: 2015-12-30
+  vimeos:
+    - 135181161
   images:
     - thumb.jpg
     - inner23-06.jpg
@@ -475,6 +479,8 @@
 
 - id: origamiandslowtech
   publishTime: 2013-12-30
+  vimeos:
+    - 80030888
   images:
     - thumb.jpg
     - inner02-01.jpg

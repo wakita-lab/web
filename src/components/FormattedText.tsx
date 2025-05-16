@@ -47,7 +47,7 @@ export const FormattedText = ({ text, className }: FormattedTextProps) => {
     return text.split('\n').map((line, index) => {
       const trimmedLine = line.trim();
 
-      if (!trimmedLine) return <div key={index} className="h-3" />;
+      if (!trimmedLine) return <br key={index} />;
 
       return (
         <p key={index} className={className}>

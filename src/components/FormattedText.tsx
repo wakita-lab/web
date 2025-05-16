@@ -31,7 +31,7 @@ const renderTextWithLinks = (text: string) => {
       );
     }
 
-    return <span key={index}>{segment}</span>;
+    return segment;
   });
 };
 
@@ -47,7 +47,7 @@ export const FormattedText = ({ text, className }: FormattedTextProps) => {
     return text.split('\n').map((line, index) => {
       const trimmedLine = line.trim();
 
-      if (!trimmedLine) return null;
+      if (!trimmedLine) return <div key={index} className="h-3" />;
 
       return (
         <p key={index} className={className}>

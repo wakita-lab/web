@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { memo, useMemo } from 'react';
+import { useMemo } from 'react';
 
 // Regular expression to detect URLs
 const URL_PATTERN_SPLIT = /(\[[^\]]+\]\(https?:\/\/[^\s]+\)|https?:\/\/[^\s]+)/g;
@@ -31,7 +31,7 @@ const renderTextWithLinks = (text: string) => {
       );
     }
 
-    return <span key={index}>{segment}</span>;
+    return segment;
   });
 };
 
@@ -40,15 +40,14 @@ interface FormattedTextProps {
   className?: string;
 }
 
-export const FormattedText = memo(({ text, className }: FormattedTextProps) => {
-  // メモ化されたテキスト処理
+export const FormattedText = ({ text, className }: FormattedTextProps) => {
   const formattedContent = useMemo(() => {
     if (!text) return null;
 
     return text.split('\n').map((line, index) => {
       const trimmedLine = line.trim();
 
-      if (!trimmedLine) return null;
+      if (!trimmedLine) return <br key={index} />;
 
       return (
         <p key={index} className={className}>
@@ -61,6 +60,4 @@ export const FormattedText = memo(({ text, className }: FormattedTextProps) => {
   if (!text) return null;
 
   return <div className={className}>{formattedContent}</div>;
-});
-
-FormattedText.displayName = 'FormattedText';
+};

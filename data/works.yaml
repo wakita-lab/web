@@ -525,7 +525,7 @@
     en: Access to Materials
     ja: Access to Materials
   tags:
-    - material
+    - book
   images:
     - thumb.jpg
     - inner03-01.jpg
@@ -661,8 +661,6 @@
 
       EPILOGUE
 
-  
-
 
 - id: transience
   publishTime: 2012-01-01
@@ -711,3 +709,45 @@
     en: |
       Asia Digital Art Award 2012, Interactive Art, Finalist Prize, Feb.28-Mar.5, 2013.
       Kohei Tsuji, Akira Wakita, Transience: Aesthetics of Dynamic Colors inside Japanese Calligraphy, Seventh International Conference on Tangible, Embedded and Embodied Interaction, Art Truck, Barcelona, Feb.10-13, 2013.
+
+- id: blobmanipulation
+  publishTime: 2012-01-01
+  title:
+    en: Blob Manipulation
+    ja: Blob Manipulation
+  tags:
+    - material
+  images:
+    - thumb.jpg
+    - inner05-00.jpg
+    - inner05-02.jpg
+    - inner05-03.jpg
+  youtubes:
+    - -wxpdUEhviU
+  description:
+    ja: |
+      ソフトマターとのインタラクション
+      Blob Manipulationは流動的ソフトマターとのインタラクションを実現する一手法である。ソフトマターの多くは液体と固体の中間である粘弾性を有する。我々はこの性質に着目し、斬新なセンシング及びアクチュエーションの手法を提案する。入力には撹拌棒を用いる。システムは、触れる、擦る、タップするなどの操作を検知し、それにふさわしい形状変換をソフトマターに適用する。ソフトマターを幾何的かつ位相的に変形するために、六つの基本操作(Word)と、その組み合わせによるデザインアプローチ(Idiom, Sentences)をデザインした。モーフィングを伴う流動的インターフェイスの実現により、デザイン、教育、娯楽に新しい可能性を与えることが期待される。
+
+      メタボールの物質化
+      Blob Manipulationは、blobと呼ばれる磁性スライムを用いて、CGにおけるメタボールのような形状生成とその制御を実現するシステムである。 このシステムは、磁性スライムの入った水槽、その下に設置された電磁石の配列とその制御回路から構成される。
+      ある電磁石をONにすると、その位置に引力が発生し、周囲のblobが引き寄せられることで流体形状が変化する。 複数の電磁石のON/OFFとPWMを制御することで多様な形状生成が可能である。
+
+      変形可能物質のアーキテクチャ
+      blobの形状と撹拌棒の動きは水槽の上に設置されたウェブカメラを通してキャプチャされopenFrameworksと独自GUIライブラリで記述された画像処理ソフトウェアに送られる。ソフトウェアはblobの形と撹拌棒の動きの組み合わせに応じて、ふさわしい変形操作の単語を選択し、磁力ユニットの制御コマンドをArduinoで組まれた電子回路に送る。
+
+      T-1000の実現は可能か？
+      映画"Terminator 2"に登場する流体金属ロボットT-1000のように、流体の形状を柔軟に制御できるようになれば、有機的な形状表現やモーフィングに基づく変形を伴う表現が実現する。形状変化を伴う流体的インターフェイスの実現は、デザイン、教育、娯楽に大きな可能性を開くであろう。
+    en: |
+      INTERACTION WITH SOFT MATTER
+      Blob Manipulation is an interaction technique with fluidic soft matter. Most of the soft matters are substances between liquid and solid and possess viscoelasticity. We focus on this materiality and propose a novel interaction technique. A stirring rod is used as the input tool. When the system detects a user input such as touching, rubbing or tapping, the corresponding transformation will be executed. Six basic operations were designed to transform fluidic soft matter geometrically and topologically. Rheological user interface associated with metamorphose is expected to pioneer new possibilities for design, education and entertainment.
+
+      MATERIALIZED METABALL
+      Blob Manipulation is the system to implement shape modeling and control of magnetic slime called blob like metaballs in computer graphics. This system is composed of a water tank where the magnetic slime is put, an array of electromagnets set below the tank, and a control circuit.
+      Turning on an electromagnet generates the attractive force at the corresponding blob and the surrounding blobs will gather to it to change the shape.
+
+      THE SYSTEM ARCHITECTURE
+      The blob shape and the movement of the stirring rod are detected by the camera set on the ceiling above the water tank and sent to the software. According to the detected blob shape and rod movement, the software determines an appropriate transformation operation and sends the corresponding control command to the electronic circuit of the magnetic units.
+
+      TOWARD THE REALIZATION OF T-1000
+      if we can control fluid shapes flexibly as seen in T-1000, the fluid metal robot appearing in the movie “Terminator 2”, organic shape representation or morphing-based transformation will be realized. The fluidic interface associated with such transformation will pioneer big possibilities of design, education or entertainment.

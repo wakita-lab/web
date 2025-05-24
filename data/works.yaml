@@ -568,3 +568,82 @@
     en: |
       Asia Digital Art Award 2012, Interactive Art, Finalist Prize, Feb.28-Mar.5, 2013.
       Kohei Tsuji, Akira Wakita, Transience: Aesthetics of Dynamic Colors inside Japanese Calligraphy, Seventh International Conference on Tangible, Embedded and Embodied Interaction, Art Truck, Barcelona, Feb.10-13, 2013.
+
+- id: anabiosis
+  publishTime: 2011-01-01
+  title:
+    en: ANABIOSIS
+    ja: ANABIOSIS
+  tags:
+    - material
+  images:
+    - thumb.jpg
+    - inner06-02.jpg
+    - inner06-03.jpg
+    - inner06-04.jpg
+  youtubes:
+    - EbRh0I2MTRw
+  description:
+    ja: |
+      紙上の生命
+      ANABIOSIS は紙とコンピュテーションを融合する技術 - Polychrome Paper Computing - によって作られたインタラクティブな絵画作品である。 紙上の蝶にそっと触れると瞬時にその羽に鮮やかな色彩が蘇る。ドイツの昆虫学者 Adalbert Seitz（1860-1938）は世界中の蝶や蛾を網羅的に記載した全16巻のリトグラフ集 ”The Macrolepidoptera of the World” を編纂した。Seitz の手によって生み出された蝶達はまさに紙上で生きているかの様な美しさを有していた。ANABIOSIS はSeitz が描いた蝶に動的な美を付与する作品である。紙上の蝶に触れることで自身の生命が蝶に分け与えられ蘇生したかの様な感覚を与える。
+
+      コンピュータと紙の調和
+      我々のビジョンはコンピュテーションと印刷技術を紙の素材性の上に融合することである。浮世絵、カリグラフィ、リトグラフなどの紙を扱う技法（テクニーク）とPaper Computingの技術（テクノロジー）を連関させることで、人類がこれまで蓄積してきた文化や美意識とデジタル表現が紙の素材性の上に調和する。古来より紙は多くの文化と密接に関係してきた素材であり、単なる記憶メディアとしての機能を超えて、美しさを創出する重要な役割を果たして来た。紙がコンピュータとシームレスに融合することで、これまで存在しえなかった全く新しい作品を作りだすことができるだろう。
+    en: | 
+      A LIFE ON PAPER
+      Anabiosis is a pictorial artwork based on the polychrome paper computing technology. In this work, human touch gives the printed butterfly a color. Adalbert Seitz (1860-1938), an Entomologist of Germany, has edited "The Macrolepidoptera of the World", 16 part series of lithograph of butterflies and moths from the world. The butterflies created by Seitz, has a presence and beauty as if they are alive. Anabiosis is developed to give a dynamic aesthetics to a beautiful butterfly Seitz has drawn on paper. By touching a butterfly on a piece of paper, this gives a feeling of a resurrection by parting a life of human into a butterfly.
+
+      HARMONY BETWEEN PAPER AND COMPUTING
+      The vision of our work is to fuse computer with existing printing techniques such as Ukiyo-e, calligraphy and lithography. By using existing printing techniques with paper computing technology, previous know-hows can be blended into the materiality of paper. We must remember that paper relates to many cultures, and have been playing an important role more than just as a recording media. When the paper gets the character connecting to computer seamlessly, a fascinating work which holds another beauty, will be generated.
+  press:
+    ja: | 
+      Kohei Tsuji, Akira Wakita, Polychrome Paper Computing, [ACM SIGGRAPH ASIA 2011 (Emerging Technologies)](http://www.siggraph.org/asia2011/emerging-technologies), Hong Kong, 2011.
+      Kohei Tsuji, Akira Wakita, Anabiosis: An Interactive Pictorial Art Based on Polychrome Paper Computing, ACM ACE 2011 , Lisbon, Portugal, 2011. [Gold Award (Interactive Art)](http://www.ace2011.org/).
+      Kohei Tsuji, Akira Wakita, Anabiosis: A Pictorial Art Based on Polychrome Paper Computing, 2nd International Workshop on Organic User Interface (OUI 2010), Funchal, Portugal, 2010. - Anabiosis - 紙上の生命,[アジアデジタルアートアワード 2011](http://adaa.jp/2011/j/12_list.html), インタラクティブ部門 入賞
+      辻 航平, 脇田 玲, Anabiosis: 紙上での動的な色彩表現を実現した絵画作品, インタラクション2011, インタラクティブ発表, 2011年3月12日, 東京.[インタラクティブ発表賞](http://www.interaction-ipsj.org/2011/program.html)
+      辻 航平, 脇田 玲, Polychrome Paper Computing: 機能性インクを用いた多色刷りによるペーパー・コンピューティング, 情報処理学会ヒューマンコンピュータインタラクション第144回研究会, 2011年7月29日, 富山.
+    en: | 
+      Kohei Tsuji, Akira Wakita, Polychrome Paper Computing, ACM SIGGRAPH ASIA 2011 (Emerging Technologies), Hong Kong, 2011.
+      Kohei Tsuji, Akira Wakita, Anabiosis: An Interactive Pictorial Art Based on Polychrome Paper Computing, ACM ACE 2011 , Lisbon, Portugal, 2011. Gold Award (Interactive Art).
+      Kohei Tsuji, Akira Wakita, Anabiosis: A Pictorial Art Based on Polychrome Paper Computing, 2nd International Workshop on Organic User Interface (OUI 2010), Funchal, Portugal, 2010. - Anabiosis - A Life on Paper,Asia Digital Art Award 2011, Interactive Art, Finalist, 2011.
+      Kohei Tsuji, Akira Wakita, Anabiosis: A Pictorial Art Based on Polychrome Paper Computing, INTERACTION 2011, Interactive Presentation, Interactive Presentation Award, Tokyo, March 12, 2011.>Interactive Presentation Award
+      Kohei Tsuji, Akira Wakita, Polychrome Paper Computing: A Dynamic Color-generating Technology Using Printing Technique and Functional Inks, IPSJ SIG Technical Reports, 2011-HCI-144(20), 1-6, 2011-07-21
+  exhibition:
+    ja: | 
+      New Scientist, [Colour-changing inks bring butterflies to life](http://www.newscientist.com/blogs/onepercent/2011/11/colour-changing-butterfly.html), Nov.2, 2011
+      Discovery News,PAPER MAKES TOUCH SCREEN DISPLAYS, Dec. 16, 2011
+      ALT 1040,Japoneses inventan pantalla táctil sobre papel, Dec. 17, 2011
+      麻省理工 (Technology Review in Chinese),纸张制成触摸屏, Dec. 19, 2011
+      TIC beat,Científicos japoneses añaden al papel propiedades táctiles, Dec. 19, 2011
+      beyond print.de,Papier als Batteriestoff und Display, Dec. 19, 2011
+      treehugger,Ordinary Paper Transformed Into New Touch Screen Display, Dec. 19, 2011
+      ABC.es,Científicos japoneses añaden propiedades táctiles al papel, Dec. 19, 2011
+      TECHNOLOGIA 21,Japoneses inventan pantalla táctil sobre papel (video), Dec. 17, 2011
+      Colombia.com,Desarrollan técnica para incorporar al papel propiedades táctiles, Dec. 19, 2011
+      psfk,Amazing Flexible Touch Screen Made Of Ordinary Paper And Conductive Ink, Dec. 21, 2011
+      ENERGY SISTEM, Brasil,Touchscreen de papel muda de cor com toque, Dec. 20, 2011.
+      「スマートマテリアル 触れると変化する動的表現への挑戦」Adobe Systems 知的創造性でサバイブする
+      「タッチでカラフル紙」テレビ東京, ワールドビジネスサテライト,トレンドたまご, 2011年3月4日
+      「絵を触ると色変わる紙 慶大、特殊インク活用」日経産業新聞, 2011年2月28日
+    en: | 
+      New Scientist,Colour-changing inks bring butterflies to life, Nov.2, 2011
+      Discovery News,PAPER MAKES TOUCH SCREEN DISPLAYS, Dec. 16, 2011
+      ALT 1040,Japoneses inventan pantalla táctil sobre papel, Dec. 17, 2011
+      Mashu Science and Technology (Technology Review in Chinese), 纸张 Formation Touch Screen, Dec. 19, 2011
+      TIC beat,Científicos japoneses añaden al papel propiedades táctiles, Dec. 19, 2011
+      beyond print.de,Papier als Batteriestoff und Display, Dec. 19, 2011
+      treehugger,Ordinary Paper Transformed Into New Touch Screen Display, Dec. 19, 2011
+      ABC.es, Científicos japoneses añaden propiedades táctiles al papel, Dec. 19, 2011
+      TECHNOLOGIA 21,Japoneses inventan pantalla táctil sobre papel (video), Dec. 17, 2011
+      Colombia.com,Desarrollan técnica para incorporar al papel propiedades táctiles, Dec. 19, 2011
+      psfk,Amazing Flexible Touch Screen Made Of Ordinary Paper And Conductive Ink, Dec. 21, 2011
+      ENERGY SISTEM, Brasil,Touchscreen de papel muda de cor com toque, Dec. 20, 2011.
+      “Smart Material: A challenge to dynamic expression that changes when touched” Adobe Systems Surviving with intellectual creativity
+      "Colorful paper that changes with your touch" TV Tokyo, World Business Satellite, Trend Tamago, March 4, 2011
+      "Paper that changes color when you touch the picture: Keio University uses special ink" Nikkei Business Daily, February 28, 2011
+  team:
+    ja: | 
+      辻航平, 羽田久一, 脇田玲
+    en: | 
+      Kohei Tsuji, Hisakazu Hada, Akira Wakita

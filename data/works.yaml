@@ -568,3 +568,223 @@
     en: |
       Asia Digital Art Award 2012, Interactive Art, Finalist Prize, Feb.28-Mar.5, 2013.
       Kohei Tsuji, Akira Wakita, Transience: Aesthetics of Dynamic Colors inside Japanese Calligraphy, Seventh International Conference on Tangible, Embedded and Embodied Interaction, Art Truck, Barcelona, Feb.10-13, 2013.
+
+
+
+- id: livingtextile
+  publishTime: 2010-01-01
+  title:
+    en: Living Textile
+    ja: Living Textile
+  tags:
+    - material
+  images:
+    - thumb.jpg
+    - inner11-03.gif
+    - inner11-01.jpg
+    - inner11-02.jpg
+  description:
+    ja: |
+      Living Textileは動的な変形機能を通して生物性を提供するテキスタイルです。我々はテキスタイルの振る舞いと印象の関係性を探るために、様々な動きのパターンを適用する実験を行っています。現在はまだ研究過程ではありますが、1/fゆらぎや一様乱数に沿って動きを制御することで、人間は生物らしさを感じる傾向があることが分かっています。将来的には愛着を誘発できる玩具や工業製品を作ることができるかもしれません。
+    en: |
+      Living Textile is a dynamically transformable textile to design artifacts with biological motions. We adopt various movement patterns and seek the relationship between the textile behavior and the impressions. At present, although our task is still ongoing, we have already found that human beings feel as if a cloth is a living thing and it has its feelings when the cloth changes its shapes according to the difference of 1/f noise, normal random number and rhythm recursion. This feature is considered to be effective if the cloth is applied to fabric toys or products that evoke some warm feelings.
+  publication:
+    ja: |
+      - 脇田玲「スマートマテリアルから建築へ」, 松本文夫（編集）MODELS - 建築模型の博物都市」(単行本),2010/04, 東京大学出版会.
+      - 脇田玲, スマートテキスタイルがつくる布と人工物の未来（解説記事）, 日本繊維製品消費科学会誌, Vol.50, No.7, pp.532-535, 2009.
+      - 脇田玲, 上野道彦, Living Textile: アニマシーインタラクションのための動的変形テキスタイル, 情報処理学会第133回ヒューマンコンピュータインタラクション研究会, 2009年５月16日 小松.
+      - 脇田玲, 上野道彦, Living Textile- アニマシーインタラクションのための動的な変形機能を有するスマートテキスタイル, 日本デザイン学会全国大会 第56回春季研究発表大会, 2009年6月28日 名古屋.
+      - 上野道彦, 脇田 玲, Living Textiles:アニマシーインタラクションのための動的変形機能を有するテキスタイル, インタラクション2010, インタラクティブ発表, 2010年3月1-2日.
+      - MO]VE[MENT - MODE & SCIENCE 3rd Fashion Event, 東京大学総合研究博物館小石川分館, 2009年12月12-13日.
+    en: |
+      - Akira Wakita, From Smart Material to Architecture, in "MODELS" Fumio Matsumoto(ed), University of Tokyo Press, 2010/04.
+      - Present and future of wearable computing (9) Future of textile and man-made structure made by smart textiles, Journal of the Japan Research Association for Textile End-Use, 50(7), 532-535, 2009-07
+      - Akira Wakita, Michihiko Ueno, Living Textile : A Dynamic Deformable Textile for Animacy Interaction, IPSJ SIG Technical Reports, 2009-HCI-133(13), 1-6, 2009-05-08
+      - Akira Wakita, Michihiko Ueno, Living Textile : A Smart Textile with Dynamic Deformation for Animacy Interaction, JSSD 2009, (56), 280-281, 2009-06-20.
+      - Michihiko Ueno, Akira Wakita, Living Textiles:Smart Textile with active deformation for Animacy Interaction, INTERACTION 2010, Tokyo, March 1-2, 2010.
+      - MO]VE[MENT - MODE & SCIENCE 3rd Fashion Event, The University Museum, The University of Tokyo (Koishikawa Annex) , Dec.12-13, 2009.
+  credits:
+    ja: |
+      上野道彦, 脇田玲
+    en: |
+      Michihiko Ueno, Akira Wakita
+
+
+
+- id: quatreunite
+  publishTime: 2009-01-01
+  title:
+    en: quatre unité
+    ja: quatre unité
+  tags:
+    - fashion
+    - material
+  images:
+    - thumb.jpg
+    - inner12-01.jpg
+    - inner12-02.jpg
+    - inner12-03.jpg
+  description:
+    ja: |
+      身体と機械の美しさ
+      「quatre unité」は東京大学総合研究博物館で開催された mo]ve[ment - MODE & SCIENCE 3rd Fashion Event に 出品したFabcell を使用した衣服です。 　このイベントは西野嘉章氏、滝沢直己氏、関岡裕之氏の三名 の教授がプロジェクトをディレクションし、学生服飾団体Fab が中心となり服とイベントを作り上げます。 　Fabcell は赤から青へと色が可逆的に変化します。発光ダイ オードや液晶ディスプレイとは異なる非発光で柔らかな質感は 衣服にとけ込みながらも機械的なイメージを保持します。 　Wearable Computing において、制御装置とバッテリー は見た目の美しさを損なう原因となります。
+      しかし、 それらを敢えて外に配置することにより、身体の有機的な フォルムにクラシックコンピュータのような機械の美しさを 取り込むことをめざしました。また、初めて人が着用すること ができるFabcell を使用した服を制作することに成功しました。
+      正方形という規則に基づいた美しさ
+      「布のピクセル」であるFabcell を意識し、ピクセルを扱う 際のルールであるグリッドにより、全体の統一を計りました。 布や電子部品の形は正方形、数とサイズは４の倍数で構成され ており、衣服のフォルム作りやFabcell、基盤の配置において も４の倍数にこだわり造形を行いました。
+      辻 航平
+    en: |
+      The beauty of the body and the machine
+      "quatre unité" is the clothing made from Fabcell exhibited at the mo]ve[ment MODE & SCIENCE 3rd Fashion Event at the Tokyo University Museum. The clothing for this event, which directed by professor Yoshiaki Nishino, Naoki Takizawa, Hiroyuki Sekioka, was created mainly by Fab, a student fashion organization. "Fabcell" changes color from red to blue. Different from Light emitting diode and liquid crystal display, Fabcell is non-radiant and adds softness to the clothing as well as a mechanical quality. With Wearable Computing, the exposure of the control device and battery often affects the beauty of the clothing itself.
+      However, we tried adding the beauty of mechanics of a classical computer to the organic form of a body by exposing them on purpose. We were the first to succeed in creating clothing made of Fabcell people can wear.
+      The beauty of squares
+      Fabcell, being a "pixel of fabric", was organized by a grid for standardization. The shape of the fabric and mechanical parts are all square, and the number and size are composed in multiples of 4. The form of the clothing, the Fabcell, and the placement of the circuit boards were also all modeled to match the multiple of 4.
+      Kohei Tsuji
+  publication:
+    ja: |
+      - MO]VE[MENT - MODE & SCIENCE 3rd Fashion Event, The University Museum,The University of Tokyo, Koishikawa Annex, Tokyo, 2009/12/12-13.
+    en: |
+      - MO]VE[MENT - MODE & SCIENCE 3rd Fashion Event, The University Museum,The University of Tokyo, Koishikawa Annex, Tokyo, 2009/12/12-13.
+  credits:
+    ja: |
+      Design & Couture: 藤嶋 陽子
+      Design & Production: 辻 航平, 大久保 迪子, 返田 岳, 首藤 まり江, 根岸 明子
+      Adviser: 脇田 玲
+
+    en: |
+      Design & Couture: Yoko Fujishima
+      Design & Production: Kohei Tsuji, Michiko Okubo, Takeru Sorita, Marie Shuto, Akiko Negishi
+      Adviser: Akira Wakita
+
+
+
+
+- id: ephyra
+  publishTime: 2007-01-01
+  title:
+    en: Ephyra
+    ja: Ephyra
+  tags:
+    - robotics
+    - material
+  images:
+    - thumb.jpg
+    - inner15-01.jpg
+    - inner15-02.jpg
+    - inner15-03.jpg
+  youtubes:
+    - F8foLFwAKGU
+  description:
+    ja: |
+      この展示物、エフィラは、鋭敏な触覚器がそなわった柔軟な皮膚を持つ、 未来の人工物のささやかなシミュレーションです。天に向かって大きく開いた筒状の布は、 最先端のラッセル織機の製造限界に挑戦した最大級のものです。 その筒は、下方に向かうに従って高密度に編み込まれており、皮膚のように柔らかく 機械体を包み込んでいます。
+      中央の機械体には、空気圧で駆動される12本のアームが放射状に配置されており、 自分の身体の拡張限界を確かめるかのように、この伸縮性の高い布を八方に押し広げては 収縮することを繰り返しています。
+      実はこのアームは、感覚器を持った「触手」として作られました。 それぞれのアームの先端にはセンサーが組み込まれ、何かが触れたことを検知することが できるのです。突き出された触手の先端に誘われて来場者が手で触れようとすると、 エフィラはある種の生物、例えばカタツムリ、と同じような反応を見せます。 つまり、指先が触れるか触れないかのわずかな刺激に反応し、 驚くほどの速度で触手を引っ込めるのです。刺激を受けた触手は少しの間縮んだままですが、 待っているとまたゆっくりと伸びてきます。そしてまた、誰かが触れるまで、 おだやかな収縮を繰り返します。（山中俊治）
+    en: |
+      Ephyra, a robot featured at this exhibition equipped with a flexible "skin" andhighly-sensitive touch organs, is intended to be a mini simulation of mankind' s future creations. The cylinder-shaped cloth with its mouth wide open upward is a supreme example of extending the limitations of the cutting -edge warp knitting machine of Raschel Seamless Ware.
+      This cylinder woven in a denser weave toward the bottom wraps the mechanical body in softness like "skin" . Twelve arms, driven by hydraulics, are set up in a radial pattern at the center of the machine. As if to explore their extended boundaries, these tentacles expand and contract in all directions, pushing out the highly elastic fiber that covers them in a slow, repetitive movement.
+      In fact, these arms, equipped with sense organs, serve as tentacles, and each is equipped with touch sensors at its extremity. When visitors, enticed by the tips of the protruding tentacles, try to touch the robot with their hands, Ephyra reacts like a living thing, for example a snail. The robot has the ability to respond to the slightest stimulation; whether or not the tentacle has been touched, it may retract it at unbelievable speed.Though the tentacle remains hidden for some time after, if you wait for a while you will see it slowly emerge once again. Then, until someone else touches it, a graceful, gentle movement of expansion and contraction is played out.
+  publication:
+    ja: |
+      - Tokyofiber07 SENSEWARE, Aoyama Spiral, Tokyo, 4/26-29, 2007.
+      - Tokyofiber07 SENSEWARE, PALAIS DE TOKYO, Paris, 6/26-28, 2007.
+    en: |
+      - Tokyofiber07 SENSEWARE, Aoyama Spiral, Tokyo, 4/26-29, 2007.
+      - Tokyofiber07 SENSEWARE, PALAIS DE TOKYO, Paris, 6/26-28, 2007.
+  credits:
+    ja: |
+      Design & Direction: 山中 俊治
+      Research Cooperation: 慶應義塾大学 SFC 脇田玲研究室
+      Production: 檜垣 万里子, 上野 道彦, 牛込洋介
+      Programming: 北田 荘平
+      Frame Design: 下村 将基
+
+    en: |
+      Design & Direction: Shunji Yamanaka
+      Research Cooperation: Keio University SFC Wakita Lab
+      Production: Mariko Higaki, Michihiko Ueno, Yosuke Ushigome
+      Programming: Sohei Kitada
+      Frame Design: Masaki Shimomura
+
+
+
+- id: algorithmiccouture
+  publishTime: 2006-01-01
+  title:
+    en: Algorithmic Couture
+    ja: Algorithmic Couture
+  tags:
+    - fashion
+    - material
+  images:
+    - thumb.jpg
+    - inner16-02.jpg
+    - inner16-03.jpg
+    - inner16-04.jpg
+  description:
+    ja: |
+      3次元コンピュータ・グラフィックスのアルゴリズムを用いることにより、コンピュータ上でしか創り出すことのできない形状や表現をファッションデザインに利用する。コンピュータ上で創り出した形状を実際の衣服と結びつけるためのデザイン方法論と、コンピュータ上でしか作り出すことのできない表現を利用した衣服について提案する。
+    en: |
+      In this research, we have utilized the algorithms of 3D computer graphics to realize the innovative and unique expression of fashion design. We have proposed the methodology of the fashion design to tie computer-generated shapes to actual clothes.
+  publication:
+    ja: |
+      - 第81回 装苑賞入選滝沢直己選出, 2006年. (Mapping Cloth)
+      - 第29回 HepFive Original Fashion Contest 入選, 2006年. (contour clothes)
+      - 第33回 神戸ファッションコンテスト入選, 2006年. (voxel clothes)
+      - 第82回 装苑賞入選田山淳朗選出, 2007年 (鏡地獄)
+    en: |
+      - SO-EN Award 2006, Naoki Takizawa Selection, "Mapping Clothes".
+      - HepFive Original Fashion Contest 2006, accepted "Contour Clothes"
+      - Kobe Fashion Contest 2006, accepted, "Voxel Clothes"
+      - SO-EN Award 2007, Atsuro Tayama Selection, "Kagami Jigoku".
+  credits:
+    ja: |
+      Design: 丹治基浩
+      Adviser: 脇田玲
+    en: |
+      Design: Tanji Motohiro
+      Adviser: Akira Wakita
+
+
+
+
+- id: fabcell
+  publishTime: 2006-01-01
+  title:
+    en: Fabcell
+    ja: Fabcell
+  tags:
+    - material
+  images:
+    - thumb.jpg
+    - inner17-01.jpg
+    - inner17-02.jpg
+    - inner17-03.jpg
+  youtubes:
+    - kEWdqSsE88s
+  description:
+    ja: |
+      Fabcellは非発光かつ可逆的な変色が可能なモジュール型テキスタイルです。 このモジュールは液晶インクで染色した糸と導電性繊維から作られた一辺7cmの織物です。抵抗値の低い導電性繊維は印加することで瞬時に発熱します。この熱は表面に塗布された液晶インクに伝わり布全体の色彩が変化します。マトリックス状に配置されたFabcellはフレキシブルな布型ディスプレイとして機能します。
+    en: |
+      Fabcell is a flexible, non-emissive, and multi-color fabric module. In Fabcell, fibers dyed with liquid crystal ink and conductive yarns connected to electronic components are woven into a square textile. By applying voltage to the conductive yarn, and changing the fabric's temperature, the color of fabric surface can be changed. Arranged in matrices, Fabcells display images on the curves of flexible textiles.
+  publication:
+    ja: |
+      - Akira Wakita, Midori Shibutani, Mosaic Textile: Wearable Ambient Display with Non-emissive Color-changing Modules, Full Paper, ACM CHI ACE 2006.
+      - Midori Shibutani, Akira Wakita, Fabcell:Fabric Element, SIGGRAPH 2006 Emerging Technologies, 2006.
+      - インタラクティブ東京, 日本科学未来館, 2006年9月16,17日.
+      - 脇田玲, 渋谷みどり, Fabcell - Fabric Element, 情報処理学会 第126回ヒューマンコンピュータインタラクション研究会
+      - 脇田玲, 渋谷みどり, Fabcell Dress, NPO法人ウェアラブルコンピュータ研究開発機構 第6回研究会
+      - テレビ東京「ワールドビジネスサテライト - トレンドたまご」2007年10月18日
+      - 日経産業新聞、"布、カメレオン、温度で色が変化、慶大が開発--洋服で健康チェックも。" , 第一面, 2006年9月5日.
+    en: |
+      - Akira Wakita, Midori Shibutani, Mosaic Textile: Wearable Ambient Display with Non-emissive Color-changing Modules, Full Paper, ACM CHI ACE 2006.
+      - Midori Shibutani, Akira Wakita, Fabcell:Fabric Element, SIGGRAPH 2006 Emerging Technologies, 2006.
+      - Interactive Tokyo, Miraikan, September 16-17, 2006.
+      - Akira Wakita, Midori Shibutani, Fabcell - Fabric Element : Non-emissive Color-changing Textiles for Ambient Display, IPSJ SIG technical reports 126, 1-6, 2007-11-12.
+      - Akira Wakita, Midori Shibutani, Fabcell Dress, NPO WIN 6th Technical Reports
+      - TV Tokyo, World Business Satellite, Trend-Tamago, October 18, 2007.
+      - Nikkei Sangyo News Paper, September 5, 2006.
+  credits:
+    ja: |
+      渋谷 みどり, 辻 航平, 檜垣 万里子, 脇田 玲
+    en: |
+      Midori Shibutani, Kohei Tsuji, Mariko Higaki, Akira Wakita
+

@@ -648,3 +648,24 @@
       辻航平, 羽田久一, 脇田玲
     en: | 
       Kohei Tsuji, Hisakazu Hada, Akira Wakita
+
+- id: blobmotility2colony
+  publishTime: 2011-01-01
+  title:
+    en: Blob Motility II - COLONY
+    ja: Blob Motility II - COLONY
+  tags:
+    - material
+  images:
+    - thumb.jpg
+    - inner07-02.jpg
+    - inner07-03.jpg
+    - inner07-04.jpg
+  youtubes:
+    - jDwpKMAhU6g
+  description:
+    ja: |
+      プログラマブルなゲルの「群」
+      本プロジェクトでは、独自合成した磁性を有する粘弾性体 (pBlob, programmable blob) に多様な磁界を作用させることでその形態の制御を試みている。 開発したシステムは、流動的物質を人工物の素材として扱う Rheologic Interaction（レオロジック・インタラクション）のコンセプトを具現化したインスタンスの一つでもある。 初代 Blob Motility が一個体のpBlobの振る舞いを生成する系であったのに対し、本システムではコロニー（培養地から発生する細菌等の集落）という現象に着目し、そこから発生するN個の振る舞いを動的に生成している。
+      流れ、ゆらぎ、創発
+      コロニーからエネルギーが放出されることで個体が生成される。個体はそのエネルギーを次の振る舞いに変換し、新しいコロニーを作り出す。そこに見られるのはエネルギーの流れそのものである。個体が選択しうる振る舞い（他のコロニーに吸収されるか / 個体同士で融合するか / 単体のまま彷徨い続けるか）は制御することができず、ある種のゆらぎの中で決定される。時に、全ての個体が一つの大きなコロニーに収束し、再び細分裂していくような振る舞いが創発することもある。

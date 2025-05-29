@@ -675,17 +675,13 @@
       コロニーからエネルギーが放出されることで個体が生成される。個体はそのエネルギーを次の振る舞いに変換し、新しいコロニーを作り出す。そこに見られるのはエネルギーの流れそのものである。個体が選択しうる振る舞い（他のコロニーに吸収されるか / 個体同士で融合するか / 単体のまま彷徨い続けるか）は制御することができず、ある種のゆらぎの中で決定される。時に、全ての個体が一つの大きなコロニーに収束し、再び細分裂していくような振る舞いが創発することもある。
 
       秩序と混沌
-
       コロニーを撹拌するとpBlobは細かく分解される。コロニーや個体といった分類はもはやなくなり、情報は解体され、混沌（カオス）が生まれる。しかしこの混沌は長続きしない。細分化された pBlob は再び集合し、結合を繰り返しながらコロニーを再形成する。あらたな秩序（コスモス）が場を支配し、情報とエネルギーの流れが生まれる。そこに自己修復、自己組織化の現象が確認できる。
 
 
       意図せぬ結果としての人工生命
-
       我々はこれらの振る舞いを意図してシステムをデザインしたわけではない。本来の目的は、変形や変態を実現するアーキテクチャを実装し運用することであった。結果として生命の特徴と言われる現象の多くが確認されたことは興味深い。
 
-
       プログラマブル・マターの可能性
-
       pBlobは流動的なプログラマブル・マター（形や色をプログラムできる物質）として捉えることができる。ここから考察されることは、制御／非制御の境界線にこの新物質の可能性が潜んでいるということだ。全く新しい設計手法が必要とされるだろう。
     en: | 
       Swarm Behavior of Programmable Blobs
@@ -696,18 +692,14 @@
       Rheology, fluctuation and emergence
 
       New pBlobs are born as a consequence of unharnessed magnetic energy. pBlobs convert the energy into their locomotions which generate a new colony. These phenomena are nothing but the rheological energy flow. There are some choices for the movements of pBlob such as "absorption", "unification" and "roam". It does not depend on the program of the system but the fluctuation of the system. Sometimes, emergent behaviors, for example all pBlob unify into one large colony and then they are subdivided into small pBlobs, are observed.
+      
       Cosmos and chaos
-
       Stirring the petri dish makes colony into tiny pBlobs. There we can see no difference between colonies and pBlobs. Information is broken into pieces and chaos rules the system. However, immediately tiny pieces of pBlobs begin to assemble and they regenerate colonies through several unifications. The system begins to be controlled by cosmos which recirculate the information and energy. There are self-repairing and self-organization functions in the system.
 
-
       Artificial Life as Unintended Consequence
-
       Intriguingly, the above mentioned behaviors were not intended at the stage of system design. Our purpose was to develop an architecture which realizes metamorphic locomotion. It is curious that life-like systematic phenomena was observed as a result.
 
-
       Possibility of Programmable Matter
-
       pBlob is a sort of continuous programable matter. The lesson learned from our work is that there is a curious boundary between controllable and uncontrollable of programmable matter. Radically new design method is required.
   exhibition:
     ja: |

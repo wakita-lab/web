@@ -666,6 +666,63 @@
   description:
     ja: |
       プログラマブルなゲルの「群」
+
       本プロジェクトでは、独自合成した磁性を有する粘弾性体 (pBlob, programmable blob) に多様な磁界を作用させることでその形態の制御を試みている。 開発したシステムは、流動的物質を人工物の素材として扱う Rheologic Interaction（レオロジック・インタラクション）のコンセプトを具現化したインスタンスの一つでもある。 初代 Blob Motility が一個体のpBlobの振る舞いを生成する系であったのに対し、本システムではコロニー（培養地から発生する細菌等の集落）という現象に着目し、そこから発生するN個の振る舞いを動的に生成している。
+
+
       流れ、ゆらぎ、創発
+
       コロニーからエネルギーが放出されることで個体が生成される。個体はそのエネルギーを次の振る舞いに変換し、新しいコロニーを作り出す。そこに見られるのはエネルギーの流れそのものである。個体が選択しうる振る舞い（他のコロニーに吸収されるか / 個体同士で融合するか / 単体のまま彷徨い続けるか）は制御することができず、ある種のゆらぎの中で決定される。時に、全ての個体が一つの大きなコロニーに収束し、再び細分裂していくような振る舞いが創発することもある。
+
+      秩序と混沌
+
+      コロニーを撹拌するとpBlobは細かく分解される。コロニーや個体といった分類はもはやなくなり、情報は解体され、混沌（カオス）が生まれる。しかしこの混沌は長続きしない。細分化された pBlob は再び集合し、結合を繰り返しながらコロニーを再形成する。あらたな秩序（コスモス）が場を支配し、情報とエネルギーの流れが生まれる。そこに自己修復、自己組織化の現象が確認できる。
+
+
+      意図せぬ結果としての人工生命
+
+      我々はこれらの振る舞いを意図してシステムをデザインしたわけではない。本来の目的は、変形や変態を実現するアーキテクチャを実装し運用することであった。結果として生命の特徴と言われる現象の多くが確認されたことは興味深い。
+
+
+      プログラマブル・マターの可能性
+
+      pBlobは流動的なプログラマブル・マター（形や色をプログラムできる物質）として捉えることができる。ここから考察されることは、制御／非制御の境界線にこの新物質の可能性が潜んでいるということだ。全く新しい設計手法が必要とされるだろう。
+    en: | 
+      Swarm Behavior of Programmable Blobs
+
+      "Blob Motility II - COLONY" is an attempt of controlling the swarm behavior of pBlobs(programmable blobs), which are our unique magnetic gels. This is an instance of our concept "Rheologic Interaction". The previous version of Blob Motility was the system for generating the behavior of single pBlob. The new one focuses on the colony, which is an aggregation of bacteria growing together as the descendants of a single cell, and generates the behaviors of multiple pBlobs.
+
+
+      Rheology, fluctuation and emergence
+
+      New pBlobs are born as a consequence of unharnessed magnetic energy. pBlobs convert the energy into their locomotions which generate a new colony. These phenomena are nothing but the rheological energy flow. There are some choices for the movements of pBlob such as "absorption", "unification" and "roam". It does not depend on the program of the system but the fluctuation of the system. Sometimes, emergent behaviors, for example all pBlob unify into one large colony and then they are subdivided into small pBlobs, are observed.
+      Cosmos and chaos
+
+      Stirring the petri dish makes colony into tiny pBlobs. There we can see no difference between colonies and pBlobs. Information is broken into pieces and chaos rules the system. However, immediately tiny pieces of pBlobs begin to assemble and they regenerate colonies through several unifications. The system begins to be controlled by cosmos which recirculate the information and energy. There are self-repairing and self-organization functions in the system.
+
+
+      Artificial Life as Unintended Consequence
+
+      Intriguingly, the above mentioned behaviors were not intended at the stage of system design. Our purpose was to develop an architecture which realizes metamorphic locomotion. It is curious that life-like systematic phenomena was observed as a result.
+
+
+      Possibility of Programmable Matter
+
+      pBlob is a sort of continuous programable matter. The lesson learned from our work is that there is a curious boundary between controllable and uncontrollable of programmable matter. Radically new design method is required.
+  exhibition:
+    ja: |
+     - Robotinity, Robolab, ARS Electronica Center, Linz, Austria, Permanent Exhibition(2011/03/10 - 2012/04/10) > ARS Electronica, [Robotinity](http://new.aec.at/center/ausstellungen/new-views-of-humankind/)
+    en: |
+      - Robotinity, Robolab, ARS Electronica Center, Linz, Austria, Permanent Exhibition(2011/03/10 - 2012/04/10) > ARS Electronica, [Robotinity](http://new.aec.at/center/ausstellungen/new-views-of-humankind/)
+  team:  
+    ja: |
+      コンセプト & ディレクション : 脇田玲
+      システム開発 : 中野亜希人
+      開発アシスタント： 金子結
+      技術協力：柿崎勇晃
+    en: |
+      Concept & Direction : Akira Wakita
+      System Development : Akito Nakano
+      Development Assistant : Yui Kaneko
+      Technical Support : Yukou Kakizaki
+

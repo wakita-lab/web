@@ -10,10 +10,6 @@
     en: Yuki Yoshida
   role: doctor
 - name:
-    ja: 川崎 和也
-    en: Kazuya Kawasaki
-  role: doctor
-- name:
     ja: 石原 航
     en: Ko Ishihara
   role: doctor
@@ -24,24 +20,20 @@
     en: Rakuki Ogawa
   role: master
 - name:
-    ja: 村井 琴音
-    en: Kotone Murai
+    ja: 須田 梨花子
+    en: Rikako Suda
   role: master
 - name:
     ja: 永田 一樹
-    en: Nagata Kazuki
-  role: master
-- name:
-    ja: 須田 梨花子
-    en: Rikako Suda
+    en: Kazuki Nagata
   role: master
 - name:
     ja: 春名 海里
     en: Kairi Haruna
   role: master
 - name:
-    ja: 穴山 桃羽
-    en: Momoha Anayama
+    ja: 村井 琴音
+    en: Kotone Murai
   role: master
 - name:
     ja: 佐久間 基就
@@ -50,28 +42,44 @@
 
 # 学部生 / Undergraduate Student
 - name:
-    ja: 桑島 侑己
-    en: Kuwashima Yuki
+    ja: 穴山 桃羽
+    en: Momoha Anayama
   role: bachelor
 - name:
-    ja: 井上 柊
-    en: Shu Inoue
+    ja: 桑島 侑己
+    en: Yuki Kuwashima
   role: bachelor
 - name:
     ja: 菊田 有祐
     en: Yusuke Kikuta
   role: bachelor
 - name:
-    ja: 形山 竜一
-    en: Ryuichi Katayama
-  role: bachelor
-- name:
     ja: 西原 大生
     en: Taisho Nishihara
   role: bachelor
 - name:
+    ja: 三澤 龍大
+    en: Ryudai Misawa
+  role: bachelor
+- name:
+    ja: 形山 竜一
+    en: Ryuichi Katayama
+  role: bachelor
+- name:
     ja: 池田 悠生
-    en: Ryusei Ikeda
+    en: Yuki Ikeda
+  role: bachelor
+- name:
+    ja: 井上 柊
+    en: Shu Inoue
+  role: bachelor
+- name:
+    ja: 八代 有希
+    en: Yuki Yashiro
+  role: bachelor
+- name:
+    ja: 横川 晃太郎
+    en: Kotaro Yokokawa
   role: bachelor
 - name:
     ja: 湊 真之
@@ -82,32 +90,20 @@
     en: Atsuya Tsuchida
   role: bachelor
 - name:
-    ja: 三澤 龍大
-    en: Ryudai Misawa
-  role: bachelor
-- name:
     ja: 蛯名 寿亮
     en: Jusuke Ebina
-  role: bachelor
-- name:
-    ja: 八代 有希
-    en: Yuki Yashiro
   role: bachelor
 - name:
     ja: 大倉 怜
     en: Ryo Okura
   role: bachelor
 - name:
-    ja: 平野 福
-    en: Fuku Hirano
+    ja: 熊倉 金時
+    en: Kintoki Kumakura
   role: bachelor
 - name:
-    ja: 伏見 太杜
-    en: Taito Fushimi
-  role: bachelor
-- name:
-    ja: 井坂 勇午
-    en: Yuma Isaka
+    ja: 中正 夕愛
+    en: Yume Nakasho
   role: bachelor
 
 # 卒業生 / ALUMNI
@@ -457,19 +453,19 @@
   role: alumni
 - name:
     ja: 山本 愛
-    en: Yamamoto Ai
+    en: Ai Yamamoto
   role: alumni
 - name:
     ja: 植田 理紗子
-    en: Ueda Risako
+    en: Risako Ueda
   role: alumni
 - name:
     ja: 松村 萌々音
-    en: Matsumura Momone
+    en: Momone Matsumura
   role: alumni
 - name:
     ja: 宇田川 まや
-    en: Udagawa Maya
+    en: Maya Udagawa
   role: alumni
 - name:
     ja: 諸藤 勇太

@@ -749,7 +749,23 @@
       The blob shape and the movement of the stirring rod are detected by the camera set on the ceiling above the water tank and sent to the software. According to the detected blob shape and rod movement, the software determines an appropriate transformation operation and sends the corresponding control command to the electronic circuit of the magnetic units.
 
       TOWARD THE REALIZATION OF T-1000
-      if we can control fluid shapes flexibly as seen in T-1000, the fluid metal robot appearing in the movie “Terminator 2”, organic shape representation or morphing-based transformation will be realized. The fluidic interface associated with such transformation will pioneer big possibilities of design, education or entertainment.
+      if we can control fluid shapes flexibly as seen in T-1000, the fluid metal robot appearing in the movie "Terminator 2", organic shape representation or morphing-based transformation will be realized. The fluidic interface associated with such transformation will pioneer big possibilities of design, education or entertainment.
+  publication:
+    ja: |
+      - Techfest 2011, as an invited work of Japan Media Art Festival, Bombay, India, 6-8 January, 2012. / Techfest 2011, an invited work of Japan Media Art Festival, Mumbai
+      - Akira Wakita, Akito Nakano, Blob Manipulation, In Proceedings of TEI '12 (Sixth International Conference on Tangible, Embedded and Embodied Interaction), ACM, pp.299-302, Kingston, Canada, 2012.
+      - 中野亜希人, 脇田玲, 磁性ゲル形状ディスプレイの開発とインタラクション手法の検討, 情報処理学会論文誌 Vol.54 No.4, pp.1528-1537
+    en: |
+      - Techfest 2011, as an invited work of Japan Media Art Festival, Bombay, India, 6-8 January, 2012. / Techfest 2011, an invited work of Japan Media Art Festival, Mumbai
+      - Akira Wakita, Akito Nakano, Blob Manipulation, In Proceedings of TEI '12 (Sixth International Conference on Tangible, Embedded and Embodied Interaction), ACM, pp.299-302, Kingston, Canada, 2012.
+      - Akito Nakano, Akira Wakita, The Development and Interaction Study of Magnetic Gel Shape Display, IPSJ SIG Technical Reports, 54(4), 1528-1537, 2013-04-15
+  credits:
+    ja: |
+      コンセプト & ディレクション : 脇田玲
+      ハードウェア & ソフトウェア : 中野亜希人
+    en: |
+      Concept & Direction : Akira Wakita
+      Hardware & Software : Akito Nakano
 
 - id: livingtextile
   publishTime: 2010-01-01

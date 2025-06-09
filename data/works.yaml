@@ -519,7 +519,148 @@
       Tatsuya Kaiho and Akira Wakita, Electronic Origami with the Color-Changing Function, to appear in 2nd Workshop on [Smart Material Interfaces (SMI 2013), Sydney, Dec.12, 2013](https://smartmaterialinterfaces.wordpress.com/).
       海宝竜也, 脇田玲, Origamic I/O device: 機能性インクを用いた色彩制御可能な折り紙, 情報処理学会 第31回 ヒューマンコンピュータインタラクション研究会, 2014/3/15.
 
-# - id: accesstomaterials
+- id: accesstomaterials
+  publishTime: 2013-01-01
+  title:
+    en: Access to Materials
+    ja: Access to Materials
+  tags:
+    - book
+  images:
+    - thumb.jpg
+    - inner03-01.jpg
+    - inner03-02.jpg
+    - inner03-03.jpg
+    - inner03-04.jpg
+  vimeos:
+    - 73737416
+  description:
+    ja: |
+      マテリアルコンピューティングへの入門
+      本書は、素材に着目したフィジカルコンピューティングの入門書です。テクノロジーありきでデザインを考えるのではなく、ものづくりで当たり前に考えるべき「素材への眼差し」を、インタラクティブなモノの設計に導入しようという試みです。マテリアルコンピューティングとは、手芸・工芸・絵画・カリグラフィなどの職人的技法と、フィジカルコンピューティングやクリエイティブコーディングなどの新しい技術を、素材を触媒として高度な美意識の上に調和を試みる行為と言えます。
+
+      素材と電子工作を融合する作法を学ぶ
+      本書は以下の読者を想定して書かれました。
+      ・フィジカルコンピューティングを始めたい方。 特にその技術的側面よりも表現の可能性に興味をもっている方 ・フィジカルコンピューティングを始めたい方。特にその技術的側面よりも表現の可能性に興味をもっている方
+      ・デザイナー。特に特殊な複合素材を用いたプロダクトやインタラクションをプロトタイピングしてみたい方
+      ・建築家。特にキネティックな仕組みを持った模型やデザインインターフェイスを作ってみたい方
+      ・素材の世界に翼を広げたいアーティスト
+      本書は電気の理論やプログラミングの話には深入りせず、製作を通した理解の促進に重きを置いています。専門性を求める方は中途半端な印象を持たれるかもしれませんが、本書を導入としてさらに専門的な書籍に手を伸ばして欲しいと思います。
+
+      目次
+
+      はじめに
+
+      第1章　マテリアルコンピューティングの胎動
+      1.1　素材性とインタラクション
+      1.2　世界中で注目を集めるマテリアルコンピューティング
+      1.3　オープンソースとマテリアルコンピューティング
+      ｜コラム｜しずちゃんの法則
+
+      第2章　素材と道具
+      2.1　魔法の素材
+      2.2　道具
+      2.3　素材と道具の入手
+      ｜コラム｜ものづくりと哲学
+
+      第3章　デザインの手順と言語
+      3.1　デザインプロセス
+      3.2　素材性に着目する―Materiality
+      3.3　素材のコンポジション―Composition
+      3.4　プログラマビリティを与える―Programmability
+      3.5　概念を物質化する―Materialization
+      3.6　多様なスケールに展開する―Scalability
+      3.7　PassiveとActive―Controllability
+      ｜コラム｜モノと情報
+
+      第4章　クロミック素材を使う
+      4.1　変色原理とクロミック素材
+      4.2　サーモクロミックインクとフォトクロミックインク
+      4.3　環境とのインタラクション
+      ｜コラム｜我が身の置き場所
+
+      第5章　Arduinoを用いた素材の変色
+      5.1　Arduino入門
+      5.2　アニメーションするテキスタイル
+      5.3　アニメーションする絵画
+      ｜コラム｜Technology, Philosophy and Methodology
+
+      第6章　デジタルとフィジカルの対話
+      6.1　GUIを作る―Processingによるマテリアルの制御
+      6.2　デザインツールを作る―変形する布とベジェ曲面の同期
+      6.3　SNSとつながるマテリアルを作る―Twitterと連動するアンビエントデバイス
+      6.4　布のセンサとPdを用いたサウンドデバイスを作る
+
+      Interview
+      ・渡邉康太郎
+      ・山中俊治
+      ・田中浩也
+      ・小川秀明
+
+      おわりに
+    en: |
+      INTRODUCTION TO MATERIAL COMPUTING
+      There is a growing need for converting ideas into working-prototypes for designers, artists and architects. Arduino and Open-source hardwares are not only for electronic geeks and researchers. By adopting the concept of "Material Computing", this book gives you a lot of recipes for projects and helps you redesign traditional craft (for example, painting, calligraphy and knitting) based on magical materials such as conductive threads, thermo-chromic inks and artificial muscles.
+      
+      LEARNING THE NATURE OF MATERIALS
+      Assumed readers include,
+      - Those who want to start physical computing. Those who are interested in the possibility of representation than its technical aspects in particular - Designers who would like to prototyping the interaction and product using special composite materials
+      - Architect who want to make design models with kinetic mechanisms
+      - Artists who want to spread their wings in the world of material
+      The detail of the programming and the theory of electricity are not described well. Instead this book is focusing on the understanding through the production. The readers can learn the nature of thermo-chromic materials and conductive materials, how to use these materials in their projects.
+
+      TABLE OF CONTENTS
+
+      INTRODUCTION
+
+      1　RIZE OF MATERIAL COMPUTING
+      1.1　Materiality and Interaction
+      1.2　Material Computing around the World
+      1.3　Open Source and Material Computing
+      Column : The Law of Shizu-chan
+
+      2　MATERIALS AND TOOLS
+      2.1　Magical Materials
+      2.2　Tools
+      2.3　How to Get Materials and Tools
+      Column : Manufacturing and Philosophy
+
+      3　DESIGN PROCESS / DESIGN LANGUAGE
+      3.1　Design Process
+      3.2　Materiality
+      3.3　Composition
+      3.4　Programmability
+      3.5　Materialization
+      3.6　Scalability
+      3.7　Passive and Active - Controllability
+      Column : Matter and Information
+
+      4　USING CHROMIC MATERIALS
+      4.1　Chromism and Chromic Materials
+      4.2　Thermochromic Inks and Photochromic Inks
+      4.3　Interaction with Outer Environment
+      Column : The Best Place to Put Yourself
+
+      5　ARDUINO AND PROGRAMMABLE MATERIALS
+      5.1　Introduction to Arduino
+      5.2　Animating Textiles
+      5.3　Animating Paintings
+      Column : Technology, Philosophy and Methodology
+
+      6　DIALOGUE BETWEEN DIGITAL AND PHYSICAL
+      6.1　Designing GUI - Controlling Materials with Processing
+      6.2　Design Materials - Materializing Bezier Surfaces
+      6.3　SNS Materials - Ambient Devices connected to Twitter
+      6.4　Sound Materials - Connecting Pure Data and Fabric Sensors
+
+      INTERVIEW
+      - Kotaro Watanabe
+      - Shunji Yamanaka
+      - Hiroya Tanaka
+      - Hide Ogawa
+
+      EPILOGUE
+
 
 - id: transience
   publishTime: 2012-01-01
@@ -569,7 +710,47 @@
       Asia Digital Art Award 2012, Interactive Art, Finalist Prize, Feb.28-Mar.5, 2013.
       Kohei Tsuji, Akira Wakita, Transience: Aesthetics of Dynamic Colors inside Japanese Calligraphy, Seventh International Conference on Tangible, Embedded and Embodied Interaction, Art Truck, Barcelona, Feb.10-13, 2013.
 
+- id: blobmanipulation
+  publishTime: 2012-01-01
+  title:
+    en: Blob Manipulation
+    ja: Blob Manipulation
+  tags:
+    - material
+  images:
+    - thumb.jpg
+    - inner05-00.jpg
+    - inner05-02.jpg
+    - inner05-03.jpg
+  youtubes:
+    - -wxpdUEhviU
+  description:
+    ja: |
+      ソフトマターとのインタラクション
+      Blob Manipulationは流動的ソフトマターとのインタラクションを実現する一手法である。ソフトマターの多くは液体と固体の中間である粘弾性を有する。我々はこの性質に着目し、斬新なセンシング及びアクチュエーションの手法を提案する。入力には撹拌棒を用いる。システムは、触れる、擦る、タップするなどの操作を検知し、それにふさわしい形状変換をソフトマターに適用する。ソフトマターを幾何的かつ位相的に変形するために、六つの基本操作(Word)と、その組み合わせによるデザインアプローチ(Idiom, Sentences)をデザインした。モーフィングを伴う流動的インターフェイスの実現により、デザイン、教育、娯楽に新しい可能性を与えることが期待される。
 
+      メタボールの物質化
+      Blob Manipulationは、blobと呼ばれる磁性スライムを用いて、CGにおけるメタボールのような形状生成とその制御を実現するシステムである。 このシステムは、磁性スライムの入った水槽、その下に設置された電磁石の配列とその制御回路から構成される。
+      ある電磁石をONにすると、その位置に引力が発生し、周囲のblobが引き寄せられることで流体形状が変化する。 複数の電磁石のON/OFFとPWMを制御することで多様な形状生成が可能である。
+
+      変形可能物質のアーキテクチャ
+      blobの形状と撹拌棒の動きは水槽の上に設置されたウェブカメラを通してキャプチャされopenFrameworksと独自GUIライブラリで記述された画像処理ソフトウェアに送られる。ソフトウェアはblobの形と撹拌棒の動きの組み合わせに応じて、ふさわしい変形操作の単語を選択し、磁力ユニットの制御コマンドをArduinoで組まれた電子回路に送る。
+
+      T-1000の実現は可能か？
+      映画"Terminator 2"に登場する流体金属ロボットT-1000のように、流体の形状を柔軟に制御できるようになれば、有機的な形状表現やモーフィングに基づく変形を伴う表現が実現する。形状変化を伴う流体的インターフェイスの実現は、デザイン、教育、娯楽に大きな可能性を開くであろう。
+    en: |
+      INTERACTION WITH SOFT MATTER
+      Blob Manipulation is an interaction technique with fluidic soft matter. Most of the soft matters are substances between liquid and solid and possess viscoelasticity. We focus on this materiality and propose a novel interaction technique. A stirring rod is used as the input tool. When the system detects a user input such as touching, rubbing or tapping, the corresponding transformation will be executed. Six basic operations were designed to transform fluidic soft matter geometrically and topologically. Rheological user interface associated with metamorphose is expected to pioneer new possibilities for design, education and entertainment.
+
+      MATERIALIZED METABALL
+      Blob Manipulation is the system to implement shape modeling and control of magnetic slime called blob like metaballs in computer graphics. This system is composed of a water tank where the magnetic slime is put, an array of electromagnets set below the tank, and a control circuit.
+      Turning on an electromagnet generates the attractive force at the corresponding blob and the surrounding blobs will gather to it to change the shape.
+
+      THE SYSTEM ARCHITECTURE
+      The blob shape and the movement of the stirring rod are detected by the camera set on the ceiling above the water tank and sent to the software. According to the detected blob shape and rod movement, the software determines an appropriate transformation operation and sends the corresponding control command to the electronic circuit of the magnetic units.
+
+      TOWARD THE REALIZATION OF T-1000
+      if we can control fluid shapes flexibly as seen in T-1000, the fluid metal robot appearing in the movie “Terminator 2”, organic shape representation or morphing-based transformation will be realized. The fluidic interface associated with such transformation will pioneer big possibilities of design, education or entertainment.
 
 - id: livingtextile
   publishTime: 2010-01-01
@@ -609,8 +790,6 @@
     en: |
       Michihiko Ueno, Akira Wakita
 
-
-
 - id: quatreunite
   publishTime: 2009-01-01
   title:
@@ -649,14 +828,10 @@
       Design & Couture: 藤嶋 陽子
       Design & Production: 辻 航平, 大久保 迪子, 返田 岳, 首藤 まり江, 根岸 明子
       Adviser: 脇田 玲
-
     en: |
       Design & Couture: Yoko Fujishima
       Design & Production: Kohei Tsuji, Michiko Okubo, Takeru Sorita, Marie Shuto, Akiko Negishi
       Adviser: Akira Wakita
-
-
-
 
 - id: ephyra
   publishTime: 2007-01-01
@@ -704,8 +879,6 @@
       Programming: Sohei Kitada
       Frame Design: Masaki Shimomura
 
-
-
 - id: algorithmiccouture
   publishTime: 2006-01-01
   title:
@@ -742,9 +915,6 @@
     en: |
       Design: Tanji Motohiro
       Adviser: Akira Wakita
-
-
-
 
 - id: fabcell
   publishTime: 2006-01-01
@@ -787,4 +957,3 @@
       渋谷 みどり, 辻 航平, 檜垣 万里子, 脇田 玲
     en: |
       Midori Shibutani, Kohei Tsuji, Mariko Higaki, Akira Wakita
-

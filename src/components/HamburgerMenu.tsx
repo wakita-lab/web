@@ -23,7 +23,7 @@ export const HamburgerMenu = ({ isOpen, onClick }: HamburgerMenuProps) => {
         <Link href="/" onClick={onClick}>Home</Link>
         <Link href="/works" onClick={onClick}>Works</Link>
         <Link href="/about" onClick={onClick}>About</Link>
-        <Link href="/member" onClick={onClick}>Member</Link>
+        <Link href="/members" onClick={onClick}>Member</Link>
         <Link href="/archivements" onClick={onClick}>Archivements</Link>
       </div>
     </div>

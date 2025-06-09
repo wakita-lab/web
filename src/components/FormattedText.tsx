@@ -45,15 +45,14 @@ export const FormattedText = ({ text, className }: FormattedTextProps) => {
     if (!text) return null;
 
     return text.split('\n').map((line, index) => {
+      if (!line) return;
       const trimmedLine = line.trim();
 
-      if (!trimmedLine) return <br key={index} />;
-
-      return (
-        <p key={index} className={className}>
+      return trimmedLine
+        ? <p key={index} className={className}>
           {renderTextWithLinks(trimmedLine)}
         </p>
-      );
+        : <br key={index} />;
     });
   }, [text, className]);
 

@@ -59,7 +59,7 @@ export default async function WorkPage({ params }: WorkPageProps) {
           </div>
 
           <div className="mb-4 flex flex-col gap-8">
-            <div className="grid grid-cols-1 gap-x-8 gap-y-2 leading-loose md:grid-cols-2">
+            <div className="grid grid-cols-1 gap-8 leading-loose md:grid-cols-2">
               {work.description?.en && <FormattedText text={work.description.en} />}
               {work.description?.ja && <FormattedText text={work.description.ja} />}
             </div>

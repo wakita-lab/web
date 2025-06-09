@@ -563,57 +563,11 @@
       ・素材の世界に翼を広げたいアーティスト
       本書は電気の理論やプログラミングの話には深入りせず、製作を通した理解の促進に重きを置いています。専門性を求める方は中途半端な印象を持たれるかもしれませんが、本書を導入としてさらに専門的な書籍に手を伸ばして欲しいと思います。
 
-      目次
-
-      はじめに
-
-      第1章　マテリアルコンピューティングの胎動
-      1.1　素材性とインタラクション
-      1.2　世界中で注目を集めるマテリアルコンピューティング
-      1.3　オープンソースとマテリアルコンピューティング
-      ｜コラム｜しずちゃんの法則
-
-      第2章　素材と道具
-      2.1　魔法の素材
-      2.2　道具
-      2.3　素材と道具の入手
-      ｜コラム｜ものづくりと哲学
-
-      第3章　デザインの手順と言語
-      3.1　デザインプロセス
-      3.2　素材性に着目する―Materiality
-      3.3　素材のコンポジション―Composition
-      3.4　プログラマビリティを与える―Programmability
-      3.5　概念を物質化する―Materialization
-      3.6　多様なスケールに展開する―Scalability
-      3.7　PassiveとActive―Controllability
-      ｜コラム｜モノと情報
-
-      第4章　クロミック素材を使う
-      4.1　変色原理とクロミック素材
-      4.2　サーモクロミックインクとフォトクロミックインク
-      4.3　環境とのインタラクション
-      ｜コラム｜我が身の置き場所
-
-      第5章　Arduinoを用いた素材の変色
-      5.1　Arduino入門
-      5.2　アニメーションするテキスタイル
-      5.3　アニメーションする絵画
-      ｜コラム｜Technology, Philosophy and Methodology
-
-      第6章　デジタルとフィジカルの対話
-      6.1　GUIを作る―Processingによるマテリアルの制御
-      6.2　デザインツールを作る―変形する布とベジェ曲面の同期
-      6.3　SNSとつながるマテリアルを作る―Twitterと連動するアンビエントデバイス
-      6.4　布のセンサとPdを用いたサウンドデバイスを作る
-
-      Interview
-      ・渡邉康太郎
-      ・山中俊治
-      ・田中浩也
-      ・小川秀明
-
-      おわりに
+      インタビュー
+      - 渡邉康太郎
+      - 山中俊治
+      - 田中浩也
+      - 小川秀明
     en: |
       INTRODUCTION TO MATERIAL COMPUTING
       There is a growing need for converting ideas into working-prototypes for designers, artists and architects. Arduino and Open-source hardwares are not only for electronic geeks and researchers. By adopting the concept of "Material Computing", this book gives you a lot of recipes for projects and helps you redesign traditional craft (for example, painting, calligraphy and knitting) based on magical materials such as conductive threads, thermo-chromic inks and artificial muscles.
@@ -625,57 +579,11 @@
       - Artists who want to spread their wings in the world of material
       The detail of the programming and the theory of electricity are not described well. Instead this book is focusing on the understanding through the production. The readers can learn the nature of thermo-chromic materials and conductive materials, how to use these materials in their projects.
 
-      TABLE OF CONTENTS
-
-      INTRODUCTION
-
-      1　RIZE OF MATERIAL COMPUTING
-      1.1　Materiality and Interaction
-      1.2　Material Computing around the World
-      1.3　Open Source and Material Computing
-      Column : The Law of Shizu-chan
-
-      2　MATERIALS AND TOOLS
-      2.1　Magical Materials
-      2.2　Tools
-      2.3　How to Get Materials and Tools
-      Column : Manufacturing and Philosophy
-
-      3　DESIGN PROCESS / DESIGN LANGUAGE
-      3.1　Design Process
-      3.2　Materiality
-      3.3　Composition
-      3.4　Programmability
-      3.5　Materialization
-      3.6　Scalability
-      3.7　Passive and Active - Controllability
-      Column : Matter and Information
-
-      4　USING CHROMIC MATERIALS
-      4.1　Chromism and Chromic Materials
-      4.2　Thermochromic Inks and Photochromic Inks
-      4.3　Interaction with Outer Environment
-      Column : The Best Place to Put Yourself
-
-      5　ARDUINO AND PROGRAMMABLE MATERIALS
-      5.1　Introduction to Arduino
-      5.2　Animating Textiles
-      5.3　Animating Paintings
-      Column : Technology, Philosophy and Methodology
-
-      6　DIALOGUE BETWEEN DIGITAL AND PHYSICAL
-      6.1　Designing GUI - Controlling Materials with Processing
-      6.2　Design Materials - Materializing Bezier Surfaces
-      6.3　SNS Materials - Ambient Devices connected to Twitter
-      6.4　Sound Materials - Connecting Pure Data and Fabric Sensors
-
-      INTERVIEW
+      Interview
       - Kotaro Watanabe
       - Shunji Yamanaka
       - Hiroya Tanaka
       - Hide Ogawa
-
-      EPILOGUE
 
 - id: transience
   publishTime: 2012-01-01

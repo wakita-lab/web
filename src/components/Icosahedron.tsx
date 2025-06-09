@@ -11,8 +11,8 @@ function RotatingIcosahedron() {
   // Rotate the icosahedron on each frame
   useFrame((state, delta) => {
     if (meshRef.current) {
-      meshRef.current.rotation.x += delta * 0.1;
-      meshRef.current.rotation.y += delta * 0.04;
+      meshRef.current.rotation.x += delta * 0.02;
+      meshRef.current.rotation.y += delta * 0.08;
     }
   });
 
@@ -31,7 +31,7 @@ function RotatingIcosahedron() {
 // Main component that positions the icosahedron at the top-left corner
 export function Icosahedron() {
   return (
-    <div className="pointer-events-none fixed -left-36 -top-36 -z-50 size-96">
+    <div className="pointer-events-none fixed -left-36 -top-36 z-40 size-96">
       <Canvas
         camera={{
           position: [0, 0, 3],
@@ -53,7 +53,6 @@ export function Icosahedron() {
           intensity={0.5}
           color="#ffffff"
         />
-
         <RotatingIcosahedron />
       </Canvas>
     </div>

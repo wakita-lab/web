@@ -1045,6 +1045,47 @@
     en: |
       Takafumi Iwai, Sohei Kitada, Mariko Higaki, Kazuya Kaijima, Mizuki Deguchi, Hisayasu Kamiya, Michihiko Ueno, Yuki Anezaki, Ken Ishizuka, Atsushi Moriyama, Akira Wakita
 
-# - id: plantdisplay
+- id: plantdisplay
+  publishTime: 2006-01-01
+  title:
+    en: Plant Display
+    ja: Plant Display
+  tags:
+    - installation
+    - visualization
+    - human_machine_interaction
+  images:
+    - thumb.jpg
+    - inner19-01.jpg
+    - inner19-02.jpg
+    - inner19-03.jpg
+  description:
+    ja: |
+      "Growable Media"は植物とデジタルメディアを結合するアクチュエーターです。 実空間のインフォメーションビジュアライゼーションのためのアンビエントメディアです。 植物の成長は有機的な変化によるものなので、 人間の関係や感情を表すのに適していると思いました。 さらに、植物には私たちの感情に訴えかけるものがあります。 これらの理由から最初のプロトタイプを作成し、日々のコミュニケーションを Growable Mediaの植物の成長により表現しました。
+
+      この研究では、植物を使ったインフォメーションビジュアライゼーションの新しい可能性を模索しています。インプットされた情報に基づき、Growable Mediaは直接植物に刺激を与えます。Growable Mediaは光をコントロールすることによって光合成による植物の成長を制御します。私たちはコンピューターディスプレイでは表現できない有機的な情報を扱っています。供給された水は一度プランターに蓄えられ、少しずつ下に垂らします。 水面の高さで情報の蓄積を確認することができ、水が落ちると、水面にさざ波ができ、光がそれを照らします。この現象がポンプに滋養水の供給を知らせます。
+
+      主に3つに分けられます。 一つ目は携帯やRFIDから毎日のコミュニケーションの情報を集めるセンサーです。 二つ目はその情報を管理するMySQLデータベースサーバー、 三つ目が情報をデーターサーバーから読み取り、植物の成長に還元するアクチュエーターです。　 アクチュエーターは照明装置、ウォーターポンプ、AC電源装置、 およびLANケーブルに接続されたXPORTデバイスサーバから成ります。 RFIDリーダーをデーターベースに結果を反映する際の引き金として利用しました。 ユーザーが帰宅すると、RFIDリーダーがそれを認知し、 コンピューターが自動的にアプリケーションを立ち上げ、XPORTディバイスサーバーの中の JAVAアプレットにアクセスします。このアプレットがデータベースをチェックし、 コミュニケーションの結果を取得します。 その結果、LEDとウォーターポンプの起動時間を制御します。
+    en: |
+      "Growable Media" means an actuator, which integrates plants and digital media. It is ambient media for information visualization in real space. Since plants are grown with organic change, we think that the growth of plants is well suited to visualize some sort of information like human relation and feeling. In addition, plants are effective to appeal to our emotion. For these reasons, we have developed the first prototype of Growable Media to visualize a result of the everyday communication using the growth of plants.
+
+      The supplied water is stocked once on the planter, and drops below little by little. We can confirm the reservoir of information by the height of the surface of the water. The water drips, and it create water ripple in the surface of the water. Light illuminate the ripple beautifully. It informs that the pump is supplying the nourishment water.
+
+      It consists of three parts. The first part is the sensor that mobile phones and RFIDs collect the results of everyday communications. The second part is the MySQL database server, which manages the collected data. The third part is the actuator, which reads data from the database server, and embodies information as growth of plants. Actuator consists of the lighting system, the water-pump, the AC power control unit and the XPORT device server connected to the LAN cable. We use RFID readers as a trigger to reflect the result of the database. If the RFID readers detect users ID when users come home, a computer starts the browser application automatically and accesses the JAVA applet in the XPORT device server. The applet checks the database, and acquires the results of communications. Hence, it controls the duration of running LEDs and the duration of running the water supply.
+  publication:
+    ja: |
+      - Satoshi Kuribayashi and Akira Wakita. PlantDisplay:Turning Houseplants into Ambient Display. ACM CHI ACE 2006, demo (Bronze demo award).
+      - 栗林賢, 脇田玲, PlantDisplay：植物が情報を表示する新しいディスプレイの開発．インタラクション2006 インタラクティブ発表．
+      - 栗林賢, 脇田玲, Growable Media Design:植物とデジタル技術を統合した情報可視化メディアの提案.ヒューマンインターフェースシンポジウム2005対話発表
+      - 栗林賢, 脇田玲, PlantDisplay：植物が情報を表示する新しいディスプレイのかたち．SFC Open Research Forum2005.（展示発表、セッション発表「メディアデザインsの未来：ファッションからドキュメンタリーまで」）
+    en: |
+      - Satoshi Kuribayashi and Akira Wakita. PlantDisplay:Turning Houseplants into Ambient Display. ACM CHI ACE 2006, demo (Bronze demo award).
+      - Satoshi Kuribayashi, Akira Wakita, PlantDisplay, Interaction 2006.
+      - Satoshi Kuribayashi, Akira Wakita, Growable media design: Integrating plants and digital media for information visualization, Human Interface Symposium Japan, 2005-2-571-574
+  credits:
+    ja: |
+      栗林 賢, 脇田 玲
+    en: |
+      Satoshi Kuribayashi, Akira Wakita
 
 # - id: wearablesynthesis

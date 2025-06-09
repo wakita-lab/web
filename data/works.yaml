@@ -1003,3 +1003,48 @@
       渋谷 みどり, 辻 航平, 檜垣 万里子, 脇田 玲
     en: |
       Midori Shibutani, Kohei Tsuji, Mariko Higaki, Akira Wakita
+
+- id: orfparavision
+  publishTime: 2006-01-01
+  title:
+    en: ORF Paravision
+    ja: ORF Paravision
+  tags:
+    - installation
+    - visualization
+    - human_machine_interaction
+  images:
+    - thumb.jpg
+    - inner18-01.jpg
+    - inner18-02.jpg
+  description:
+    ja: |
+      ParavisionはRFIDと透明スクリーンを使用した公共スペースのダイナミックサインシステムです。このシステムはイベントや展示会場での使用を想定して作られました。 ユーザー各自がRFIDタグを持ち歩き、会場のいたるところにRFIDリーダーを配置された状態で、 Paravisionは透明スクリーン上にダイナミックサインを映し出すことができます。 ParavisionはRFIDの新しい可能性を模索しています。 また、このダイナミックサインシステムはビジュアライゼーションのクオリティにもこだわりました。
+
+      透明スクリーンを使用したため、ユーザーがそれを覗くと、実際のビジョンの上にバーチャルな情報が重なります。 ORFでは、物理的に見えるORFの会場に情報を重ねました。
+
+      Paravisionは与えられた情報を直に会場へと繋げます。 地図による情報はユーザーが目の前にある情報にマッピングしなくてはなりません。 直接的なサインにより、ORFの理解を深めることができたと思います。
+
+      RFIDリーダーは各ブースに配置され、ユーザーは各自が持っているRFIDタグをそれにかざし、 訪問の記録を残すことができます。タッチはブースへの投票となり、 idには訪問の記録が残るので、後に自分の軌跡をたどることができます。 その記録を元にParavisionはユーザーの好みに合わせたナビゲーションを表示します。 一つのRFIDによるタッチが、ブースの人気、ユーザーの訪問ログ、と複数のデータに 影響を与えます。
+    en: |
+      Paravision is a dynamic sign system in public space using RFID and transparent screen. This system is assumed to be in use at event and exhibition space. With all users having their own RFID tag, and RFID reader placed in several places at site, Paravision can project the dynamic sign on the transparent screen. Paravision is seeking for the new possibility of ways of using the RFID. This dynamic sign system also stuck resolutely to the quality of visualization.
+
+      We used the transparent screen, so when one sees a location through this, the virtual information will be put over the real vision. At ORF, users were able to overlap the information onto the site of ORF itself.
+
+      Paravision connects the given information directly to the site, where information using maps have to be broken down before applying to the actual site. This helped the user to understand ORF better.
+
+      A RFID reader is placed in every booth, for people to be able to mark their visit by touching the reader with their own RFID tag. A touch is a vote for the booth, and at the same time, user's id will remember the booths the user has visited in the past. This will be the hint for Paravision to guess and advise the suitable unvisited booth for the user. A single touch of RFID gives effect to several different data: booth popularity ranking, user's own visited booth log.
+  publication:
+    ja: |
+      Takafumi Iwai, Sohei Kitada, Mariko Higaki, Mizuki Deguchi, Kazuya Kaijima, Akira Wakita, Paravision - the entertaining visualizer in public spaces, ACE 2006 Poster, June 2006
+    en: |
+      Takafumi Iwai, Sohei Kitada, Mariko Higaki, Mizuki Deguchi, Kazuya Kaijima, Akira Wakita, Paravision - the entertaining visualizer in public spaces, ACE 2006 Poster, June 2006
+  credits:
+    ja: |
+      岩井 貴史, 北田 荘平, 檜垣 万里子, 貝嶋 一哉, 出口 美月, 神谷 久泰, 上野 道彦, 姉崎 祐樹, 石塚 賢, 森山 篤, 脇田 玲
+    en: |
+      Takafumi Iwai, Sohei Kitada, Mariko Higaki, Kazuya Kaijima, Mizuki Deguchi, Hisayasu Kamiya, Michihiko Ueno, Yuki Anezaki, Ken Ishizuka, Atsushi Moriyama, Akira Wakita
+
+# - id: plantdisplay
+
+# - id: wearablesynthesis

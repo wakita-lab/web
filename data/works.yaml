@@ -748,17 +748,21 @@
   description:
     ja: |
       身体と機械の美しさ
-      「quatre unité」は東京大学総合研究博物館で開催された mo]ve[ment - MODE & SCIENCE 3rd Fashion Event に 出品したFabcell を使用した衣服です。 　このイベントは西野嘉章氏、滝沢直己氏、関岡裕之氏の三名 の教授がプロジェクトをディレクションし、学生服飾団体Fab が中心となり服とイベントを作り上げます。 　Fabcell は赤から青へと色が可逆的に変化します。発光ダイ オードや液晶ディスプレイとは異なる非発光で柔らかな質感は 衣服にとけ込みながらも機械的なイメージを保持します。 　Wearable Computing において、制御装置とバッテリー は見た目の美しさを損なう原因となります。
-      しかし、 それらを敢えて外に配置することにより、身体の有機的な フォルムにクラシックコンピュータのような機械の美しさを 取り込むことをめざしました。また、初めて人が着用すること ができるFabcell を使用した服を制作することに成功しました。
+      「quatre unité」は東京大学総合研究博物館で開催された mo]ve[ment - MODE & SCIENCE 3rd Fashion Event に 出品したFabcell を使用した衣服です。このイベントは西野嘉章氏、滝沢直己氏、関岡裕之氏の三名 の教授がプロジェクトをディレクションし、学生服飾団体Fab が中心となり服とイベントを作り上げます。Fabcell は赤から青へと色が可逆的に変化します。発光ダイ オードや液晶ディスプレイとは異なる非発光で柔らかな質感は 衣服にとけ込みながらも機械的なイメージを保持します。Wearable Computing において、制御装置とバッテリーは見た目の美しさを損なう原因となります。
+      しかし、それらを敢えて外に配置することにより、身体の有機的なフォルムにクラシックコンピュータのような機械の美しさを取り込むことをめざしました。また、初めて人が着用することができるFabcellを使用した服を制作することに成功しました。
+
       正方形という規則に基づいた美しさ
-      「布のピクセル」であるFabcell を意識し、ピクセルを扱う 際のルールであるグリッドにより、全体の統一を計りました。 布や電子部品の形は正方形、数とサイズは４の倍数で構成され ており、衣服のフォルム作りやFabcell、基盤の配置において も４の倍数にこだわり造形を行いました。
+      「布のピクセル」であるFabcellを意識し、ピクセルを扱う際のルールであるグリッドにより、全体の統一を計りました。 布や電子部品の形は正方形、数とサイズは４の倍数で構成されており、衣服のフォルム作りやFabcell、基盤の配置においても４の倍数にこだわり造形を行いました。
+      
       辻 航平
     en: |
       The beauty of the body and the machine
       "quatre unité" is the clothing made from Fabcell exhibited at the mo]ve[ment MODE & SCIENCE 3rd Fashion Event at the Tokyo University Museum. The clothing for this event, which directed by professor Yoshiaki Nishino, Naoki Takizawa, Hiroyuki Sekioka, was created mainly by Fab, a student fashion organization. "Fabcell" changes color from red to blue. Different from Light emitting diode and liquid crystal display, Fabcell is non-radiant and adds softness to the clothing as well as a mechanical quality. With Wearable Computing, the exposure of the control device and battery often affects the beauty of the clothing itself.
       However, we tried adding the beauty of mechanics of a classical computer to the organic form of a body by exposing them on purpose. We were the first to succeed in creating clothing made of Fabcell people can wear.
+      
       The beauty of squares
       Fabcell, being a "pixel of fabric", was organized by a grid for standardization. The shape of the fabric and mechanical parts are all square, and the number and size are composed in multiples of 4. The form of the clothing, the Fabcell, and the placement of the circuit boards were also all modeled to match the multiple of 4.
+      
       Kohei Tsuji
   publication:
     ja: |

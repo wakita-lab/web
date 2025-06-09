@@ -1,3 +1,28 @@
+# - id: 
+#   publishTime: 
+#   title:
+#     en: 
+#     ja:
+#   tags:
+#     -
+#   images:
+#     - thumb.jpg
+#   description:
+#     ja:
+#     en:
+#   credits:
+#     ja:
+#     en:
+#   exhibition:
+#     ja:
+#     en:
+#   publication:
+#     ja:
+#     en:
+#   press:
+#     ja:
+#     en:
+
 - id: speculativefakecollege
   publishTime: 2019-01-01
   title:
@@ -20,34 +45,25 @@
       A spate of scandals by faculty and students, gender discrimination in admissions exams, and the military-like governance of athletic teams are just a few of the exciting gossip surrounding universities that have captured the public's attention. There is no doubt that the school as a place has been shaken up in the past few years. At the same time, with the spread of artificial intelligence and IoT, an era has begun in which we must confront the question, "What is intelligence? The primary good that universities use is intelligence. A discussion on the nature of intelligence in the coming era is required. Speculative Fake College (SFC for short) was established based on the awareness of these issues.
   credits:
     ja: |
-      サンプル メンバー（慶應義塾大学）
-      サンプル メンバー（慶應義塾大学）
-      サンプル メンバー（慶應義塾大学）
+      コンセプト・ディレクション：脇田玲、石原航
+      設計：藤村龍至、RFA
+      システム開発：Scott Allen, 松橋百葉、野原恵祐
+      グッズデザイン：大渕玉美
     en: |
-      Sample Member (Keio University)
-      Sample Member (Keio University)
-      Sample Member (Keio University)
+      Concept Direction: Akira Wakita, Ko Ishihara
+      Design: Ryuji Fujimura, RFA
+      System Development: Scott Allen, Momoha Matsuhashi, Keisuke Nohara
+      Goods Design: Tamami Obuchi
   exhibition:
     ja: |
-      サンプル展示サンプル展示サンプル展示サンプル展示サンプル展示
-      サンプル展示サンプル展示サンプル展示
+      「未来の学校祭」（東京ミッドタウン六本木、アルスエレクトロニカ・ジャパン）
     en: |
-      Sample Exhibition Sample Exhibition Sample Exhibition Sample Exhibition Sample Exhibition (2020, 1)
-      Sample Exhibition Sample Exhibition Sample Exhibition (2019, 1)
-  publication:
-    ja: |
-      サンプル論文サンプル論文サンプル論文サンプル論文
-    en: |
-      Sample Article Sample Article Sample Article Sample Article
+      Future School Festival (Tokyo Midtown Roppongi, Ars Electronica Japan)
   press:
     ja: |
-      サンプル取材サンプル取材サンプル取材サンプル取材サンプル取材
-      サンプル取材サンプル取材サンプル取材
-      サンプル取材サンプル取材サンプル取材サンプル取材
+      [六本木未来会議アイデア実現プロジェクト #18「虚構大学2019年入学試験」PROJECT REPORT](https://6mirai.tokyo-midtown.com/project/pjt18_01/).
     en: |
-      Sample Sample Sample Sample Sample Sample Sample
-      Sample Sample Sample Sample
-      Sample Sample Sample Sample Sample
+      [Roppongi Future Conference Idea Realization Project #18 "Speculative Fake College - Social Credit Score Admission" PROJECT REPORT](https://6mirai.tokyo-midtown.com/project/pjt18_01/).
 
 - id: worldsvesselroutes
   publishTime: 2018-01-09

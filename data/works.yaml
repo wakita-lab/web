@@ -661,7 +661,6 @@
 
       EPILOGUE
 
-
 - id: transience
   publishTime: 2012-01-01
   title:
@@ -832,6 +831,51 @@
       Design & Couture: Yoko Fujishima
       Design & Production: Kohei Tsuji, Michiko Okubo, Takeru Sorita, Marie Shuto, Akiko Negishi
       Adviser: Akira Wakita
+
+- id: kerido
+  publishTime: 2009-01-01
+  title:
+    en: KERIDO
+    ja: KERIDO
+  tags:
+    - material
+  images:
+    - inner13-01.jpg
+    - inner13-03.jpg
+    - inner13-02.jpg
+  description:
+    ja: |
+      Kerido は脇田研究室で開発された可逆変色テキスタイル"Fabcell"を用いて開発されたインテリアのプロトタイプです． Fabcell(Fabric Pixel)の非発光で変色する特性は，従来のプッシュ型ではないプル型の情報提示の可能性を示してくれます． Kerido Partition はこの特性を活かして，アンビエントな空間をユーザが自由にデザインできるツールとして機能します．
+      Kerido Partitionの5つのカラムの色彩はZigbeeに基づく無線経由でパーソナルコンピュータでコントロールすることができます． Red/Green/Blue のカラースライダーを変更すると，
+      そのカラースキーム情報が Partition に送信され，Fabcell は穏やかに変色を開始します． プリセットされたパターンから模様を選択することも可能です．あたかもPCの壁紙を変更するかのように， 自身の空間の壁紙をカスタマイズする．それが Kerido Partition のコンセプトです．
+      Kerido Fabric Board は約1メートルの巨大な Fabcell を用いた1枚のファブリックパネルです． 一見して特別なものには見えませんが，その背後には有機的なテクスチャを映し出す制御回路が組み込まれています． ひとたびスイッチを入れると，あたかも竹林を散策しているかのような感覚を想起させる幻想的なムービングテクスチャが映し出されます．
+    en: |
+      Kerido is a prototype of the next generation interior that is developed with Fabcell, our original color-changing textile. Fabcell (Fabric Pixel) is a new smart material for the use of interior and fashion design. Because of its non-emissive manner, it is suitable not for pushing information but for pulling users attentions. By utilizing this capability, Kerido Partition functions as a tool of customizing individual ambient space.
+      Columns of Kerido Partition can be controlled by a personal computer which communicate with each fabcell with ZigBee based wireless connections.
+      Color sliders (Red/Green/Blue) for each fabcell are prepared on Kerido GUI, sending color data and enabling calm color change. Users can also select preset color schemes. The concept of Kerido Partition is that as if user changes wallpaper on the desktop, user can customize wallpaper of real-space.
+      Kerido Fabric Board is a fabric panel made with large fabcell (W:1200 x H:450). At first glance, it seems a simple black fabric panel. However control circuit that permeate dynamic organic textures are placed inside it. Fantastic moving texture makes an illusion that user feel like walking in a bamboo bush.
+  press:
+    en: |
+      Hisakazu Hada, Midori Shibutani, Kohei Tsuji, Akira Wakita, Ambient display using non-emissive color-changing textiles, Journal of Human Interface Society Japan, 12(1), 23-33, 2010-02-25.ヒューマンインターフェイス学会論文誌, Vol.12, No.1, 2010.
+      interiorlifestyle TOKYO 2009, Tokyo Bigsight, June 3-5, 2009.
+      EKISUMER, Vol.2, 2009.
+      Nippon Television Network Corporation, NEWS 24, June 5, 2009.
+    ja: |
+      羽田久一, 渋谷みどり, 辻航平, 脇田玲, 非発光変色テキスタイルによるアンビエント型ディスプレイの提案, ヒューマンインターフェイス学会論文誌, Vol.12, No.1, 2010.
+      interiorlifestyle TOKYO 2009, 東京ビックサイト, 2009年6月3～5日
+      EKISUMER, 「こちらデジテク探査隊」, Vol.2, JR東日本駅消費研究センター 2009年9月30日
+      日本テレビ, 「日テレNEWS24」, 2009年6月5日
+    credits:
+      en: |
+        Midori Shibutani
+        Hisakazu Hada
+        Kohei Tsuji
+        Akira Wakita
+      ja: |
+        渋谷 みどり
+        羽田 久一
+        辻 航平
+        脇田 玲
 
 - id: ephyra
   publishTime: 2007-01-01

@@ -877,7 +877,34 @@
         辻 航平
         脇田 玲
 
-# - id: evoku
+- id: evoku
+  publishTime: 2007-01-01
+  title:
+    en: Evoku
+    ja: Evoku
+  tags:
+    - visualization
+  images:
+    - thumb.jpg
+    - inner14-02.jpg
+    - inner14-03.jpg
+  description:
+    ja: |
+      Evokuは、俳句を構成する3つのプロセス - 投句、選句、味読 - を支援する可視化システムです。 ウェブのインターフェイスから投稿された俳句は、3次元のタイポグラフィ空間に展開され、 日本科学未来館に設営されている900インチの超巨大スクリーンに投影されます。 句会の参加者は各々が投稿した句を身体を遥かに超えるスケールで体験し、その世界観に身をまかせながら句の選考をします。 俳句のタイポグラフィ空間はプロセスに応じて3次元と2次元を行き来し、最適な情報提示を実現します。
+      俳句の英語表記"Haiku"という言葉は英英辞典では"The words evoking the images of natural world" と説明されています。 タイトルの"Evoku"は、自然の美しい風景を想起させる"Evoke"と"Haiku"による造語です。 Evokuの世界観は日本古来の言霊信仰をヒントとにしており、俳句を紡ぎ上げる一言一言に魂が宿るがごとくフラフラとアニメーションします。 Flashが本来持つアウトラインフォントを美しく表示できる特性と、近年サポートされた3次元描画機能の組み合わせは、 ビルボード的な制約をもつ独特のフォント空間の体験を提供します。
+    en: |
+      Evoku is a visualization system supporting the three processes of haiku reading, that is to-ku, sen-ku and midoku. Each haiku phrase is submitted through web interfaces, and is transformed into 3D typography space. Ultra large screen (900 inch) built in National Museum of Emerging Science and Innovation (MeSci) is used for the projection. Atendee of haiku reading experiences haiku phrases as large scale embodied typography, and selects preferable haiku for further reading. Haiku space can be changed through 3D to 2D, and vise versa, to accomplish suitable information display.
+      "Evoku" is named after two words, one is "Haiku" that means "The simple words evoking the images of natural world", and the other is "evoke". The mood of Evoku is inspired by the world of "Kotodama" in which it is believed that words have its own spirits. Each words animate like a living thing to bring the feeling of "A-WA-RE". By utilizing the ability of smooth outline font and the 3D graphics in Flash, a unique font space is accomplished.
+  publication:
+    ja: |
+      - 「科学を旅して俳句をつくろう」, 日本科学未来館、2007年5月4日
+    en: |
+      - Kagaku-wo-tabi-shite-haiku-wo-tsukuro, Miraikan, May 4, 2007.
+  credits:
+    ja: |
+      姉崎 祐樹, 村松 充, 森山 篤, 平瀬 謙太朗, 脇田 玲
+    en: |
+      Yuki Anezaki, Mitsuru Muramatsu, Atsushi Moriyama, Kentaro Hirase, Akira Wakita
 
 - id: ephyra
   publishTime: 2007-01-01

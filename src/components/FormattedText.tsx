@@ -44,8 +44,7 @@ export const FormattedText = ({ text, className }: FormattedTextProps) => {
   const formattedContent = useMemo(() => {
     if (!text) return null;
 
-    return text.split('\n').map((line, index) => {
-      if (!line) return;
+    return text.trim().split('\n').map((line, index) => {
       const trimmedLine = line.trim();
 
       return trimmedLine

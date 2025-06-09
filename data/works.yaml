@@ -1003,3 +1003,116 @@
       渋谷 みどり, 辻 航平, 檜垣 万里子, 脇田 玲
     en: |
       Midori Shibutani, Kohei Tsuji, Mariko Higaki, Akira Wakita
+
+- id: orfparavision
+  publishTime: 2006-01-01
+  title:
+    en: ORF Paravision
+    ja: ORF Paravision
+  tags:
+    - user_interface
+  images:
+    - thumb.jpg
+    - inner18-01.jpg
+    - inner18-02.jpg
+  description:
+    ja: |
+      ParavisionはRFIDと透明スクリーンを使用した公共スペースのダイナミックサインシステムです。このシステムはイベントや展示会場での使用を想定して作られました。 ユーザー各自がRFIDタグを持ち歩き、会場のいたるところにRFIDリーダーを配置された状態で、 Paravisionは透明スクリーン上にダイナミックサインを映し出すことができます。 ParavisionはRFIDの新しい可能性を模索しています。 また、このダイナミックサインシステムはビジュアライゼーションのクオリティにもこだわりました。
+      透明スクリーンを使用したため、ユーザーがそれを覗くと、実際のビジョンの上にバーチャルな情報が重なります。 ORFでは、物理的に見えるORFの会場に情報を重ねました。
+      Paravisionは与えられた情報を直に会場へと繋げます。 地図による情報はユーザーが目の前にある情報にマッピングしなくてはなりません。 直接的なサインにより、ORFの理解を深めることができたと思います。
+      RFIDリーダーは各ブースに配置され、ユーザーは各自が持っているRFIDタグをそれにかざし、 訪問の記録を残すことができます。タッチはブースへの投票となり、 idには訪問の記録が残るので、後に自分の軌跡をたどることができます。 その記録を元にParavisionはユーザーの好みに合わせたナビゲーションを表示します。 一つのRFIDによるタッチが、ブースの人気、ユーザーの訪問ログ、と複数のデータに 影響を与えます。
+    en: |
+      Paravision is a dynamic sign system in public space using RFID and transparent screen. This system is assumed to be in use at event and exhibition space. With all users having their own RFID tag, and RFID reader placed in several places at site, Paravision can project the dynamic sign on the transparent screen. Paravision is seeking for the new possibility of ways of using the RFID. This dynamic sign system also stuck resolutely to the quality of visualization.
+      We used the transparent screen, so when one sees a location through this, the virtual information will be put over the real vision. At ORF, users were able to overlap the information onto the site of ORF itself.
+      Paravision connects the given information directly to the site, where information using maps have to be broken down before applying to the actual site. This helped the user to understand ORF better.
+      A RFID reader is placed in every booth, for people to be able to mark their visit by touching the reader with their own RFID tag. A touch is a vote for the booth, and at the same time, user's id will remember the booths the user has visited in the past. This will be the hint for Paravision to guess and advise the suitable unvisited booth for the user. A single touch of RFID gives effect to several different data: booth popularity ranking, user's own visited booth log.
+  publication:
+    ja: |
+      Takafumi Iwai, Sohei Kitada, Mariko Higaki, Mizuki Deguchi, Kazuya Kaijima, Akira Wakita, Paravision - the entertaining visualizer in public spaces, ACE 2006 Poster, June 2006
+    en: |
+      Takafumi Iwai, Sohei Kitada, Mariko Higaki, Mizuki Deguchi, Kazuya Kaijima, Akira Wakita, Paravision - the entertaining visualizer in public spaces, ACE 2006 Poster, June 2006
+  credits:
+    ja: |
+      岩井 貴史, 北田 荘平, 檜垣 万里子, 貝嶋 一哉, 出口 美月, 神谷 久泰, 上野 道彦, 姉崎 祐樹, 石塚 賢, 森山 篤, 脇田 玲
+    en: |
+      Takafumi Iwai, Sohei Kitada, Mariko Higaki, Kazuya Kaijima, Mizuki Deguchi, Hisayasu Kamiya, Michihiko Ueno, Yuki Anezaki, Ken Ishizuka, Atsushi Moriyama, Akira Wakita
+
+- id: plantdisplay
+  publishTime: 2006-01-01
+  title:
+    en: Plant Display
+    ja: Plant Display
+  tags:
+    - user_interface
+  images:
+    - thumb.jpg
+    - inner19-01.jpg
+    - inner19-02.jpg
+    - inner19-03.jpg
+  description:
+    ja: |
+      "Growable Media"は植物とデジタルメディアを結合するアクチュエーターです。 実空間のインフォメーションビジュアライゼーションのためのアンビエントメディアです。 植物の成長は有機的な変化によるものなので、 人間の関係や感情を表すのに適していると思いました。 さらに、植物には私たちの感情に訴えかけるものがあります。 これらの理由から最初のプロトタイプを作成し、日々のコミュニケーションを Growable Mediaの植物の成長により表現しました。
+      この研究では、植物を使ったインフォメーションビジュアライゼーションの新しい可能性を模索しています。インプットされた情報に基づき、Growable Mediaは直接植物に刺激を与えます。Growable Mediaは光をコントロールすることによって光合成による植物の成長を制御します。私たちはコンピューターディスプレイでは表現できない有機的な情報を扱っています。供給された水は一度プランターに蓄えられ、少しずつ下に垂らします。 水面の高さで情報の蓄積を確認することができ、水が落ちると、水面にさざ波ができ、光がそれを照らします。この現象がポンプに滋養水の供給を知らせます。
+      主に3つに分けられます。 一つ目は携帯やRFIDから毎日のコミュニケーションの情報を集めるセンサーです。 二つ目はその情報を管理するMySQLデータベースサーバー、 三つ目が情報をデーターサーバーから読み取り、植物の成長に還元するアクチュエーターです。　 アクチュエーターは照明装置、ウォーターポンプ、AC電源装置、 およびLANケーブルに接続されたXPORTデバイスサーバから成ります。 RFIDリーダーをデーターベースに結果を反映する際の引き金として利用しました。 ユーザーが帰宅すると、RFIDリーダーがそれを認知し、 コンピューターが自動的にアプリケーションを立ち上げ、XPORTディバイスサーバーの中の JAVAアプレットにアクセスします。このアプレットがデータベースをチェックし、 コミュニケーションの結果を取得します。 その結果、LEDとウォーターポンプの起動時間を制御します。
+    en: |
+      "Growable Media" means an actuator, which integrates plants and digital media. It is ambient media for information visualization in real space. Since plants are grown with organic change, we think that the growth of plants is well suited to visualize some sort of information like human relation and feeling. In addition, plants are effective to appeal to our emotion. For these reasons, we have developed the first prototype of Growable Media to visualize a result of the everyday communication using the growth of plants.
+      The supplied water is stocked once on the planter, and drops below little by little. We can confirm the reservoir of information by the height of the surface of the water. The water drips, and it create water ripple in the surface of the water. Light illuminate the ripple beautifully. It informs that the pump is supplying the nourishment water.
+      It consists of three parts. The first part is the sensor that mobile phones and RFIDs collect the results of everyday communications. The second part is the MySQL database server, which manages the collected data. The third part is the actuator, which reads data from the database server, and embodies information as growth of plants. Actuator consists of the lighting system, the water-pump, the AC power control unit and the XPORT device server connected to the LAN cable. We use RFID readers as a trigger to reflect the result of the database. If the RFID readers detect users ID when users come home, a computer starts the browser application automatically and accesses the JAVA applet in the XPORT device server. The applet checks the database, and acquires the results of communications. Hence, it controls the duration of running LEDs and the duration of running the water supply.
+  publication:
+    ja: |
+      - Satoshi Kuribayashi and Akira Wakita. PlantDisplay:Turning Houseplants into Ambient Display. ACM CHI ACE 2006, demo (Bronze demo award).
+      - 栗林賢, 脇田玲, PlantDisplay：植物が情報を表示する新しいディスプレイの開発．インタラクション2006 インタラクティブ発表．
+      - 栗林賢, 脇田玲, Growable Media Design:植物とデジタル技術を統合した情報可視化メディアの提案.ヒューマンインターフェースシンポジウム2005対話発表
+      - 栗林賢, 脇田玲, PlantDisplay：植物が情報を表示する新しいディスプレイのかたち．SFC Open Research Forum2005.（展示発表、セッション発表「メディアデザインsの未来：ファッションからドキュメンタリーまで」）
+    en: |
+      - Satoshi Kuribayashi and Akira Wakita. PlantDisplay:Turning Houseplants into Ambient Display. ACM CHI ACE 2006, demo (Bronze demo award).
+      - Satoshi Kuribayashi, Akira Wakita, PlantDisplay, Interaction 2006.
+      - Satoshi Kuribayashi, Akira Wakita, Growable media design: Integrating plants and digital media for information visualization, Human Interface Symposium Japan, 2005-2-571-574
+  credits:
+    ja: |
+      栗林 賢, 脇田 玲
+    en: |
+      Satoshi Kuribayashi, Akira Wakita
+
+- id: wareablesynthesis
+  publishTime: 2005-01-01
+  title:
+    en: Wearable Synthesis
+    ja: Wearable Synthesis
+  tags:
+    - fashion
+    - material
+  images:
+    - thumb.jpg
+    - inner20-01.jpg
+    - inner20-02.jpg
+  description:
+    ja: |
+      本研究のコンセプトは衣服をモジュールとして捉えることです。 入力と処理と出力の機能を衣服に埋め込むことで、衣服の新しい可能性を探るものです。 まず、人の体温を色の変化で表す衣服をつくりました。 インプットである体温は温度センサを通して入力され、PICマイコンによって処理されています。
+      一つのモジュールの出力が他のモジュールの入力になることにより、ぞれぞれのリンケージが築かれます。 インナーが出力する光をインプットするアウターなど、 他の装身具を取り入れ、繋げることによって「情報のコーディネート」を設立することができます。アクセサリー、バッグ、帽子などもモジュールとして取り入れられるエフェクターだと考えられます。
+      このコンセプトモデルはアナログシンセサイザーよく似ています。 アナログシンセサイザーでユーザーはVCA、VCO、VCFの3つのモジュールを 接続し調節することによって、無限にオリジナルの音を作り上げあることができます。 個々のモジュールを接続することによりオリジナルなファッション表現を可能にする という意味を込めて、このコンセプトを「ウェアラブル・シンセシス」と名づけました。
+    en: |
+      Our concept is based on the perception of clothing as a module. This clothing has both input and output. Say, we have an inner wear that senses the body temperature and changes its color. In this case, body temperature is input through a temperature sensor and processed by microcontrollers.
+      Here, by assuming the output of a module as the input of another module, linkage between two modules is realized. By connecting another fashion item, for example outer wear, that inputs the light output from the inner wear, "the coordination of information" can be established. Effectors, for example accessories, hats and bags, can be also thought that amplifies the output of a module.
+      This conceptual model is similar to the analog synthesizer. In analog synthesizer, users can generate infinite original sound by connecting and tuning three modules, VCA, VCO and VCF. We have named our model "Wearable Synthesis" in the meaning of enabling original fashion expression by combining individual fashion items.
+  publication:
+    ja: |
+      - ACM SIGGRAPH Cyberfashion Show 2005.
+      - IEEE ISWC Fashion Show 2005.
+      - 脇田玲, 丹治基浩, 渋谷みどり, 北田荘平, 内山博子, 稲蔭正彦、ファッションにおけるウェアラビリティを考慮した衣服構造、情報処理学会ヒューマンインターフェイス第115回研究会、2005.
+      - 脇田玲, 丹治基浩, 北田荘平, 渋谷みどり, 内山博子, 稲蔭正彦、Wearable Synthesis : ウェアラブルファッションにおけるコーディネーションフレームワーク、情報処理学会ヒューマンインターフェイス第114回研究会、2005.
+      - 脇田玲, コンピューティングのアナロジーに基づく衣服のデザイン, 日本デザイン学会第53回研究発表大会.
+      - 予感研究所 - アート＋テクノロジー＋エンターテイメント 325人の研究者たちの予感, 2006年5月3日-7日.
+      - 脇田玲, "目的は適度にあやふやに-創発のためのメディアデザイン", 國領(編), 創発する社会, 日経BP社
+    en: |
+      - ACM SIGGRAPH Cyberfashion Show 2005.
+      - IEEE ISWC Fashion Show 2005.
+      - Akira Wakita et.al., Clothing Structure Design for Wearability, IPSJ SIG Technical Reports, 2005(95), 39-44, 2005-09-30
+      - Akira Wakita et.al., Wearable Synthesis : A Coordination Framework for Wearable Fashion, IPSJ SIG Technical Reports, 2005(71(2005-HI-114)), 57-62, 2005-07-22.
+      - Akira Wakita, Introducing Computing Analogies into Garment Design, JSSD 2006
+      - YOKAN-KENKYUJO, Miraikan, May 3-7, 2006.
+  credits:
+    ja: |
+      丹治 基浩, 北田 荘平, 渋谷 みどり, 稲陰 正彦, 内山 博子, 脇田 玲
+    en: |
+      Motohiro Tanji, Sohei Kitada, Midori Shibutani, Masahiko Inakage, Hiroko Uchiyama, Akira Wakita

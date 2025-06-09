@@ -2,6 +2,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 import './globals.css';
 import { Header } from '@/components/Header';
+import { Icosahedron } from '@/components/Icosahedron';
 import { ScrollPercentageOverlay } from '@/components/ScrollPercentageOverlay';
 import TypekitLoader from '@/components/TypekitLoader';
 
@@ -24,6 +25,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="https://use.typekit.net/fte5vza.css" />
       </head>
       <body className="overflow-x-clip scroll-smooth font-sans-adobe text-sm font-normal tracking-widest">
+        <Icosahedron />
         <Header />
         {children}
         <ScrollPercentageOverlay />
